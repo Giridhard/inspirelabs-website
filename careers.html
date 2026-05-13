@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Careers at Inspirelabs</title>
+<meta name="description" content="We hire operators. People who have shipped, owned a number, and held the standard. Build your decade at Inspirelabs in Hyderabad. Write to careers@inspirelabs.com." />
+<meta name="theme-color" content="#FFFFFF" />
+<link rel="canonical" href="https://inspirelabs.com/careers.html" />
+<link rel="icon" type="image/svg+xml" href="assets/brand/inspirelabs-mark.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300..900&family=JetBrains+Mono:wght@400..700&display=swap" rel="stylesheet" />
+
+<style>
+:root {
+  --white: #FFFFFF; --bg: #FFFFFF; --warm: #FAF7F1; --text: #0E0F0A;
+  --text-secondary: #6F7583; --text-tertiary: #8C92A0;
+  --hairline: #ECEEF2; --line: #DEE1E8;
+  --accent: #FF7A45; --accent-soft: #FFE7DC; --accent-deep: #E55E2A;
+  --max-w: 1800px; --pad-x: clamp(20px, 3vw, 56px);
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Hanken Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); font-size: 17px; font-weight: 400; line-height: 1.5; -webkit-font-smoothing: antialiased; }
+img, svg { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; cursor: pointer; border: none; background: none; color: inherit; }
+ul, ol { list-style: none; }
+::selection { background: var(--accent); color: var(--white); }
+.container { width: min(88%, var(--max-w)); margin: 0 auto; padding: 0 var(--pad-x); }
+@media (max-width: 1100px) { .container { width: 100%; } }
+
+.nav { position: sticky; top: 0; z-index: 100; background: rgba(255, 255, 255, 0.92); backdrop-filter: saturate(140%) blur(14px); -webkit-backdrop-filter: saturate(140%) blur(14px); padding: 22px 0; border-bottom: 1px solid transparent; transition: border-color 0.25s var(--ease); }
+.nav.scrolled { border-bottom-color: var(--hairline); }
+.nav-inner { display: flex; align-items: center; justify-content: space-between; gap: 32px; }
+.nav-brand { display: inline-flex; align-items: center; color: var(--text); line-height: 1; }
+.nav-brand img { height: 24px; width: auto; display: block; }
+.footer-brand-block .nav-brand img { height: 32px; }
+.nav-links { display: flex; gap: 36px; align-items: center; }
+.nav-link { font-size: 15px; font-weight: 500; color: var(--text); padding: 10px 0; position: relative; transition: color 0.2s var(--ease); }
+.nav-link:hover { color: var(--accent-deep); }
+.nav-link.active::after { content: ''; position: absolute; bottom: 4px; left: 0; right: 0; height: 2px; background: var(--accent); }
+.nav-toggle { display: none; width: 36px; height: 36px; }
+.nav-toggle span { display: block; width: 22px; height: 1.5px; background: var(--text); margin: 5px auto; }
+@media (max-width: 880px) { .nav-links { display: none; } .nav-toggle { display: block; } }
+
+h1, h2, h3, h4, h5 { color: var(--text); font-weight: 400; letter-spacing: -0.02em; line-height: 1.06; text-wrap: balance; }
+p, .lead, .section-intro { text-wrap: pretty; }
+.display-1 { font-size: clamp(48px, 6.4vw, 124px); font-weight: 400; letter-spacing: -0.03em; line-height: 1.04; }
+
+section { padding: clamp(64px, 7vw, 110px) 0; position: relative; }
+
+/* Hero — same pattern as products/services */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100svh;
+  padding: clamp(110px, 16vh, 200px) 0 clamp(56px, 6vh, 96px);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: center;
+}
+.hero-grid {
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(to right, rgba(15, 17, 23, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15, 17, 23, 0.05) 1px, transparent 1px);
+  background-size: 88px 88px;
+  -webkit-mask-image: radial-gradient(ellipse 60% 70% at 50% 40%, black 0%, transparent 78%);
+  mask-image: radial-gradient(ellipse 60% 70% at 50% 40%, black 0%, transparent 78%);
+  pointer-events: none; z-index: 0;
+}
+.hero-inner { position: relative; z-index: 1; max-width: 940px; margin: 0 auto; }
+.hero-eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--text-tertiary); font-weight: 500;
+  display: inline-block;
+  margin-bottom: clamp(28px, 3vw, 40px);
+}
+.hero h1 { max-width: 18ch; margin: 0 auto; }
+.hero-sub {
+  font-size: clamp(15.5px, 1.2vw, 18px);
+  line-height: 1.55;
+  color: var(--text-secondary);
+  max-width: 56ch;
+  margin: clamp(24px, 2.4vw, 36px) auto 0;
+}
+
+/* Section primitives (matches services patterns) */
+.section-body { padding: clamp(80px, 9vw, 140px) 0; border-top: 1px solid var(--hairline); }
+.section-head { margin-bottom: clamp(40px, 4.5vw, 64px); max-width: 70ch; }
+.section-title {
+  font-size: clamp(30px, 3.6vw, 52px);
+  font-weight: 400; letter-spacing: -0.025em; line-height: 1.1;
+  margin-bottom: 16px;
+  max-width: 22ch;
+}
+.section-intro {
+  font-size: clamp(15.5px, 1.2vw, 18px);
+  line-height: 1.55; color: var(--text-secondary);
+  max-width: 56ch;
+}
+
+/* Editorial 2-column — heading left, body right (matches about-origin) */
+.editorial-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr);
+  gap: clamp(56px, 7vw, 120px);
+  align-items: start;
+}
+@media (max-width: 980px) { .editorial-grid { grid-template-columns: 1fr; gap: 32px; } }
+.editorial-title {
+  font-size: clamp(30px, 3.6vw, 52px);
+  font-weight: 400; letter-spacing: -0.025em; line-height: 1.1;
+  margin: 0; max-width: 14ch;
+}
+.editorial-body p {
+  font-size: clamp(16.5px, 1.25vw, 19px);
+  line-height: 1.7; color: var(--text-secondary);
+  margin: 0 0 22px;
+  max-width: 60ch;
+}
+.editorial-body p:last-child { margin-bottom: 0; }
+.editorial-body strong { color: var(--text); font-weight: 600; }
+
+/* Criteria — compact ordered list */
+.criteria-list {
+  display: flex; flex-direction: column;
+  gap: clamp(14px, 1.4vw, 18px);
+  max-width: 64ch;
+}
+.criteria-row {
+  display: flex; align-items: baseline; gap: 18px;
+  padding: 0;
+  border: none;
+}
+.criteria-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px; font-weight: 500;
+  letter-spacing: 0.10em; color: var(--accent-deep);
+  flex-shrink: 0;
+  width: 28px;
+}
+.criteria-row h3 {
+  font-size: clamp(18px, 1.6vw, 22px);
+  font-weight: 500; letter-spacing: -0.015em;
+  line-height: 1.4;
+  max-width: 40ch;
+}
+
+/* Benefits — services-style plan list */
+.benefits-list { border-top: 1px solid var(--hairline); }
+.benefit-row {
+  display: grid; grid-template-columns: 180px 1fr;
+  gap: 32px;
+  padding: clamp(28px, 3vw, 44px) 0;
+  border-bottom: 1px solid var(--hairline);
+  align-items: baseline;
+}
+.benefit-tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; font-weight: 500;
+  letter-spacing: 0.10em; text-transform: uppercase;
+  color: var(--text-tertiary);
+}
+.benefit-text {
+  font-size: clamp(16px, 1.25vw, 19px);
+  line-height: 1.65; color: var(--text);
+  max-width: 64ch;
+}
+.benefit-text strong { font-weight: 600; }
+@media (max-width: 700px) { .benefit-row { grid-template-columns: 1fr; gap: 8px; } }
+
+/* Vision / mantra moment */
+.careers-mantra { padding: clamp(80px, 10vw, 160px) 0; border-top: 1px solid var(--hairline); background: var(--warm); }
+.careers-mantra-inner { text-align: center; max-width: 28ch; margin: 0 auto; }
+.careers-mantra-eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; letter-spacing: 0.10em; text-transform: uppercase;
+  color: var(--text-tertiary); font-weight: 500;
+  margin-bottom: 32px; display: block;
+}
+.careers-mantra-text {
+  font-size: clamp(32px, 4.4vw, 68px);
+  font-weight: 400; letter-spacing: -0.03em; line-height: 1.1;
+  color: var(--text);
+}
+.careers-mantra-body {
+  margin-top: 36px;
+  font-size: clamp(15.5px, 1.2vw, 18px);
+  line-height: 1.6; color: var(--text-secondary);
+  max-width: 52ch; margin-left: auto; margin-right: auto;
+}
+
+/* Apply CTA — centered */
+.careers-apply { padding: clamp(80px, 9vw, 140px) 0; border-top: 1px solid var(--hairline); }
+.careers-apply-inner { text-align: center; max-width: 60ch; margin: 0 auto; }
+.careers-apply-eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; letter-spacing: 0.10em; text-transform: uppercase;
+  color: var(--text-tertiary); font-weight: 500;
+  margin-bottom: 32px; display: block;
+}
+.careers-apply h2 {
+  font-size: clamp(40px, 5.4vw, 76px);
+  font-weight: 400; letter-spacing: -0.03em; line-height: 1.04;
+  margin: 0 auto 28px; max-width: 18ch;
+}
+.careers-apply p {
+  font-size: clamp(16px, 1.2vw, 18px);
+  line-height: 1.65; color: var(--text-secondary);
+  max-width: 52ch; margin: 0 auto 40px;
+}
+.careers-apply-mail {
+  display: inline-block;
+  font-size: clamp(20px, 2vw, 26px);
+  font-weight: 500; color: var(--text);
+  padding-bottom: 4px;
+  border-bottom: 1.5px solid var(--text);
+  letter-spacing: -0.01em;
+  transition: color 0.2s var(--ease), border-color 0.2s var(--ease);
+}
+.careers-apply-mail:hover { color: var(--accent-deep); border-color: var(--accent); }
+
+/* Footer */
+footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid var(--hairline); }
+.footer-grid { display: grid; grid-template-columns: 1.6fr repeat(4, 1fr); gap: 56px; }
+.footer-brand-block .nav-brand { font-size: 24px; }
+.footer-brand-block p { margin-top: 18px; font-size: 14.5px; color: var(--text-secondary); line-height: 1.6; max-width: 36ch; }
+.footer-brand-block address { margin-top: 16px; font-size: 13px; color: var(--text-tertiary); line-height: 1.55; font-style: normal; }
+.footer-brand-block address a { color: var(--text); }
+.footer-col h5 { font-size: 11px; font-weight: 700; letter-spacing: 0.10em; text-transform: uppercase; color: var(--text-tertiary); margin-bottom: 18px; }
+.footer-col a { display: block; font-size: 14px; color: var(--text); padding: 5px 0; transition: color 0.2s var(--ease); }
+.footer-col a:hover { color: var(--accent-deep); }
+.footer-bottom { margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--hairline); display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; font-size: 12.5px; color: var(--text-tertiary); }
+.footer-bottom-links { display: flex; gap: 20px; }
+.footer-bottom-links a { color: var(--text-tertiary); }
+.footer-bottom-links a:hover { color: var(--text); }
+@media (max-width: 1000px) { .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; } .footer-brand-block { grid-column: 1 / -1; } }
+@media (max-width: 600px) { .footer-grid { grid-template-columns: 1fr; } .footer-brand-block { grid-column: auto; } }
+
+.reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.7s var(--ease), transform 0.7s var(--ease); }
+.reveal.in-view { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } html { scroll-behavior: auto; } }
+</style>
+</head>
+
+<body>
+
+<header class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-brand" aria-label="Inspirelabs"><img src="assets/brand/inspirelabs-logo.svg" alt="Inspirelabs" /></a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="products.html" class="nav-link">Products</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="careers.html" class="nav-link active">Careers</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-grid"></div>
+  <div class="container hero-inner">
+    <div class="hero-eyebrow">Careers</div>
+    <h1 class="display-1">We hire operators. Then we hand them the room.</h1>
+    <p class="hero-sub">Twelve years bootstrapped, five platforms in market, people who joined in their twenties still here in their forties. The room is built to make you sharper, then it expects you to keep it sharp.</p>
+  </div>
+</section>
+
+<!-- HOW WE HIRE -->
+<section class="section-body">
+  <div class="container">
+    <div class="editorial-grid reveal">
+      <h2 class="editorial-title">We do not hire resumes. We hire receipts.</h2>
+      <div class="editorial-body">
+        <p>The people who do well here have shipped something. They have owned a number. They have stood next to a problem and refused to leave the room until it was fixed. Where you went to school does not feature in the conversation. Neither does the title you are leaving behind.</p>
+        <p>What we look for is simple. <strong>Evidence.</strong> A repository. A revenue line. A user count. A story about a bad quarter you walked through. A team that would work with you again. If you have receipts, the rest of the interview takes care of itself.</p>
+        <p>Most hires come through people already on the team. That is by design. The fastest way in is to be referred by an operator who has held the standard with you before. If that is not you yet, write to us anyway. We read every note.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT WE ASK -->
+<section class="section-body">
+  <div class="container">
+    <div class="section-head reveal">
+      <h2 class="section-title">When we meet a candidate, we ask ourselves five questions.</h2>
+      <p class="section-intro">The yes or no on each is the interview. The rest is paperwork.</p>
+    </div>
+    <div class="criteria-list reveal">
+      <article class="criteria-row">
+        <div class="criteria-num">01</div>
+        <h3>Are they smarter than us in the room?</h3>
+      </article>
+      <article class="criteria-row">
+        <div class="criteria-num">02</div>
+        <h3>Are they more ambitious than us about the work?</h3>
+      </article>
+      <article class="criteria-row">
+        <div class="criteria-num">03</div>
+        <h3>Do they take full ownership of their lives?</h3>
+      </article>
+      <article class="criteria-row">
+        <div class="criteria-num">04</div>
+        <h3>Are they comfortable saying, &ldquo;I don&rsquo;t know&rdquo;?</h3>
+      </article>
+      <article class="criteria-row">
+        <div class="criteria-num">05</div>
+        <h3>Will they make every person in the room sharper?</h3>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- A DECADE IN -->
+<section class="section-body">
+  <div class="container">
+    <div class="editorial-grid reveal">
+      <h2 class="editorial-title">A decade in, the math changes.</h2>
+      <div class="editorial-body">
+        <p>When you give a decade to one operating company, you start watching the consequences of your own decisions land. A feature you shipped in 2018 is still earning the company money in 2026. A junior you hired in 2020 is now the person other juniors come to. The titles stop being interesting. The receipts start stacking.</p>
+        <p>People who join Inspirelabs in their twenties tend to still be here in their forties. They buy houses on these salaries. They put children through school. They watch the company they helped build cross another zero. <strong>The compounding is not a metaphor.</strong> It is the reason to be here in the first place.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFITS -->
+<section class="section-body">
+  <div class="container">
+    <div class="section-head reveal">
+      <h2 class="section-title">How we care for the team.</h2>
+      <p class="section-intro">From day one, the programmes we fund for every full-time teammate.</p>
+    </div>
+    <div class="benefits-list reveal">
+      <div class="benefit-row">
+        <div class="benefit-tag">Leave</div>
+        <div class="benefit-text"><strong>24 paid leaves a year.</strong> Six sick. Six casual. Twelve annual. On top of ten public holidays across the calendar.</div>
+      </div>
+      <div class="benefit-row">
+        <div class="benefit-tag">Health</div>
+        <div class="benefit-text"><strong>Comprehensive health insurance.</strong> Group coverage with no cooling period, family-coverage options, and annual check-ups for every teammate.</div>
+      </div>
+      <div class="benefit-row">
+        <div class="benefit-tag">Wellness</div>
+        <div class="benefit-text"><strong>Health First, the 90-day challenge.</strong> An annual campaign to build healthy habits, supported by wellness rooms, recreation zones, and a cafeteria stocked through the day.</div>
+      </div>
+      <div class="benefit-row">
+        <div class="benefit-tag">Growth</div>
+        <div class="benefit-text"><strong>Learn at Work and the Young Leaders Programme.</strong> Brown-bag sessions, cross-team learning, and a leadership track that hands operators real ownership of outcomes.</div>
+      </div>
+      <div class="benefit-row">
+        <div class="benefit-tag">Belonging</div>
+        <div class="benefit-text"><strong>Festivals from every tradition.</strong> Iftars, Diwali, Christmas, Women&rsquo;s Day, Sports Week, annual outings. Part of the year, not a calendar afterthought.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THE ROOM (mantra) -->
+<section class="careers-mantra">
+  <div class="container">
+    <div class="careers-mantra-inner reveal">
+      <span class="careers-mantra-eyebrow">The room</span>
+      <h2 class="careers-mantra-text">This place is built to make you sharper.</h2>
+      <p class="careers-mantra-body">The work asks for hard hours, real ownership, and the willingness to sit slightly outside your comfort. You will feel a little stretched. A little under-prepared for the size of the problem in front of you. That is the room. That is also the only room where the compounding happens.</p>
+    </div>
+  </div>
+</section>
+
+<!-- APPLY -->
+<section class="careers-apply">
+  <div class="container">
+    <div class="careers-apply-inner reveal">
+      <span class="careers-apply-eyebrow">Ready</span>
+      <h2>Write to us.</h2>
+      <p>Tell us what you have shipped. Tell us the problem you would not let go. Tell us the team you held the standard with. We read every note.</p>
+      <a href="mailto:careers@inspirelabs.com" class="careers-apply-mail">careers@inspirelabs.com</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand-block">
+        <a href="index.html" class="nav-brand" aria-label="Inspirelabs"><img src="assets/brand/inspirelabs-logo.svg" alt="Inspirelabs" /></a>
+        <p>The Hyderabad-based parent company behind GrabOn, GrabCash, GrabShare, RankDrive and Alternatives.co. Bootstrapped, profitable, and building since 2013.</p>
+        <address>
+          21st Floor, OneWest Building<br/>
+          Financial District, Gachibowli<br/>
+          Hyderabad 500032, India<br/><br/>
+          <a href="tel:+914032537070">040-32537070</a> &middot; <a href="mailto:contact@inspirelabs.com">contact@inspirelabs.com</a>
+        </address>
+      </div>
+      <div class="footer-col">
+        <h5>Our products</h5>
+        <a href="https://www.grabon.in" target="_blank" rel="noopener">GrabOn</a>
+        <a href="https://www.grabcash.in" target="_blank" rel="noopener">GrabCash</a>
+        <a href="https://www.grabshare.com" target="_blank" rel="noopener">GrabShare</a>
+        <a href="https://www.rankdrive.com" target="_blank" rel="noopener">RankDrive</a>
+        <a href="https://alternatives.co" target="_blank" rel="noopener">Alternatives.co</a>
+      </div>
+      <div class="footer-col">
+        <h5>What we do</h5>
+        <a href="products.html">Products</a>
+        <a href="services.html">Services</a>
+        <a href="ai-agents.html">AI Agents</a>
+        <a href="platform.html">Platform</a>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <a href="about.html">About</a>
+        <a href="careers.html">Careers</a>
+        <a href="partnership.html">Partner with us</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h5>Trust &amp; legal</h5>
+        <a href="trust.html">Trust &amp; security</a>
+        <a href="privacy.html">Privacy policy</a>
+        <a href="terms.html">Terms</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>&copy; <span data-year>2026</span> Inspirelabs Solutions Ltd. Bootstrapped in Hyderabad since 2013.</div>
+      <div class="footer-bottom-links">
+        <a href="about.html">About</a>
+        <a href="careers.html">Careers</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+(() => { const nav = document.getElementById('nav'); if (!nav) return; const onScroll = () => { if (window.scrollY > 8) nav.classList.add('scrolled'); else nav.classList.remove('scrolled'); }; window.addEventListener('scroll', onScroll, { passive: true }); onScroll(); })();
+(() => { const els = document.querySelectorAll('.reveal'); if (!('IntersectionObserver' in window)) { els.forEach(e => e.classList.add('in-view')); return; } const io = new IntersectionObserver((entries) => { entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in-view'); io.unobserve(en.target); } }); }, { rootMargin: '0px 0px -10% 0px', threshold: 0.05 }); els.forEach(e => io.observe(e)); })();
+(() => { const y = new Date().getFullYear(); document.querySelectorAll('[data-year]').forEach(e => { e.textContent = y; }); })();
+</script>
+
+</body>
+</html>

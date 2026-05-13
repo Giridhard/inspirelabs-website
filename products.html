@@ -1,0 +1,1141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Products, Five platforms that compound | Inspirelabs</title>
+<meta name="description" content="GrabOn, GrabCash, GrabShare, RankDrive, Alternatives.co. Five properties, one operating company. The Inspirelabs portfolio in detail." />
+<meta name="theme-color" content="#FFFFFF" />
+<link rel="canonical" href="https://inspirelabs.com/products.html?v=v3-products-style-sync" />
+<link rel="icon" type="image/svg+xml" href="assets/brand/inspirelabs-mark.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300..900&family=JetBrains+Mono:wght@400..700&display=swap" rel="stylesheet" />
+
+<style>
+:root { --white: #FFFFFF; --bg: #FFFFFF; --text: #0E0F0A; --text-secondary: #6F7583; --text-tertiary: #8C92A0; --hairline: #ECEEF2; --line: #DEE1E8; --accent: #FF7A45; --accent-soft: #FFE7DC; --accent-deep: #E55E2A; --tile-dark: #0F1117; --max-w: 1800px; --pad-x: clamp(20px, 3vw, 56px); --ease: cubic-bezier(0.16, 1, 0.3, 1); }
+
+/* Brand: JetBrains Mono on all small labels / eyebrows / metadata */
+.hero-eyebrow,
+.hero-stamp,
+.about-hero-eyebrow,
+.section-eyebrow,
+.plan-list-year,
+.about-num-lbl,
+.deliver-row-num,
+.pillar-eyebrow,
+.numbers-cell-lbl,
+.biz-tile-tag,
+.bleed-photo-stamp,
+.fact-eyebrow,
+.tile-eyebrow,
+.category-eyebrow,
+.kpi-label,
+.tag-label,
+.service-eyebrow,
+.product-eyebrow,
+.career-eyebrow,
+.trust-eyebrow,
+.insight-eyebrow,
+.chapter-tag,
+.chapter-num,
+.eyebrow,
+.meta-row,
+.mono { font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace; }
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Hanken Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); font-size: 17px; font-weight: 400; line-height: 1.5; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+img, svg { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; cursor: pointer; border: none; background: none; color: inherit; }
+ul, ol { list-style: none; }
+::selection { background: var(--accent); color: var(--white); }
+.container { width: min(88%, var(--max-w)); margin: 0 auto; padding: 0 var(--pad-x); }
+@media (max-width: 1100px) { .container { width: 100%; } }
+
+.nav { position: sticky; top: 0; z-index: 100; background: rgba(255, 255, 255, 0.92); backdrop-filter: saturate(140%) blur(14px); padding: 22px 0; border-bottom: 1px solid transparent; transition: border-color 0.25s var(--ease); }
+.nav.scrolled { border-bottom-color: var(--hairline); }
+.nav-inner { display: flex; align-items: center; justify-content: space-between; gap: 32px; }
+.nav-brand { display: inline-flex; align-items: center; color: var(--text); line-height: 1; }
+
+.nav-brand img { height: 24px; width: auto; display: block; }
+.footer-brand-block .nav-brand img { height: 32px; }
+.nav.on-hero .nav-brand img { filter: invert(1) brightness(2); }
+.nav-links { display: flex; gap: 36px; align-items: center; }
+.nav-link { font-size: 15px; font-weight: 500; color: var(--text); padding: 10px 0; position: relative; transition: color 0.2s var(--ease); }
+.nav-link:hover { color: var(--accent-deep); }
+.nav-link.active::after { content: ''; position: absolute; bottom: 4px; left: 0; right: 0; height: 2px; background: var(--accent); }
+.nav-toggle { display: none; width: 36px; height: 36px; }
+.nav-toggle span { display: block; width: 22px; height: 1.5px; background: var(--text); margin: 5px auto; }
+@media (max-width: 880px) { .nav-links { display: none; } .nav-toggle { display: block; } }
+
+h1, h2, h3, h4, h5 { color: var(--text); font-weight: 400; letter-spacing: -0.02em; line-height: 1.06; text-wrap: balance; }
+p, .lead, .section-intro { text-wrap: pretty; }
+.display-1 { font-size: clamp(48px, 6.4vw, 124px); font-weight: 400; letter-spacing: -0.03em; line-height: 1.04; }
+.display-2 { font-size: clamp(36px, 5vw, 72px); font-weight: 400; letter-spacing: -0.025em; line-height: 1.06; }
+.display-3 { font-size: clamp(24px, 3vw, 36px); font-weight: 400; letter-spacing: -0.02em; line-height: 1.15; }
+
+section { padding: clamp(48px, 5.5vw, 90px) 0; position: relative; }
+section.tight { padding: clamp(32px, 3.5vw, 55px) 0; }
+.section-eyebrow { display: inline-block; font-size: clamp(20px, 2.2vw, 26px); font-weight: 600; color: var(--text); letter-spacing: -0.02em; padding-bottom: 6px; border-bottom: 2px solid var(--accent); margin-bottom: 32px; }
+.section-title-xl { position: relative; font-size: clamp(30px, 3.2vw, 48px); font-weight: 500; color: var(--text); letter-spacing: -0.005em; line-height: 1.08; margin: 0 0 32px; text-wrap: balance; max-width: 24ch; }
+.section-title-xl::after { content: ''; display: block; width: 72px; height: 3px; background: var(--accent); margin-top: 14px; }
+.biz-intro { font-size: clamp(16px, 1.4vw, 20px); font-weight: 300; line-height: 1.5; color: #414A5D; max-width: 100%; width: 100%; text-wrap: pretty; }
+.section-intro { font-size: clamp(15px, 1.2vw, 17px); line-height: 1.6; color: var(--text-secondary); max-width: 64ch; }
+.tlink { display: inline-block; font-size: 15px; font-weight: 500; color: var(--text); padding-bottom: 2px; border-bottom: 1.5px solid var(--text); transition: color 0.2s var(--ease), border-color 0.2s var(--ease); }
+.tlink:hover { color: var(--accent-deep); border-color: var(--accent); }
+.tlink-light { color: var(--white); border-bottom-color: rgba(255,255,255,0.6); }
+.tlink-light:hover { color: var(--white); border-bottom-color: var(--white); }
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100svh;
+  padding: clamp(110px, 16vh, 200px) 0 clamp(56px, 6vh, 96px);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.hero-grid { position: absolute; inset: 0; background-image: linear-gradient(to right, rgba(15, 17, 23, 0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(15, 17, 23, 0.05) 1px, transparent 1px); background-size: 88px 88px; mask-image: radial-gradient(ellipse 60% 70% at 50% 40%, black 0%, transparent 78%); -webkit-mask-image: radial-gradient(ellipse 60% 70% at 50% 40%, black 0%, transparent 78%); pointer-events: none; z-index: 0; }
+.hero-inner { position: relative; z-index: 1; }
+.hero-eyebrow { font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-tertiary); font-weight: 500; display: inline-flex; align-items: center; gap: 12px; margin-bottom: 40px; }
+.hero-eyebrow::before { content: ''; width: 28px; height: 1.5px; background: var(--accent); }
+.hero h1 .line { display: block; }
+.hero h1 .line + .line { margin-top: 0.2em; }
+
+/* Products page brand-book hero — centered text */
+.hero-text-center {
+  text-align: center;
+  max-width: 920px;
+  margin: 0 auto clamp(36px, 4vw, 56px);
+}
+.hero-text-center .hero-eyebrow { margin-bottom: clamp(28px, 3vw, 40px); }
+.hero-text-center .hero-eyebrow::before { display: none; }
+.hero-text-center h1 {
+  max-width: 18ch;
+  margin: 0 auto;
+}
+.hero-text-center h1 .accent { color: var(--accent); }
+.hero-text-center .hero-split-lead {
+  margin: clamp(24px, 2.4vw, 36px) auto 0;
+  max-width: 52ch;
+  font-size: clamp(15.5px, 1.2vw, 18px);
+  line-height: 1.55;
+  color: var(--text-secondary);
+}
+
+/* Portfolio pill row */
+.hero-portfolio-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  margin-bottom: 16px;
+}
+.hero-portfolio-pills {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: clamp(10px, 1vw, 14px);
+}
+.hero-portfolio-pill {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 16px 20px;
+  border-radius: 12px;
+  background: var(--text);
+  color: #fff;
+  font-weight: 600;
+  font-size: 14.5px;
+  letter-spacing: -0.005em;
+  text-decoration: none;
+  transition: transform 0.2s var(--ease), background 0.2s var(--ease), color 0.2s var(--ease);
+  min-height: 54px;
+}
+.hero-portfolio-pill:hover {
+  transform: translateY(-2px);
+  background: var(--accent);
+  color: var(--text);
+}
+.hero-portfolio-pill .pill-meta {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  opacity: 0.55;
+  transition: opacity 0.2s var(--ease), color 0.2s var(--ease);
+}
+.hero-portfolio-pill:hover .pill-meta {
+  opacity: 0.85;
+  color: var(--text);
+}
+.hero-portfolio-pill--live {
+  background: var(--text);
+  color: #fff;
+}
+.hero-portfolio-pill--next {
+  background: transparent;
+  color: var(--text);
+  border: 1.4px solid var(--hairline);
+}
+.hero-portfolio-pill--next:hover {
+  background: transparent;
+  color: var(--text);
+  border-color: var(--hairline);
+  transform: none;
+}
+.hero-portfolio-pill--next .pill-meta {
+  color: var(--text-tertiary);
+  opacity: 1;
+}
+.hero-portfolio-pill--next:hover .pill-meta {
+  color: var(--text-tertiary);
+  opacity: 1;
+}
+
+@media (max-width: 980px) {
+  .hero-split { grid-template-columns: 1fr; gap: 56px; align-items: start; }
+  .hero-split-text h1 { max-width: none; }
+  .hero-brandmark { justify-content: flex-start; }
+  .hero-portfolio-pills { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 640px) {
+  .hero-portfolio-pills { grid-template-columns: repeat(2, 1fr); }
+}
+
+footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid var(--hairline); margin-top: 56px; }
+.footer-grid { display: grid; grid-template-columns: 1.6fr repeat(4, 1fr); gap: 56px; }
+.footer-brand-block .nav-brand { font-size: 24px; }
+.footer-brand-block p { margin-top: 18px; font-size: 14.5px; color: var(--text-secondary); line-height: 1.6; max-width: 36ch; }
+.footer-brand-block address { margin-top: 16px; font-size: 13px; color: var(--text-tertiary); line-height: 1.55; font-style: normal; }
+.footer-brand-block address a { color: var(--text); }
+.footer-col h5 { font-size: 11px; font-weight: 700; letter-spacing: 0.10em; text-transform: uppercase; color: var(--text-tertiary); margin-bottom: 18px; }
+.footer-col a { display: block; font-size: 14px; color: var(--text); padding: 5px 0; }
+.footer-col a:hover { color: var(--accent-deep); }
+.footer-bottom { margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--hairline); display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; font-size: 12.5px; color: var(--text-tertiary); }
+.footer-bottom-links { display: flex; gap: 20px; }
+.footer-bottom-links a { color: var(--text-tertiary); }
+.footer-bottom-links a:hover { color: var(--text); }
+@media (max-width: 1000px) { .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; } .footer-brand-block { grid-column: 1 / -1; } }
+@media (max-width: 600px) { .footer-grid { grid-template-columns: 1fr; } .footer-brand-block { grid-column: auto; } }
+
+.reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.7s var(--ease), transform 0.7s var(--ease); }
+.reveal.in-view { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } html { scroll-behavior: auto; } }
+
+/* === Product rows (two-column with mockup visual) === */
+.prod-row { padding: clamp(64px, 7vw, 110px) 0; background: var(--white); position: relative; overflow: visible; }
+.prod-row-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  gap: clamp(48px, 6vw, 100px);
+  align-items: start;
+  min-height: 70vh;
+}
+@media (max-width: 980px) {
+  .prod-row-grid { min-height: 0; }
+}
+@media (max-width: 980px) {
+  .prod-row-grid { grid-template-columns: 1fr; gap: 48px; }
+}
+/* Alternate: visual on left for even-numbered rows */
+.prod-row:nth-of-type(2n+1) .prod-row-grid .prod-row-content { order: 2; }
+.prod-row:nth-of-type(2n) .prod-row-grid .prod-row-visual { order: 2; }
+@media (max-width: 980px) {
+  .prod-row .prod-row-grid .prod-row-content,
+  .prod-row .prod-row-grid .prod-row-visual { order: 0 !important; }
+}
+
+.prod-row-content { display: flex; flex-direction: column; }
+.prod-row-lockup {
+  display: flex; align-items: center; gap: 20px;
+  margin-bottom: clamp(28px, 3vw, 44px);
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--hairline);
+}
+.prod-row-logo {
+  height: 44px;
+  width: auto;
+  max-width: 220px;
+  display: block;
+}
+.prod-row-tag {
+  font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--text-tertiary); font-weight: 600;
+  padding-left: 20px; border-left: 1px solid var(--hairline);
+  line-height: 1.4;
+}
+.prod-row-content h2 { margin-bottom: 24px; max-width: 22ch; }
+.prod-row-content .biz-intro { margin-bottom: 40px; max-width: 56ch; }
+.prod-row-stats {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+  padding: 28px 0;
+  border-top: 1px solid var(--hairline);
+  border-bottom: 1px solid var(--hairline);
+  margin-bottom: 28px;
+}
+@media (max-width: 600px) { .prod-row-stats { grid-template-columns: 1fr; gap: 18px; } }
+.prod-row-stat { display: flex; flex-direction: column; gap: 6px; }
+.prod-row-stat-num {
+  font-size: clamp(28px, 3vw, 42px);
+  font-weight: 400; letter-spacing: -0.03em; line-height: 1;
+  color: var(--tone, var(--text));
+}
+.prod-row-stat-lbl { font-size: 13px; color: var(--text-secondary); }
+.prod-row-content .tlink { align-self: flex-start; }
+
+/* Per-product brand zone tint — soft radial gradient behind each row */
+.prod-row { position: relative; overflow: hidden; isolation: isolate; }
+.prod-row > .container { position: relative; z-index: 1; }
+.prod-row::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse 55% 70% at 28% 40%, color-mix(in srgb, var(--row-tone, transparent) 7%, transparent) 0%, transparent 70%);
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 1.4s var(--ease), transform 1.4s var(--ease);
+}
+.prod-row:nth-of-type(2n)::before {
+  background: radial-gradient(ellipse 55% 70% at 72% 40%, color-mix(in srgb, var(--row-tone, transparent) 7%, transparent) 0%, transparent 70%);
+}
+.prod-row.row-active::before { opacity: 1; transform: scale(1); }
+
+.prod-row-visual {
+  position: sticky;
+  top: 120px;
+  aspect-ratio: 5 / 4;
+  display: flex; align-items: center; justify-content: center;
+  /* Entry state — mockup slides in from its alternation side */
+  opacity: 0;
+  transform: translateX(-80px) translateY(20px) scale(0.96);
+  transition: opacity 1s var(--ease), transform 1.1s var(--ease);
+  will-change: transform, opacity;
+}
+.prod-row:nth-of-type(2n) .prod-row-visual {
+  /* Even rows: mockup is on the right, slide in from the right */
+  transform: translateX(80px) translateY(20px) scale(0.96);
+}
+@media (max-width: 980px) {
+  .prod-row-visual { position: relative; top: auto; transform: translateY(40px) scale(0.96); }
+  .prod-row:nth-of-type(2n) .prod-row-visual { transform: translateY(40px) scale(0.96); }
+}
+.prod-row-grid.in-view .prod-row-visual,
+.prod-row:nth-of-type(2n) .prod-row-grid.in-view .prod-row-visual {
+  opacity: 1;
+  transform: translateX(0) translateY(0) scale(1);
+}
+/* Subtle continuous float on the mockup once it's in view */
+.prod-row-grid.in-view .mockup {
+  animation: mockupFloat 6s ease-in-out infinite;
+}
+@keyframes mockupFloat {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-8px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .prod-row-grid .mockup { animation: none !important; }
+  .prod-row-visual { opacity: 1 !important; transform: none !important; }
+  .prod-row::before { opacity: 1 !important; transform: none !important; }
+}
+
+/* === Mockup base === */
+.mockup {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+  font-family: 'Hanken Grotesk', sans-serif;
+}
+.mockup-card {
+  background: white;
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow:
+    0 1px 2px rgba(0,0,0,0.04),
+    0 8px 24px rgba(15, 17, 23, 0.08),
+    0 24px 60px rgba(15, 17, 23, 0.06);
+  border: 1px solid var(--hairline);
+  position: relative;
+  z-index: 2;
+}
+.mockup-card-behind {
+  position: absolute;
+  inset: 0;
+  background: white;
+  border-radius: 18px;
+  border: 1px solid var(--hairline);
+  box-shadow: 0 12px 32px rgba(15, 17, 23, 0.05);
+}
+.mockup-card-behind--1 { transform: rotate(-3deg) translateY(8px) translateX(-12px); z-index: 1; opacity: 0.6; }
+.mockup-card-behind--2 { transform: rotate(2deg) translateY(16px) translateX(8px); z-index: 0; opacity: 0.4; }
+
+/* Per-brand tone */
+.mockup--grabon { --tone: #28538F; }
+.mockup--grabcash { --tone: #008EE6; }
+.mockup--grabshare { --tone: #7940C9; }
+.mockup--rankdrive { --tone: #FF7058; }
+.mockup--alternatives { --tone: #008CE2; }
+
+/* === Mockup A: Deal card (GrabOn) === */
+.mockup-deal { transform: rotate(-2deg); }
+.mockup-deal-brand {
+  display: inline-flex; align-items: center;
+  padding: 6px 12px;
+  background: color-mix(in srgb, var(--tone) 10%, white);
+  color: var(--tone);
+  border-radius: 999px;
+  font-size: 10.5px; font-weight: 700; letter-spacing: 0.12em;
+  margin-bottom: 18px;
+}
+.mockup-deal-title {
+  font-size: 32px; font-weight: 600; letter-spacing: -0.02em;
+  line-height: 1.05; color: var(--text); margin-bottom: 8px;
+}
+.mockup-deal-sub {
+  font-size: 14px; color: var(--text-secondary); margin-bottom: 20px;
+}
+.mockup-deal-code {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 14px 16px;
+  border: 1.5px dashed color-mix(in srgb, var(--tone) 40%, #DDE2EA);
+  background: color-mix(in srgb, var(--tone) 4%, white);
+  border-radius: 10px;
+  margin-bottom: 14px;
+}
+.mockup-deal-code-lbl {
+  font-size: 10.5px; font-weight: 600; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--text-tertiary);
+}
+.mockup-deal-code-val {
+  font-size: 16px; font-weight: 700; letter-spacing: 0.04em; color: var(--tone);
+  font-family: 'SF Mono', Menlo, monospace;
+}
+.mockup-deal-btn {
+  width: 100%; padding: 13px 16px;
+  background: var(--tone); color: white;
+  border-radius: 10px;
+  font-size: 14px; font-weight: 600;
+  margin-bottom: 14px;
+}
+.mockup-deal-caption {
+  font-size: 12px; color: var(--text-tertiary);
+  display: flex; align-items: center; gap: 6px;
+}
+.mockup-deal-caption svg { color: #22A06B; }
+
+/* === Mockup B: Cashback card (GrabCash) === */
+.mockup-cashback-top {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 14px;
+}
+.mockup-cashback-lbl {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 12px; color: var(--text-secondary); font-weight: 500;
+}
+.mockup-cashback-lbl svg { color: #22A06B; }
+.mockup-cashback-badge {
+  display: inline-flex; align-items: center; gap: 4px;
+  padding: 4px 10px;
+  background: color-mix(in srgb, #22A06B 12%, white);
+  color: #1A8957;
+  border-radius: 999px;
+  font-size: 10.5px; font-weight: 600;
+}
+.mockup-cashback-num {
+  font-size: 44px; font-weight: 500; letter-spacing: -0.03em;
+  line-height: 1; color: var(--tone); margin-bottom: 6px;
+}
+.mockup-cashback-sub {
+  font-size: 14px; color: var(--text); font-weight: 500; margin-bottom: 4px;
+}
+.mockup-cashback-time {
+  font-size: 12px; color: var(--text-tertiary); margin-bottom: 22px;
+}
+.mockup-cashback-chart {
+  border-top: 1px solid var(--hairline);
+  padding-top: 16px;
+}
+.mockup-cashback-chart-bars {
+  display: grid; grid-template-columns: repeat(6, 1fr);
+  gap: 8px;
+  align-items: end;
+  height: 64px;
+  margin-bottom: 8px;
+}
+.mockup-cashback-chart-bars span {
+  display: block; width: 100%;
+  background: linear-gradient(180deg, var(--tone) 0%, color-mix(in srgb, var(--tone) 50%, white) 100%);
+  border-radius: 4px 4px 2px 2px;
+}
+.mockup-cashback-chart-labels {
+  display: grid; grid-template-columns: repeat(6, 1fr);
+  gap: 8px;
+  font-size: 10px; color: var(--text-tertiary); text-align: center;
+  letter-spacing: 0.04em;
+}
+
+/* === Mockup C: Creator storefront (GrabShare) === */
+.mockup-creator-head {
+  display: flex; align-items: center; gap: 12px;
+  margin-bottom: 18px;
+}
+.mockup-creator-avatar {
+  width: 42px; height: 42px; border-radius: 50%;
+  background: linear-gradient(135deg, #F8B5C4 0%, #B68CFF 60%, #7940C9 100%);
+  flex: 0 0 42px;
+}
+.mockup-creator-name {
+  font-size: 14.5px; font-weight: 600; color: var(--text);
+  display: flex; align-items: center; gap: 5px;
+}
+.mockup-creator-name svg { color: var(--tone); }
+.mockup-creator-followers {
+  font-size: 12px; color: var(--text-tertiary); margin-top: 2px;
+}
+.mockup-creator-title {
+  font-size: 19px; font-weight: 600; letter-spacing: -0.015em;
+  line-height: 1.2; color: var(--text); margin-bottom: 16px;
+}
+.mockup-creator-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;
+  margin-bottom: 18px;
+}
+.mockup-creator-thumb {
+  aspect-ratio: 3 / 4;
+  border-radius: 10px;
+  position: relative;
+  display: flex; align-items: flex-end;
+  padding: 8px;
+  overflow: hidden;
+}
+.mockup-creator-thumb:nth-child(1) { background: linear-gradient(160deg, #FFE9D6 0%, #FFB78A 100%); }
+.mockup-creator-thumb:nth-child(2) { background: linear-gradient(160deg, #E6DBFF 0%, #9B7FE0 100%); }
+.mockup-creator-thumb:nth-child(3) { background: linear-gradient(160deg, #D7F0FF 0%, #79B6E8 100%); }
+.mockup-creator-price {
+  font-size: 11px; font-weight: 700; color: var(--text);
+  background: rgba(255,255,255,0.95);
+  padding: 3px 7px; border-radius: 999px;
+}
+.mockup-creator-btn {
+  width: 100%; padding: 12px;
+  background: var(--tone); color: white;
+  border-radius: 10px;
+  font-size: 13.5px; font-weight: 600;
+}
+
+/* === Mockup D: Rank tracker (RankDrive) === */
+.mockup-rank-lbl {
+  font-size: 11px; font-weight: 600; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--text-tertiary);
+  margin-bottom: 8px;
+}
+.mockup-rank-kw {
+  font-size: 15px; font-weight: 600; color: var(--text);
+  margin-bottom: 18px;
+}
+.mockup-rank-top {
+  display: flex; align-items: baseline; gap: 14px;
+  margin-bottom: 16px;
+}
+.mockup-rank-num {
+  font-size: 56px; font-weight: 500; letter-spacing: -0.04em;
+  line-height: 1; color: var(--tone);
+}
+.mockup-rank-delta {
+  display: inline-flex; align-items: center; gap: 4px;
+  padding: 5px 10px;
+  background: color-mix(in srgb, var(--tone) 12%, white);
+  color: var(--tone);
+  border-radius: 999px;
+  font-size: 12px; font-weight: 700;
+}
+.mockup-rank-chart {
+  margin: 8px 0 18px;
+  height: 78px;
+}
+.mockup-rank-chart svg { width: 100%; height: 100%; overflow: visible; }
+.mockup-rank-rev {
+  display: flex; align-items: center; justify-content: space-between;
+  padding-top: 14px;
+  border-top: 1px solid var(--hairline);
+  margin-bottom: 12px;
+}
+.mockup-rank-rev-lbl {
+  font-size: 12px; color: var(--text-secondary);
+}
+.mockup-rank-rev-val {
+  font-size: 15px; font-weight: 600; color: var(--text);
+}
+.mockup-rank-pill {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 6px 12px;
+  background: color-mix(in srgb, var(--tone) 10%, white);
+  color: var(--tone);
+  border-radius: 999px;
+  font-size: 11.5px; font-weight: 600;
+}
+.mockup-rank-pill::before {
+  content: ''; width: 6px; height: 6px; border-radius: 50%;
+  background: var(--tone);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--tone) 20%, transparent);
+}
+
+/* === Mockup E: Software listing (Alternatives.co) === */
+.mockup-software-head {
+  display: flex; align-items: center; gap: 12px;
+  margin-bottom: 16px;
+}
+.mockup-software-icon {
+  width: 44px; height: 44px; border-radius: 10px;
+  background: linear-gradient(135deg, #2D2D2D 0%, #555 100%);
+  display: flex; align-items: center; justify-content: center;
+  color: white; font-weight: 700; font-size: 18px;
+  flex: 0 0 44px;
+}
+.mockup-software-name-row {
+  display: flex; align-items: center; justify-content: space-between;
+  flex: 1;
+}
+.mockup-software-name {
+  font-size: 17px; font-weight: 600; color: var(--text);
+}
+.mockup-software-link {
+  font-size: 12px; color: var(--tone); font-weight: 600;
+}
+.mockup-software-rating {
+  display: flex; align-items: center; gap: 8px;
+  margin-bottom: 16px;
+}
+.mockup-software-stars {
+  display: inline-flex; gap: 2px; color: #F5A623;
+}
+.mockup-software-rating-text {
+  font-size: 12px; color: var(--text-tertiary);
+}
+.mockup-software-rating-text strong { color: var(--text); font-weight: 600; }
+.mockup-software-chips {
+  display: flex; flex-wrap: wrap; gap: 6px;
+  margin-bottom: 20px;
+}
+.mockup-software-chip {
+  padding: 5px 11px;
+  background: #F4F6FA;
+  color: var(--text-secondary);
+  border-radius: 999px;
+  font-size: 11.5px; font-weight: 500;
+}
+.mockup-software-alt-lbl {
+  font-size: 11px; font-weight: 600; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--text-tertiary);
+  margin-bottom: 12px;
+  padding-top: 16px;
+  border-top: 1px solid var(--hairline);
+}
+.mockup-software-alts {
+  display: flex; gap: 8px;
+}
+.mockup-software-alt {
+  width: 34px; height: 34px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  color: white; font-weight: 700; font-size: 13px;
+}
+.mockup-software-alt:nth-child(1) { background: linear-gradient(135deg, #FF6B6B 0%, #C73E3E 100%); }
+.mockup-software-alt:nth-child(2) { background: linear-gradient(135deg, #4ECDC4 0%, #2B8C85 100%); }
+.mockup-software-alt:nth-child(3) { background: linear-gradient(135deg, #FFA94D 0%, #D97C1A 100%); }
+
+/* Staggered children */
+.reveal.stagger > * {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
+  transition-delay: calc(var(--stagger-i, 0) * 90ms);
+}
+.reveal.stagger > *.staggered {
+  opacity: 1;
+  transform: none;
+}
+.parallax { will-change: transform; transition: none; }
+@media (prefers-reduced-motion: reduce) { .parallax { transform: none !important; } }
+</style>
+</head>
+
+<body>
+
+<header class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-brand" aria-label="Inspirelabs"><img src="assets/brand/inspirelabs-logo.svg" alt="Inspirelabs" /></a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="products.html" class="nav-link active">Products</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="careers.html" class="nav-link">Careers</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="hero-grid"></div>
+  <div class="container hero-inner">
+    <div class="hero-text-center">
+      <div class="hero-eyebrow">AI-first Martech Company</div>
+      <h1 class="display-1">We build platforms that stay live.</h1>
+      <p class="hero-split-lead">Commerce, rewards, sharing, growth, decision intelligence.<br/><span style="white-space: nowrap;">One venture engine.</span></p>
+    </div>
+
+    <div class="hero-portfolio">
+      <div class="hero-portfolio-pills">
+        <a href="#grabon" class="hero-portfolio-pill"><span>GrabOn</span></a>
+        <a href="#grabshare" class="hero-portfolio-pill"><span>GrabShare</span></a>
+        <a href="#grabcash" class="hero-portfolio-pill"><span>GrabCash</span></a>
+        <a href="#rankdrive" class="hero-portfolio-pill"><span>RankDrive</span></a>
+        <a href="#alternatives" class="hero-portfolio-pill"><span>Alternatives.co</span></a>
+        <span class="hero-portfolio-pill hero-portfolio-pill--next" aria-disabled="true"><span>Next</span><span class="pill-meta">2026</span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 01 GrabOn -->
+<section id="grabon" class="prod-row" style="--row-tone: #28538F;">
+  <div class="container">
+    <div class="prod-row-grid reveal stagger">
+      <div class="prod-row-content">
+        <div class="prod-row-lockup">
+          <img src="assets/logos/grabon-real.png" alt="GrabOn" class="prod-row-logo" />
+          <span class="prod-row-tag">An Inspirelabs company</span>
+        </div>
+        <h2 class="section-title-xl">India&rsquo;s most-trusted source of high-intent commerce traffic.</h2>
+        <p class="biz-intro">GrabOn is the property that started Inspirelabs. Twelve years on, it is one of the most-visited commerce destinations in the country. 200M+ shoppers a month land on GrabOn looking for verified offers from 4,500+ brands. Editorial-led, expert-verified, served on a stack we built ourselves.</p>
+        <div class="prod-row-stats">
+          <div class="prod-row-stat"><span class="prod-row-stat-num count-up" style="--tone:#28538F;">200M+</span><span class="prod-row-stat-lbl">Monthly shoppers</span></div>
+          <div class="prod-row-stat"><span class="prod-row-stat-num count-up" style="--tone:#28538F;">4,500+</span><span class="prod-row-stat-lbl">Brand partners</span></div>
+          <div class="prod-row-stat"><span class="prod-row-stat-num count-up" style="--tone:#28538F;">200K+</span><span class="prod-row-stat-lbl">Live offers</span></div>
+        </div>
+        <a href="https://www.grabon.in" target="_blank" rel="noopener" class="tlink">Visit GrabOn &rarr;</a>
+      </div>
+      <div class="prod-row-visual">
+        <div class="mockup mockup--grabon">
+          <div class="mockup-card-behind mockup-card-behind--2"></div>
+          <div class="mockup-card-behind mockup-card-behind--1"></div>
+          <div class="mockup-card mockup-deal">
+            <div class="mockup-deal-brand"><span>AMAZON</span></div>
+            <h4 class="mockup-deal-title">Up to 70% off</h4>
+            <p class="mockup-deal-sub">On verified summer deals</p>
+            <div class="mockup-deal-code">
+              <span class="mockup-deal-code-lbl">Code</span>
+              <span class="mockup-deal-code-val">SUMMER70</span>
+            </div>
+            <button class="mockup-deal-btn">Copy code</button>
+            <p class="mockup-deal-caption">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Verified &middot; 18,420 users used this
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 02 GrabCash -->
+<section id="grabcash" class="prod-row" style="--row-tone: #008EE6;">
+  <div class="container">
+    <div class="prod-row-grid reveal stagger">
+      <div class="prod-row-content">
+        <div class="prod-row-lockup">
+          <img src="assets/logos/grabcash-real.png" alt="GrabCash" class="prod-row-logo" />
+          <span class="prod-row-tag">An Inspirelabs company</span>
+        </div>
+        <h2 class="section-title-xl">Pure performance. Paid only on the conversion.</h2>
+        <p class="biz-intro">GrabCash is the affiliate-earnings network for everyday creators. Students, homemakers and creators share verified deals with their network and earn real cash when their network shops. No influencer status required, no upfront cost, no inventory. Just a clean attribution contract.</p>
+        <div class="prod-row-stats">
+          <div class="prod-row-stat"><span class="prod-row-stat-num count-up" style="--tone:#008EE6;">1,000+</span><span class="prod-row-stat-lbl">Partner brands</span></div>
+          <div class="prod-row-stat"><span class="prod-row-stat-num count-up" style="--tone:#008EE6;">&#8377;100Cr+</span><span class="prod-row-stat-lbl">Paid out to earners</span></div>
+          <div class="prod-row-stat"><span class="prod-row-stat-num count-up" style="--tone:#008EE6;">99.4%</span><span class="prod-row-stat-lbl">Tracking accuracy</span></div>
+        </div>
+        <a href="https://www.grabcash.in" target="_blank" rel="noopener" class="tlink">Visit GrabCash &rarr;</a>
+      </div>
+      <div class="prod-row-visual">
+        <div class="mockup mockup--grabcash">
+          <div class="mockup-card mockup-cashback">
+            <div class="mockup-cashback-top">
+              <span class="mockup-cashback-lbl">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+                Cashback earned
+              </span>
+              <span class="mockup-cashback-badge">
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Verified
+              </span>
+            </div>
+            <div class="mockup-cashback-num">&#8377;247.50</div>
+            <div class="mockup-cashback-sub">From a Myntra purchase</div>
+            <div class="mockup-cashback-time">2 hours ago &middot; Tracking confirmed</div>
+            <div class="mockup-cashback-chart">
+              <div class="mockup-cashback-chart-bars">
+                <span style="height: 32%;"></span>
+                <span style="height: 58%;"></span>
+                <span style="height: 44%;"></span>
+                <span style="height: 72%;"></span>
+                <span style="height: 88%;"></span>
+                <span style="height: 100%;"></span>
+              </div>
+              <div class="mockup-cashback-chart-labels">
+                <span>DEC</span><span>JAN</span><span>FEB</span><span>MAR</span><span>APR</span><span>MAY</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 GrabShare -->
+<section id="grabshare" class="prod-row" style="--row-tone: #7940C9;">
+  <div class="container">
+    <div class="prod-row-grid reveal stagger">
+      <div class="prod-row-content">
+        <div class="prod-row-lockup">
+          <img src="assets/logos/grabshare-real.png" alt="GrabShare" class="prod-row-logo" />
+          <span class="prod-row-tag">An Inspirelabs company</span>
+        </div>
+        <h2 class="section-title-xl">Creators turn recommendations into revenue.</h2>
+        <p class="biz-intro">GrabShare is a creator-led storefront platform. Verified creators curate the brands they actually use, audiences shop with trust they&rsquo;ve built up over years, and brands get attribution that ties revenue back to a specific recommendation on a specific day. India&rsquo;s social commerce era, finally given a real contract.</p>
+        <div class="prod-row-stats">
+          <div class="prod-row-stat"><span class="prod-row-stat-num count-up" style="--tone:#7940C9;">25K+</span><span class="prod-row-stat-lbl">Verified creators</span></div>
+          <div class="prod-row-stat"><span class="prod-row-stat-num count-up" style="--tone:#7940C9;">800+</span><span class="prod-row-stat-lbl">Brand partners</span></div>
+          <div class="prod-row-stat"><span class="prod-row-stat-num count-up" style="--tone:#7940C9;">12+</span><span class="prod-row-stat-lbl">Verticals covered</span></div>
+        </div>
+        <a href="https://www.grabshare.com" target="_blank" rel="noopener" class="tlink">Visit GrabShare &rarr;</a>
+      </div>
+      <div class="prod-row-visual">
+        <div class="mockup mockup--grabshare">
+          <div class="mockup-card mockup-creator">
+            <div class="mockup-creator-head">
+              <div class="mockup-creator-avatar"></div>
+              <div>
+                <div class="mockup-creator-name">
+                  Anjali R.
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1l2.5 2.5L18 3l1 3.5L22 8l-1.5 3L22 14l-3 1.5L18 19l-3.5-.5L12 21l-2.5-2.5L6 19l-1-3.5L2 14l1.5-3L2 8l3-1.5L6 3l3.5.5L12 1zm-1.2 14.2l5.5-5.5-1.4-1.4-4.1 4.1-1.9-1.9-1.4 1.4 3.3 3.3z"/></svg>
+                </div>
+                <div class="mockup-creator-followers">12.4K followers</div>
+              </div>
+            </div>
+            <div class="mockup-creator-title">My top 3 skincare picks</div>
+            <div class="mockup-creator-grid">
+              <div class="mockup-creator-thumb"><span class="mockup-creator-price">&#8377;649</span></div>
+              <div class="mockup-creator-thumb"><span class="mockup-creator-price">&#8377;1,249</span></div>
+              <div class="mockup-creator-thumb"><span class="mockup-creator-price">&#8377;399</span></div>
+            </div>
+            <button class="mockup-creator-btn">Shop the edit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 04 RankDrive -->
+<section id="rankdrive" class="prod-row" style="--row-tone: #FF7058;">
+  <div class="container">
+    <div class="prod-row-grid reveal stagger">
+      <div class="prod-row-content">
+        <div class="prod-row-lockup">
+          <img src="assets/logos/rankdrive-real.png" alt="RankDrive" class="prod-row-logo" />
+          <span class="prod-row-tag">An Inspirelabs company</span>
+        </div>
+        <h2 class="section-title-xl">Search-revenue intelligence for growth teams.</h2>
+        <p class="biz-intro">RankDrive is SEO software written by operators who actually run growth. Daily, ML-prioritised actions that map directly to revenue. Track keywords, GEO citations, AI Overview presence and SGE coverage in one platform built by the team that runs SEO across our 200M-user network. Most SEO tools tell you where you rank. RankDrive tells you which actions move the rankings that move revenue.</p>
+        <div class="prod-row-stats">
+          <div class="prod-row-stat"><span class="prod-row-stat-num count-up" style="--tone:#FF7058;">1</span><span class="prod-row-stat-lbl">Action queue, not a dashboard</span></div>
+          <div class="prod-row-stat"><span class="prod-row-stat-num count-up" style="--tone:#FF7058;">200M</span><span class="prod-row-stat-lbl">Users of network it was built on</span></div>
+          <div class="prod-row-stat"><span class="prod-row-stat-num" style="--tone:#FF7058;">24/7</span><span class="prod-row-stat-lbl">Continuous regression</span></div>
+        </div>
+        <a href="https://www.rankdrive.com" target="_blank" rel="noopener" class="tlink">Visit RankDrive &rarr;</a>
+      </div>
+      <div class="prod-row-visual">
+        <div class="mockup mockup--rankdrive">
+          <div class="mockup-card mockup-rank">
+            <div class="mockup-rank-lbl">Keyword</div>
+            <div class="mockup-rank-kw">&ldquo;best running shoes&rdquo;</div>
+            <div class="mockup-rank-top">
+              <span class="mockup-rank-num">#3</span>
+              <span class="mockup-rank-delta">
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 4 22 20 2 20"></polygon></svg>
+                4
+              </span>
+            </div>
+            <div class="mockup-rank-chart">
+              <svg viewBox="0 0 280 78" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="rdFill" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#FF7058" stop-opacity="0.22"/>
+                    <stop offset="100%" stop-color="#FF7058" stop-opacity="0"/>
+                  </linearGradient>
+                </defs>
+                <path d="M0,18 L46,28 L92,22 L138,42 L184,38 L230,58 L280,66 L280,78 L0,78 Z" fill="url(#rdFill)"/>
+                <path d="M0,18 L46,28 L92,22 L138,42 L184,38 L230,58 L280,66" fill="none" stroke="#FF7058" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="0" cy="18" r="3" fill="#FF7058"/>
+                <circle cx="46" cy="28" r="3" fill="#FF7058"/>
+                <circle cx="92" cy="22" r="3" fill="#FF7058"/>
+                <circle cx="138" cy="42" r="3" fill="#FF7058"/>
+                <circle cx="184" cy="38" r="3" fill="#FF7058"/>
+                <circle cx="230" cy="58" r="3" fill="#FF7058"/>
+                <circle cx="280" cy="66" r="4" fill="white" stroke="#FF7058" stroke-width="2.5"/>
+              </svg>
+            </div>
+            <div class="mockup-rank-rev">
+              <span class="mockup-rank-rev-lbl">Revenue impact</span>
+              <span class="mockup-rank-rev-val">&#8377;4.2L / month</span>
+            </div>
+            <span class="mockup-rank-pill">Action queued</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 05 Alternatives.co -->
+<section id="alternatives" class="prod-row" style="--row-tone: #008CE2;">
+  <div class="container">
+    <div class="prod-row-grid reveal stagger">
+      <div class="prod-row-content">
+        <div class="prod-row-lockup">
+          <img src="assets/logos/alternatives-real.png" alt="Alternatives.co" class="prod-row-logo" />
+          <span class="prod-row-tag">An Inspirelabs company</span>
+        </div>
+        <h2 class="section-title-xl">The platform where leaders find software.</h2>
+        <p class="biz-intro">Alternatives.co is the global discovery layer for B2B software. 1,100+ software profiles, 574,000 buyers a month. Free for buyers, free to list. Vendors only pay when qualified intent reaches them. The discovery layer for every modern B2B software decision.</p>
+        <div class="prod-row-stats">
+          <div class="prod-row-stat"><span class="prod-row-stat-num count-up" style="--tone:#008CE2;">1,100+</span><span class="prod-row-stat-lbl">Software profiles</span></div>
+          <div class="prod-row-stat"><span class="prod-row-stat-num count-up" style="--tone:#008CE2;">574K</span><span class="prod-row-stat-lbl">Monthly buyers</span></div>
+          <div class="prod-row-stat"><span class="prod-row-stat-num" style="--tone:#008CE2;">0&#8377;</span><span class="prod-row-stat-lbl">Free to list, free to use</span></div>
+        </div>
+        <a href="https://alternatives.co" target="_blank" rel="noopener" class="tlink">Visit Alternatives.co &rarr;</a>
+      </div>
+      <div class="prod-row-visual">
+        <div class="mockup mockup--alternatives">
+          <div class="mockup-card mockup-software">
+            <div class="mockup-software-head">
+              <div class="mockup-software-icon">N</div>
+              <div class="mockup-software-name-row">
+                <span class="mockup-software-name">Notion</span>
+                <a class="mockup-software-link">View profile &rarr;</a>
+              </div>
+            </div>
+            <div class="mockup-software-rating">
+              <span class="mockup-software-stars">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 9 22 9.5 17 14.5 18.5 22 12 18 5.5 22 7 14.5 2 9.5 9 9"/></svg>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 9 22 9.5 17 14.5 18.5 22 12 18 5.5 22 7 14.5 2 9.5 9 9"/></svg>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 9 22 9.5 17 14.5 18.5 22 12 18 5.5 22 7 14.5 2 9.5 9 9"/></svg>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 9 22 9.5 17 14.5 18.5 22 12 18 5.5 22 7 14.5 2 9.5 9 9"/></svg>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><defs><linearGradient id="halfStar"><stop offset="50%" stop-color="#F5A623"/><stop offset="50%" stop-color="#E5E7EB"/></linearGradient></defs><polygon points="12 2 15 9 22 9.5 17 14.5 18.5 22 12 18 5.5 22 7 14.5 2 9.5 9 9" fill="url(#halfStar)"/></svg>
+              </span>
+              <span class="mockup-software-rating-text"><strong>4.5</strong> &middot; 4,231 reviews</span>
+            </div>
+            <div class="mockup-software-chips">
+              <span class="mockup-software-chip">Productivity</span>
+              <span class="mockup-software-chip">Wiki</span>
+              <span class="mockup-software-chip">Collaboration</span>
+            </div>
+            <div class="mockup-software-alt-lbl">Alternatives to consider</div>
+            <div class="mockup-software-alts">
+              <span class="mockup-software-alt">O</span>
+              <span class="mockup-software-alt">C</span>
+              <span class="mockup-software-alt">A</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Closing tease -->
+<section class="next-tease tight">
+  <div class="container" style="text-align:center; max-width: 720px; margin: 0 auto;">
+    <div class="hero-eyebrow">What&rsquo;s next</div>
+    <h2 class="display-3" style="margin-top: 24px;">More platforms in the works. Same room, same standard.</h2>
+    <p class="biz-intro" style="margin-top: 24px;">We&rsquo;ve launched a property a year on average since 2013. Each one solves a real problem inside the operating company first, then opens up to brands.</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand-block">
+        <a href="index.html" class="nav-brand" aria-label="Inspirelabs"><img src="assets/brand/inspirelabs-logo.svg" alt="Inspirelabs" /></a>
+        <p>The Hyderabad-based parent company behind GrabOn, GrabCash, GrabShare, RankDrive and Alternatives.co. Bootstrapped, profitable, and building since 2013.</p>
+        <address>
+          21st Floor, OneWest Building<br/>
+          Financial District, Gachibowli<br/>
+          Hyderabad 500032, India<br/><br/>
+          <a href="tel:+914032537070">040-32537070</a> &middot; <a href="mailto:contact@inspirelabs.com">contact@inspirelabs.com</a>
+        </address>
+      </div>
+      <div class="footer-col">
+        <h5>Our products</h5>
+        <a href="https://www.grabon.in" target="_blank" rel="noopener">GrabOn</a>
+        <a href="https://www.grabcash.in" target="_blank" rel="noopener">GrabCash</a>
+        <a href="https://www.grabshare.com" target="_blank" rel="noopener">GrabShare</a>
+        <a href="https://www.rankdrive.com" target="_blank" rel="noopener">RankDrive</a>
+        <a href="https://alternatives.co" target="_blank" rel="noopener">Alternatives.co</a>
+      </div>
+      <div class="footer-col">
+        <h5>What we do</h5>
+        <a href="products.html">Products</a>
+        <a href="services.html">Services</a>
+        <a href="ai-agents.html">AI Agents</a>
+        <a href="platform.html">Platform</a>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <a href="about.html">About</a>
+        <a href="careers.html">Careers</a>
+        <a href="partnership.html">Partner with us</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h5>Trust &amp; legal</h5>
+        <a href="trust.html">Trust &amp; security</a>
+        <a href="privacy.html">Privacy policy</a>
+        <a href="terms.html">Terms</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>&copy; <span data-year>2026</span> Inspirelabs Solutions Ltd. Bootstrapped in Hyderabad since 2013.</div>
+      <div class="footer-bottom-links">
+        <a href="about.html">About</a>
+        <a href="careers.html">Careers</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+(() => { const nav = document.getElementById('nav'); if (!nav) return; const onScroll = () => { if (window.scrollY > 8) nav.classList.add('scrolled'); else nav.classList.remove('scrolled'); }; window.addEventListener('scroll', onScroll, { passive: true }); onScroll(); })();
+(() => { const els = document.querySelectorAll('.reveal'); if (!('IntersectionObserver' in window)) { els.forEach(e => e.classList.add('in-view')); return; } const io = new IntersectionObserver((entries) => { entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in-view'); io.unobserve(en.target); } }); }, { rootMargin: '0px 0px -10% 0px', threshold: 0.05 }); els.forEach(e => io.observe(e)); })();
+(() => { const y = new Date().getFullYear(); document.querySelectorAll('[data-year]').forEach(e => { e.textContent = y; }); })();
+
+// Staggered reveal
+(() => {
+  const containers = document.querySelectorAll('.reveal.stagger');
+  if (!('IntersectionObserver' in window)) {
+    containers.forEach(c => Array.from(c.children).forEach(ch => ch.classList.add('staggered')));
+    return;
+  }
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(en => {
+      if (en.isIntersecting) {
+        Array.from(en.target.children).forEach((ch, i) => {
+          ch.style.setProperty('--stagger-i', i);
+          ch.classList.add('staggered');
+        });
+        io.unobserve(en.target);
+      }
+    });
+  }, { rootMargin: '0px 0px -10% 0px', threshold: 0.05 });
+  containers.forEach(c => io.observe(c));
+})();
+
+// Parallax
+(() => {
+  const elems = document.querySelectorAll('.parallax');
+  if (!elems.length || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  let ticking = false;
+  const updateParallax = () => {
+    elems.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      const vh = window.innerHeight;
+      if (rect.bottom < 0 || rect.top > vh) return;
+      const progress = (vh - rect.top) / (vh + rect.height);
+      const strength = parseFloat(el.dataset.parallax || '40');
+      const offset = (progress - 0.5) * strength;
+      el.style.transform = `translate3d(0, ${offset}px, 0)`;
+    });
+    ticking = false;
+  };
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      requestAnimationFrame(updateParallax);
+      ticking = true;
+    }
+  }, { passive: true });
+  updateParallax();
+})();
+
+// Counter-up
+(() => {
+  const counters = document.querySelectorAll('.count-up');
+  if (!counters.length) return;
+  const parseTarget = (text) => {
+    const match = text.match(/([\d,.]+)([A-Za-z+%₹\s]*)/);
+    if (!match) return null;
+    const num = parseFloat(match[1].replace(/,/g, ''));
+    const suffix = match[2] || '';
+    return { num, suffix, original: text };
+  };
+  const animate = (el, target) => {
+    if (!target) return;
+    const duration = 1400;
+    const start = performance.now();
+    const startVal = 0;
+    const step = (now) => {
+      const t = Math.min(1, (now - start) / duration);
+      const eased = 1 - Math.pow(1 - t, 3);
+      const val = startVal + (target.num - startVal) * eased;
+      const formatted = target.num >= 1000 ? Math.round(val).toLocaleString('en-IN') : val.toFixed(target.num % 1 === 0 ? 0 : 1);
+      el.textContent = formatted + target.suffix;
+      if (t < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  };
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(en => {
+      if (en.isIntersecting) {
+        const original = en.target.textContent;
+        const target = parseTarget(original);
+        en.target.dataset.target = original;
+        animate(en.target, target);
+        io.unobserve(en.target);
+      }
+    });
+  }, { rootMargin: '0px 0px -10% 0px', threshold: 0.3 });
+  counters.forEach(c => io.observe(c));
+})();
+
+// Row-active — light up the brand-tinted background when a product row crosses viewport center
+(() => {
+  const rows = document.querySelectorAll('.prod-row');
+  if (!rows.length || !('IntersectionObserver' in window)) {
+    rows.forEach(r => r.classList.add('row-active'));
+    return;
+  }
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(en => {
+      if (en.isIntersecting) en.target.classList.add('row-active');
+      else en.target.classList.remove('row-active');
+    });
+  }, { rootMargin: '-30% 0px -30% 0px', threshold: 0 });
+  rows.forEach(r => io.observe(r));
+})();
+</script>
+
+</body>
+</html>

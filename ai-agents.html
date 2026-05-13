@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>AI agents, The fleet running every account | Inspirelabs</title>
+<meta name="description" content="The operating advantage Inspirelabs holds for 4,500+ brands. Speed, accuracy and a standard that doesn't slip, held by a continuous review layer underneath." />
+<meta name="theme-color" content="#FFFFFF" />
+<link rel="canonical" href="https://inspirelabs.com/ai-agents.html?v=v4-strategic" />
+<link rel="icon" type="image/svg+xml" href="assets/brand/inspirelabs-mark.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300..900&family=JetBrains+Mono:wght@400..700&display=swap" rel="stylesheet" />
+
+<style>
+:root { --white: #FFFFFF; --bg: #FFFFFF; --text: #0E0F0A; --text-secondary: #6F7583; --text-tertiary: #8C92A0; --hairline: #ECEEF2; --line: #DEE1E8; --accent: #FF7A45; --accent-soft: #FFE7DC; --accent-deep: #E55E2A; --tile-dark: #0F1117; --max-w: 1800px; --pad-x: clamp(20px, 3vw, 56px); --ease: cubic-bezier(0.16, 1, 0.3, 1); }
+
+/* Brand: JetBrains Mono on all small labels / eyebrows / metadata */
+.hero-eyebrow,
+.hero-stamp,
+.about-hero-eyebrow,
+.section-eyebrow,
+.plan-list-year,
+.about-num-lbl,
+.deliver-row-num,
+.pillar-eyebrow,
+.numbers-cell-lbl,
+.biz-tile-tag,
+.bleed-photo-stamp,
+.fact-eyebrow,
+.tile-eyebrow,
+.category-eyebrow,
+.kpi-label,
+.tag-label,
+.service-eyebrow,
+.product-eyebrow,
+.career-eyebrow,
+.trust-eyebrow,
+.insight-eyebrow,
+.chapter-tag,
+.chapter-num,
+.eyebrow,
+.meta-row,
+.mono { font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace; }
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Hanken Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); font-size: 17px; font-weight: 400; line-height: 1.5; -webkit-font-smoothing: antialiased; }
+img, svg { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; cursor: pointer; border: none; background: none; color: inherit; }
+ul, ol { list-style: none; }
+::selection { background: var(--accent); color: var(--white); }
+.container { width: min(88%, var(--max-w)); margin: 0 auto; padding: 0 var(--pad-x); }
+@media (max-width: 1100px) { .container { width: 100%; } }
+
+.nav { position: sticky; top: 0; z-index: 100; background: rgba(255, 255, 255, 0.92); backdrop-filter: saturate(140%) blur(14px); padding: 22px 0; border-bottom: 1px solid transparent; transition: border-color 0.25s var(--ease); }
+.nav.scrolled { border-bottom-color: var(--hairline); }
+.nav-inner { display: flex; align-items: center; justify-content: space-between; gap: 32px; }
+.nav-brand { display: inline-flex; align-items: center; color: var(--text); line-height: 1; }
+
+.nav-brand img { height: 24px; width: auto; display: block; }
+.footer-brand-block .nav-brand img { height: 32px; }
+.nav.on-hero .nav-brand img { filter: invert(1) brightness(2); }
+.nav-links { display: flex; gap: 36px; align-items: center; }
+.nav-link { font-size: 15px; font-weight: 500; color: var(--text); padding: 10px 0; position: relative; transition: color 0.2s var(--ease); }
+.nav-link:hover { color: var(--accent-deep); }
+.nav-link.active::after { content: ''; position: absolute; bottom: 4px; left: 0; right: 0; height: 2px; background: var(--accent); }
+.nav-toggle { display: none; width: 36px; height: 36px; }
+.nav-toggle span { display: block; width: 22px; height: 1.5px; background: var(--text); margin: 5px auto; }
+@media (max-width: 880px) { .nav-links { display: none; } .nav-toggle { display: block; } }
+
+h1, h2, h3, h4, h5 { color: var(--text); font-weight: 400; letter-spacing: -0.02em; line-height: 1.06; text-wrap: balance; }
+p, .lead, .section-intro { text-wrap: pretty; }
+.display-1 { font-size: clamp(48px, 6.4vw, 124px); font-weight: 400; letter-spacing: -0.03em; line-height: 1.04; }
+.display-1 .line { display: block; }
+.display-1 .line:nth-child(2) { color: var(--text-secondary); }
+.display-2 { font-size: clamp(36px, 5vw, 72px); font-weight: 400; letter-spacing: -0.025em; line-height: 1.06; }
+.display-3 { font-size: clamp(24px, 3vw, 36px); font-weight: 400; letter-spacing: -0.02em; line-height: 1.15; }
+
+section { padding: clamp(48px, 5.5vw, 90px) 0; position: relative; }
+section.tight { padding: clamp(32px, 3.5vw, 55px) 0; }
+.section-title-xl { position: relative; font-size: clamp(30px, 3.2vw, 48px); font-weight: 500; color: var(--text); letter-spacing: -0.005em; line-height: 1.08; margin: 0 0 32px; text-wrap: balance; max-width: 24ch; }
+.section-title-xl::after { content: ''; display: block; width: 72px; height: 3px; background: var(--accent); margin-top: 14px; }
+.biz-intro { font-size: clamp(16px, 1.4vw, 20px); font-weight: 300; line-height: 1.5; color: #414A5D; max-width: 100%; width: 100%; text-wrap: pretty; }
+.section-intro { font-size: clamp(15px, 1.2vw, 17px); line-height: 1.6; color: var(--text-secondary); max-width: 64ch; }
+.tlink { display: inline-block; font-size: 15px; font-weight: 500; color: var(--text); padding-bottom: 2px; border-bottom: 1.5px solid var(--text); transition: color 0.2s var(--ease), border-color 0.2s var(--ease); }
+.tlink:hover { color: var(--accent-deep); border-color: var(--accent); }
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100svh;
+  padding: clamp(64px, 8vh, 120px) 0;
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.hero-grid { position: absolute; inset: 0; background-image: linear-gradient(to right, rgba(15, 17, 23, 0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(15, 17, 23, 0.05) 1px, transparent 1px); background-size: 88px 88px; mask-image: radial-gradient(ellipse 50% 60% at 50% 30%, black 0%, transparent 75%); -webkit-mask-image: radial-gradient(ellipse 50% 60% at 50% 30%, black 0%, transparent 75%); pointer-events: none; z-index: 0; }
+.hero-inner { position: relative; z-index: 1; }
+.hero h1 { max-width: 22ch; margin: 0 auto; }
+.hero-sub { font-size: clamp(17px, 1.5vw, 22px); font-weight: 300; line-height: 1.5; color: var(--text-secondary); max-width: 56ch; margin: 32px auto 0; text-align: center; }
+
+/* Editorial claim rows */
+.claim-list { display: flex; flex-direction: column; border-top: 1px solid var(--hairline); }
+.claim-row {
+  padding: clamp(36px, 4vw, 56px) 0;
+  border-bottom: 1px solid var(--hairline);
+  display: grid;
+  grid-template-columns: 110px minmax(0, 1fr);
+  gap: clamp(24px, 3vw, 56px);
+  align-items: baseline;
+}
+.claim-num { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; font-weight: 600; color: var(--accent); letter-spacing: 0.08em; padding-top: 8px; }
+.claim-body h3 { font-size: clamp(26px, 2.6vw, 40px); font-weight: 500; letter-spacing: -0.018em; line-height: 1.12; margin-bottom: 16px; max-width: 22ch; }
+.claim-body p { font-size: clamp(16px, 1.2vw, 18px); line-height: 1.65; color: var(--text-secondary); max-width: 58ch; font-weight: 300; }
+@media (max-width: 700px) {
+  .claim-row { grid-template-columns: 1fr; gap: 12px; }
+  .claim-num { padding-top: 0; }
+}
+
+/* Operating layer (centered editorial) */
+.op-layer { max-width: 760px; margin: 0 auto; text-align: center; }
+.op-layer h2 { margin-bottom: 40px; }
+.op-layer p { font-size: clamp(17px, 1.4vw, 21px); line-height: 1.6; color: var(--text-secondary); font-weight: 300; margin-bottom: 24px; text-wrap: pretty; }
+.op-layer p:last-child { margin-bottom: 0; color: var(--text); font-weight: 400; }
+
+/* Delivered stats (4 big numbers) */
+.delivered-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border-top: 1px solid var(--hairline); border-bottom: 1px solid var(--hairline); }
+.delivered-stat { padding: clamp(36px, 4vw, 56px) clamp(20px, 2vw, 32px); border-right: 1px solid var(--hairline); }
+.delivered-stat:last-child { border-right: none; }
+.delivered-stat-val { font-size: clamp(40px, 5.2vw, 76px); font-weight: 400; letter-spacing: -0.03em; line-height: 1; color: var(--text); margin-bottom: 14px; }
+.delivered-stat-lbl { font-size: 13px; color: var(--text-tertiary); letter-spacing: 0.04em; line-height: 1.45; font-weight: 500; }
+.delivered-note { padding-top: 18px; font-size: 12.5px; color: var(--text-tertiary); letter-spacing: 0.04em; text-align: center; }
+@media (max-width: 880px) {
+  .delivered-stats { grid-template-columns: 1fr 1fr; }
+  .delivered-stat:nth-child(2) { border-right: none; }
+  .delivered-stat:nth-child(1), .delivered-stat:nth-child(2) { border-bottom: 1px solid var(--hairline); }
+}
+@media (max-width: 540px) {
+  .delivered-stats { grid-template-columns: 1fr; }
+  .delivered-stat { border-right: none; border-bottom: 1px solid var(--hairline); }
+  .delivered-stat:last-child { border-bottom: none; }
+}
+
+/* Closing declarative */
+.closing { text-align: center; max-width: 880px; margin: 0 auto; padding: clamp(40px, 6vw, 96px) 0; }
+.closing .lead-line { font-size: clamp(32px, 4.4vw, 64px); font-weight: 400; letter-spacing: -0.025em; line-height: 1.12; color: var(--text); margin-bottom: 36px; font-style: italic; text-wrap: balance; }
+.closing p { font-size: clamp(17px, 1.4vw, 21px); line-height: 1.6; color: var(--text-secondary); font-weight: 300; margin-bottom: 18px; text-wrap: pretty; }
+
+footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid var(--hairline); margin-top: 56px; }
+.footer-grid { display: grid; grid-template-columns: 1.6fr repeat(4, 1fr); gap: 56px; }
+.footer-brand-block .nav-brand { font-size: 24px; }
+.footer-brand-block p { margin-top: 18px; font-size: 14.5px; color: var(--text-secondary); line-height: 1.6; max-width: 36ch; }
+.footer-brand-block address { margin-top: 16px; font-size: 13px; color: var(--text-tertiary); line-height: 1.55; font-style: normal; }
+.footer-brand-block address a { color: var(--text); }
+.footer-col h5 { font-size: 11px; font-weight: 700; letter-spacing: 0.10em; text-transform: uppercase; color: var(--text-tertiary); margin-bottom: 18px; }
+.footer-col a { display: block; font-size: 14px; color: var(--text); padding: 5px 0; }
+.footer-col a:hover { color: var(--accent-deep); }
+.footer-bottom { margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--hairline); display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; font-size: 12.5px; color: var(--text-tertiary); }
+.footer-bottom-links { display: flex; gap: 20px; }
+.footer-bottom-links a { color: var(--text-tertiary); }
+.footer-bottom-links a:hover { color: var(--text); }
+@media (max-width: 1000px) { .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; } .footer-brand-block { grid-column: 1 / -1; } }
+@media (max-width: 600px) { .footer-grid { grid-template-columns: 1fr; } .footer-brand-block { grid-column: auto; } }
+
+.reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.7s var(--ease), transform 0.7s var(--ease); }
+.reveal.in-view { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } html { scroll-behavior: auto; } }
+
+/* Staggered children */
+.reveal.stagger > * {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
+  transition-delay: calc(var(--stagger-i, 0) * 90ms);
+}
+.reveal.stagger > *.staggered {
+  opacity: 1;
+  transform: none;
+}
+</style>
+</head>
+
+<body>
+
+<header class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-brand" aria-label="Inspirelabs"><img src="assets/brand/inspirelabs-logo.svg" alt="Inspirelabs" /></a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="products.html" class="nav-link">Products</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="careers.html" class="nav-link">Careers</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="hero-grid"></div>
+  <div class="container hero-inner">
+    <h1 class="display-1"><span class="line">We move faster.</span><span class="line">We hold the standard.</span></h1>
+    <p class="hero-sub">AI is how a Hyderabad operating company holds the same standard for 4,500+ brands, every day, without compromise.</p>
+  </div>
+</section>
+
+<!-- Section 1: Three claim rows -->
+<section style="border-top: 1px solid var(--hairline);">
+  <div class="container">
+    <div class="claim-list reveal">
+      <article class="claim-row">
+        <div class="claim-num">01</div>
+        <div class="claim-body">
+          <h3>Always-on quality control.</h3>
+          <p>Every word we publish, every offer we route, every campaign we ship gets re-checked by a continuous review layer. No piece of content reaches a brand's audience without passing the same standard a senior editor would hold it to.</p>
+        </div>
+      </article>
+      <article class="claim-row">
+        <div class="claim-num">02</div>
+        <div class="claim-body">
+          <h3>Operating speed, not operating cost.</h3>
+          <p>Most agencies trade headcount for speed. We don't have to. The work that takes other teams days runs through our review layer in hours, against eval suites, with human owners signing off. Speed comes from the standard, not from skipping it.</p>
+        </div>
+      </article>
+      <article class="claim-row">
+        <div class="claim-num">03</div>
+        <div class="claim-body">
+          <h3>One standard, every account.</h3>
+          <p>4,500+ brand accounts. One operating standard. Every customer-support reply, every offer verification, every keyword decision is held against the same bar we hold our own products to. The bar moves up. It never moves down.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Section 2: The operating layer -->
+<section style="border-top: 1px solid var(--hairline);">
+  <div class="container">
+    <div class="op-layer reveal">
+      <h2 class="display-2">The operating layer underneath.</h2>
+      <p>Inspirelabs runs on a layer of continuous review. It catches drift before it ships. It surfaces the next action, on the right surface, at the right cost. It writes the first draft of every operating decision so the team's time goes to the harder, slower work.</p>
+      <p>This is the moat. It's why a brand running through our network gets the same operating standard whether they joined yesterday or in 2013.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Section 3: Four numbers -->
+<section style="border-top: 1px solid var(--hairline);">
+  <div class="container">
+    <div class="reveal" style="margin-bottom: 40px;">
+      <h2 class="section-title-xl">What that looks like, today.</h2>
+    </div>
+    <div class="delivered-stats reveal">
+      <div class="delivered-stat">
+        <div class="delivered-stat-val">47,200</div>
+        <div class="delivered-stat-lbl">Decisions reviewed today</div>
+      </div>
+      <div class="delivered-stat">
+        <div class="delivered-stat-val">99.4%</div>
+        <div class="delivered-stat-lbl">Eval pass rate</div>
+      </div>
+      <div class="delivered-stat">
+        <div class="delivered-stat-val">0.8s</div>
+        <div class="delivered-stat-lbl">Median review latency</div>
+      </div>
+      <div class="delivered-stat">
+        <div class="delivered-stat-val">24/7</div>
+        <div class="delivered-stat-lbl">Continuous regression</div>
+      </div>
+    </div>
+    <p class="delivered-note">Updated every 24 hours from our internal operating dashboard.</p>
+  </div>
+</section>
+
+<!-- Section 4: How the standard holds -->
+<section style="border-top: 1px solid var(--hairline);">
+  <div class="container">
+    <div class="reveal" style="margin-bottom: 24px;">
+      <h2 class="section-title-xl">How the standard holds.</h2>
+      <p class="biz-intro" style="max-width: 60ch;">Four checks every operating decision passes before it reaches a customer.</p>
+    </div>
+    <div class="claim-list reveal" style="margin-top: 40px;">
+      <article class="claim-row">
+        <div class="claim-num">01</div>
+        <div class="claim-body">
+          <h3>A reviewed baseline.</h3>
+          <p>A hand-curated standard for what "good" looks like, set by the senior operators who built it. Reviewed quarterly. The bar that everything else is measured against.</p>
+        </div>
+      </article>
+      <article class="claim-row">
+        <div class="claim-num">02</div>
+        <div class="claim-body">
+          <h3>Continuous regression.</h3>
+          <p>Every change runs against that baseline before it ships. If it regresses, it doesn't ship. There is no manual override.</p>
+        </div>
+      </article>
+      <article class="claim-row">
+        <div class="claim-num">03</div>
+        <div class="claim-body">
+          <h3>Live sampling.</h3>
+          <p>1 to 3% of every live decision is sampled, scored, and surfaced on a dashboard the founder reads weekly. Drift surfaces inside an hour.</p>
+        </div>
+      </article>
+      <article class="claim-row">
+        <div class="claim-num">04</div>
+        <div class="claim-body">
+          <h3>Human-in-loop on every category.</h3>
+          <p>Trained reviewers audit a slice of every category every week. Their decisions feed back into the baseline. The bar keeps rising.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Section 5: Closing declarative -->
+<section style="border-top: 1px solid var(--hairline);">
+  <div class="container">
+    <div class="closing reveal">
+      <div class="lead-line">This is what bootstrapping for twelve years bought us.</div>
+      <p>A standard no one can buy off-the-shelf.</p>
+      <p>A bar held by people who have been holding it since 2013.</p>
+      <p>A way of operating that is the company.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Section 6: CTA -->
+<section style="border-top: 1px solid var(--hairline);">
+  <div class="container" style="text-align: center; max-width: 760px; margin: 0 auto;">
+    <h2 class="display-3" style="margin-bottom: 24px;">Want to operate at this standard without building it?</h2>
+    <p class="biz-intro" style="margin-bottom: 32px;">Plug into the operating layer 4,500+ brands already run on.</p>
+    <a href="contact.html" class="tlink">Talk to us about your account &rarr;</a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand-block">
+        <a href="index.html" class="nav-brand" aria-label="Inspirelabs"><img src="assets/brand/inspirelabs-logo.svg" alt="Inspirelabs" /></a>
+        <p>The Hyderabad-based parent company behind GrabOn, GrabCash, GrabShare, RankDrive and Alternatives.co. Bootstrapped, profitable, and building since 2013.</p>
+        <address>
+          21st Floor, OneWest Building<br/>
+          Financial District, Gachibowli<br/>
+          Hyderabad 500032, India<br/><br/>
+          <a href="tel:+914032537070">040-32537070</a> &middot; <a href="mailto:contact@inspirelabs.com">contact@inspirelabs.com</a>
+        </address>
+      </div>
+      <div class="footer-col">
+        <h5>Our products</h5>
+        <a href="https://www.grabon.in" target="_blank" rel="noopener">GrabOn</a>
+        <a href="https://www.grabcash.in" target="_blank" rel="noopener">GrabCash</a>
+        <a href="https://www.grabshare.com" target="_blank" rel="noopener">GrabShare</a>
+        <a href="https://www.rankdrive.com" target="_blank" rel="noopener">RankDrive</a>
+        <a href="https://alternatives.co" target="_blank" rel="noopener">Alternatives.co</a>
+      </div>
+      <div class="footer-col">
+        <h5>What we do</h5>
+        <a href="products.html">Products</a>
+        <a href="services.html">Services</a>
+        <a href="ai-agents.html">AI Agents</a>
+        <a href="platform.html">Platform</a>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <a href="about.html">About</a>
+        <a href="careers.html">Careers</a>
+        <a href="partnership.html">Partner with us</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h5>Trust &amp; legal</h5>
+        <a href="trust.html">Trust &amp; security</a>
+        <a href="privacy.html">Privacy policy</a>
+        <a href="terms.html">Terms</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>&copy; <span data-year>2026</span> Inspirelabs Solutions Ltd. Bootstrapped in Hyderabad since 2013.</div>
+      <div class="footer-bottom-links">
+        <a href="about.html">About</a>
+        <a href="careers.html">Careers</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+(() => { const nav = document.getElementById('nav'); if (!nav) return; const onScroll = () => { if (window.scrollY > 8) nav.classList.add('scrolled'); else nav.classList.remove('scrolled'); }; window.addEventListener('scroll', onScroll, { passive: true }); onScroll(); })();
+(() => { const els = document.querySelectorAll('.reveal'); if (!('IntersectionObserver' in window)) { els.forEach(e => e.classList.add('in-view')); return; } const io = new IntersectionObserver((entries) => { entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in-view'); io.unobserve(en.target); } }); }, { rootMargin: '0px 0px -10% 0px', threshold: 0.05 }); els.forEach(e => io.observe(e)); })();
+(() => { const y = new Date().getFullYear(); document.querySelectorAll('[data-year]').forEach(e => { e.textContent = y; }); })();
+
+// Staggered reveal
+(() => {
+  const containers = document.querySelectorAll('.reveal.stagger');
+  if (!('IntersectionObserver' in window)) {
+    containers.forEach(c => Array.from(c.children).forEach(ch => ch.classList.add('staggered')));
+    return;
+  }
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(en => {
+      if (en.isIntersecting) {
+        Array.from(en.target.children).forEach((ch, i) => {
+          ch.style.setProperty('--stagger-i', i);
+          ch.classList.add('staggered');
+        });
+        io.unobserve(en.target);
+      }
+    });
+  }, { rootMargin: '0px 0px -10% 0px', threshold: 0.05 });
+  containers.forEach(c => io.observe(c));
+})();
+</script>
+
+</body>
+</html>

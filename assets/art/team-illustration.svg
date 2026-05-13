@@ -1,0 +1,61 @@
+<svg viewBox="0 0 800 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Stylized illustration of an operating team at work">
+  <defs>
+    <linearGradient id="floor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ECECFF"/>
+      <stop offset="1" stop-color="#FFFFFF"/>
+    </linearGradient>
+  </defs>
+  <!-- floor band -->
+  <rect x="0" y="280" width="800" height="80" fill="url(#floor)"/>
+  <line x1="0" y1="280" x2="800" y2="280" stroke="#0A0A0A" stroke-width="2"/>
+  <!-- desk -->
+  <rect x="160" y="220" width="480" height="14" rx="3" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="2"/>
+  <line x1="200" y1="234" x2="200" y2="280" stroke="#0A0A0A" stroke-width="2"/>
+  <line x1="600" y1="234" x2="600" y2="280" stroke="#0A0A0A" stroke-width="2"/>
+  <!-- laptops -->
+  <rect x="220" y="190" width="80" height="30" rx="2" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="2"/>
+  <line x1="216" y1="220" x2="304" y2="220" stroke="#0A0A0A" stroke-width="2"/>
+  <line x1="230" y1="198" x2="280" y2="198" stroke="#5B5CFF" stroke-width="2"/>
+  <line x1="230" y1="206" x2="290" y2="206" stroke="#0A0A0A" stroke-width="1.4"/>
+  <line x1="230" y1="213" x2="260" y2="213" stroke="#0A0A0A" stroke-width="1.4"/>
+  <rect x="500" y="190" width="80" height="30" rx="2" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="2"/>
+  <line x1="496" y1="220" x2="584" y2="220" stroke="#0A0A0A" stroke-width="2"/>
+  <line x1="510" y1="198" x2="560" y2="198" stroke="#FF7058" stroke-width="2"/>
+  <line x1="510" y1="206" x2="570" y2="206" stroke="#0A0A0A" stroke-width="1.4"/>
+  <line x1="510" y1="213" x2="540" y2="213" stroke="#0A0A0A" stroke-width="1.4"/>
+  <!-- person left -->
+  <circle cx="260" cy="160" r="22" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="2.2"/>
+  <path d="M232 220 C 232 192, 288 192, 288 220" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="2.2"/>
+  <line x1="240" y1="220" x2="240" y2="280" stroke="#0A0A0A" stroke-width="2"/>
+  <line x1="280" y1="220" x2="280" y2="280" stroke="#0A0A0A" stroke-width="2"/>
+  <!-- person right -->
+  <circle cx="540" cy="160" r="22" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="2.2"/>
+  <path d="M512 220 C 512 192, 568 192, 568 220" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="2.2"/>
+  <line x1="520" y1="220" x2="520" y2="280" stroke="#0A0A0A" stroke-width="2"/>
+  <line x1="560" y1="220" x2="560" y2="280" stroke="#0A0A0A" stroke-width="2"/>
+  <!-- center collaborator standing -->
+  <circle cx="400" cy="140" r="22" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="2.2"/>
+  <path d="M372 200 C 372 172, 428 172, 428 200" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="2.2"/>
+  <line x1="380" y1="200" x2="380" y2="280" stroke="#0A0A0A" stroke-width="2"/>
+  <line x1="420" y1="200" x2="420" y2="280" stroke="#0A0A0A" stroke-width="2"/>
+  <!-- gesture line from center to laptop screens -->
+  <path d="M380 188 Q 340 180, 290 198" fill="none" stroke="#5B5CFF" stroke-width="2" stroke-linecap="round"/>
+  <path d="M420 188 Q 460 180, 510 198" fill="none" stroke="#FF7058" stroke-width="2" stroke-linecap="round"/>
+  <!-- window light top-left -->
+  <circle cx="70" cy="80" r="22" fill="#FFFFFF" stroke="#5B5CFF" stroke-width="2"/>
+  <line x1="70" y1="40" x2="70" y2="50" stroke="#5B5CFF" stroke-width="2"/>
+  <line x1="70" y1="110" x2="70" y2="120" stroke="#5B5CFF" stroke-width="2"/>
+  <line x1="30" y1="80" x2="40" y2="80" stroke="#5B5CFF" stroke-width="2"/>
+  <line x1="100" y1="80" x2="110" y2="80" stroke="#5B5CFF" stroke-width="2"/>
+  <line x1="42" y1="52" x2="50" y2="60" stroke="#5B5CFF" stroke-width="2"/>
+  <line x1="90" y1="100" x2="98" y2="108" stroke="#5B5CFF" stroke-width="2"/>
+  <!-- plant top-right -->
+  <rect x="700" y="220" width="36" height="32" rx="3" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="2"/>
+  <path d="M718 220 C 718 196, 706 184, 706 168" fill="none" stroke="#0A0A0A" stroke-width="2"/>
+  <path d="M718 220 C 718 196, 730 184, 730 168" fill="none" stroke="#0A0A0A" stroke-width="2"/>
+  <path d="M718 220 C 718 196, 718 178, 718 160" fill="none" stroke="#0A0A0A" stroke-width="2"/>
+  <!-- floating ideas tiny dots -->
+  <circle cx="160" cy="120" r="3" fill="#5B5CFF"/>
+  <circle cx="640" cy="120" r="3" fill="#FF7058"/>
+  <circle cx="400" cy="80" r="4" fill="#7940C9"/>
+</svg>

@@ -1,0 +1,65 @@
+<svg viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Stylized illustration of a team gathering and celebrating">
+  <defs>
+    <linearGradient id="ce-glow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#ECECFF"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="500" width="600" height="100" fill="url(#ce-glow)"/>
+  <line x1="0" y1="500" x2="600" y2="500" stroke="#0A0A0A" stroke-width="2.4"/>
+  <!-- long table -->
+  <rect x="80" y="380" width="440" height="20" rx="4" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="2.4"/>
+  <line x1="120" y1="400" x2="120" y2="500" stroke="#0A0A0A" stroke-width="2.4"/>
+  <line x1="480" y1="400" x2="480" y2="500" stroke="#0A0A0A" stroke-width="2.4"/>
+  <!-- 4 plates -->
+  <ellipse cx="160" cy="380" rx="28" ry="8" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="2"/>
+  <ellipse cx="260" cy="380" rx="28" ry="8" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="2"/>
+  <ellipse cx="340" cy="380" rx="28" ry="8" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="2"/>
+  <ellipse cx="440" cy="380" rx="28" ry="8" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="2"/>
+  <!-- food bumps on plates -->
+  <circle cx="160" cy="374" r="6" fill="#FF7058"/>
+  <circle cx="260" cy="374" r="6" fill="#7940C9"/>
+  <circle cx="340" cy="374" r="6" fill="#008EE6"/>
+  <circle cx="440" cy="374" r="6" fill="#28538F"/>
+  <!-- 4 figures sitting/standing -->
+  <g>
+    <circle cx="120" cy="280" r="22" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="2.4"/>
+    <path d="M 92 340 C 92 314, 148 314, 148 340" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="2.4"/>
+    <line x1="100" y1="340" x2="100" y2="380" stroke="#0A0A0A" stroke-width="2.4"/>
+    <line x1="140" y1="340" x2="140" y2="380" stroke="#0A0A0A" stroke-width="2.4"/>
+  </g>
+  <g>
+    <circle cx="220" cy="260" r="22" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="2.4"/>
+    <path d="M 192 320 C 192 294, 248 294, 248 320" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="2.4"/>
+    <line x1="200" y1="320" x2="200" y2="380" stroke="#0A0A0A" stroke-width="2.4"/>
+    <line x1="240" y1="320" x2="240" y2="380" stroke="#0A0A0A" stroke-width="2.4"/>
+  </g>
+  <g>
+    <circle cx="380" cy="260" r="22" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="2.4"/>
+    <path d="M 352 320 C 352 294, 408 294, 408 320" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="2.4"/>
+    <line x1="360" y1="320" x2="360" y2="380" stroke="#0A0A0A" stroke-width="2.4"/>
+    <line x1="400" y1="320" x2="400" y2="380" stroke="#0A0A0A" stroke-width="2.4"/>
+  </g>
+  <g>
+    <circle cx="480" cy="280" r="22" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="2.4"/>
+    <path d="M 452 340 C 452 314, 508 314, 508 340" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="2.4"/>
+    <line x1="460" y1="340" x2="460" y2="380" stroke="#0A0A0A" stroke-width="2.4"/>
+    <line x1="500" y1="340" x2="500" y2="380" stroke="#0A0A0A" stroke-width="2.4"/>
+  </g>
+  <!-- bunting overhead -->
+  <path d="M 60 140 Q 300 80, 540 140" fill="none" stroke="#0A0A0A" stroke-width="2"/>
+  <g>
+    <polygon points="100,142 88,168 112,168" fill="#FF7058" stroke="#0A0A0A" stroke-width="1.6"/>
+    <polygon points="180,138 168,164 192,164" fill="#5B5CFF" stroke="#0A0A0A" stroke-width="1.6"/>
+    <polygon points="260,128 248,154 272,154" fill="#008EE6" stroke="#0A0A0A" stroke-width="1.6"/>
+    <polygon points="340,128 328,154 352,154" fill="#7940C9" stroke="#0A0A0A" stroke-width="1.6"/>
+    <polygon points="420,138 408,164 432,164" fill="#FF7058" stroke="#0A0A0A" stroke-width="1.6"/>
+    <polygon points="500,142 488,168 512,168" fill="#5B5CFF" stroke="#0A0A0A" stroke-width="1.6"/>
+  </g>
+  <!-- confetti dots -->
+  <circle cx="80" cy="200" r="4" fill="#FF7058"/>
+  <circle cx="540" cy="200" r="4" fill="#7940C9"/>
+  <circle cx="160" cy="80" r="3" fill="#5B5CFF"/>
+  <circle cx="440" cy="80" r="3" fill="#008CE2"/>
+  <circle cx="300" cy="60" r="4" fill="#FF7058"/>
+</svg>

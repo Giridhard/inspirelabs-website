@@ -1,0 +1,18 @@
+# macOS
+.DS_Store
+
+# Dev/iteration leftovers
+index-cinematic-backup.html
+logo_compare.html
+
+# Removed pages (kept as files in outputs but not on the site)
+customers.html
+impact.html
+investors.html
+press.html
+culture.html
+
+# Editor temp
+*.bak
+*.tmp
+.fuse_hidden*

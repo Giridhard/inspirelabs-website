@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" width="320" height="80">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a3a2e"/>
+      <stop offset="100%" stop-color="#40916c"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#86efac"/>
+      <stop offset="100%" stop-color="#4ade80"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Icon mark -->
+  <rect x="0" y="0" width="80" height="80" rx="17" fill="url(#bg)"/>
+  <polyline
+    points="10,19 21,56 40,28 59,56 70,19"
+    fill="none" stroke="white" stroke-width="8"
+    stroke-linecap="round" stroke-linejoin="round"
+  />
+  <line x1="24" y1="66" x2="56" y2="66" stroke="url(#accent)" stroke-width="3.5" stroke-linecap="round"/>
+  <circle cx="56" cy="66" r="2.5" fill="#86efac"/>
+
+  <!-- WriteGenius text -->
+  <text
+    x="96" y="34"
+    font-family="'Segoe UI', system-ui, -apple-system, sans-serif"
+    font-size="26"
+    font-weight="700"
+    fill="#1a3a2e"
+    letter-spacing="-0.5"
+  >Write</text>
+  <text
+    x="96" y="34"
+    font-family="'Segoe UI', system-ui, -apple-system, sans-serif"
+    font-size="26"
+    font-weight="700"
+    fill="#2d6a4f"
+    letter-spacing="-0.5"
+    dx="74"
+  >Genius</text>
+
+  <!-- Tagline -->
+  <text
+    x="96" y="56"
+    font-family="'Segoe UI', system-ui, -apple-system, sans-serif"
+    font-size="12"
+    font-weight="400"
+    fill="#6b7280"
+    letter-spacing="0.2"
+  >Free AI Writing Tools</text>
+
+  <!-- Green accent bar under tagline -->
+  <line x1="96" y1="63" x2="200" y2="63" stroke="url(#accent)" stroke-width="2" stroke-linecap="round"/>
+</svg>

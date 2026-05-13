@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 600" fill="none" aria-hidden="true">
+  <defs>
+    <radialGradient id="meshA" cx="0.2" cy="0.25" r="0.6">
+      <stop offset="0%" stop-color="#5B5CFF" stop-opacity="0.32"/>
+      <stop offset="55%" stop-color="#7B7CFF" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="meshB" cx="0.75" cy="0.7" r="0.7">
+      <stop offset="0%" stop-color="#4040DD" stop-opacity="0.28"/>
+      <stop offset="60%" stop-color="#5B5CFF" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="meshC" cx="0.5" cy="0.5" r="0.55">
+      <stop offset="0%" stop-color="#9596FF" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="node" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#5B5CFF" stop-opacity="0.95"/>
+      <stop offset="60%" stop-color="#5B5CFF" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#5B5CFF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="nodeDeep" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#4040DD" stop-opacity="0.95"/>
+      <stop offset="60%" stop-color="#4040DD" stop-opacity="0.30"/>
+      <stop offset="100%" stop-color="#4040DD" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1600" height="600" fill="url(#meshA)"/>
+  <rect width="1600" height="600" fill="url(#meshB)"/>
+  <rect width="1600" height="600" fill="url(#meshC)"/>
+
+  <g stroke="#5B5CFF" stroke-opacity="0.22" stroke-width="1" fill="none">
+    <path d="M150 180 C 320 120, 420 220, 560 200"/>
+    <path d="M560 200 C 700 180, 760 320, 880 300"/>
+    <path d="M880 300 C 1000 290, 1080 200, 1220 220"/>
+    <path d="M1220 220 C 1330 240, 1420 180, 1500 200"/>
+    <path d="M200 420 C 360 400, 460 460, 600 430"/>
+    <path d="M600 430 C 760 410, 820 500, 980 470"/>
+    <path d="M980 470 C 1120 450, 1240 440, 1380 430"/>
+    <path d="M150 180 C 220 280, 280 360, 200 420"/>
+    <path d="M560 200 C 540 300, 620 380, 600 430"/>
+    <path d="M880 300 C 900 380, 940 440, 980 470"/>
+    <path d="M1220 220 C 1260 320, 1340 380, 1380 430"/>
+    <path d="M420 110 C 500 200, 540 220, 560 200" stroke-opacity="0.14"/>
+    <path d="M1080 520 C 1120 500, 1180 490, 1220 220" stroke-opacity="0.10"/>
+  </g>
+
+  <g>
+    <circle cx="150" cy="180" r="44" fill="url(#node)"/>
+    <circle cx="150" cy="180" r="6" fill="#5B5CFF"/>
+    <circle cx="560" cy="200" r="56" fill="url(#node)"/>
+    <circle cx="560" cy="200" r="7" fill="#5B5CFF"/>
+    <circle cx="880" cy="300" r="64" fill="url(#nodeDeep)"/>
+    <circle cx="880" cy="300" r="8" fill="#4040DD"/>
+    <circle cx="1220" cy="220" r="48" fill="url(#node)"/>
+    <circle cx="1220" cy="220" r="6" fill="#5B5CFF"/>
+    <circle cx="1500" cy="200" r="36" fill="url(#node)"/>
+    <circle cx="1500" cy="200" r="5" fill="#5B5CFF"/>
+    <circle cx="200" cy="420" r="40" fill="url(#node)"/>
+    <circle cx="200" cy="420" r="5" fill="#5B5CFF"/>
+    <circle cx="600" cy="430" r="52" fill="url(#nodeDeep)"/>
+    <circle cx="600" cy="430" r="7" fill="#4040DD"/>
+    <circle cx="980" cy="470" r="46" fill="url(#node)"/>
+    <circle cx="980" cy="470" r="6" fill="#5B5CFF"/>
+    <circle cx="1380" cy="430" r="42" fill="url(#node)"/>
+    <circle cx="1380" cy="430" r="6" fill="#5B5CFF"/>
+    <circle cx="420" cy="110" r="28" fill="url(#node)"/>
+    <circle cx="420" cy="110" r="4" fill="#5B5CFF"/>
+    <circle cx="1080" cy="520" r="32" fill="url(#node)"/>
+    <circle cx="1080" cy="520" r="5" fill="#5B5CFF"/>
+    <circle cx="780" cy="80" r="22" fill="url(#node)"/>
+    <circle cx="780" cy="80" r="4" fill="#5B5CFF"/>
+  </g>
+</svg>

@@ -1,0 +1,9 @@
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Inspirelabs">
+  <rect x="0" y="0" width="64" height="64" rx="14" fill="#FAF7F1"/>
+  <g transform="translate(16 16)">
+    <rect x="0"  y="0"  width="14" height="14" fill="#FF7A45"/>
+    <rect x="18" y="0"  width="14" height="14" fill="#0E0F0A"/>
+    <rect x="0"  y="18" width="14" height="14" fill="#6F7583"/>
+    <rect x="18.75" y="18.75" width="12.5" height="12.5" fill="none" stroke="#0E0F0A" stroke-width="1.4" stroke-dasharray="2 1.8"/>
+  </g>
+</svg>

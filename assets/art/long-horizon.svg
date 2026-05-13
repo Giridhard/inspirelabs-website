@@ -1,0 +1,47 @@
+<svg viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Stylized illustration of a person looking out toward a long-term horizon">
+  <defs>
+    <linearGradient id="lh-glow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ECECFF"/>
+      <stop offset="1" stop-color="#FFFFFF"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="460" width="600" height="140" fill="url(#lh-glow)"/>
+  <line x1="0" y1="460" x2="600" y2="460" stroke="#0A0A0A" stroke-width="2.4"/>
+  <!-- window frame -->
+  <rect x="320" y="120" width="220" height="280" rx="8" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="2.4"/>
+  <line x1="430" y1="120" x2="430" y2="400" stroke="#0A0A0A" stroke-width="1.8"/>
+  <line x1="320" y1="260" x2="540" y2="260" stroke="#0A0A0A" stroke-width="1.8"/>
+  <!-- sun in window -->
+  <circle cx="380" cy="200" r="22" fill="#FFFFFF" stroke="#5B5CFF" stroke-width="2.4"/>
+  <line x1="380" y1="160" x2="380" y2="172" stroke="#5B5CFF" stroke-width="2"/>
+  <line x1="380" y1="230" x2="380" y2="242" stroke="#5B5CFF" stroke-width="2"/>
+  <line x1="340" y1="200" x2="352" y2="200" stroke="#5B5CFF" stroke-width="2"/>
+  <line x1="408" y1="200" x2="420" y2="200" stroke="#5B5CFF" stroke-width="2"/>
+  <line x1="350" y1="172" x2="358" y2="180" stroke="#5B5CFF" stroke-width="2"/>
+  <line x1="402" y1="220" x2="410" y2="228" stroke="#5B5CFF" stroke-width="2"/>
+  <!-- chart line rising across the window panes -->
+  <path d="M 326 380 L 360 340 L 400 350 L 440 290 L 480 270 L 520 210" fill="none" stroke="#FF7058" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="326" cy="380" r="4" fill="#FF7058"/>
+  <circle cx="400" cy="350" r="4" fill="#FF7058"/>
+  <circle cx="480" cy="270" r="4" fill="#FF7058"/>
+  <circle cx="520" cy="210" r="5" fill="#FF7058" stroke="#0A0A0A" stroke-width="1.8"/>
+  <!-- year markers below window -->
+  <text x="340" y="426" font-family="Figtree, sans-serif" font-weight="700" font-size="12" letter-spacing="0.05em" fill="#8C92A0">2013</text>
+  <text x="520" y="426" font-family="Figtree, sans-serif" font-weight="700" font-size="12" letter-spacing="0.05em" fill="#8C92A0">2035</text>
+  <line x1="340" y1="410" x2="540" y2="410" stroke="#ECEEF2" stroke-width="1.4"/>
+  <!-- figure looking at window -->
+  <circle cx="180" cy="260" r="32" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="2.4"/>
+  <path d="M 140 360 C 140 322, 220 322, 220 360" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="2.4"/>
+  <line x1="150" y1="360" x2="150" y2="460" stroke="#0A0A0A" stroke-width="2.4"/>
+  <line x1="210" y1="360" x2="210" y2="460" stroke="#0A0A0A" stroke-width="2.4"/>
+  <!-- looking arrow eye line -->
+  <path d="M 212 250 Q 280 240, 326 240" fill="none" stroke="#0A0A0A" stroke-width="1.6" stroke-dasharray="3 5" stroke-linecap="round"/>
+  <!-- coffee cup beside -->
+  <rect x="64" y="380" width="44" height="40" rx="4" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="2"/>
+  <path d="M 108 388 C 122 388, 122 412, 108 412" fill="none" stroke="#0A0A0A" stroke-width="2"/>
+  <path d="M 76 372 Q 80 360, 86 372" fill="none" stroke="#5B5CFF" stroke-width="2" stroke-linecap="round"/>
+  <path d="M 90 372 Q 94 360, 100 372" fill="none" stroke="#5B5CFF" stroke-width="2" stroke-linecap="round"/>
+  <!-- small horizon dots -->
+  <circle cx="80" cy="120" r="4" fill="#5B5CFF"/>
+  <circle cx="240" cy="100" r="3" fill="#7940C9"/>
+</svg>

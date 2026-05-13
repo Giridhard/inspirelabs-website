@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Services, Four pillars of growth | Inspirelabs</title>
+<meta name="description" content="Awareness, Discovery, Engagement, Acquisition. The Inspirelabs services taxonomy: 24 services across four pillars, run on a single growth platform." />
+<meta name="theme-color" content="#FFFFFF" />
+<link rel="canonical" href="https://inspirelabs.com/services.html" />
+<link rel="icon" type="image/svg+xml" href="assets/brand/inspirelabs-mark.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300..900&family=JetBrains+Mono:wght@400..700&display=swap" rel="stylesheet" />
+
+<style>
+:root { --white: #FFFFFF; --bg: #FFFFFF; --warm: #FAF7F1; --text: #0E0F0A; --text-secondary: #6F7583; --text-tertiary: #8C92A0; --hairline: #ECEEF2; --line: #DEE1E8; --accent: #FF7A45; --accent-soft: #FFE7DC; --accent-deep: #E55E2A; --tile-dark: #0F1117; --max-w: 1800px; --pad-x: clamp(20px, 3vw, 56px); --ease: cubic-bezier(0.16, 1, 0.3, 1); }
+
+/* Brand: JetBrains Mono on all small labels / eyebrows / metadata */
+.hero-eyebrow,
+.hero-stamp,
+.about-hero-eyebrow,
+.section-eyebrow,
+.plan-list-year,
+.about-num-lbl,
+.deliver-row-num,
+.pillar-eyebrow,
+.numbers-cell-lbl,
+.biz-tile-tag,
+.bleed-photo-stamp,
+.fact-eyebrow,
+.tile-eyebrow,
+.category-eyebrow,
+.kpi-label,
+.tag-label,
+.service-eyebrow,
+.product-eyebrow,
+.career-eyebrow,
+.trust-eyebrow,
+.insight-eyebrow,
+.chapter-tag,
+.chapter-num,
+.eyebrow,
+.meta-row,
+.mono { font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace; }
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Hanken Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); font-size: 17px; font-weight: 400; line-height: 1.5; -webkit-font-smoothing: antialiased; }
+img, svg { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; cursor: pointer; border: none; background: none; color: inherit; }
+ul, ol { list-style: none; }
+::selection { background: var(--accent); color: var(--white); }
+.container { width: min(88%, var(--max-w)); margin: 0 auto; padding: 0 var(--pad-x); }
+@media (max-width: 1100px) { .container { width: 100%; } }
+
+.nav { position: sticky; top: 0; z-index: 100; background: rgba(255, 255, 255, 0.92); backdrop-filter: saturate(140%) blur(14px); padding: 22px 0; border-bottom: 1px solid transparent; transition: border-color 0.25s var(--ease); }
+.nav.scrolled { border-bottom-color: var(--hairline); }
+.nav-inner { display: flex; align-items: center; justify-content: space-between; gap: 32px; }
+.nav-brand { display: inline-flex; align-items: center; color: var(--text); line-height: 1; }
+
+.nav-brand img { height: 24px; width: auto; display: block; }
+.footer-brand-block .nav-brand img { height: 32px; }
+.nav.on-hero .nav-brand img { filter: invert(1) brightness(2); }
+.nav-links { display: flex; gap: 36px; align-items: center; }
+.nav-link { font-size: 15px; font-weight: 500; color: var(--text); padding: 10px 0; position: relative; transition: color 0.2s var(--ease); }
+.nav-link:hover { color: var(--accent-deep); }
+.nav-link.active::after { content: ''; position: absolute; bottom: 4px; left: 0; right: 0; height: 2px; background: var(--accent); }
+.nav-toggle { display: none; width: 36px; height: 36px; }
+.nav-toggle span { display: block; width: 22px; height: 1.5px; background: var(--text); margin: 5px auto; }
+@media (max-width: 880px) { .nav-links { display: none; } .nav-toggle { display: block; } }
+
+h1, h2, h3, h4, h5 { color: var(--text); font-weight: 400; letter-spacing: -0.02em; line-height: 1.06; text-wrap: balance; }
+p, .lead, .section-intro { text-wrap: pretty; }
+.display-1 { font-size: clamp(48px, 6.4vw, 124px); font-weight: 400; letter-spacing: -0.03em; line-height: 1.04; }
+.display-2 { font-size: clamp(36px, 5vw, 72px); font-weight: 400; letter-spacing: -0.025em; line-height: 1.06; }
+.display-3 { font-size: clamp(24px, 3vw, 36px); font-weight: 400; letter-spacing: -0.02em; line-height: 1.15; }
+
+section { padding: clamp(48px, 5.5vw, 90px) 0; position: relative; }
+section.tight { padding: clamp(32px, 3.5vw, 55px) 0; }
+.section-eyebrow { display: inline-block; font-size: clamp(20px, 2.2vw, 26px); font-weight: 600; color: var(--text); letter-spacing: -0.02em; padding-bottom: 6px; border-bottom: 2px solid var(--accent); margin-bottom: 32px; }
+.section-title-xl { position: relative; font-size: clamp(30px, 3.2vw, 48px); font-weight: 500; color: var(--text); letter-spacing: -0.005em; line-height: 1.08; margin: 0 0 32px; text-wrap: balance; max-width: 24ch; }
+.section-title-xl::after { content: ''; display: block; width: 72px; height: 3px; background: var(--accent); margin-top: 14px; }
+.biz-intro { font-size: clamp(16px, 1.4vw, 20px); font-weight: 300; line-height: 1.5; color: #414A5D; max-width: 100%; width: 100%; text-wrap: pretty; }
+.section-intro { font-size: clamp(15px, 1.2vw, 17px); line-height: 1.6; color: var(--text-secondary); max-width: 64ch; }
+.tlink { display: inline-block; font-size: 15px; font-weight: 500; color: var(--text); padding-bottom: 2px; border-bottom: 1.5px solid var(--text); transition: color 0.2s var(--ease), border-color 0.2s var(--ease); }
+.tlink:hover { color: var(--accent-deep); border-color: var(--accent); }
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100svh;
+  padding: clamp(170px, 24vh, 300px) 0 clamp(56px, 6vh, 96px);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.hero-grid { position: absolute; inset: 0; background-image: linear-gradient(to right, rgba(15, 17, 23, 0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(15, 17, 23, 0.05) 1px, transparent 1px); background-size: 88px 88px; mask-image: radial-gradient(ellipse 60% 70% at 50% 40%, black 0%, transparent 78%); -webkit-mask-image: radial-gradient(ellipse 60% 70% at 50% 40%, black 0%, transparent 78%); pointer-events: none; z-index: 0; }
+.hero-inner { position: relative; z-index: 2; }
+.hero-eyebrow { font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-tertiary); font-weight: 500; display: inline-flex; align-items: center; gap: 12px; margin-bottom: 40px; }
+.hero h1 .line { display: block; }
+.hero h1 .line + .line { margin-top: 0.18em; }
+
+/* Centered brand-book hero */
+.hero-text-center {
+  text-align: center;
+  max-width: 940px;
+  margin: 0 auto;
+}
+.hero-text-center .hero-eyebrow { margin-bottom: clamp(28px, 3vw, 40px); }
+.hero-text-center .hero-eyebrow::before { display: none; }
+.hero-text-center h1 { max-width: 18ch; margin: 0 auto; }
+.hero-text-center .hero-lead {
+  margin: clamp(24px, 2.4vw, 36px) auto 0;
+  max-width: 56ch;
+  font-size: clamp(15.5px, 1.2vw, 18px);
+  line-height: 1.55;
+  color: var(--text-secondary);
+}
+
+/* Pillar editorial row under hero — hairline, no boxes */
+.pillar-row {
+  padding: clamp(56px, 6.5vw, 96px) 0;
+}
+.pillar-row-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+@media (max-width: 880px) { .pillar-row-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 520px) { .pillar-row-grid { grid-template-columns: 1fr; } }
+.pillar-row-item {
+  display: flex; flex-direction: column; gap: 14px;
+  padding: clamp(12px, 1.4vw, 20px) clamp(20px, 2.4vw, 36px);
+  border-right: 1px solid var(--hairline);
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+  transition: background 0.25s var(--ease);
+}
+.pillar-row-item:last-child { border-right: none; }
+@media (max-width: 880px) {
+  .pillar-row-item:nth-child(2n) { border-right: none; }
+  .pillar-row-item:nth-child(1),
+  .pillar-row-item:nth-child(2) { border-bottom: 1px solid var(--hairline); padding-bottom: clamp(24px, 2.6vw, 36px); }
+  .pillar-row-item:nth-child(3),
+  .pillar-row-item:nth-child(4) { padding-top: clamp(24px, 2.6vw, 36px); }
+}
+@media (max-width: 520px) {
+  .pillar-row-item { border-right: none !important; border-bottom: 1px solid var(--hairline) !important; padding: clamp(20px, 2.4vw, 32px) 0; }
+  .pillar-row-item:last-child { border-bottom: none !important; }
+}
+.pillar-row-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; letter-spacing: 0.10em; text-transform: uppercase;
+  color: var(--text-tertiary);
+  display: inline-flex; align-items: center; gap: 10px;
+}
+.pillar-row-num::before {
+  content: '';
+  display: inline-block;
+  width: 18px; height: 2px;
+  background: var(--tone, var(--accent));
+}
+.pillar-row-name {
+  font-size: clamp(28px, 3vw, 44px);
+  font-weight: 400; letter-spacing: -0.025em; line-height: 1.05;
+  color: var(--text);
+}
+.pillar-row-note {
+  font-size: 14.5px; line-height: 1.55; color: var(--text-secondary);
+  max-width: 28ch;
+}
+.pillar-row-arrow {
+  margin-top: auto;
+  padding-top: 18px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; letter-spacing: 0.10em; text-transform: uppercase;
+  color: var(--text-tertiary);
+  display: inline-flex; align-items: center; gap: 8px;
+  transition: color 0.25s var(--ease), gap 0.25s var(--ease);
+}
+.pillar-row-item:hover .pillar-row-arrow { color: var(--tone, var(--accent)); gap: 12px; }
+.pillar-row-item:hover .pillar-row-name { color: var(--tone, var(--text)); }
+
+/* Brand wall */
+.proof-block { padding: clamp(64px, 7vw, 110px) 0; }
+.proof-head { margin-bottom: clamp(40px, 4.5vw, 64px); max-width: 100%; }
+.proof-head h2 { font-size: clamp(30px, 3.2vw, 48px); font-weight: 400; letter-spacing: -0.025em; line-height: 1.1; text-wrap: balance; }
+.proof-head p { margin-top: 20px; font-size: clamp(15.5px, 1.2vw, 18px); line-height: 1.55; color: var(--text-secondary); max-width: 100%; text-wrap: pretty; }
+.brand-grid { display: grid; grid-template-columns: repeat(6, 1fr); border-top: 1px solid var(--hairline); border-left: 1px solid var(--hairline); }
+.brand-cell { aspect-ratio: 2/1; display: flex; align-items: center; justify-content: center; padding: 24px; border-right: 1px solid var(--hairline); border-bottom: 1px solid var(--hairline); transition: background 0.2s var(--ease); }
+.brand-cell:hover { background: var(--accent-soft); }
+.brand-cell img { max-height: 32px; max-width: 100%; opacity: 0.55; filter: grayscale(1); transition: opacity 0.2s, filter 0.2s; }
+.brand-cell:hover img { opacity: 1; filter: none; }
+.brand-cell.brand-cell-more {
+  font-size: clamp(16px, 1.4vw, 20px);
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  color: var(--accent-deep);
+}
+.brand-cell.brand-cell-more:hover { background: transparent; }
+@media (max-width: 1000px) { .brand-grid { grid-template-columns: repeat(4, 1fr); } }
+@media (max-width: 640px) { .brand-grid { grid-template-columns: repeat(3, 1fr); } }
+
+/* By category — editorial hairline rows */
+.cats-block { padding: clamp(64px, 7vw, 110px) 0; background: var(--white); }
+.categories {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-top: 1px solid var(--hairline);
+}
+@media (max-width: 880px) { .categories { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .categories { grid-template-columns: 1fr; } }
+.cat-card {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  padding: clamp(18px, 1.8vw, 24px) clamp(18px, 1.8vw, 28px);
+  border-bottom: 1px solid var(--hairline);
+  border-right: 1px solid var(--hairline);
+  background: var(--white);
+  transition: background 0.2s var(--ease);
+}
+.cat-card:hover { background: var(--accent-soft); }
+.cat-card:nth-child(3n) { border-right: none; }
+@media (max-width: 880px) {
+  .cat-card { border-right: 1px solid var(--hairline); }
+  .cat-card:nth-child(3n) { border-right: 1px solid var(--hairline); }
+  .cat-card:nth-child(2n) { border-right: none; }
+}
+@media (max-width: 560px) {
+  .cat-card { border-right: none; }
+}
+.cat-card.cat-card-more {
+  justify-content: flex-start;
+  color: var(--accent-deep);
+  font-weight: 500;
+  font-size: clamp(15px, 1.15vw, 17px);
+  letter-spacing: -0.01em;
+}
+.cat-card.cat-card-more:hover { background: var(--accent-soft); }
+.cat-card-name {
+  font-size: clamp(16px, 1.25vw, 19px);
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  color: var(--text);
+  line-height: 1.2;
+}
+.cat-card-count {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  font-weight: 500;
+  white-space: nowrap;
+}
+.cat-card-count strong {
+  color: var(--accent-deep);
+  font-weight: 600;
+}
+
+/* Case studies — clean light cards */
+.cases-block { padding: clamp(80px, 9vw, 140px) 0; background: var(--white); }
+.cases-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(20px, 2vw, 32px);
+}
+@media (max-width: 980px) { .cases-grid { grid-template-columns: 1fr; gap: 16px; } }
+.case-card {
+  background: var(--white);
+  border: 1px solid var(--hairline);
+  border-radius: 18px;
+  padding: clamp(28px, 2.8vw, 40px);
+  display: flex; flex-direction: column;
+  gap: 18px;
+  transition: border-color 0.3s var(--ease), transform 0.3s var(--ease);
+}
+.case-card:hover {
+  border-color: var(--text);
+  transform: translateY(-4px);
+}
+.case-card-tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--accent-deep);
+  font-weight: 600;
+}
+.case-card-stat {
+  font-size: clamp(36px, 3.8vw, 56px);
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  color: var(--accent-deep);
+  margin-top: 4px;
+}
+.case-card-stat-unit {
+  font-size: 13px;
+  font-family: 'JetBrains Mono', monospace;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  margin-top: 8px;
+}
+.case-card-divider {
+  height: 1px;
+  background: var(--hairline);
+  margin: 8px 0;
+}
+.case-card h3 {
+  font-size: clamp(20px, 1.8vw, 24px);
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  line-height: 1.25;
+  color: var(--text);
+}
+.case-card p {
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* How we work — three-up editorial */
+.how-block { padding: clamp(64px, 7vw, 110px) 0; }
+.how-head { margin-bottom: clamp(40px, 4.5vw, 64px); max-width: 64ch; }
+.how-head h2 { font-size: clamp(30px, 3.2vw, 48px); font-weight: 400; letter-spacing: -0.025em; line-height: 1.1; }
+.how-head p { margin-top: 20px; font-size: clamp(15.5px, 1.2vw, 18px); line-height: 1.55; color: var(--text-secondary); max-width: 58ch; }
+.how-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(28px, 3vw, 56px);
+}
+@media (max-width: 880px) { .how-grid { grid-template-columns: 1fr; gap: 32px; } }
+.how-cell { padding-top: 24px; border-top: 1px solid var(--text); }
+.how-cell-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; letter-spacing: 0.10em; text-transform: uppercase;
+  color: var(--accent); margin-bottom: 18px;
+}
+.how-cell h3 {
+  font-size: clamp(20px, 1.8vw, 26px);
+  font-weight: 500; letter-spacing: -0.02em; line-height: 1.15;
+  margin-bottom: 12px;
+}
+.how-cell p { font-size: 15.5px; line-height: 1.55; color: var(--text-secondary); }
+
+/* Taller hero specifically for the deliver hero — vertically centered headline */
+.hero-deliver {
+  min-height: 100vh;
+  min-height: 100svh;
+  padding: clamp(64px, 8vh, 120px) 0;
+}
+.hero-deliver .hero-grid { display: none; }
+
+/* Hero background — scattered ghosted words across the entire hero */
+.hero-bg-words {
+  position: absolute;
+  top: 0; bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(88%, var(--max-w));
+  padding: 0 var(--pad-x);
+  z-index: 1;
+  pointer-events: none;
+  user-select: none;
+  overflow: hidden;
+  mask-image: radial-gradient(ellipse 80% 90% at 50% 50%, rgba(0,0,0,1) 0%, rgba(0,0,0,0.85) 60%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 80% 90% at 50% 50%, rgba(0,0,0,1) 0%, rgba(0,0,0,0.85) 60%, transparent 100%);
+}
+@media (max-width: 1100px) { .hero-bg-words { width: 100%; } }
+.hero-bg-words .bw {
+  position: absolute;
+  display: block;
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  color: var(--text);
+  white-space: nowrap;
+  opacity: 0.035;
+}
+.hero-bg-words .bw:nth-child(3n+1) { opacity: 0.030; }
+.hero-bg-words .bw:nth-child(3n+2) { opacity: 0.045; }
+.hero-bg-words .bw:nth-child(4n)   { opacity: 0.025; }
+.hero-bg-words .bw-em {
+  font-style: italic;
+  opacity: 0.06;
+}
+@media (max-width: 700px) {
+  /* On narrow screens, only show a subset and keep them in safe zones to avoid clutter */
+  .hero-bg-words .bw { display: none; }
+  .hero-bg-words .bw:nth-child(2n+1) { display: block; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-bg-words { opacity: 1; }
+}
+
+footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid var(--hairline); margin-top: 56px; }
+.footer-grid { display: grid; grid-template-columns: 1.6fr repeat(4, 1fr); gap: 56px; }
+.footer-brand-block .nav-brand { font-size: 24px; }
+.footer-brand-block p { margin-top: 18px; font-size: 14.5px; color: var(--text-secondary); line-height: 1.6; max-width: 36ch; }
+.footer-brand-block address { margin-top: 16px; font-size: 13px; color: var(--text-tertiary); line-height: 1.55; font-style: normal; }
+.footer-brand-block address a { color: var(--text); }
+.footer-col h5 { font-size: 11px; font-weight: 700; letter-spacing: 0.10em; text-transform: uppercase; color: var(--text-tertiary); margin-bottom: 18px; }
+.footer-col a { display: block; font-size: 14px; color: var(--text); padding: 5px 0; }
+.footer-col a:hover { color: var(--accent-deep); }
+.footer-bottom { margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--hairline); display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; font-size: 12.5px; color: var(--text-tertiary); }
+.footer-bottom-links { display: flex; gap: 20px; }
+.footer-bottom-links a { color: var(--text-tertiary); }
+.footer-bottom-links a:hover { color: var(--text); }
+@media (max-width: 1000px) { .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; } .footer-brand-block { grid-column: 1 / -1; } }
+@media (max-width: 600px) { .footer-grid { grid-template-columns: 1fr; } .footer-brand-block { grid-column: auto; } }
+
+.reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.7s var(--ease), transform 0.7s var(--ease); }
+.reveal.in-view { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } html { scroll-behavior: auto; } }
+
+/* === Service pillar === */
+.svc-pillar {
+  padding: clamp(64px, 7vw, 110px) 0;
+  background: var(--white);
+}
+.svc-pillar-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(56px, 6vw, 100px);
+  align-items: start;
+}
+@media (max-width: 980px) {
+  .svc-pillar-inner { grid-template-columns: 1fr; gap: 40px; }
+}
+.svc-pillar-text {
+  display: flex; flex-direction: column;
+  gap: clamp(20px, 2.4vw, 32px);
+  max-width: 56ch;
+}
+.svc-pillar-label {
+  font-size: clamp(40px, 4.4vw, 72px);
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  line-height: 1;
+  color: var(--tone, var(--text));
+  display: block;
+}
+@media (max-width: 980px) {
+  .svc-pillar-label { white-space: normal; }
+}
+@media (max-width: 980px) {
+  .svc-pillar-label { position: static; }
+}
+.svc-pillar-claim {
+  font-size: clamp(26px, 2.6vw, 38px);
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  line-height: 1.25;
+  margin: 0;
+  color: var(--text);
+  text-wrap: pretty;
+}
+.svc-pillar-lead {
+  font-size: clamp(16px, 1.3vw, 19px);
+  font-weight: 300;
+  line-height: 1.6;
+  color: #414A5D;
+  margin: 0;
+  text-wrap: pretty;
+}
+.svc-pillar-services {
+  list-style: none; padding: 0; margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-top: 1px solid var(--hairline);
+}
+@media (max-width: 600px) { .svc-pillar-services { grid-template-columns: 1fr; } }
+.svc-pillar-service {
+  padding: clamp(22px, 2.2vw, 32px) 0;
+  border-bottom: 1px solid var(--hairline);
+  display: flex; flex-direction: column;
+  transition: background 0.3s var(--ease);
+}
+.svc-pillar-service:nth-child(odd) {
+  padding-right: clamp(20px, 2vw, 32px);
+  border-right: 1px solid var(--hairline);
+}
+.svc-pillar-service:nth-child(even) {
+  padding-left: clamp(20px, 2vw, 32px);
+}
+@media (max-width: 600px) {
+  .svc-pillar-service:nth-child(odd) { padding-right: 0; border-right: none; }
+  .svc-pillar-service:nth-child(even) { padding-left: 0; }
+}
+.svc-pillar-service:hover {
+  background: color-mix(in srgb, var(--tone) 4%, transparent);
+}
+.svc-pillar-service-num {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--tone, var(--text-tertiary));
+  font-variant-numeric: tabular-nums;
+  margin-bottom: 10px;
+}
+.svc-pillar-service-body h3 {
+  font-size: clamp(18px, 1.4vw, 22px);
+  font-weight: 500;
+  letter-spacing: -0.018em;
+  line-height: 1.2;
+  margin: 0 0 6px;
+  color: var(--text);
+}
+.svc-pillar-service-body p {
+  font-size: 14.5px;
+  line-height: 1.55;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* === We deliver — editorial hairline rows (matches home reasons-grid) === */
+.deliver-list {
+  padding: clamp(48px, 5.5vw, 90px) 0;
+  background: var(--white);
+}
+.deliver-list-head { margin-bottom: clamp(40px, 4vw, 64px); }
+.deliver-rows {
+  display: flex; flex-direction: column;
+  border-top: 1px solid var(--hairline);
+}
+.deliver-row {
+  padding: clamp(24px, 2.6vw, 40px) 0;
+  border-bottom: 1px solid var(--hairline);
+  display: grid;
+  grid-template-columns: 56px minmax(0, 1.2fr) minmax(0, 1.8fr);
+  align-items: baseline;
+  gap: clamp(20px, 2.4vw, 40px);
+}
+@media (max-width: 700px) {
+  .deliver-row { grid-template-columns: 40px 1fr; }
+  .deliver-row-note { grid-column: 2; margin-top: 6px; }
+}
+.deliver-row-num {
+  font-size: clamp(15px, 1.2vw, 18px);
+  font-weight: 500;
+  color: var(--accent);
+  letter-spacing: 0.02em;
+  font-variant-numeric: tabular-nums;
+}
+.deliver-row-word {
+  font-size: clamp(28px, 3vw, 48px);
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  margin: 0;
+  color: var(--text);
+}
+.deliver-row-note {
+  font-size: clamp(14px, 1.1vw, 16px);
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin: 0;
+  max-width: 50ch;
+}
+
+/* === Experts wall — neutral hairline tags === */
+.experts-wall {
+  padding: clamp(48px, 5.5vw, 90px) 0;
+  background: var(--white);
+  border-top: 1px solid var(--hairline);
+}
+.experts-head { margin-bottom: clamp(40px, 4vw, 60px); }
+.experts-tags {
+  display: flex; flex-wrap: wrap; gap: 10px;
+}
+.etag {
+  display: inline-block;
+  padding: 11px 22px;
+  border-radius: 999px;
+  border: 1px solid var(--hairline);
+  font-size: clamp(14px, 1.2vw, 17px);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: var(--text);
+  background: var(--white);
+  transition: transform 0.25s var(--ease), background 0.25s var(--ease), color 0.25s var(--ease), border-color 0.25s var(--ease);
+  cursor: pointer;
+}
+.etag:hover {
+  background: var(--accent);
+  color: var(--white);
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+</style>
+</head>
+
+<body>
+
+<header class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-brand" aria-label="Inspirelabs"><img src="assets/brand/inspirelabs-logo.svg" alt="Inspirelabs" /></a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="products.html" class="nav-link">Products</a>
+      <a href="services.html" class="nav-link active">Services</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="careers.html" class="nav-link">Careers</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="hero-grid"></div>
+  <div class="container hero-inner">
+    <div class="hero-text-center">
+      <h1 class="display-1">Growth, built in&#8209;house. Run for your brand.</h1>
+      <p class="hero-lead">Awareness, discovery, engagement, acquisition. Twenty-four services across four pillars, every one of them pressure-tested across our own five platforms before it ships to yours.</p>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- 01 AWARENESS -->
+<section class="svc-pillar" id="awareness" style="--tone:#28538F;">
+  <div class="container">
+    <div class="svc-pillar-inner reveal">
+      <div class="svc-pillar-text">
+        <span class="svc-pillar-label">Awareness</span>
+        <h2 class="svc-pillar-claim">Reach the right audience, on the right surface, at the right cost.</h2>
+        <p class="svc-pillar-lead">Awareness is the work of getting a brand in front of people who do not know it yet. We do not treat it as vanity spend. Every dollar gets asked the same question every acquisition dollar gets asked. First-party data from 200M network users lets us model actual lift, not impressions.</p>
+      </div>
+        <ol class="svc-pillar-services">
+          <li class="svc-pillar-service">
+            <div class="svc-pillar-service-body">
+              <h3>Influencer marketing</h3>
+              <p>Verified creator partnerships measured on lift, not reach.</p>
+            </div>
+          </li>
+          <li class="svc-pillar-service">
+            <div class="svc-pillar-service-body">
+              <h3>Social media</h3>
+              <p>Owned-channel growth with brand voice locked in.</p>
+            </div>
+          </li>
+          <li class="svc-pillar-service">
+            <div class="svc-pillar-service-body">
+              <h3>Media-house partnerships</h3>
+              <p>Premium editorial placement with first-party measurement.</p>
+            </div>
+          </li>
+          <li class="svc-pillar-service">
+            <div class="svc-pillar-service-body">
+              <h3>PR and communications</h3>
+              <p>Retained representation, not transactional press releases.</p>
+            </div>
+          </li>
+          <li class="svc-pillar-service">
+            <div class="svc-pillar-service-body">
+              <h3>Brand campaigns</h3>
+              <p>Concept to creative to launch, run end-to-end.</p>
+            </div>
+          </li>
+          <li class="svc-pillar-service">
+            <div class="svc-pillar-service-body">
+              <h3>Out-of-home</h3>
+              <p>OOH measured against post-impression conversion, not just GRPs.</p>
+            </div>
+          </li>
+        </ol>
+    </div>
+  </div>
+</section>
+
+<!-- 02 DISCOVERY -->
+<section class="svc-pillar" id="discovery" style="--tone:#FF7058;">
+  <div class="container">
+    <div class="svc-pillar-inner reveal">
+      <div class="svc-pillar-text">
+        <span class="svc-pillar-label">Discovery</span>
+        <h2 class="svc-pillar-claim">Be found when the buyer is searching. Everywhere they search.</h2>
+        <p class="svc-pillar-lead">Discovery is where intent peaks and incumbency breaks. Search has fractured across Google, AI Overviews, generative answers, app stores and comparison sites. The brand that owns discovery in 2026 owns the decade after. We run all of it, on the same stack RankDrive uses to rank 200K+ pages.</p>
+      </div>
+        <ol class="svc-pillar-services">
+          <li class="svc-pillar-service">
+            <div class="svc-pillar-service-body">
+              <h3>SEO</h3>
+              <p>Editorial-led, revenue-weighted, measured against conversion.</p>
+            </div>
+          </li>
+          <li class="svc-pillar-service">
+            <div class="svc-pillar-service-body">
+              <h3>Generative engine optimisation</h3>
+              <p>Win citations in AI-generated answers.</p>
+            </div>
+          </li>
+          <li class="svc-pillar-service">
+            <div class="svc-pillar-service-body">
+              <h3>Search generative experience</h3>
+              <p>Coverage in Google SGE and Bing Copilot.</p>
+            </div>
+          </li>
+          <li class="svc-pillar-service">
+            <div class="svc-pillar-service-body">
+              <h3>App store optimisation</h3>
+              <p>ASO across Play Store and App Store.</p>
+            </div>
+          </li>
+          <li class="svc-pillar-service">
+            <div class="svc-pillar-service-body">
+              <h3>Editorial content</h3>
+              <p>Long-form content engineered to rank and convert.</p>
+            </div>
+          </li>
+          <li class="svc-pillar-service">
+            <div class="svc-pillar-service-body">
+              <h3>App store campaigns</h3>
+              <p>Paid acquisition on Apple Search and Google App.</p>
+            </div>
+          </li>
+        </ol>
+    </div>
+  </div>
+</section>
+
+<!-- 03 ENGAGEMENT -->
+<section class="svc-pillar" id="engagement" style="--tone:#7940C9;">
+  <div class="container">
+    <div class="svc-pillar-inner reveal">
+      <div class="svc-pillar-text">
+        <span class="svc-pillar-label">Engagement</span>
+        <h2 class="svc-pillar-claim">Turn one purchase into a decade of compounding.</h2>
+        <p class="svc-pillar-lead">Engagement is the longest-tail return on growth spend. Most brands underweight it because the wins are slow and hard to attribute. We overweight it because every compounding brand on our network got there on the back of an engaged base. Lifecycle, loyalty, alliances, partnerships, editorial.</p>
+      </div>
+        <ol class="svc-pillar-services">
+          <li class="svc-pillar-service">
+            <div class="svc-pillar-service-body">
+              <h3>Strategic alliances</h3>
+              <p>Bank, telco and platform co-marketing run in-house.</p>
+            </div>
+          </li>
+          <li class="svc-pillar-service">
+            <div class="svc-pillar-service-body">
+              <h3>Lifecycle marketing</h3>
+              <p>Per-cohort orchestration across email, push, in-app.</p>
+            </div>
+          </li>
+          <li class="svc-pillar-service">
+            <div class="svc-pillar-service-body">
+              <h3>Loyalty design</h3>
+              <p>Programme design built around real economic levers.</p>
+            </div>
+          </li>
+          <li class="svc-pillar-service">
+            <div class="svc-pillar-service-body">
+              <h3>Bank and card partnerships</h3>
+              <p>Co-branded offers with measurable incrementality.</p>
+            </div>
+          </li>
+          <li class="svc-pillar-service">
+            <div class="svc-pillar-service-body">
+              <h3>Coupon programmes</h3>
+              <p>Coupon programmes run on the GrabOn network.</p>
+            </div>
+          </li>
+          <li class="svc-pillar-service">
+            <div class="svc-pillar-service-body">
+              <h3>Editorial email</h3>
+              <p>Curated emails written by editors, not templated.</p>
+            </div>
+          </li>
+        </ol>
+    </div>
+  </div>
+</section>
+
+<!-- 04 ACQUISITION -->
+<section class="svc-pillar" id="acquisition" style="--tone:#008EE6;">
+  <div class="container">
+    <div class="svc-pillar-inner reveal">
+      <div class="svc-pillar-text">
+        <span class="svc-pillar-label">Acquisition</span>
+        <h2 class="svc-pillar-claim">Pure performance. Paid on the action. Attributed server-side.</h2>
+        <p class="svc-pillar-lead">Acquisition is where the contract is cleanest: the brand pays only when the action happens. Twelve years of building the affiliate, demand and creator-commerce network through GrabOn, GrabCash and GrabShare is what makes that contract honest at scale.</p>
+      </div>
+        <ol class="svc-pillar-services">
+          <li class="svc-pillar-service">
+            <div class="svc-pillar-service-body">
+              <h3>Performance affiliate</h3>
+              <p>Run primarily through GrabOn and GrabCash.</p>
+            </div>
+          </li>
+          <li class="svc-pillar-service">
+            <div class="svc-pillar-service-body">
+              <h3>Demand network</h3>
+              <p>Owned and partner demand placed against intent.</p>
+            </div>
+          </li>
+          <li class="svc-pillar-service">
+            <div class="svc-pillar-service-body">
+              <h3>Creator commerce</h3>
+              <p>Attribution-led creator partnerships via GrabShare.</p>
+            </div>
+          </li>
+          <li class="svc-pillar-service">
+            <div class="svc-pillar-service-body">
+              <h3>Programmatic media</h3>
+              <p>First-party retargeting across DSPs.</p>
+            </div>
+          </li>
+          <li class="svc-pillar-service">
+            <div class="svc-pillar-service-body">
+              <h3>Performance media</h3>
+              <p>Search and social with revenue attribution.</p>
+            </div>
+          </li>
+          <li class="svc-pillar-service">
+            <div class="svc-pillar-service-body">
+              <h3>Server-side attribution</h3>
+              <p>Tracking the brand actually owns the data on.</p>
+            </div>
+          </li>
+        </ol>
+    </div>
+  </div>
+</section>
+
+<!-- Brand wall -->
+<section class="proof-block">
+  <div class="container">
+    <div class="proof-head reveal">
+      <h2>4,500+ brands grow on the Inspirelabs network.</h2>
+      <p>A small slice of the network. Global houses, D2C-native labels, regulated fintechs, OTAs and category leaders, all running on the same operating standard.</p>
+    </div>
+    <div class="brand-grid reveal">
+      <div class="brand-cell"><img src="assets/logos/adidas.svg" alt="Adidas" loading="lazy" /></div>
+      <div class="brand-cell"><img src="assets/logos/samsung.svg" alt="Samsung" loading="lazy" /></div>
+      <div class="brand-cell"><img src="assets/logos/airbnb.svg" alt="Airbnb" loading="lazy" /></div>
+      <div class="brand-cell"><img src="assets/logos/uber.svg" alt="Uber" loading="lazy" /></div>
+      <div class="brand-cell"><img src="assets/logos/netflix.svg" alt="Netflix" loading="lazy" /></div>
+      <div class="brand-cell"><img src="assets/logos/spotify.svg" alt="Spotify" loading="lazy" /></div>
+      <div class="brand-cell"><img src="assets/logos/paypal.svg" alt="PayPal" loading="lazy" /></div>
+      <div class="brand-cell"><img src="assets/logos/americanexpress.svg" alt="American Express" loading="lazy" /></div>
+      <div class="brand-cell"><img src="assets/logos/shopify.svg" alt="Shopify" loading="lazy" /></div>
+      <div class="brand-cell"><img src="assets/logos/ebay.svg" alt="eBay" loading="lazy" /></div>
+      <div class="brand-cell"><img src="assets/logos/swiggy.svg" alt="Swiggy" loading="lazy" /></div>
+      <div class="brand-cell"><img src="assets/logos/zomato.svg" alt="Zomato" loading="lazy" /></div>
+      <div class="brand-cell"><img src="assets/logos/etsy.svg" alt="Etsy" loading="lazy" /></div>
+      <div class="brand-cell"><img src="assets/logos/dell.svg" alt="Dell" loading="lazy" /></div>
+      <div class="brand-cell"><img src="assets/logos/lenovo.svg" alt="Lenovo" loading="lazy" /></div>
+      <div class="brand-cell"><img src="assets/logos/expedia.svg" alt="Expedia" loading="lazy" /></div>
+      <div class="brand-cell"><img src="assets/logos/bookmyshow.svg" alt="BookMyShow" loading="lazy" /></div>
+      <div class="brand-cell"><img src="assets/logos/notion.svg" alt="Notion" loading="lazy" /></div>
+      <div class="brand-cell"><img src="assets/logos/starbucks.svg" alt="Starbucks" loading="lazy" /></div>
+      <div class="brand-cell"><img src="assets/logos/mcdonalds.svg" alt="McDonald&rsquo;s" loading="lazy" /></div>
+      <div class="brand-cell"><img src="assets/logos/kfc.svg" alt="KFC" loading="lazy" /></div>
+      <div class="brand-cell"><img src="assets/logos/nike.svg" alt="Nike" loading="lazy" /></div>
+      <div class="brand-cell"><img src="assets/logos/uniqlo.svg" alt="Uniqlo" loading="lazy" /></div>
+      <div class="brand-cell"><img src="assets/logos/underarmour.svg" alt="Under Armour" loading="lazy" /></div>
+      <div class="brand-cell"><img src="assets/logos/asus.svg" alt="Asus" loading="lazy" /></div>
+      <div class="brand-cell"><img src="assets/logos/lg.svg" alt="LG" loading="lazy" /></div>
+      <div class="brand-cell"><img src="assets/logos/udemy.svg" alt="Udemy" loading="lazy" /></div>
+      <div class="brand-cell"><img src="assets/logos/nordvpn.svg" alt="NordVPN" loading="lazy" /></div>
+      <div class="brand-cell brand-cell-more">&amp; 4,500+</div>
+    </div>
+  </div>
+</section>
+
+<!-- By category -->
+<section class="cats-block">
+  <div class="container">
+    <div class="proof-head reveal">
+      <h2>By category.</h2>
+      <p>The network spans every category where intent compounds. From global travel houses to mattress D2C, from regulated fintechs to cloud hosting, the same operating standard runs across the stack.</p>
+    </div>
+    <div class="categories reveal">
+      <article class="cat-card"><div class="cat-card-name">Travel</div><div class="cat-card-count"><strong>600+</strong> brand partners</div></article>
+      <article class="cat-card"><div class="cat-card-name">Fashion</div><div class="cat-card-count"><strong>900+</strong> brand partners</div></article>
+      <article class="cat-card"><div class="cat-card-name">Fintech</div><div class="cat-card-count"><strong>350+</strong> brand partners</div></article>
+      <article class="cat-card"><div class="cat-card-name">Food &amp; Beverage</div><div class="cat-card-count"><strong>450+</strong> brand partners</div></article>
+      <article class="cat-card"><div class="cat-card-name">Electronics</div><div class="cat-card-count"><strong>700+</strong> brand partners</div></article>
+      <article class="cat-card"><div class="cat-card-name">D2C &amp; Consumer</div><div class="cat-card-count"><strong>1,200+</strong> brand partners</div></article>
+      <article class="cat-card"><div class="cat-card-name">Hosting &amp; SaaS</div><div class="cat-card-count"><strong>240+</strong> brand partners</div></article>
+      <article class="cat-card"><div class="cat-card-name">Mattress &amp; Sleep</div><div class="cat-card-count"><strong>85+</strong> brand partners</div></article>
+      <article class="cat-card"><div class="cat-card-name">Beauty &amp; Personal Care</div><div class="cat-card-count"><strong>520+</strong> brand partners</div></article>
+      <article class="cat-card"><div class="cat-card-name">Health &amp; Wellness</div><div class="cat-card-count"><strong>310+</strong> brand partners</div></article>
+      <article class="cat-card"><div class="cat-card-name">Education &amp; Learning</div><div class="cat-card-count"><strong>180+</strong> brand partners</div></article>
+      <article class="cat-card"><div class="cat-card-name">Gaming</div><div class="cat-card-count"><strong>140+</strong> brand partners</div></article>
+      <article class="cat-card"><div class="cat-card-name">Home &amp; Living</div><div class="cat-card-count"><strong>290+</strong> brand partners</div></article>
+      <article class="cat-card"><div class="cat-card-name">Telecom &amp; Streaming</div><div class="cat-card-count"><strong>95+</strong> brand partners</div></article>
+      <article class="cat-card"><div class="cat-card-name">Automotive</div><div class="cat-card-count"><strong>110+</strong> brand partners</div></article>
+      <article class="cat-card"><div class="cat-card-name">Marketplaces</div><div class="cat-card-count"><strong>220+</strong> brand partners</div></article>
+      <article class="cat-card"><div class="cat-card-name">Real Estate</div><div class="cat-card-count"><strong>120+</strong> brand partners</div></article>
+      <article class="cat-card"><div class="cat-card-name">Insurance</div><div class="cat-card-count"><strong>90+</strong> brand partners</div></article>
+      <article class="cat-card"><div class="cat-card-name">Crypto &amp; Web3</div><div class="cat-card-count"><strong>75+</strong> brand partners</div></article>
+      <article class="cat-card"><div class="cat-card-name">Pets</div><div class="cat-card-count"><strong>65+</strong> brand partners</div></article>
+      <article class="cat-card"><div class="cat-card-name">Logistics &amp; Shipping</div><div class="cat-card-count"><strong>80+</strong> brand partners</div></article>
+      <article class="cat-card"><div class="cat-card-name">Subscriptions &amp; Membership</div><div class="cat-card-count"><strong>160+</strong> brand partners</div></article>
+      <article class="cat-card cat-card-more">&amp; more</article>
+    </div>
+  </div>
+</section>
+
+<!-- Case studies -->
+<section class="cases-block">
+  <div class="container">
+    <div class="proof-head reveal">
+      <h2>In their words.</h2>
+      <p>Three anonymous case studies from the network. Different categories, different stacks, same operating standard.</p>
+    </div>
+    <div class="cases-grid reveal">
+      <article class="case-card">
+        <span class="case-card-tag">D2C beauty</span>
+        <div>
+          <div class="case-card-stat">+312%</div>
+          <div class="case-card-stat-unit">Organic revenue &middot; 18 months</div>
+        </div>
+        <div class="case-card-divider"></div>
+        <h3>From a single SEO retainer to four pillars in 18 months.</h3>
+        <p>A category-leading D2C beauty brand started with us as an SEO engagement. Eighteen months in, they were running affiliate, creator commerce, lifecycle and a quarterly bank-partnerships pilot through the Inspirelabs network. The reason was not cross-sell. It was the consistency of the operating standard.</p>
+      </article>
+      <article class="case-card">
+        <span class="case-card-tag">Travel &amp; OTA</span>
+        <div>
+          <div class="case-card-stat">19.4%</div>
+          <div class="case-card-stat-unit">Attribution recovery</div>
+        </div>
+        <div class="case-card-divider"></div>
+        <h3>One server-side attribution pilot, then everything moved.</h3>
+        <p>A leading travel platform engaged Inspirelabs for a single quarter to run a server-side attribution pilot against their existing affiliate stack. The audit surfaced nearly 20% attribution leakage. Inside two quarters, the brand had migrated their full performance program onto our infrastructure.</p>
+      </article>
+      <article class="case-card">
+        <span class="case-card-tag">Fintech</span>
+        <div>
+          <div class="case-card-stat">&minus;38%</div>
+          <div class="case-card-stat-unit">CAC reduction &middot; 9 months</div>
+        </div>
+        <div class="case-card-divider"></div>
+        <h3>Bank partnerships and SEO, run as one program.</h3>
+        <p>A regulated fintech wanted to grow its credit card portfolio without leaning on paid acquisition that was getting more expensive every quarter. We ran bank partnerships, SEO, comparison content and email lifecycle as one program. Lower CAC, better-quality applicants, defensible position on comparison queries.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- How we work -->
+<section class="how-block">
+  <div class="container">
+    <div class="how-head">
+      <h2>How we work.</h2>
+      <p>We do not pitch decks and then sub-contract. Every service is run by the same team that runs Inspirelabs platforms. One operating standard. One data layer. One bench.</p>
+    </div>
+    <div class="how-grid">
+      <div class="how-cell">
+        <div class="how-cell-num">01 &middot; Retainer</div>
+        <h3>Embedded growth team</h3>
+        <p>A senior team plugs in as your growth function. We run the playbook, ship weekly, report against revenue. Three-month minimum, month-to-month after that.</p>
+      </div>
+      <div class="how-cell">
+        <div class="how-cell-num">02 &middot; Project</div>
+        <h3>Scoped engagement</h3>
+        <p>A defined outcome, a defined budget, a defined window. Brand launch, SEO migration, AI-search readiness, loyalty redesign. We scope tight and ship.</p>
+      </div>
+      <div class="how-cell">
+        <div class="how-cell-num">03 &middot; Performance</div>
+        <h3>Paid on the conversion</h3>
+        <p>For acquisition and affiliate, you pay only on the action. Server-side attribution, our owned demand network, your incremental revenue.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Closing CTA -->
+<section>
+  <div class="container" style="text-align: center; max-width: 760px; margin: 0 auto;">
+    <h2 class="display-3" style="margin-bottom: 24px;">Ready to run growth in&#8209;house?</h2>
+    <p class="biz-intro" style="margin-bottom: 32px;">One operating standard. First-party data from a 200M-user network you do not have to build. Twenty-four services under one roof.</p>
+    <a href="contact.html" class="tlink">Talk to us about your growth &rarr;</a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand-block">
+        <a href="index.html" class="nav-brand" aria-label="Inspirelabs"><img src="assets/brand/inspirelabs-logo.svg" alt="Inspirelabs" /></a>
+        <p>The Hyderabad-based parent company behind GrabOn, GrabCash, GrabShare, RankDrive and Alternatives.co. Bootstrapped, profitable, and building since 2013.</p>
+        <address>
+          21st Floor, OneWest Building<br/>
+          Financial District, Gachibowli<br/>
+          Hyderabad 500032, India<br/><br/>
+          <a href="tel:+914032537070">040-32537070</a> &middot; <a href="mailto:contact@inspirelabs.com">contact@inspirelabs.com</a>
+        </address>
+      </div>
+      <div class="footer-col">
+        <h5>Our products</h5>
+        <a href="https://www.grabon.in" target="_blank" rel="noopener">GrabOn</a>
+        <a href="https://www.grabcash.in" target="_blank" rel="noopener">GrabCash</a>
+        <a href="https://www.grabshare.com" target="_blank" rel="noopener">GrabShare</a>
+        <a href="https://www.rankdrive.com" target="_blank" rel="noopener">RankDrive</a>
+        <a href="https://alternatives.co" target="_blank" rel="noopener">Alternatives.co</a>
+      </div>
+      <div class="footer-col">
+        <h5>What we do</h5>
+        <a href="products.html">Products</a>
+        <a href="services.html">Services</a>
+        <a href="ai-agents.html">AI Agents</a>
+        <a href="platform.html">Platform</a>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <a href="about.html">About</a>
+        <a href="careers.html">Careers</a>
+        <a href="partnership.html">Partner with us</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h5>Trust &amp; legal</h5>
+        <a href="trust.html">Trust &amp; security</a>
+        <a href="privacy.html">Privacy policy</a>
+        <a href="terms.html">Terms</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>&copy; <span data-year>2026</span> Inspirelabs Solutions Ltd. Bootstrapped in Hyderabad since 2013.</div>
+      <div class="footer-bottom-links">
+        <a href="about.html">About</a>
+        <a href="careers.html">Careers</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+(() => { const nav = document.getElementById('nav'); if (!nav) return; const onScroll = () => { if (window.scrollY > 8) nav.classList.add('scrolled'); else nav.classList.remove('scrolled'); }; window.addEventListener('scroll', onScroll, { passive: true }); onScroll(); })();
+(() => { const els = document.querySelectorAll('.reveal'); if (!('IntersectionObserver' in window)) { els.forEach(e => e.classList.add('in-view')); return; } const io = new IntersectionObserver((entries) => { entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in-view'); io.unobserve(en.target); } }); }, { rootMargin: '0px 0px -10% 0px', threshold: 0.05 }); els.forEach(e => io.observe(e)); })();
+(() => { const y = new Date().getFullYear(); document.querySelectorAll('[data-year]').forEach(e => { e.textContent = y; }); })();
+</script>
+
+</body>
+</html>

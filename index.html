@@ -1,0 +1,1749 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Inspirelabs, The growth infrastructure 4,500+ brands run on.</title>
+<meta name="description" content="Inspirelabs Solutions Ltd. is the Hyderabad-based parent company behind GrabOn, GrabCash, GrabShare, RankDrive and Alternatives.co. We build and run the platforms that ambitious brands grow on." />
+<meta name="theme-color" content="#FFFFFF" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Inspirelabs, The growth infrastructure 4,500+ brands run on." />
+<meta property="og:description" content="Six platforms. 4,500+ brands. 200M+ monthly users. One operating company in Hyderabad, built since 2013." />
+<link rel="canonical" href="https://inspirelabs.com/?v=v3-index-fix1" />
+<link rel="icon" type="image/svg+xml" href="assets/brand/inspirelabs-mark.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300..900&family=JetBrains+Mono:wght@400..700&display=swap" rel="stylesheet" />
+<style>body{font-family:'Hanken Grotesk',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-feature-settings:'ss01','ss02','cv11';}</style>
+
+<style>
+/* ================================================================
+   Inspirelabs v3 · brutalist-confident · single sans · violet accent
+   ================================================================ */
+:root {
+  --white: #FFFFFF;
+  --bg: #FFFFFF;
+  --text: #0E0F0A;          /* matched to eternal's near-black, warmer than slate */
+  --text-secondary: #6F7583;
+  --text-tertiary: #8C92A0;
+  --hairline: #ECEEF2;
+  --line: #DEE1E8;
+  --accent: #FF7A45;
+  --accent-soft: #FFE7DC;
+  --accent-deep: #E55E2A;
+  --tile-dark: #0F1117;
+  --max-w: 1800px;                    /* widened, content uses ~88% of viewport */
+  --pad-x: clamp(20px, 3vw, 56px);    /* tighter side padding so the headline fits on one line */
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Brand: JetBrains Mono on all small labels / eyebrows / metadata */
+.hero-eyebrow,
+.hero-stamp,
+.about-hero-eyebrow,
+.section-eyebrow,
+.plan-list-year,
+.about-num-lbl,
+.deliver-row-num,
+.pillar-eyebrow,
+.numbers-cell-lbl,
+.biz-tile-tag,
+.bleed-photo-stamp,
+.fact-eyebrow,
+.tile-eyebrow,
+.category-eyebrow,
+.kpi-label,
+.tag-label,
+.service-eyebrow,
+.product-eyebrow,
+.career-eyebrow,
+.trust-eyebrow,
+.insight-eyebrow,
+.chapter-tag,
+.chapter-num,
+.eyebrow,
+.meta-row,
+.mono { font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace; }
+
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+html, body { overflow-x: hidden; }
+body {
+  font-family: 'Hanken Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+img, svg { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; cursor: pointer; border: none; background: none; color: inherit; }
+ul, ol { list-style: none; }
+::selection { background: var(--accent); color: var(--white); }
+
+.container { width: min(88%, var(--max-w)); margin: 0 auto; padding: 0 var(--pad-x); }
+@media (max-width: 1100px) { .container { width: 100%; } }
+
+/* ── Navigation ───────────────────────────────────────────────── */
+.nav {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: saturate(140%) blur(14px);
+  -webkit-backdrop-filter: saturate(140%) blur(14px);
+  padding: 22px 0;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.25s var(--ease);
+}
+.nav.scrolled { border-bottom-color: var(--hairline); }
+.nav-inner { display: flex; align-items: center; justify-content: space-between; gap: 32px; }
+.nav-brand { display: inline-flex; align-items: center; color: var(--text); line-height: 1; }
+
+.nav-brand img { height: 24px; width: auto; display: block; }
+.footer-brand-block .nav-brand img { height: 32px; }
+.nav.on-hero .nav-brand img { filter: invert(1) brightness(2); }
+.nav-links { display: flex; gap: 36px; align-items: center; }
+.nav-link { font-size: 15px; font-weight: 500; color: var(--text); padding: 10px 0; position: relative; transition: color 0.2s var(--ease); }
+.nav-link:hover { color: var(--accent-deep); }
+.nav-link.active::after {
+  content: ''; position: absolute; bottom: 4px; left: 0; right: 0;
+  height: 2px; background: var(--accent);
+}
+.nav-toggle { display: none; width: 36px; height: 36px; }
+.nav-toggle span { display: block; width: 22px; height: 1.5px; background: var(--text); margin: 5px auto; }
+@media (max-width: 880px) { .nav-links { display: none; } .nav-toggle { display: block; } }
+
+/* ── Type primitives ──────────────────────────────────────────── */
+h1, h2, h3, h4, h5 { color: var(--text); font-weight: 400; letter-spacing: -0.02em; line-height: 1.06; text-wrap: balance; }
+p, .lead, .section-intro { text-wrap: pretty; }
+/* eternal.com matched: Figtree 500, ~7vw, line-height 1.04, letter-spacing -0.025em */
+/* eternal renders display headlines at weight 400 (regular), not 500, strokes are noticeably thinner */
+.display-1 { font-size: clamp(46px, 6.4vw, 122px); font-weight: 400; letter-spacing: -0.03em; line-height: 1.04; }
+/* hero headline: each sentence on its own line with eternal-style breathing room between */
+.hero h1 { max-width: 100%; overflow-wrap: break-word; }
+.hero h1 .line { display: block; white-space: nowrap; max-width: 100%; }
+.hero h1 .line + .line { margin-top: 0.4em; }   /* eternal has a big visible gap between line 1 and line 2 */
+@media (max-width: 1024px) { .hero h1 .line { white-space: normal; } }
+.display-2 { font-size: clamp(36px, 5vw, 72px); font-weight: 400; letter-spacing: -0.025em; line-height: 1.06; }
+.display-3 { font-size: clamp(24px, 3vw, 36px); font-weight: 400; letter-spacing: -0.02em; line-height: 1.15; }
+.lead { font-size: clamp(16px, 1.3vw, 19px); line-height: 1.55; color: var(--text-secondary); max-width: 60ch; }
+
+/* ── Section primitives ───────────────────────────────────────── */
+section { padding: clamp(48px, 5.5vw, 90px) 0; position: relative; }
+section.tight { padding: clamp(32px, 3.5vw, 55px) 0; }
+section.section-bleed { padding: 0; }
+
+.section-eyebrow {
+  display: inline-block;
+  font-size: clamp(20px, 2.2vw, 26px);
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: -0.02em;
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--accent);
+  margin-bottom: 32px;
+}
+.section-intro { font-size: clamp(15px, 1.2vw, 17px); line-height: 1.6; color: var(--text-secondary); max-width: 64ch; }
+/* eternal-style large section title (used only on the products section) */
+/* matches eternal exactly: 40px, weight 500, 64px violet underline as ::after */
+.section-title-xl {
+  position: relative;
+  font-size: clamp(30px, 3.2vw, 48px);
+  font-weight: 500;
+  color: var(--text);
+  letter-spacing: -0.005em;
+  line-height: 1.08;
+  margin: 0 0 32px;
+  text-wrap: balance;
+  max-width: 24ch;
+}
+.section-title-xl::after {
+  content: '';
+  display: block;
+  width: 72px;
+  height: 3px;
+  background: var(--accent);
+  margin-top: 14px;
+}
+
+/* ── Text-link CTA pattern ────────────────────────────────────── */
+.tlink {
+  display: inline-block; font-size: 15px; font-weight: 500; color: var(--text);
+  padding-bottom: 2px; border-bottom: 1.5px solid var(--text);
+  transition: color 0.2s var(--ease), border-color 0.2s var(--ease);
+}
+.tlink:hover { color: var(--accent-deep); border-color: var(--accent); }
+.tlink-sm { font-size: 14px; }
+.tlink-light { color: var(--white); border-bottom-color: rgba(255,255,255,0.6); }
+.tlink-light:hover { color: var(--white); border-bottom-color: var(--white); }
+
+/* ── Hero ─────────────────────────────────────────────────────── */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100svh;
+  padding: clamp(64px, 8vh, 120px) 0;
+  display: flex; flex-direction: column; justify-content: center;
+  overflow: hidden;
+  text-align: center;        /* headline centered horizontally */
+}
+.hero-grid {
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(to right, rgba(15, 17, 23, 0.10) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15, 17, 23, 0.10) 1px, transparent 1px);
+  background-size: 96px 96px;
+  background-position: -1px -1px;
+  mask-image: radial-gradient(ellipse 50% 60% at 78% 28%, black 0%, transparent 78%);
+  -webkit-mask-image: radial-gradient(ellipse 50% 60% at 78% 28%, black 0%, transparent 78%);
+  pointer-events: none;
+  z-index: 0;
+}
+.hero-stamp {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  font-weight: 500;
+  display: inline-flex; align-items: center; gap: 12px;
+  margin-bottom: 40px;
+}
+.hero-stamp::before { content: ''; width: 28px; height: 1.5px; background: var(--accent); }
+.hero-inner { position: relative; z-index: 1; }
+.hero h1 { max-width: none; }    /* let the two-sentence headline use full container width */
+.hero-foot {
+  margin-top: clamp(56px, 8vw, 100px);
+  display: flex; align-items: flex-end; justify-content: space-between;
+  gap: 32px; flex-wrap: wrap;
+  text-align: left;                /* keep founder-note text left-aligned inside the centered hero */
+}
+.hero-scroll {
+  width: 38px; height: 38px;
+  border: 1px solid var(--line); border-radius: 50%;
+  display: inline-flex; align-items: center; justify-content: center;
+  color: var(--text-tertiary); flex-shrink: 0;
+  transition: border-color 0.2s var(--ease), color 0.2s var(--ease);
+}
+.hero-scroll:hover { border-color: var(--accent); color: var(--accent); }
+.founder-note { display: flex; align-items: center; gap: 16px; max-width: 440px; transform: translateX(clamp(-80px, -3vw, -20px)); }
+@media (max-width: 720px) { .founder-note { transform: none; } }
+/* circular founder photo, full color */
+.founder-note-img {
+  width: 64px; height: 64px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #1A1A1A;
+  display: flex; align-items: center; justify-content: center;
+  color: rgba(255,255,255,0.6); font-weight: 600; font-size: 18px; letter-spacing: -0.01em;
+  flex-shrink: 0;
+}
+.founder-note-img img {
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center center;
+  display: block;
+  border-radius: 50% !important;
+}
+.founder-note-text { font-size: 15px; color: var(--text); line-height: 1.45; }
+.founder-note-text strong { font-weight: 600; }
+
+/* ── Businesses carousel ──────────────────────────────────────── */
+.biz-head {
+  position: relative;
+  margin-bottom: clamp(56px, 5vw, 80px);
+}
+.biz-head-text { max-width: 100%; padding-right: 120px; }
+.biz-intro {
+  font-size: clamp(16px, 1.4vw, 20px);
+  font-weight: 300;
+  line-height: 1.5;
+  color: #414A5D;
+  max-width: 100%;        /* span the full container, no narrow reflow */
+  width: 100%;
+  text-wrap: pretty;      /* prevent orphan words on the last line */
+}
+.biz-arrows-abs {
+  position: absolute; right: 0; bottom: 0;
+  display: flex; gap: 8px;
+}
+.biz-arrows { display: flex; gap: 8px; flex-shrink: 0; }
+.biz-arrow {
+  width: 38px; height: 38px;
+  border: 1px solid var(--line); border-radius: 50%;
+  display: inline-flex; align-items: center; justify-content: center;
+  color: var(--text); cursor: pointer; transition: all 0.2s var(--ease);
+}
+.biz-arrow:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-soft); }
+.biz-track-wrap { overflow: hidden; }
+.biz-track {
+  display: flex; gap: 20px; overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  padding-bottom: 8px;
+  scrollbar-width: none;
+}
+.biz-track::-webkit-scrollbar { display: none; }
+/* Eternal exact spec: 4:3 aspect, #2E2E2E bg, 0 radius. Tile stays still, only the logo zooms on hover. */
+.biz-card { flex: 0 0 clamp(320px, 32vw, 460px); scroll-snap-align: start; display: flex; flex-direction: column; padding: 0; }
+.biz-tile {
+  width: 100%; aspect-ratio: 1.33 / 1;
+  background: #1A1A1A;     /* default: deep black */
+  border: 1px solid #1A1A1A;
+  border-radius: 0;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 10px; padding: 0;
+  position: relative; overflow: hidden;
+  transition: background 0.7s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+/* On hover the tile flips to white so the native-colour logo can come alive on top */
+.biz-tile:hover { background: #FFFFFF; border-color: #ECECEC; }
+/* Every logo gets the SAME HEIGHT so they all sit at identical vertical size on the tile.
+   Widths vary naturally by aspect ratio (shorter names look short, longer names look long),
+   but the OPTICAL HEIGHT is constant, which is what reads as "matching" visually. */
+.biz-tile-logo {
+  height: clamp(40px, 4vw, 56px);
+  width: auto;
+  max-width: 78%;
+  object-fit: contain;
+  object-position: center;
+  filter: brightness(0) invert(1);
+  transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1), filter 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+/* On hover: tile turns white, logo drops the white filter so its native brand colours surface, and zooms */
+.biz-tile:hover .biz-tile-logo { transform: scale(1.10); filter: none; }
+.biz-tile-tag {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.85);  /* white-ish on black default */
+  text-align: center;
+  margin-top: 4px;
+  transition: color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.biz-tile:hover .biz-tile-tag { color: #6B7280; }   /* dark grey when bg flips to white */
+.biz-card h3 {
+  margin-top: 24px;
+  font-size: clamp(20px, 1.8vw, 26px);
+  font-weight: 400;
+  letter-spacing: normal;
+  color: var(--text);
+  line-height: 1.18;
+  text-wrap: pretty;          /* override the global balance which can break awkwardly */
+  min-height: 2.4em;          /* reserve space for 2 lines so cards align */
+}
+.biz-card p {
+  margin-top: 14px;
+  font-size: clamp(15px, 1.1vw, 17px);
+  font-weight: 300;
+  color: #414A5D;
+  line-height: 1.5;
+  text-wrap: pretty;            /* allow natural line breaks, no orphan/balance gymnastics */
+  flex: 1;                    /* let p grow so the Learn more link aligns at the bottom */
+  min-height: 5em;            /* baseline 4–5 lines so short descriptions don't squash the card */
+}
+.biz-card .tlink { margin-top: 20px; font-size: 14px; align-self: flex-start; }
+
+/* ── Four-pillar framework ────────────────────────────────────── */
+.pillars {
+  background: var(--white);
+  padding: clamp(48px, 5.5vw, 90px) 0;
+}
+.pillars-head {
+  margin-bottom: clamp(56px, 6vw, 80px);
+  max-width: 100%;
+}
+.pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  border-top: 1px solid var(--hairline);
+  border-bottom: 1px solid var(--hairline);
+}
+.pillar {
+  position: relative;
+  padding: clamp(36px, 3vw, 52px) clamp(28px, 2.4vw, 40px);
+  background: var(--white);
+  border-right: 1px solid var(--hairline);
+  display: flex; flex-direction: column;
+  min-height: 360px;
+  cursor: default;
+  transition: background 0.55s var(--ease), color 0.55s var(--ease);
+  overflow: hidden;
+}
+.pillar:last-child { border-right: none; }
+.pillar:hover { color: var(--white); }
+.pillar:hover h3 { color: var(--white); }
+.pillar:hover p { color: rgba(255, 255, 255, 0.86); }
+.pillar:hover .pillar-eyebrow { color: var(--white); opacity: 0.85; }
+.pillar:hover .pillar-list { color: rgba(255, 255, 255, 0.72); border-top-color: rgba(255,255,255,0.24); }
+.pillar:hover .pillar-arrow { opacity: 1; transform: translateY(0); color: var(--white); }
+.pillar:hover .pillar-products { color: rgba(255, 255, 255, 0.86); }
+
+.pillar.pillar-awareness:hover    { background: linear-gradient(135deg, #28538F 0%, #7940C9 100%); }
+.pillar.pillar-discovery:hover    { background: linear-gradient(135deg, #FF7058 0%, #008CE2 100%); }
+.pillar.pillar-engagement:hover   { background: linear-gradient(135deg, #7940C9 0%, #008EE6 100%); }
+.pillar.pillar-acquisition:hover  { background: linear-gradient(135deg, #008EE6 0%, #28538F 100%); }
+
+.pillar-eyebrow {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent-deep);
+  margin-bottom: 36px;
+  transition: color 0.55s var(--ease);
+}
+.pillar h3 {
+  font-size: clamp(22px, 2vw, 30px);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.12;
+  margin-bottom: 18px;
+  color: var(--text);
+  text-wrap: pretty;
+  transition: color 0.55s var(--ease);
+}
+.pillar p {
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--text-secondary);
+  margin-bottom: 28px;
+  transition: color 0.55s var(--ease);
+}
+.pillar-products {
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: var(--text-tertiary);
+  margin-top: auto;
+  margin-bottom: 16px;
+  transition: color 0.55s var(--ease);
+}
+.pillar-products strong { font-weight: 600; color: var(--text); }
+.pillar:hover .pillar-products strong { color: var(--white); }
+.pillar-list {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--text-tertiary);
+  padding-top: 18px;
+  border-top: 1px solid var(--hairline);
+  transition: color 0.55s var(--ease), border-color 0.55s var(--ease);
+}
+.pillar-arrow {
+  position: absolute;
+  top: clamp(36px, 3vw, 52px);
+  right: clamp(28px, 2.4vw, 40px);
+  font-size: 22px;
+  color: var(--text-tertiary);
+  opacity: 0.35;
+  transform: translateY(-4px);
+  transition: opacity 0.45s var(--ease), transform 0.45s var(--ease), color 0.45s var(--ease);
+}
+.pillars-foot {
+  margin-top: clamp(40px, 4vw, 64px);
+  text-align: center;
+}
+@media (max-width: 980px) {
+  .pillars-grid { grid-template-columns: repeat(2, 1fr); }
+  .pillar:nth-child(2) { border-right: none; }
+  .pillar:nth-child(1), .pillar:nth-child(2) { border-bottom: 1px solid var(--hairline); }
+}
+@media (max-width: 600px) {
+  .pillars-grid { grid-template-columns: 1fr; }
+  .pillar { border-right: none; border-bottom: 1px solid var(--hairline); min-height: 0; }
+  .pillar:last-child { border-bottom: none; }
+}
+
+/* ── By the numbers row ───────────────────────────────────────── */
+.numbers {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid var(--hairline);
+  border-bottom: 1px solid var(--hairline);
+}
+.numbers-cell {
+  padding: 36px 28px;
+  border-right: 1px solid var(--hairline);
+}
+.numbers-cell:last-child { border-right: none; }
+.numbers-cell-val {
+  font-size: clamp(36px, 4.5vw, 56px);
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  line-height: 1;
+  color: var(--text);
+}
+.numbers-cell-val .accent { color: var(--accent); font-weight: 700; }
+.numbers-cell-lbl {
+  margin-top: 12px;
+  font-size: 13.5px;
+  color: var(--text-secondary);
+  font-weight: 500;
+  letter-spacing: -0.005em;
+}
+@media (max-width: 880px) {
+  .numbers { grid-template-columns: repeat(2, 1fr); }
+  .numbers-cell:nth-child(2) { border-right: none; }
+  .numbers-cell:nth-child(1), .numbers-cell:nth-child(2) { border-bottom: 1px solid var(--hairline); }
+}
+@media (max-width: 540px) { .numbers { grid-template-columns: 1fr; } .numbers-cell { border-right: none; border-bottom: 1px solid var(--hairline); } .numbers-cell:last-child { border-bottom: none; } }
+
+/* ── Hyderabad full-bleed dark photo block ────────────────────── */
+.bleed-photo {
+  position: relative;
+  min-height: clamp(420px, 60vh, 620px);
+  background: var(--tile-dark);
+  overflow: hidden;
+  display: flex; align-items: flex-end;
+  isolation: isolate;
+}
+.bleed-photo-img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  opacity: 0.55;
+  z-index: 0;
+}
+.bleed-photo::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(15,17,23,0.4) 0%, rgba(15,17,23,0.85) 100%);
+  z-index: 1;
+}
+.bleed-photo-inner {
+  position: relative; z-index: 2;
+  padding: clamp(48px, 6vw, 96px) 0;
+  width: 100%;
+}
+.bleed-photo-stamp {
+  font-size: 12px; letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.65);
+  font-weight: 500;
+  display: inline-flex; align-items: center; gap: 12px;
+  margin-bottom: 28px;
+}
+.bleed-photo-stamp::before { content: ''; width: 28px; height: 1.5px; background: var(--accent); }
+.bleed-photo h2 {
+  font-size: clamp(44px, 7vw, 96px);
+  font-weight: 600;
+  color: var(--white);
+  line-height: 0.98;
+  letter-spacing: -0.04em;
+  max-width: 18ch;
+}
+.bleed-photo-foot {
+  margin-top: 36px;
+  display: flex; gap: 40px; flex-wrap: wrap;
+  align-items: baseline;
+}
+.bleed-photo-foot-stat-val { font-size: 24px; font-weight: 700; color: var(--white); letter-spacing: -0.02em; line-height: 1; }
+.bleed-photo-foot-stat-lbl { font-size: 12px; color: rgba(255,255,255,0.6); letter-spacing: 0.06em; text-transform: uppercase; margin-top: 6px; }
+
+/* ── Vision + Mission paired ──────────────────────────────────── */
+.vm-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(48px, 6vw, 96px); }
+.vm-block .section-eyebrow { margin-bottom: 24px; }
+.vm-block p { font-size: clamp(22px, 2vw, 30px); font-weight: 400; line-height: 1.2; color: var(--text); letter-spacing: -0.02em; }
+.vm-block-sub { font-size: 16px !important; font-weight: 300 !important; line-height: 1.55 !important; color: #414A5D !important; letter-spacing: normal !important; margin-top: 18px; }
+@media (max-width: 800px) { .vm-grid { grid-template-columns: 1fr; gap: 48px; } }
+
+/* ── Delivered-for-brands proof section (immediately after products) ── */
+.delivered-section { padding: clamp(48px, 5.5vw, 90px) 0; background: var(--white); }
+.delivered-head { max-width: 78ch; margin-bottom: clamp(64px, 6vw, 88px); }
+
+.delivered-stats {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid var(--hairline);
+}
+.delivered-stat {
+  padding: clamp(32px, 3vw, 48px) clamp(20px, 1.6vw, 28px);
+  border-right: 1px solid var(--hairline);
+  border-bottom: 1px solid var(--hairline);
+  display: flex; flex-direction: column; justify-content: space-between;
+  min-height: 200px;
+}
+.delivered-stat:last-child { border-right: none; }
+.delivered-stat-val {
+  font-size: clamp(34px, 3.8vw, 56px);
+  font-weight: 500;
+  letter-spacing: -0.035em;
+  line-height: 1;
+  color: var(--text);
+  white-space: nowrap;          /* never let the number wrap */
+}
+.delivered-stat-val .accent { color: var(--accent); margin-left: 0.04em; }
+.delivered-stat-lbl {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  margin-top: 20px;
+  line-height: 1.45;
+  font-weight: 600;
+}
+@media (max-width: 900px) {
+  .delivered-stats { grid-template-columns: repeat(2, 1fr); }
+  .delivered-stat:nth-child(2n) { border-right: none; }
+  .delivered-stat:nth-child(odd):not(:last-child) { border-right: 1px solid var(--hairline); }
+}
+@media (max-width: 540px) {
+  .delivered-stats { grid-template-columns: 1fr; }
+  .delivered-stat { border-right: none !important; }
+}
+
+/* Featured-brand marquee inside the delivered section */
+.delivered-brands-block { margin-top: clamp(64px, 7vw, 96px); }
+.delivered-brands-label {
+  font-size: 13px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  font-weight: 600;
+  margin-bottom: 36px;
+  text-align: center;
+}
+.brand-marquee {
+  position: relative;
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent 0, #000 6%, #000 94%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0, #000 6%, #000 94%, transparent 100%);
+}
+.brand-marquee-track {
+  display: flex;
+  gap: clamp(40px, 4vw, 72px);
+  width: max-content;
+  animation: brandMarquee 38s linear infinite;
+  align-items: center;
+}
+.brand-marquee:hover .brand-marquee-track { animation-play-state: paused; }
+.brand-marquee-track img {
+  height: 36px;
+  width: auto;
+  flex-shrink: 0;
+  object-fit: contain;
+  opacity: 0.7;
+  filter: grayscale(1);
+  transition: opacity 0.3s var(--ease), filter 0.3s var(--ease);
+}
+.brand-marquee-track img:hover { opacity: 1; filter: grayscale(0); }
+@keyframes brandMarquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* ── Inside Inspirelabs (Life at the company) ─────────────────── */
+.inside-section { padding: clamp(48px, 5.5vw, 90px) 0; background: var(--white); }
+.inside-head { margin-bottom: clamp(48px, 5vw, 64px); }
+.inside-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: clamp(20px, 2vw, 32px);
+  margin-top: clamp(40px, 4vw, 60px);
+}
+.inside-tile {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  background: #0F1117;
+}
+.inside-tile-img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.inside-tile:hover .inside-tile-img { transform: scale(1.05); }
+.inside-tile-caption {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: clamp(24px, 2vw, 36px);
+  background: linear-gradient(to top, rgba(0,0,0,0.78) 0%, rgba(0,0,0,0) 70%);
+  color: var(--white);
+  z-index: 2;
+}
+.inside-tile-eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 10px;
+}
+.inside-tile-title {
+  font-size: clamp(20px, 1.7vw, 26px);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.18;
+  color: var(--white);
+}
+.inside-stats {
+  margin-top: clamp(56px, 5vw, 72px);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid var(--hairline);
+}
+.inside-stat {
+  padding: clamp(28px, 2.4vw, 40px) clamp(20px, 1.6vw, 28px);
+  border-right: 1px solid var(--hairline);
+}
+.inside-stat:last-child { border-right: none; }
+.inside-stat-val { font-size: clamp(28px, 2.6vw, 40px); font-weight: 500; letter-spacing: -0.025em; line-height: 1; color: var(--text); }
+.inside-stat-lbl { font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-tertiary); margin-top: 14px; line-height: 1.4; }
+@media (max-width: 900px) {
+  .inside-grid { grid-template-columns: 1fr; }
+  .inside-stats { grid-template-columns: repeat(2, 1fr); }
+  .inside-stat:nth-child(2n) { border-right: none; }
+}
+
+/* Why brands trust — compact editorial rows, label + body */
+.reasons-grid {
+  display: flex;
+  flex-direction: column;
+  margin-top: clamp(40px, 4vw, 64px);
+  border-top: 1px solid var(--hairline);
+}
+.reason-card {
+  position: relative;
+  padding: clamp(28px, 2.8vw, 44px) 0;
+  background: none;
+  border: none;
+  border-bottom: 1px solid var(--hairline);
+  display: grid;
+  grid-template-columns: 56px minmax(0, 1fr) minmax(0, 1.6fr);
+  column-gap: clamp(28px, 2.4vw, 52px);
+  align-items: start;
+  overflow: visible;
+}
+.reason-card-idx {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-tertiary);
+  letter-spacing: 0.02em;
+  font-variant-numeric: tabular-nums;
+  align-self: start;
+  padding-top: 4px;
+}
+.reason-card::before {
+  content: '';
+  position: absolute;
+  bottom: -1px; left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--accent);
+  transition: width 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reason-card:hover { transform: none; box-shadow: none; }
+.reason-card:hover::before { width: 100%; transform: none; }
+.reason-card:hover .reason-card-num { color: var(--accent); }
+.reason-card-body { display: flex; flex-direction: column; }
+.reason-card-num {
+  font-size: clamp(18px, 1.5vw, 24px);
+  font-weight: 500;
+  letter-spacing: -0.012em;
+  line-height: 1.2;
+  color: var(--text);
+  margin: 0;
+  text-wrap: balance;
+  text-transform: none;
+  padding-top: 2px;
+}
+.reason-card-body { display: flex; flex-direction: column; }
+.reason-card h3 {
+  font-size: clamp(16px, 1.2vw, 18px);
+  font-weight: 500;
+  letter-spacing: -0.005em;
+  line-height: 1.35;
+  color: var(--text);
+  margin: 0 0 10px;
+  text-wrap: pretty;
+}
+.reason-card p {
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.6;
+  color: #414A5D;
+  text-wrap: pretty;
+  margin: 0;
+}
+@media (max-width: 800px) {
+  .reason-card { grid-template-columns: 1fr; row-gap: 12px; }
+  .reason-card-idx { display: none; }
+}
+
+/* ── Built to compound, big stats row ──────────────────────────── */
+.compound-section { background: #0A0A0A; color: var(--white); padding: clamp(48px, 5.5vw, 90px) 0; }
+.compound-section .section-title-xl { color: var(--white); }
+.compound-section .biz-intro { color: rgba(255,255,255,0.78); }
+.compound-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; margin-top: clamp(48px, 5vw, 80px); border-top: 1px solid rgba(255,255,255,0.12); }
+.compound-stat { padding: clamp(32px, 3vw, 48px) clamp(24px, 2vw, 32px); border-right: 1px solid rgba(255,255,255,0.12); border-bottom: 1px solid rgba(255,255,255,0.12); }
+.compound-stat:last-child { border-right: none; }
+.compound-stat-val {
+  font-size: clamp(36px, 4.6vw, 72px);
+  font-weight: 500;
+  letter-spacing: -0.035em;
+  line-height: 1;
+  color: var(--white);
+}
+.compound-stat-lbl {
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.6);
+  margin-top: 16px;
+  line-height: 1.4;
+}
+@media (max-width: 900px) { .compound-grid { grid-template-columns: repeat(2, 1fr); } .compound-stat { border-right: 1px solid rgba(255,255,255,0.12); } .compound-stat:nth-child(2n) { border-right: none; } }
+@media (max-width: 540px) { .compound-grid { grid-template-columns: 1fr; } .compound-stat { border-right: none; } }
+
+/* ── Outcomes grid (three concrete ways brands grow with us) ──── */
+.outcomes-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(24px, 2vw, 32px); margin-top: clamp(40px, 4vw, 64px); }
+.outcome-card { display: flex; flex-direction: column; }
+.outcome-card-frame { background: #FAFAFA; border: 1px solid #ECECEC; aspect-ratio: 4/3; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: clamp(28px, 2.4vw, 40px); position: relative; overflow: hidden; transition: background 0.5s var(--ease); }
+.outcome-card:hover .outcome-card-frame { background: var(--white); }
+.outcome-card-num {
+  position: absolute; top: 24px; left: 28px;
+  font-size: 13px; font-weight: 700;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--accent-deep);
+}
+.outcome-card-big {
+  font-size: clamp(40px, 4.6vw, 84px);
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  color: var(--text);
+  text-align: center;
+}
+.outcome-card-sub {
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  margin-top: 20px;
+  text-align: center;
+  font-weight: 500;
+}
+.outcome-card-body h3 {
+  margin-top: 24px;
+  font-size: clamp(20px, 1.7vw, 26px);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.18;
+  color: var(--text);
+  text-wrap: pretty;
+}
+.outcome-card-body p {
+  margin-top: 12px;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.55;
+  color: #414A5D;
+  text-wrap: pretty;
+}
+@media (max-width: 900px) { .outcomes-grid { grid-template-columns: 1fr; } }
+
+/* ── Values grid (6 cards) ──────────────────────────────────────── */
+.values-section { padding: clamp(48px, 5.5vw, 90px) 0 0; }
+.vm-section { padding: clamp(28px, 3vw, 48px) 0 clamp(48px, 5.5vw, 90px); }
+.values-head { margin-bottom: clamp(48px, 5vw, 72px); max-width: 80ch; }
+/* Values — 2-column hairline editorial grid (was Why-trust's format) */
+.values-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: clamp(48px, 5vw, 96px);
+  row-gap: 0;
+  border-top: 1px solid var(--hairline);
+}
+.value-card {
+  padding: clamp(36px, 3vw, 52px) 0;
+  border-bottom: 1px solid var(--hairline);
+  background: none;
+  display: grid;
+  grid-template-columns: minmax(160px, 28%) 1fr;
+  column-gap: clamp(24px, 2vw, 40px);
+  align-items: start;
+  position: relative;
+}
+.value-card-idx { display: none; }    /* index removed — using the value name as the label */
+.value-card-num {
+  font-size: clamp(14px, 1.05vw, 16px);
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  text-transform: none;
+  color: var(--accent-deep);
+  margin: 0;
+  line-height: 1.2;
+}
+.value-card-body { display: flex; flex-direction: column; }
+.value-card h3 {
+  font-size: clamp(20px, 1.7vw, 26px);
+  font-weight: 500;
+  letter-spacing: -0.018em;
+  line-height: 1.2;
+  color: var(--text);
+  margin: 0 0 10px;
+  text-wrap: pretty;
+}
+.value-card p {
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.55;
+  color: #414A5D;
+  text-wrap: pretty;
+  margin: 0;
+}
+@media (max-width: 900px) {
+  .values-grid { grid-template-columns: 1fr; column-gap: 0; }
+  .value-card { grid-template-columns: 1fr; row-gap: 14px; }
+}
+
+/* ── Working at Inspirelabs ───────────────────────────────────── */
+.culture-teaser { margin-top: 24px; max-width: 980px; }
+.culture-teaser h2 {
+  font-size: clamp(40px, 7vw, 96px);
+  font-weight: 600; line-height: 0.98;
+  letter-spacing: -0.04em; color: var(--text);
+}
+.culture-teaser p {
+  margin-top: 32px;
+  font-size: clamp(16px, 1.3vw, 19px);
+  line-height: 1.55;
+  color: var(--text-secondary);
+  max-width: 56ch;
+}
+.culture-teaser .tlink { margin-top: 28px; }
+
+/* ── Performance row ──────────────────────────────────────────── */
+.perf-head {
+  display: flex; gap: 32px; align-items: flex-start;
+  flex-wrap: wrap; margin-bottom: 40px;
+}
+.perf-head-text { flex: 1 1 60%; min-width: 280px; }
+.perf-row { display: flex; flex-wrap: wrap; gap: 10px; }
+.perf-pill {
+  position: relative;
+  padding: 11px 18px;
+  background: var(--white);
+  border: 1px solid var(--hairline);
+  border-radius: 8px;
+  font-size: 14px; font-weight: 500;
+  color: var(--text);
+  cursor: pointer;
+  transition: all 0.2s var(--ease);
+  white-space: nowrap;
+}
+.perf-pill:hover { background: var(--accent-soft); border-color: var(--accent); color: var(--accent-deep); }
+.perf-pill .new-tag {
+  position: absolute; top: -7px; right: -8px;
+  font-size: 9px; font-weight: 700; letter-spacing: 0.05em;
+  background: var(--accent); color: var(--white);
+  padding: 3px 7px; border-radius: 999px;
+}
+
+/* ── Impact cards with real photos ────────────────────────────── */
+.impact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.impact-card {
+  display: flex; flex-direction: column;
+  background: var(--white);
+  border: 1px solid var(--hairline);
+  border-radius: 8px; overflow: hidden;
+  transition: all 0.3s var(--ease);
+}
+.impact-card:hover { border-color: var(--accent); box-shadow: 0 1px 2px rgba(15,17,23,0.05), 0 12px 32px -16px rgba(91,92,255,0.18); transform: translateY(-2px); }
+.impact-card-img {
+  width: 100%; aspect-ratio: 16/9;
+  object-fit: cover;
+  background: var(--accent-soft);
+}
+.impact-card-body { padding: clamp(28px, 3vw, 36px); display: flex; flex-direction: column; gap: 14px; }
+.impact-card h3 {
+  font-size: 22px; font-weight: 600;
+  letter-spacing: -0.02em; color: var(--text); line-height: 1.2;
+}
+.impact-card p {
+  font-size: 15px; color: var(--text-secondary); line-height: 1.6;
+}
+.impact-card .tlink { margin-top: 8px; align-self: flex-start; }
+@media (max-width: 800px) { .impact-grid { grid-template-columns: 1fr; } }
+
+/* ── Brand wall (clients we serve) ────────────────────────────── */
+.clients {
+  padding: 80px 0;
+  border-top: 1px solid var(--hairline);
+  background: var(--white);
+}
+.clients-label {
+  text-align: center;
+  font-size: 12px; letter-spacing: 0.10em; text-transform: uppercase;
+  color: var(--text-tertiary); font-weight: 600;
+  margin-bottom: 32px;
+}
+.clients-marquee { overflow: hidden; mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
+.clients-track {
+  display: flex; gap: 64px; align-items: center;
+  width: max-content;
+  animation: clientsMarquee 60s linear infinite;
+}
+.clients-marquee:hover .clients-track { animation-play-state: paused; }
+.clients-track img {
+  height: 26px; width: auto;
+  opacity: 0.55; filter: grayscale(1);
+  transition: opacity 0.2s, filter 0.2s;
+  flex-shrink: 0;
+}
+.clients-track img:hover { opacity: 1; filter: none; }
+@keyframes clientsMarquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ── Footer ───────────────────────────────────────────────────── */
+footer {
+  padding: 44px 0 32px;
+  background: var(--white);
+  border-top: 1px solid var(--hairline);
+  margin-top: 56px;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.6fr repeat(4, 1fr);
+  gap: 56px;
+}
+.footer-brand-block .nav-brand { font-size: 24px; }
+.footer-brand-block p {
+  margin-top: 18px; font-size: 14.5px;
+  color: var(--text-secondary); line-height: 1.6;
+  max-width: 36ch;
+}
+.footer-brand-block address {
+  margin-top: 16px; font-size: 13px;
+  color: var(--text-tertiary); line-height: 1.55; font-style: normal;
+}
+.footer-brand-block address a { color: var(--text); }
+.footer-col h5 {
+  font-size: 11px; font-weight: 700; letter-spacing: 0.10em;
+  text-transform: uppercase; color: var(--text-tertiary);
+  margin-bottom: 18px;
+}
+.footer-col a {
+  display: block; font-size: 14px; color: var(--text);
+  padding: 5px 0; transition: color 0.2s var(--ease);
+}
+.footer-col a:hover { color: var(--accent-deep); }
+.footer-bottom {
+  margin-top: 64px; padding-top: 24px;
+  border-top: 1px solid var(--hairline);
+  display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap;
+  font-size: 12.5px; color: var(--text-tertiary);
+}
+.footer-bottom-links { display: flex; gap: 20px; }
+.footer-bottom-links a { color: var(--text-tertiary); }
+.footer-bottom-links a:hover { color: var(--text); }
+@media (max-width: 1000px) {
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+  .footer-brand-block { grid-column: 1 / -1; }
+}
+@media (max-width: 600px) {
+  .footer-grid { grid-template-columns: 1fr; }
+  .footer-brand-block { grid-column: auto; }
+}
+
+/* ── Reveal animation ─────────────────────────────────────────── */
+.reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.7s var(--ease), transform 0.7s var(--ease); }
+.reveal.in-view { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } html { scroll-behavior: auto; } }
+
+/* ── Section art (Eternal-style abstract illustrations) ────────── */
+.section-art { max-width: 100%; height: auto; max-height: 320px; margin: 0 auto; opacity: 0.9; display: block; }
+
+/* Staggered children — start invisible, animate with delay based on --stagger-i */
+.reveal.stagger > * {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
+  transition-delay: calc(var(--stagger-i, 0) * 90ms);
+}
+.reveal.stagger > *.staggered {
+  opacity: 1;
+  transform: none;
+}
+/* Parallax: smooth transform, no transition */
+.parallax { will-change: transform; transition: none; }
+@media (prefers-reduced-motion: reduce) { .parallax { transform: none !important; } }
+</style>
+</head>
+
+<body>
+
+<!-- ===========================================================
+ NAVIGATION
+ =========================================================== -->
+<header class="nav" id="nav">
+ <div class="container nav-inner">
+ <a href="index.html" class="nav-brand" aria-label="Inspirelabs"><img src="assets/brand/inspirelabs-logo.svg" alt="Inspirelabs" /></a>
+ <nav class="nav-links" aria-label="Primary">
+ <a href="index.html" class="nav-link active">Home</a>
+ <a href="products.html" class="nav-link">Products</a>
+ <a href="services.html" class="nav-link">Services</a>
+ <a href="about.html" class="nav-link">About</a>
+ <a href="careers.html" class="nav-link">Careers</a>
+ <a href="contact.html" class="nav-link">Contact</a>
+ </nav>
+ <button class="nav-toggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+ </div>
+</header>
+
+<main>
+
+<!-- ===========================================================
+ HERO, declarative, two-line, founder note
+ =========================================================== -->
+<section class="hero">
+ <div class="hero-grid parallax" data-parallax="40"></div>
+ <div class="container hero-inner">
+ <h1 class="display-1"><span class="line">Inspirelabs isn&rsquo;t a digital agency.</span><span class="line">We&rsquo;re growth infrastructure.</span></h1>
+
+ <div class="hero-foot">
+ <a href="#our-products" class="hero-scroll" aria-label="Scroll to next section">
+ <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 9l6 6 6-6"/></svg>
+ </a>
+
+ <div class="founder-note">
+ <div class="founder-note-img">
+ <img src="assets/founders/ashok-reddy.jpg" alt="Ashok Reddy, Founder & CEO" onerror="this.style.display='none'; this.parentElement.innerHTML='AR';" />
+ </div>
+ <div>
+ <div class="founder-note-text">A note from our Founder &amp; CEO, <strong>Ashok Reddy</strong></div>
+ <a href="#" class="tlink tlink-sm" style="margin-top: 6px;">Read the founder letter</a>
+ </div>
+ </div>
+ </div>
+ </div>
+</section>
+
+<!-- ===========================================================
+ OUR BUSINESSES, six dark portfolio tiles with real logos
+ =========================================================== -->
+<section id="our-products">
+ <div class="container">
+ <div class="biz-head reveal">
+ <div class="biz-head-text">
+ <h2 class="section-title-xl">Our products</h2>
+ <p class="biz-intro">Five platforms operated end-to-end. A consumer coupons marketplace (GrabOn), an affiliate earnings network for everyday creators (GrabCash), a creator-led commerce layer (GrabShare), a search-revenue intelligence engine for growth teams (RankDrive), and the global discovery layer for B2B software (Alternatives.co).</p>
+ </div>
+ <div class="biz-arrows-abs">
+ <button class="biz-arrow" id="biz-prev" aria-label="Previous"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M15 6l-6 6 6 6"/></svg></button>
+ <button class="biz-arrow" id="biz-next" aria-label="Next"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 6l6 6-6 6"/></svg></button>
+ </div>
+ </div>
+
+ <div class="biz-track-wrap">
+ <div class="biz-track" id="biz-track">
+
+ <article class="biz-card">
+ <a href="https://www.grabon.in" target="_blank" rel="noopener" class="biz-tile brand-grabon" aria-label="GrabOn, an Inspirelabs company">
+ <img src="assets/logos/grabon-real.png" alt="GrabOn" class="biz-tile-logo" />
+ </a>
+ <h3>India&rsquo;s leading coupons and deals marketplace.</h3>
+ <p>200 million shoppers a month find verified offers from 4,500+ brands. Travel, fashion, food, electronics, recharges, OTT. The most trusted commerce-intent destination in the country, operated since 2013.</p>
+ <a href="https://www.grabon.in" target="_blank" rel="noopener" class="tlink">Learn more</a>
+ </article>
+
+ <article class="biz-card">
+ <a href="https://www.grabcash.in" target="_blank" rel="noopener" class="biz-tile brand-grabcash" aria-label="GrabCash, an Inspirelabs company">
+ <img src="assets/logos/grabcash-real.png" alt="GrabCash" class="biz-tile-logo" />
+ </a>
+ <h3>Turn your network into income.</h3>
+ <p>Affiliate marketing made effortless. Students, homemakers, and creators share deals with their network and earn when their network shops. No influencer status required, no upfront cost, no inventory.</p>
+ <a href="https://www.grabcash.in" target="_blank" rel="noopener" class="tlink">Learn more</a>
+ </article>
+
+ <article class="biz-card">
+ <a href="https://www.grabshare.com" target="_blank" rel="noopener" class="biz-tile brand-grabshare" aria-label="GrabShare, an Inspirelabs company">
+ <img src="assets/logos/grabshare-real.png" alt="GrabShare" class="biz-tile-logo" />
+ </a>
+ <h3>Where creators turn audience into commerce.</h3>
+ <p>A creator-led storefront layer where verified voices curate the products they love, brands attribute revenue, and audiences shop with trust. Built for India&rsquo;s social commerce era.</p>
+ <a href="https://www.grabshare.com" target="_blank" rel="noopener" class="tlink">Learn more</a>
+ </article>
+
+ <article class="biz-card">
+ <a href="https://www.rankdrive.com" target="_blank" rel="noopener" class="biz-tile brand-rankdrive" aria-label="RankDrive, an Inspirelabs company">
+ <img src="assets/logos/rankdrive-real.png" alt="RankDrive" class="biz-tile-logo" />
+ </a>
+ <h3>Search-revenue intelligence for growth teams.</h3>
+ <p>From keywords to revenue, in one operating layer. Daily ML-prioritised actions, GEO citations, and SGE presence tracking. Built by the team that runs SEO at the scale of 200 million monthly visitors.</p>
+ <a href="https://www.rankdrive.com" target="_blank" rel="noopener" class="tlink">Learn more</a>
+ </article>
+
+<article class="biz-card">
+ <a href="https://alternatives.co" target="_blank" rel="noopener" class="biz-tile brand-alternatives" aria-label="Alternatives.co, an Inspirelabs company">
+ <img src="assets/logos/alternatives-real.png" alt="Alternatives.co" class="biz-tile-logo" />
+ </a>
+ <h3>The platform where leaders find software.</h3>
+ <p>1,100+ software profiles, 574,000 buyers a month. Free for buyers, free to list. Vendors only pay when qualified intent reaches them. The discovery layer for every modern B2B software decision.</p>
+ <a href="https://alternatives.co" target="_blank" rel="noopener" class="tlink">Learn more</a>
+ </article>
+
+ </div>
+ </div>
+ </div>
+</section>
+
+<!-- ===========================================================
+ WHAT WE'VE DELIVERED — proof section showing brand impact
+ =========================================================== -->
+<section class="delivered-section">
+ <div class="container">
+ <div class="delivered-head reveal">
+ <h2 class="section-title-xl">Outcomes brands grow on.</h2>
+ <p class="biz-intro">Four numbers that compound every quarter. The metrics we hold ourselves accountable to.</p>
+ </div>
+
+ <div class="delivered-stats reveal">
+ <div class="delivered-stat">
+ <div class="delivered-stat-val">1B<span class="accent">+</span></div>
+ <div class="delivered-stat-lbl">Conversions routed to partner brand sites</div>
+ </div>
+ <div class="delivered-stat">
+ <div class="delivered-stat-val">&#8377;2,500 Cr<span class="accent">+</span></div>
+ <div class="delivered-stat-lbl">Unlocked in savings for Indian shoppers</div>
+ </div>
+ <div class="delivered-stat">
+ <div class="delivered-stat-val">4,500<span class="accent">+</span></div>
+ <div class="delivered-stat-lbl">Brand partners on the network today</div>
+ </div>
+ <div class="delivered-stat">
+ <div class="delivered-stat-val">200M<span class="accent">+</span></div>
+ <div class="delivered-stat-lbl">Monthly shoppers across the network</div>
+ </div>
+ </div>
+
+ <div class="delivered-brands-block reveal">
+ <div class="delivered-brands-label">The brands that grow on our network</div>
+ <div class="brand-marquee">
+ <div class="brand-marquee-track">
+ <img src="assets/logos/adidas.svg" alt="Adidas" loading="lazy" />
+ <img src="assets/logos/samsung.svg" alt="Samsung" loading="lazy" />
+ <img src="assets/logos/airbnb.svg" alt="Airbnb" loading="lazy" />
+ <img src="assets/logos/uber.svg" alt="Uber" loading="lazy" />
+ <img src="assets/logos/spotify.svg" alt="Spotify" loading="lazy" />
+ <img src="assets/logos/paypal.svg" alt="PayPal" loading="lazy" />
+ <img src="assets/logos/swiggy.svg" alt="Swiggy" loading="lazy" />
+ <img src="assets/logos/zomato.svg" alt="Zomato" loading="lazy" />
+ <img src="assets/logos/dell.svg" alt="Dell" loading="lazy" />
+ <img src="assets/logos/lenovo.svg" alt="Lenovo" loading="lazy" />
+ <img src="assets/logos/expedia.svg" alt="Expedia" loading="lazy" />
+ <img src="assets/logos/bookmyshow.svg" alt="BookMyShow" loading="lazy" />
+ <img src="assets/logos/etsy.svg" alt="Etsy" loading="lazy" />
+ <img src="assets/logos/ebay.svg" alt="eBay" loading="lazy" />
+ <img src="assets/logos/shopify.svg" alt="Shopify" loading="lazy" />
+ <img src="assets/logos/americanexpress.svg" alt="American Express" loading="lazy" />
+ <img src="assets/logos/netflix.svg" alt="Netflix" loading="lazy" />
+ <img src="assets/logos/asus.svg" alt="Asus" loading="lazy" />
+ <!-- duplicate set for seamless infinite loop -->
+ <img src="assets/logos/adidas.svg" alt="" aria-hidden="true" loading="lazy" />
+ <img src="assets/logos/samsung.svg" alt="" aria-hidden="true" loading="lazy" />
+ <img src="assets/logos/airbnb.svg" alt="" aria-hidden="true" loading="lazy" />
+ <img src="assets/logos/uber.svg" alt="" aria-hidden="true" loading="lazy" />
+ <img src="assets/logos/spotify.svg" alt="" aria-hidden="true" loading="lazy" />
+ <img src="assets/logos/paypal.svg" alt="" aria-hidden="true" loading="lazy" />
+ <img src="assets/logos/swiggy.svg" alt="" aria-hidden="true" loading="lazy" />
+ <img src="assets/logos/zomato.svg" alt="" aria-hidden="true" loading="lazy" />
+ <img src="assets/logos/dell.svg" alt="" aria-hidden="true" loading="lazy" />
+ <img src="assets/logos/lenovo.svg" alt="" aria-hidden="true" loading="lazy" />
+ <img src="assets/logos/expedia.svg" alt="" aria-hidden="true" loading="lazy" />
+ <img src="assets/logos/bookmyshow.svg" alt="" aria-hidden="true" loading="lazy" />
+ <img src="assets/logos/etsy.svg" alt="" aria-hidden="true" loading="lazy" />
+ <img src="assets/logos/ebay.svg" alt="" aria-hidden="true" loading="lazy" />
+ <img src="assets/logos/shopify.svg" alt="" aria-hidden="true" loading="lazy" />
+ <img src="assets/logos/americanexpress.svg" alt="" aria-hidden="true" loading="lazy" />
+ <img src="assets/logos/netflix.svg" alt="" aria-hidden="true" loading="lazy" />
+ <img src="assets/logos/asus.svg" alt="" aria-hidden="true" loading="lazy" />
+ </div>
+ </div>
+ </div>
+ </div>
+</section>
+
+<!-- ===========================================================
+ BUILT TO COMPOUND, big-numbers dark stat block
+ =========================================================== -->
+<section class="compound-section">
+ <div class="container">
+ <div class="reveal">
+ <h2 class="section-title-xl">The company</h2>
+ <p class="biz-intro">Twelve years. Zero outside capital. One operating standard. The numbers below are the result of operating consistency, not capital infusion. Bootstrapped since day one, profitable since year three, and still hiring like it&rsquo;s year one.</p>
+ </div>
+
+ <div class="compound-grid reveal">
+ <div class="compound-stat">
+ <div class="compound-stat-val">2013</div>
+ <div class="compound-stat-lbl">Founded in Hyderabad, India</div>
+ </div>
+ <div class="compound-stat">
+ <div class="compound-stat-val">12 yrs</div>
+ <div class="compound-stat-lbl">Consecutive years of profitable operation</div>
+ </div>
+ <div class="compound-stat">
+ <div class="compound-stat-val">$0</div>
+ <div class="compound-stat-lbl">External capital raised. Bootstrapped from day one</div>
+ </div>
+ <div class="compound-stat">
+ <div class="compound-stat-val">100%</div>
+ <div class="compound-stat-lbl">Engineered, owned and operated in-house</div>
+ </div>
+ </div>
+ </div>
+</section>
+
+<!-- ===========================================================
+ FOUR-PILLAR FRAMEWORK, Awareness · Discovery · Engagement · Acquisition
+ =========================================================== -->
+<section class="pillars">
+ <div class="container">
+ <div class="pillars-head reveal">
+ <h2 class="section-title-xl">The Inspirelabs framework</h2>
+ <p class="biz-intro">Four pillars. Twenty-four services. One outcome, real revenue. Awareness, Discovery, Engagement, Acquisition. Every service in every pillar built and run in-house, every service measured against the same number.</p>
+ </div>
+
+ <div class="pillars-grid reveal">
+ <article class="pillar pillar-awareness">
+ <div class="pillar-eyebrow">Awareness</div>
+ <h3>Get the brand in front of the right audience.</h3>
+ <p>Influencer-led campaigns, owned-network placements, paid social calibrated for top-of-funnel recall, not vanity reach.</p>
+ <div class="pillar-products">Powered by &nbsp;<strong>GrabOn</strong> + <strong>GrabShare</strong></div>
+ <div class="pillar-list">Influencer &middot; Social &middot; Media houses</div>
+ <span class="pillar-arrow">&rarr;</span>
+ </article>
+
+ <article class="pillar pillar-discovery">
+ <div class="pillar-eyebrow">Discovery</div>
+ <h3>Be found at every layer of intent.</h3>
+ <p>SEO, GEO, SGE and ASO so your brand surfaces wherever buyers begin, including AI-mediated answers.</p>
+ <div class="pillar-products">Powered by &nbsp;<strong>RankDrive</strong> + <strong>Alternatives.co</strong></div>
+ <div class="pillar-list">SEO &middot; GEO &middot; SGE &middot; ASO &middot; Content</div>
+ <span class="pillar-arrow">&rarr;</span>
+ </article>
+
+ <article class="pillar pillar-engagement">
+ <div class="pillar-eyebrow">Engagement</div>
+ <h3>Turn visits into recurring relationships.</h3>
+ <p>Strategic alliances, lifecycle programmes and bank-partnered rewards that turn curiosity into recurring engagement.</p>
+ <div class="pillar-products">Powered by &nbsp;<strong>GrabShare</strong> + <strong>GrabCash</strong></div>
+ <div class="pillar-list">Alliances &middot; Lifecycle &middot; Loyalty</div>
+ <span class="pillar-arrow">&rarr;</span>
+ </article>
+
+ <article class="pillar pillar-acquisition">
+ <div class="pillar-eyebrow">Acquisition</div>
+ <h3>Convert intent into paid customers.</h3>
+ <p>Performance affiliate, demand network, creator commerce. Server-side attribution. Paid only on result.</p>
+ <div class="pillar-products">Powered by &nbsp;<strong>GrabCash</strong> + <strong>GrabOn</strong></div>
+ <div class="pillar-list">Affiliate &middot; Demand network &middot; Creator</div>
+ <span class="pillar-arrow">&rarr;</span>
+ </article>
+ </div>
+
+ <div class="pillars-foot">
+ <a href="services.html" class="tlink">See the full services taxonomy</a>
+ </div>
+ </div>
+</section>
+
+<!-- ===========================================================
+ WHY BRANDS TRUST INSPIRELABS, the differentiators
+ =========================================================== -->
+<section>
+ <div class="container">
+ <div class="reveal">
+ <h2 class="section-title-xl">Why brands trust Inspirelabs</h2>
+ <p class="biz-intro">In an industry of agencies, intermediaries, and middlemen, we built something different. An operating company that owns the entire growth stack. Five platforms, twenty-four services, one standard. Awareness, discovery, engagement, acquisition, all built and run in-house, all measured against the same number, real revenue.</p>
+ </div>
+
+ <div class="reasons-grid reveal">
+ <article class="reason-card reason-builtin">
+ <span class="reason-card-idx">01</span>
+ <div class="reason-card-num">Built in-house</div>
+ <div class="reason-card-body"> <h3>Engineered, not assembled.</h3>
+ <p>Every platform and every service runs on our own stack. No white-label tools, no rebranded vendor software, no agency layer charging by the hour. The product is the moat.</p>
+ </div>
+ </article>
+ <article class="reason-card reason-fullstack">
+ <span class="reason-card-idx">02</span>
+ <div class="reason-card-num">Full-stack services</div>
+ <div class="reason-card-body"> <h3>Twenty-four services, four pillars, one room.</h3>
+ <p>SEO, GEO, ASO, influencer, affiliate, programmatic, lifecycle, loyalty, brand campaigns, editorial, creator commerce, bank partnerships and more. Whatever a brand needs to grow, we run it end-to-end under one operating standard.</p>
+ </div>
+ </article>
+ <article class="reason-card reason-owneddemand">
+ <span class="reason-card-idx">03</span>
+ <div class="reason-card-num">Owned demand</div>
+ <div class="reason-card-body"> <h3>We own the surfaces, not just the spend.</h3>
+ <p>200 million shoppers a month show up on platforms we operate. We don&rsquo;t rent attention from gatekeepers. We attract intent at the source and route it to where it converts.</p>
+ </div>
+ </article>
+ <article class="reason-card reason-network">
+ <span class="reason-card-idx">04</span>
+ <div class="reason-card-num">Twelve-year network effect</div>
+ <div class="reason-card-body"> <h3>What we built compounds.</h3>
+ <p>Twelve years of search authority, creator relationships, brand partnerships and operational know-how. Every new partner plugs into a network that has been compounding since 2013.</p>
+ </div>
+ </article>
+ </div>
+ </div>
+</section>
+
+<!-- ===========================================================
+ OUR VALUES, six official values from the employee handbook
+ =========================================================== -->
+<section class="values-section">
+ <div class="container">
+ <div class="values-head reveal">
+ <h2 class="section-title-xl">Our values</h2>
+ <p class="biz-intro">The DNA that lets one operating company run five very different businesses. Six principles we hire for, promote for, and make daily decisions against.</p>
+ </div>
+ <div class="values-grid reveal">
+ <article class="value-card">
+ <span class="value-card-idx">01</span>
+ <div class="value-card-num">Customer Centric</div>
+ <div class="value-card-body"> <h3>Above and beyond, every time.</h3>
+ <p>Without keeping our customers and clients as priority, we cannot grow, sustain, or excel as a business. We go above and beyond to keep them happy.</p>
+ </div>
+ </article>
+ <article class="value-card">
+ <span class="value-card-idx">02</span>
+ <div class="value-card-num">Ownership</div>
+ <div class="value-card-body"> <h3>We act like owners. Because we are.</h3>
+ <p>We care about the outcome of our work as much as an owner would. We take full accountability and are proactive to get things done with the best possible result.</p>
+ </div>
+ </article>
+ <article class="value-card">
+ <span class="value-card-idx">03</span>
+ <div class="value-card-num">Curiosity</div>
+ <div class="value-card-body"> <h3>The never-ending desire to learn.</h3>
+ <p>We&rsquo;re always thinking about how we can make things better. Whether it is our product, our process, or anything else.</p>
+ </div>
+ </article>
+ <article class="value-card">
+ <span class="value-card-idx">04</span>
+ <div class="value-card-num">Solution Focused</div>
+ <div class="value-card-body"> <h3>90% on the solution. 10% on the problem.</h3>
+ <p>Identifying a problem is easy. Solving it is where we make impact. We focus 90% of our time on solutions and 10% on the problem.</p>
+ </div>
+ </article>
+ <article class="value-card">
+ <span class="value-card-idx">05</span>
+ <div class="value-card-num">Results Oriented</div>
+ <div class="value-card-body"> <h3>Driven by results, accountable to them.</h3>
+ <p>Being intensely result oriented in everything we do is the defining characteristic of high performers. We are driven by results, and we hold ourselves accountable to them.</p>
+ </div>
+ </article>
+ <article class="value-card">
+ <span class="value-card-idx">06</span>
+ <div class="value-card-num">Collaborative</div>
+ <div class="value-card-body"> <h3>Working together. In harmony. With integrity.</h3>
+ <p>We believe in the power of working together in harmony and integrity. The best work compounds when people share the lift.</p>
+ </div>
+ </article>
+ </div>
+ </div>
+</section>
+
+<!-- ===========================================================
+ OUR VISION + OUR MISSION
+ =========================================================== -->
+<section class="vm-section">
+ <div class="container">
+ <div class="vm-grid reveal">
+ <div class="vm-block">
+ <div class="section-eyebrow">Our vision</div>
+ <p>To help businesses succeed.</p>
+ <p class="vm-block-sub">Every ambitious idea deserves the platforms, the people, and the operating rigour to stand out. The standard we hold ourselves to, every quarter, every product, every team.</p>
+ </div>
+ <div class="vm-block">
+ <div class="section-eyebrow">Our mission</div>
+ <p>To simplify growth for millions of businesses.</p>
+ <p class="vm-block-sub">Five platforms, one operating company. Discovery, performance, creator commerce, search intelligence, and B2B software discovery. Built in Hyderabad, accountable to one set of values.</p>
+ </div>
+ </div>
+ </div>
+</section>
+
+<!-- ===========================================================
+ INSIDE INSPIRELABS, life at the operating company
+ =========================================================== -->
+<section class="inside-section">
+ <div class="container">
+ <div class="inside-head reveal">
+ <h2 class="section-title-xl">Inside Inspirelabs</h2>
+ <p class="biz-intro">A studio of operators who&rsquo;d rather build than pitch. We celebrate together, we ship together, and we leave the office knowing what we made today will outlive the next quarter.</p>
+ </div>
+
+ <div class="inside-grid reveal">
+ <div class="inside-tile">
+ <img class="inside-tile-img" src="assets/culture/team-collab.jpg" alt="The Inspirelabs team" loading="lazy" />
+ <div class="inside-tile-caption">
+ <div class="inside-tile-eyebrow">The Crew</div>
+ <div class="inside-tile-title">One operating standard, six core values.</div>
+ </div>
+ </div>
+ <div class="inside-tile">
+ <img class="inside-tile-img" src="assets/culture/team-portrait.jpg" alt="An Inspirelabs town-hall in progress" loading="lazy" />
+ <div class="inside-tile-caption">
+ <div class="inside-tile-eyebrow">The Townhall</div>
+ <div class="inside-tile-title">Where every decision gets explained.</div>
+ </div>
+ </div>
+ <div class="inside-tile">
+ <img class="inside-tile-img" src="assets/culture/cafeteria.jpg" alt="Cafeteria with art" loading="lazy" />
+ <div class="inside-tile-caption">
+ <div class="inside-tile-eyebrow">The Cafe</div>
+ <div class="inside-tile-title">Where ideas get loud.</div>
+ </div>
+ </div>
+ <div class="inside-tile">
+ <img class="inside-tile-img" src="assets/culture/team-meet.jpg" alt="Team meet at Inspirelabs" loading="lazy" />
+ <div class="inside-tile-caption">
+ <div class="inside-tile-eyebrow">Celebrations</div>
+ <div class="inside-tile-title">Iftars. Sports week. Women&rsquo;s Day. Anniversaries.</div>
+ </div>
+ </div>
+ </div>
+
+ <div class="inside-stats reveal">
+ <div class="inside-stat">
+ <div class="inside-stat-val">24</div>
+ <div class="inside-stat-lbl">Paid leaves a year (sick, casual, annual)</div>
+ </div>
+ <div class="inside-stat">
+ <div class="inside-stat-val">10</div>
+ <div class="inside-stat-lbl">Public holidays across the calendar year</div>
+ </div>
+ <div class="inside-stat">
+ <div class="inside-stat-val">5-day</div>
+ <div class="inside-stat-lbl">Work week with eight productive hours</div>
+ </div>
+ <div class="inside-stat">
+ <div class="inside-stat-val">90 days</div>
+ <div class="inside-stat-lbl">Health First wellness challenge, every year</div>
+ </div>
+ </div>
+
+ <div class="reveal" style="margin-top: clamp(40px, 4vw, 56px);">
+ <a href="about.html" class="tlink">See life at Inspirelabs</a>
+ </div>
+ </div>
+</section>
+
+</main>
+
+<!-- ===========================================================
+ FOOTER
+ =========================================================== -->
+<footer>
+ <div class="container">
+ <div class="footer-grid">
+ <div class="footer-brand-block">
+ <a href="index.html" class="nav-brand" aria-label="Inspirelabs"><img src="assets/brand/inspirelabs-logo.svg" alt="Inspirelabs" /></a>
+ <p>The Hyderabad-based parent company behind GrabOn, GrabCash, GrabShare, RankDrive and Alternatives.co. Bootstrapped, profitable, and building since 2013.</p>
+ <address>
+ 21st Floor, OneWest Building<br/>
+ Financial District, Gachibowli<br/>
+ Hyderabad 500032, India<br/><br/>
+ <a href="tel:+914032537070">040-32537070</a> · <a href="mailto:contact@inspirelabs.com">contact@inspirelabs.com</a>
+ </address>
+ </div>
+
+ <div class="footer-col">
+ <h5>Our products</h5>
+ <a href="https://www.grabon.in" target="_blank" rel="noopener">GrabOn</a>
+ <a href="https://www.grabcash.in" target="_blank" rel="noopener">GrabCash</a>
+ <a href="https://www.grabshare.com" target="_blank" rel="noopener">GrabShare</a>
+ <a href="https://www.rankdrive.com" target="_blank" rel="noopener">RankDrive</a>
+ <a href="https://alternatives.co" target="_blank" rel="noopener">Alternatives.co</a>
+ </div>
+
+ <div class="footer-col">
+ <h5>What we do</h5>
+ <a href="products.html">Products</a>
+ <a href="services.html">Services</a>
+ <a href="ai-agents.html">AI Agents</a>
+ <a href="platform.html">Platform</a>
+ </div>
+
+ <div class="footer-col">
+ <h5>Company</h5>
+ <a href="about.html">About</a>
+ <a href="careers.html">Careers</a>
+ <a href="partnership.html">Partner with us</a>
+ <a href="contact.html">Contact</a>
+ </div>
+
+ <div class="footer-col">
+ <h5>Trust &amp; legal</h5>
+ <a href="trust.html">Trust &amp; security</a>
+ <a href="privacy.html">Privacy policy</a>
+ <a href="terms.html">Terms</a>
+ </div>
+ </div>
+
+ <div class="footer-bottom">
+ <div>© <span data-year>2026</span> Inspirelabs Solutions Ltd. Bootstrapped in Hyderabad since 2013.</div>
+ <div class="footer-bottom-links">
+ <a href="about.html">About</a>
+ <a href="careers.html">Careers</a>
+ <a href="contact.html">Contact</a>
+ </div>
+ </div>
+ </div>
+</footer>
+
+<script>
+// Sticky-nav scroll state
+(() => {
+  const nav = document.getElementById('nav');
+  if (!nav) return;
+  const onScroll = () => {
+    if (window.scrollY > 8) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+})();
+
+// Reveal-on-scroll
+(() => {
+  const els = document.querySelectorAll('.reveal');
+  if (!('IntersectionObserver' in window)) {
+    els.forEach(e => e.classList.add('in-view'));
+    return;
+  }
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(en => {
+      if (en.isIntersecting) {
+        en.target.classList.add('in-view');
+        io.unobserve(en.target);
+      }
+    });
+  }, { rootMargin: '0px 0px -10% 0px', threshold: 0.05 });
+  els.forEach(e => io.observe(e));
+})();
+
+// Businesses carousel arrows
+(() => {
+  const track = document.getElementById('biz-track');
+  const prev = document.getElementById('biz-prev');
+  const next = document.getElementById('biz-next');
+  if (!track || !prev || !next) return;
+  const card = track.querySelector('.biz-card');
+  const step = card ? (card.getBoundingClientRect().width + 20) : 320;
+  prev.addEventListener('click', () => track.scrollBy({ left: -step, behavior: 'smooth' }));
+  next.addEventListener('click', () => track.scrollBy({ left: step, behavior: 'smooth' }));
+})();
+
+// Year
+(() => {
+  const y = new Date().getFullYear();
+  document.querySelectorAll('[data-year]').forEach(e => { e.textContent = y; });
+})();
+
+// Staggered reveal — children of .stagger fade up sequentially when parent enters viewport
+(() => {
+  const containers = document.querySelectorAll('.reveal.stagger');
+  if (!('IntersectionObserver' in window)) {
+    containers.forEach(c => Array.from(c.children).forEach(ch => ch.classList.add('staggered')));
+    return;
+  }
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(en => {
+      if (en.isIntersecting) {
+        Array.from(en.target.children).forEach((ch, i) => {
+          ch.style.setProperty('--stagger-i', i);
+          ch.classList.add('staggered');
+        });
+        io.unobserve(en.target);
+      }
+    });
+  }, { rootMargin: '0px 0px -10% 0px', threshold: 0.05 });
+  containers.forEach(c => io.observe(c));
+})();
+
+// Parallax — elements with .parallax translate -Y based on viewport-relative scroll
+(() => {
+  const elems = document.querySelectorAll('.parallax');
+  if (!elems.length || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  let ticking = false;
+  const updateParallax = () => {
+    elems.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      const vh = window.innerHeight;
+      if (rect.bottom < 0 || rect.top > vh) return;
+      const progress = (vh - rect.top) / (vh + rect.height);
+      const strength = parseFloat(el.dataset.parallax || '40');
+      const offset = (progress - 0.5) * strength;
+      el.style.transform = `translate3d(0, ${offset}px, 0)`;
+    });
+    ticking = false;
+  };
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      requestAnimationFrame(updateParallax);
+      ticking = true;
+    }
+  }, { passive: true });
+  updateParallax();
+})();
+
+// Counter-up — elements with .count-up animate from 0 to their final number on enter
+(() => {
+  const counters = document.querySelectorAll('.count-up');
+  if (!counters.length) return;
+  const parseTarget = (text) => {
+    const match = text.match(/([\d,.]+)([A-Za-z+%₹\s]*)/);
+    if (!match) return null;
+    const num = parseFloat(match[1].replace(/,/g, ''));
+    const suffix = match[2] || '';
+    return { num, suffix, original: text };
+  };
+  const animate = (el, target) => {
+    if (!target) return;
+    const duration = 1400;
+    const start = performance.now();
+    const startVal = 0;
+    const step = (now) => {
+      const t = Math.min(1, (now - start) / duration);
+      const eased = 1 - Math.pow(1 - t, 3);
+      const val = startVal + (target.num - startVal) * eased;
+      const formatted = target.num >= 1000 ? Math.round(val).toLocaleString('en-IN') : val.toFixed(target.num % 1 === 0 ? 0 : 1);
+      el.textContent = formatted + target.suffix;
+      if (t < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  };
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(en => {
+      if (en.isIntersecting) {
+        const original = en.target.textContent;
+        const target = parseTarget(original);
+        en.target.dataset.target = original;
+        animate(en.target, target);
+        io.unobserve(en.target);
+      }
+    });
+  }, { rootMargin: '0px 0px -10% 0px', threshold: 0.3 });
+  counters.forEach(c => io.observe(c));
+})();
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Platform | The data, distribution and intelligence layer behind 6 Inspirelabs properties</title>
+<meta name="description" content="The Inspirelabs platform: data, distribution and intelligence layers powering GrabOn, GrabCash, GrabShare, RankDrive and Alternatives.co. 200M+ shoppers a month, 4,500+ brand partners." />
+<meta name="theme-color" content="#FFFFFF" />
+<link rel="canonical" href="https://inspirelabs.com/platform.html?v=v3-platform-style-sync" />
+<link rel="icon" type="image/svg+xml" href="assets/brand/inspirelabs-mark.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300..900&family=JetBrains+Mono:wght@400..700&display=swap" rel="stylesheet" />
+
+<style>
+:root { --white: #FFFFFF; --bg: #FFFFFF; --text: #0E0F0A; --text-secondary: #6F7583; --text-tertiary: #8C92A0; --hairline: #ECEEF2; --line: #DEE1E8; --accent: #FF7A45; --accent-soft: #FFE7DC; --accent-deep: #E55E2A; --tile-dark: #0F1117; --max-w: 1800px; --pad-x: clamp(20px, 3vw, 56px); --ease: cubic-bezier(0.16, 1, 0.3, 1); }
+
+/* Brand: JetBrains Mono on all small labels / eyebrows / metadata */
+.hero-eyebrow,
+.hero-stamp,
+.about-hero-eyebrow,
+.section-eyebrow,
+.plan-list-year,
+.about-num-lbl,
+.deliver-row-num,
+.pillar-eyebrow,
+.numbers-cell-lbl,
+.biz-tile-tag,
+.bleed-photo-stamp,
+.fact-eyebrow,
+.tile-eyebrow,
+.category-eyebrow,
+.kpi-label,
+.tag-label,
+.service-eyebrow,
+.product-eyebrow,
+.career-eyebrow,
+.trust-eyebrow,
+.insight-eyebrow,
+.chapter-tag,
+.chapter-num,
+.eyebrow,
+.meta-row,
+.mono { font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace; }
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Hanken Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); font-size: 17px; font-weight: 400; line-height: 1.5; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+img, svg { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; cursor: pointer; border: none; background: none; color: inherit; }
+ul, ol { list-style: none; }
+::selection { background: var(--accent); color: var(--white); }
+.container { width: min(88%, var(--max-w)); margin: 0 auto; padding: 0 var(--pad-x); }
+@media (max-width: 1100px) { .container { width: 100%; } }
+
+.nav { position: sticky; top: 0; z-index: 100; background: rgba(255, 255, 255, 0.92); backdrop-filter: saturate(140%) blur(14px); padding: 22px 0; border-bottom: 1px solid transparent; transition: border-color 0.25s var(--ease); }
+.nav.scrolled { border-bottom-color: var(--hairline); }
+.nav-inner { display: flex; align-items: center; justify-content: space-between; gap: 32px; }
+.nav-brand { display: inline-flex; align-items: center; color: var(--text); line-height: 1; }
+
+.nav-brand img { height: 24px; width: auto; display: block; }
+.footer-brand-block .nav-brand img { height: 32px; }
+.nav.on-hero .nav-brand img { filter: invert(1) brightness(2); }
+.nav-links { display: flex; gap: 36px; align-items: center; }
+.nav-link { font-size: 15px; font-weight: 500; color: var(--text); padding: 10px 0; position: relative; transition: color 0.2s var(--ease); }
+.nav-link:hover { color: var(--accent-deep); }
+.nav-link.active::after { content: ''; position: absolute; bottom: 4px; left: 0; right: 0; height: 2px; background: var(--accent); }
+.nav-toggle { display: none; width: 36px; height: 36px; }
+.nav-toggle span { display: block; width: 22px; height: 1.5px; background: var(--text); margin: 5px auto; }
+@media (max-width: 880px) { .nav-links { display: none; } .nav-toggle { display: block; } }
+
+h1, h2, h3, h4, h5 { color: var(--text); font-weight: 400; letter-spacing: -0.02em; line-height: 1.06; text-wrap: balance; }
+p, .lead, .section-intro { text-wrap: pretty; }
+.display-1 { font-size: clamp(48px, 6.4vw, 124px); font-weight: 400; letter-spacing: -0.03em; line-height: 1.04; }
+.display-2 { font-size: clamp(36px, 5vw, 72px); font-weight: 400; letter-spacing: -0.025em; line-height: 1.06; }
+.display-3 { font-size: clamp(24px, 3vw, 36px); font-weight: 400; letter-spacing: -0.02em; line-height: 1.15; }
+.lead { font-size: clamp(16px, 1.3vw, 19px); line-height: 1.55; color: var(--text-secondary); max-width: 60ch; }
+
+section { padding: clamp(96px, 11vw, 180px) 0; position: relative; }
+section.tight { padding: clamp(64px, 7vw, 110px) 0; }
+section.section-bleed { padding: 0; }
+.section-eyebrow { display: inline-block; font-size: clamp(20px, 2.2vw, 26px); font-weight: 600; color: var(--text); letter-spacing: -0.02em; padding-bottom: 6px; border-bottom: 2px solid var(--accent); margin-bottom: 32px; }
+.section-title-xl { position: relative; font-size: clamp(30px, 3.2vw, 48px); font-weight: 500; color: var(--text); letter-spacing: -0.005em; line-height: 1.08; margin: 0 0 32px; text-wrap: balance; max-width: 24ch; }
+.section-title-xl::after { content: ''; display: block; width: 72px; height: 3px; background: var(--accent); margin-top: 14px; }
+.biz-intro { font-size: clamp(16px, 1.4vw, 20px); font-weight: 300; line-height: 1.5; color: #414A5D; max-width: 100%; width: 100%; text-wrap: pretty; }
+.section-intro { font-size: clamp(15px, 1.2vw, 17px); line-height: 1.6; color: var(--text-secondary); max-width: 64ch; }
+.tlink { display: inline-block; font-size: 15px; font-weight: 500; color: var(--text); padding-bottom: 2px; border-bottom: 1.5px solid var(--text); transition: color 0.2s var(--ease), border-color 0.2s var(--ease); }
+.tlink:hover { color: var(--accent-deep); border-color: var(--accent); }
+.tlink-light { color: var(--white); border-bottom-color: rgba(255,255,255,0.6); }
+.tlink-light:hover { color: var(--white); border-bottom-color: var(--white); }
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100svh;
+  padding: clamp(64px, 8vh, 120px) 0;
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.hero-grid { position: absolute; inset: 0; background-image: linear-gradient(to right, rgba(15, 17, 23, 0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(15, 17, 23, 0.05) 1px, transparent 1px); background-size: 88px 88px; mask-image: radial-gradient(ellipse 50% 60% at 50% 30%, black 0%, transparent 75%); -webkit-mask-image: radial-gradient(ellipse 50% 60% at 50% 30%, black 0%, transparent 75%); pointer-events: none; z-index: 0; }
+.hero-inner { position: relative; z-index: 1; }
+.hero-eyebrow { font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-tertiary); font-weight: 500; display: inline-flex; align-items: center; gap: 12px; margin-bottom: 40px; }
+.hero-eyebrow::before { content: ''; width: 28px; height: 1.5px; background: var(--accent); }
+.hero h1 { max-width: 22ch; margin: 0 auto; }
+
+.editorial { display: grid; grid-template-columns: 1.4fr 1fr; gap: clamp(48px, 6vw, 96px); align-items: start; }
+.editorial-body p { font-size: clamp(16px, 1.2vw, 18px); line-height: 1.7; color: var(--text-secondary); margin-bottom: 22px; max-width: 60ch; }
+.editorial-body p strong { color: var(--text); font-weight: 600; }
+.editorial-illustration { position: sticky; top: 120px; padding: 24px; }
+@media (max-width: 880px) { .editorial { grid-template-columns: 1fr; } .editorial-illustration { position: static; } }
+
+/* Layer cards */
+.layers { display: grid; gap: 24px; }
+.layer-card { padding: clamp(36px, 4vw, 56px) 0; border: none; border-bottom: 1px solid var(--hairline); display: grid; grid-template-columns: 220px 1fr; gap: 40px; align-items: start; }
+.layers { border-top: 1px solid var(--hairline); }
+.layer-card-num { font-size: clamp(48px, 5vw, 72px); font-weight: 700; color: var(--accent); letter-spacing: -0.04em; line-height: 1; }
+.layer-card-num small { display: block; font-size: 12px; letter-spacing: 0.10em; text-transform: uppercase; color: var(--text-tertiary); font-weight: 600; margin-top: 8px; }
+.layer-card h3 { font-size: clamp(28px, 3vw, 40px); font-weight: 500; letter-spacing: -0.025em; margin-bottom: 18px; line-height: 1.1; }
+.layer-card p { font-size: clamp(15.5px, 1.15vw, 17px); line-height: 1.7; color: var(--text-secondary); margin-bottom: 24px; max-width: 65ch; }
+.layer-bullets { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 28px; margin-top: 18px; }
+.layer-bullets li { font-size: 14.5px; color: var(--text); padding-left: 18px; position: relative; }
+.layer-bullets li::before { content: ''; position: absolute; left: 0; top: 9px; width: 8px; height: 1.5px; background: var(--accent); }
+@media (max-width: 880px) { .layer-card { grid-template-columns: 1fr; gap: 20px; } .layer-bullets { grid-template-columns: 1fr; } }
+
+/* AI agent mini cards */
+.ai-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.ai-card { padding: 28px 24px; border: 1px solid var(--hairline); border-radius: 0; transition: border-color 0.3s var(--ease); }
+.ai-card:hover { border-color: var(--accent); }
+.ai-card-id { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; color: var(--accent); letter-spacing: 0.05em; margin-bottom: 8px; }
+.ai-card h4 { font-size: 17px; font-weight: 600; letter-spacing: -0.015em; margin-bottom: 6px; }
+.ai-card p { font-size: 13.5px; color: var(--text-secondary); line-height: 1.55; }
+@media (max-width: 880px) { .ai-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 540px) { .ai-grid { grid-template-columns: 1fr; } }
+
+/* Numbers 6-stat */
+.numbers6 { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--hairline); border-left: 1px solid var(--hairline); }
+.numbers6-cell { padding: 36px 28px; border-right: 1px solid var(--hairline); border-bottom: 1px solid var(--hairline); }
+.numbers6-cell-val { font-size: clamp(36px, 4.5vw, 56px); font-weight: 700; letter-spacing: -0.035em; line-height: 1; }
+.numbers6-cell-val .accent { color: var(--accent); }
+.numbers6-cell-lbl { margin-top: 12px; font-size: 13.5px; color: var(--text-secondary); font-weight: 500; }
+@media (max-width: 880px) { .numbers6 { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 540px) { .numbers6 { grid-template-columns: 1fr; } }
+
+/* Bleed photo */
+.bleed-photo { position: relative; min-height: clamp(420px, 60vh, 620px); background: var(--tile-dark); overflow: hidden; display: flex; align-items: flex-end; isolation: isolate; }
+.bleed-photo-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.55; z-index: 0; }
+.bleed-photo::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(15,17,23,0.4) 0%, rgba(15,17,23,0.85) 100%); z-index: 1; }
+.bleed-photo-inner { position: relative; z-index: 2; padding: clamp(48px, 6vw, 96px) 0; width: 100%; }
+.bleed-photo-stamp { font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.65); font-weight: 500; display: inline-flex; align-items: center; gap: 12px; margin-bottom: 28px; }
+.bleed-photo-stamp::before { content: ''; width: 28px; height: 1.5px; background: var(--accent); }
+.bleed-photo h2 { font-size: clamp(44px, 7vw, 96px); font-weight: 600; color: var(--white); line-height: 0.98; letter-spacing: -0.04em; max-width: 18ch; }
+.bleed-photo-foot { margin-top: 36px; display: flex; gap: 40px; flex-wrap: wrap; align-items: baseline; }
+.bleed-photo-foot-stat-val { font-size: 24px; font-weight: 700; color: var(--white); letter-spacing: -0.02em; line-height: 1; }
+.bleed-photo-foot-stat-lbl { font-size: 12px; color: rgba(255,255,255,0.6); letter-spacing: 0.06em; text-transform: uppercase; margin-top: 6px; }
+
+footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid var(--hairline); margin-top: 56px; }
+.footer-grid { display: grid; grid-template-columns: 1.6fr repeat(4, 1fr); gap: 56px; }
+.footer-brand-block .nav-brand { font-size: 24px; }
+.footer-brand-block p { margin-top: 18px; font-size: 14.5px; color: var(--text-secondary); line-height: 1.6; max-width: 36ch; }
+.footer-brand-block address { margin-top: 16px; font-size: 13px; color: var(--text-tertiary); line-height: 1.55; font-style: normal; }
+.footer-brand-block address a { color: var(--text); }
+.footer-col h5 { font-size: 11px; font-weight: 700; letter-spacing: 0.10em; text-transform: uppercase; color: var(--text-tertiary); margin-bottom: 18px; }
+.footer-col a { display: block; font-size: 14px; color: var(--text); padding: 5px 0; transition: color 0.2s var(--ease); }
+.footer-col a:hover { color: var(--accent-deep); }
+.footer-bottom { margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--hairline); display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; font-size: 12.5px; color: var(--text-tertiary); }
+.footer-bottom-links { display: flex; gap: 20px; }
+.footer-bottom-links a { color: var(--text-tertiary); }
+.footer-bottom-links a:hover { color: var(--text); }
+@media (max-width: 1000px) { .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; } .footer-brand-block { grid-column: 1 / -1; } }
+@media (max-width: 600px) { .footer-grid { grid-template-columns: 1fr; } .footer-brand-block { grid-column: auto; } }
+
+.reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.7s var(--ease), transform 0.7s var(--ease); }
+.reveal.in-view { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } html { scroll-behavior: auto; } }
+</style>
+</head>
+
+<body>
+
+<header class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-brand" aria-label="Inspirelabs"><img src="assets/brand/inspirelabs-logo.svg" alt="Inspirelabs" /></a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="products.html" class="nav-link">Products</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="careers.html" class="nav-link">Careers</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="hero-grid"></div>
+  <div class="container hero-inner">
+    <div class="hero-eyebrow">Platform &middot; The Inspirelabs stack</div>
+    <h1 class="display-1">One platform. Five properties. 200M+ shoppers a month.</h1>
+  </div>
+</section>
+
+<section style="border-top: 1px solid var(--hairline);">
+  <div class="container">
+    <div class="editorial reveal">
+      <div class="editorial-body">
+        <h2 class="section-title-xl">Why we run our own platform</h2>
+        <p>Most growth companies stitch together a SaaS stack. We do not. We run our own platform because the stack is the product, and outsourcing the stack means outsourcing the operating standard.</p>
+        <p>Twelve years of running consumer demand sites, six platforms in market, billions of intent signals every quarter: the only honest way to keep that operating standard high is to own the data layer, the distribution layer and the intelligence layer that compounds on top. Every offer page on GrabOn, every cashback decision on GrabCash, every creator commerce flow on GrabShare runs on Inspirelabs platform code we wrote ourselves.</p>
+        <p>Brands buy the network. The network runs on the platform. The platform is what we have actually been building for a decade.</p>
+      </div>
+      <div class="editorial-illustration">
+        <svg viewBox="0 0 320 320" width="100%" style="max-width:320px;" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#0F1117" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="40" y="220" width="240" height="44" rx="4" />
+          <text x="160" y="248" font-family="Hanken Grotesk" font-size="11" fill="#0F1117" stroke="none" text-anchor="middle" font-weight="600" letter-spacing="0.08em">DATA</text>
+          <rect x="40" y="160" width="240" height="44" rx="4" stroke="#FF7A45" />
+          <text x="160" y="188" font-family="Hanken Grotesk" font-size="11" fill="#FF7A45" stroke="none" text-anchor="middle" font-weight="600" letter-spacing="0.08em">DISTRIBUTION</text>
+          <rect x="40" y="100" width="240" height="44" rx="4" />
+          <text x="160" y="128" font-family="Hanken Grotesk" font-size="11" fill="#0F1117" stroke="none" text-anchor="middle" font-weight="600" letter-spacing="0.08em">INTELLIGENCE</text>
+          <line x1="160" y1="60" x2="160" y2="92" stroke="#FF7A45" />
+          <circle cx="160" cy="50" r="6" stroke="#FF7A45" />
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="border-top: 1px solid var(--hairline);">
+  <div class="container">
+    <div class="reveal">
+      <h2 class="section-title-xl">Three layers, one platform</h2>
+    </div>
+    <div class="layers reveal" style="margin-top: 48px;">
+      <article class="layer-card">
+        <div class="layer-card-num">01<small>Data layer</small></div>
+        <div>
+          <h3>Where every signal lands.</h3>
+          <p>Every click, scroll, search, redirect, install and purchase across the network lands in one warehouse. We process billions of events a quarter, attribute them at the offer level, and feed them back into ranking, ad allocation, cashback decisioning and creator payouts.</p>
+          <ul class="layer-bullets">
+            <li>Real-time event pipeline</li>
+            <li>First-party identity graph</li>
+            <li>Server-side attribution</li>
+            <li>Offer-level revenue tracking</li>
+            <li>Cohort and LTV models</li>
+            <li>Privacy-preserving telemetry</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="layer-card">
+        <div class="layer-card-num">02<small>Distribution layer</small></div>
+        <div>
+          <h3>Where intent meets the brand.</h3>
+          <p>The distribution layer is five properties working in concert. Coupon-led discovery on GrabOn. Cashback-led conversion on GrabCash. Creator-led commerce on GrabShare. Buyer-led research on Alternatives.co. Search-revenue on RankDrive.  One audience, five entry points, one operating standard.</p>
+          <ul class="layer-bullets">
+            <li>200M+ monthly users</li>
+            <li>4,500+ brand partners</li>
+            <li>Creator network &amp; payouts</li>
+            <li>Coupon &amp; cashback engines</li>
+            <li>Editorial CMS at scale</li>
+            <li>SEO + GEO + SGE coverage</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="layer-card">
+        <div class="layer-card-num">03<small>Intelligence layer</small></div>
+        <div>
+          <h3>Where the platform learns.</h3>
+          <p>A fleet of 12 specialised agents reads the data, decides where to act and writes the next experiment. Every agent has a golden dataset, a regression suite and a human-in-the-loop reviewer. Nothing ships to production without an eval.</p>
+          <ul class="layer-bullets">
+            <li>12-agent fleet</li>
+            <li>Six-LLM content ensemble</li>
+            <li>Continuous regression evals</li>
+            <li>Production sampling</li>
+            <li>Human-in-loop reviewers</li>
+            <li>Brand voice guardrails</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section style="border-top: 1px solid var(--hairline);">
+  <div class="container">
+    <div class="reveal">
+      <h2 class="section-title-xl">The agent fleet</h2>
+      <p class="biz-intro" style="margin-bottom: 40px;">The agent fleet is not a feature. It is the operating layer the rest of the company runs on. Six categories, 12 agents in production, more in eval.</p>
+    </div>
+    <div class="ai-grid reveal">
+      <div class="ai-card"><div class="ai-card-id">AGENT/01 &middot; CONTENT</div><h4>Editorial drafting</h4><p>Long-form drafting for offer pages, comparisons and category guides. Brand voice locked in eval.</p></div>
+      <div class="ai-card"><div class="ai-card-id">AGENT/02 &middot; SEARCH</div><h4>Search intelligence</h4><p>Reads SERPs, GEO citations and AI Overview surfaces. Writes the next-action queue for SEO.</p></div>
+      <div class="ai-card"><div class="ai-card-id">AGENT/03 &middot; OFFERS</div><h4>Offer verification</h4><p>Re-validates 200,000+ live offers daily. Flags expired, broken, restricted or fraudulent claims.</p></div>
+      <div class="ai-card"><div class="ai-card-id">AGENT/04 &middot; CREATIVE</div><h4>Creative variants</h4><p>Generates, A/B tests and ranks creatives across the affiliate and demand network.</p></div>
+      <div class="ai-card"><div class="ai-card-id">AGENT/05 &middot; ATTRIBUTION</div><h4>Attribution review</h4><p>Cross-checks server-side attribution events against rule-based and probabilistic models.</p></div>
+      <div class="ai-card"><div class="ai-card-id">AGENT/06 &middot; LIFECYCLE</div><h4>Lifecycle orchestration</h4><p>Selects the next email, push or in-app message based on per-user intent and product context.</p></div>
+    </div>
+    <div style="margin-top: 32px;"><a href="ai-agents.html" class="tlink">See the full 12-agent fleet</a></div>
+  </div>
+</section>
+
+<section style="border-top: 1px solid var(--hairline);">
+  <div class="container">
+    <div class="reveal">
+      <h2 class="section-title-xl">Infrastructure at scale</h2>
+      <p class="biz-intro" style="margin-bottom: 40px;">A snapshot of what the platform processed in the last quarter.</p>
+    </div>
+    <div class="numbers6 reveal">
+      <div class="numbers6-cell"><div class="numbers6-cell-val">2.4B<span class="accent">+</span></div><div class="numbers6-cell-lbl">Events processed daily</div></div>
+      <div class="numbers6-cell"><div class="numbers6-cell-val">200K<span class="accent">+</span></div><div class="numbers6-cell-lbl">Live offers served</div></div>
+      <div class="numbers6-cell"><div class="numbers6-cell-val">4,500<span class="accent">+</span></div><div class="numbers6-cell-lbl">Brand partners on the network</div></div>
+      <div class="numbers6-cell"><div class="numbers6-cell-val">100<span class="accent">+</span></div><div class="numbers6-cell-lbl">Markets served</div></div>
+      <div class="numbers6-cell"><div class="numbers6-cell-val">800M<span class="accent">+</span></div><div class="numbers6-cell-lbl">Monthly search queries scored</div></div>
+      <div class="numbers6-cell"><div class="numbers6-cell-val">14M<span class="accent">+</span></div><div class="numbers6-cell-lbl">Inferences run daily</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section-bleed">
+  <div class="bleed-photo">
+    <img class="bleed-photo-img" src="https://images.unsplash.com/photo-1567157577867-05ccb1388e66?auto=format&amp;fit=crop&amp;w=2000&amp;q=80" alt="Hyderabad cityscape" loading="lazy" />
+    <div class="container bleed-photo-inner">
+      <div class="bleed-photo-stamp">From Hyderabad &middot; 2013&rarr;Now</div>
+      <h2>Built in Hyderabad. Operating in 100+ markets.</h2>
+      <div class="bleed-photo-foot">
+        <div><div class="bleed-photo-foot-stat-val">12 yrs</div><div class="bleed-photo-foot-stat-lbl">Profitable operating</div></div>
+        <div><div class="bleed-photo-foot-stat-val">$0</div><div class="bleed-photo-foot-stat-lbl">External capital raised</div></div>
+        <div><div class="bleed-photo-foot-stat-val">100%</div><div class="bleed-photo-foot-stat-lbl">In-house engineered</div></div>
+        <a href="about.html" class="tlink tlink-light" style="margin-left: auto;">Read our story</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand-block">
+        <a href="index.html" class="nav-brand" aria-label="Inspirelabs"><img src="assets/brand/inspirelabs-logo.svg" alt="Inspirelabs" /></a>
+        <p>The Hyderabad-based parent company behind GrabOn, GrabCash, GrabShare, RankDrive and Alternatives.co. Bootstrapped, profitable, and building since 2013.</p>
+        <address>
+          21st Floor, OneWest Building<br/>
+          Financial District, Gachibowli<br/>
+          Hyderabad 500032, India<br/><br/>
+          <a href="tel:+914032537070">040-32537070</a> &middot; <a href="mailto:contact@inspirelabs.com">contact@inspirelabs.com</a>
+        </address>
+      </div>
+      <div class="footer-col">
+        <h5>Our products</h5>
+        <a href="https://www.grabon.in" target="_blank" rel="noopener">GrabOn</a>
+        <a href="https://www.grabcash.in" target="_blank" rel="noopener">GrabCash</a>
+        <a href="https://www.grabshare.com" target="_blank" rel="noopener">GrabShare</a>
+        <a href="https://www.rankdrive.com" target="_blank" rel="noopener">RankDrive</a>
+        <a href="https://alternatives.co" target="_blank" rel="noopener">Alternatives.co</a>
+      </div>
+      <div class="footer-col">
+        <h5>What we do</h5>
+        <a href="products.html">Products</a>
+        <a href="services.html">Services</a>
+        <a href="ai-agents.html">AI Agents</a>
+        <a href="platform.html">Platform</a>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <a href="about.html">About</a>
+        <a href="careers.html">Careers</a>
+        <a href="partnership.html">Partner with us</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h5>Trust &amp; legal</h5>
+        <a href="trust.html">Trust &amp; security</a>
+        <a href="privacy.html">Privacy policy</a>
+        <a href="terms.html">Terms</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>&copy; <span data-year>2026</span> Inspirelabs Solutions Ltd. Bootstrapped in Hyderabad since 2013.</div>
+      <div class="footer-bottom-links">
+        <a href="about.html">About</a>
+        <a href="careers.html">Careers</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+(() => { const nav = document.getElementById('nav'); if (!nav) return; const onScroll = () => { if (window.scrollY > 8) nav.classList.add('scrolled'); else nav.classList.remove('scrolled'); }; window.addEventListener('scroll', onScroll, { passive: true }); onScroll(); })();
+(() => { const els = document.querySelectorAll('.reveal'); if (!('IntersectionObserver' in window)) { els.forEach(e => e.classList.add('in-view')); return; } const io = new IntersectionObserver((entries) => { entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in-view'); io.unobserve(en.target); } }); }, { rootMargin: '0px 0px -10% 0px', threshold: 0.05 }); els.forEach(e => io.observe(e)); })();
+(() => { const y = new Date().getFullYear(); document.querySelectorAll('[data-year]').forEach(e => { e.textContent = y; }); })();
+</script>
+
+</body>
+</html>

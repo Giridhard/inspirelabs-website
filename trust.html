@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Trust &amp; security | Inspirelabs</title>
+<meta name="description" content="Trust and security at Inspirelabs. SOC 2 Type II, ISO 27001, DPDP-compliant, GDPR-aligned. Compliance posture, data handling and vulnerability disclosure." />
+<meta name="theme-color" content="#FFFFFF" />
+<link rel="canonical" href="https://inspirelabs.com/trust.html?v=v3-trust-style-sync" />
+<link rel="icon" type="image/svg+xml" href="assets/brand/inspirelabs-mark.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300..900&family=JetBrains+Mono:wght@400..700&display=swap" rel="stylesheet" />
+
+<style>
+:root { --white: #FFFFFF; --bg: #FFFFFF; --text: #0E0F0A; --text-secondary: #6F7583; --text-tertiary: #8C92A0; --hairline: #ECEEF2; --line: #DEE1E8; --accent: #FF7A45; --accent-soft: #FFE7DC; --accent-deep: #E55E2A; --tile-dark: #0F1117; --max-w: 1800px; --pad-x: clamp(20px, 3vw, 56px); --ease: cubic-bezier(0.16, 1, 0.3, 1); }
+
+/* Brand: JetBrains Mono on all small labels / eyebrows / metadata */
+.hero-eyebrow,
+.hero-stamp,
+.about-hero-eyebrow,
+.section-eyebrow,
+.plan-list-year,
+.about-num-lbl,
+.deliver-row-num,
+.pillar-eyebrow,
+.numbers-cell-lbl,
+.biz-tile-tag,
+.bleed-photo-stamp,
+.fact-eyebrow,
+.tile-eyebrow,
+.category-eyebrow,
+.kpi-label,
+.tag-label,
+.service-eyebrow,
+.product-eyebrow,
+.career-eyebrow,
+.trust-eyebrow,
+.insight-eyebrow,
+.chapter-tag,
+.chapter-num,
+.eyebrow,
+.meta-row,
+.mono { font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace; }
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Hanken Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); font-size: 17px; font-weight: 400; line-height: 1.5; -webkit-font-smoothing: antialiased; }
+img, svg { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; cursor: pointer; border: none; background: none; color: inherit; }
+ul, ol { list-style: none; }
+::selection { background: var(--accent); color: var(--white); }
+.container { width: min(88%, var(--max-w)); margin: 0 auto; padding: 0 var(--pad-x); }
+@media (max-width: 1100px) { .container { width: 100%; } }
+
+.nav { position: sticky; top: 0; z-index: 100; background: rgba(255, 255, 255, 0.92); backdrop-filter: saturate(140%) blur(14px); padding: 22px 0; border-bottom: 1px solid transparent; transition: border-color 0.25s var(--ease); }
+.nav.scrolled { border-bottom-color: var(--hairline); }
+.nav-inner { display: flex; align-items: center; justify-content: space-between; gap: 32px; }
+.nav-brand { display: inline-flex; align-items: center; color: var(--text); line-height: 1; }
+
+.nav-brand img { height: 24px; width: auto; display: block; }
+.footer-brand-block .nav-brand img { height: 32px; }
+.nav.on-hero .nav-brand img { filter: invert(1) brightness(2); }
+.nav-links { display: flex; gap: 36px; align-items: center; }
+.nav-link { font-size: 15px; font-weight: 500; color: var(--text); padding: 10px 0; position: relative; transition: color 0.2s var(--ease); }
+.nav-link:hover { color: var(--accent-deep); }
+.nav-link.active::after { content: ''; position: absolute; bottom: 4px; left: 0; right: 0; height: 2px; background: var(--accent); }
+.nav-toggle { display: none; width: 36px; height: 36px; }
+.nav-toggle span { display: block; width: 22px; height: 1.5px; background: var(--text); margin: 5px auto; }
+@media (max-width: 880px) { .nav-links { display: none; } .nav-toggle { display: block; } }
+
+h1, h2, h3, h4, h5 { color: var(--text); font-weight: 400; letter-spacing: -0.02em; line-height: 1.06; text-wrap: balance; }
+p, .lead, .section-intro { text-wrap: pretty; }
+.display-1 { font-size: clamp(48px, 6.4vw, 124px); font-weight: 400; letter-spacing: -0.03em; line-height: 1.04; }
+.display-2 { font-size: clamp(36px, 5vw, 72px); font-weight: 400; letter-spacing: -0.025em; line-height: 1.06; }
+.display-3 { font-size: clamp(24px, 3vw, 36px); font-weight: 400; letter-spacing: -0.02em; line-height: 1.15; }
+
+section { padding: clamp(96px, 11vw, 180px) 0; position: relative; }
+section.tight { padding: clamp(64px, 7vw, 110px) 0; }
+.section-eyebrow { display: inline-block; font-size: clamp(20px, 2.2vw, 26px); font-weight: 600; color: var(--text); letter-spacing: -0.02em; padding-bottom: 6px; border-bottom: 2px solid var(--accent); margin-bottom: 32px; }
+.section-title-xl { position: relative; font-size: clamp(30px, 3.2vw, 48px); font-weight: 500; color: var(--text); letter-spacing: -0.005em; line-height: 1.08; margin: 0 0 32px; text-wrap: balance; max-width: 24ch; }
+.section-title-xl::after { content: ''; display: block; width: 72px; height: 3px; background: var(--accent); margin-top: 14px; }
+.biz-intro { font-size: clamp(16px, 1.4vw, 20px); font-weight: 300; line-height: 1.5; color: #414A5D; max-width: 100%; width: 100%; text-wrap: pretty; }
+.section-intro { font-size: clamp(15px, 1.2vw, 17px); line-height: 1.6; color: var(--text-secondary); max-width: 64ch; }
+.tlink { display: inline-block; font-size: 15px; font-weight: 500; color: var(--text); padding-bottom: 2px; border-bottom: 1.5px solid var(--text); transition: color 0.2s var(--ease), border-color 0.2s var(--ease); }
+.tlink:hover { color: var(--accent-deep); border-color: var(--accent); }
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100svh;
+  padding: clamp(64px, 8vh, 120px) 0;
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.hero-grid { position: absolute; inset: 0; background-image: linear-gradient(to right, rgba(15, 17, 23, 0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(15, 17, 23, 0.05) 1px, transparent 1px); background-size: 88px 88px; mask-image: radial-gradient(ellipse 50% 60% at 50% 30%, black 0%, transparent 75%); -webkit-mask-image: radial-gradient(ellipse 50% 60% at 50% 30%, black 0%, transparent 75%); pointer-events: none; z-index: 0; }
+.hero-inner { position: relative; z-index: 1; }
+.hero-eyebrow { font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-tertiary); font-weight: 500; display: inline-flex; align-items: center; gap: 12px; margin-bottom: 40px; }
+.hero-eyebrow::before { content: ''; width: 28px; height: 1.5px; background: var(--accent); }
+.hero h1 { max-width: 22ch; margin: 0 auto; }
+
+/* Editorial */
+.editorial { max-width: 64ch; margin: 0 auto; }
+.editorial p { font-size: clamp(16px, 1.2vw, 18px); line-height: 1.7; color: var(--text-secondary); margin-bottom: 22px; }
+
+/* Compliance grid */
+.compliance { display: grid; grid-template-columns: repeat(4, 1fr); column-gap: clamp(32px, 3vw, 56px); row-gap: 0; border-top: 1px solid var(--hairline); }
+.compliance-card { padding: clamp(28px, 3vw, 40px) 0; border: none; border-bottom: 1px solid var(--hairline); background: none; }
+.compliance-icon { width: 48px; height: 48px; border-radius: 8px; background: var(--accent-soft); color: var(--accent-deep); display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
+.compliance-card h4 { font-size: 18px; font-weight: 600; letter-spacing: -0.015em; margin-bottom: 8px; }
+.compliance-card p { font-size: 14px; color: var(--text-secondary); line-height: 1.55; margin-bottom: 14px; }
+.compliance-status { font-size: 11.5px; color: var(--accent-deep); letter-spacing: 0.04em; text-transform: uppercase; font-weight: 700; }
+@media (max-width: 880px) { .compliance { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 540px) { .compliance { grid-template-columns: 1fr; } }
+
+/* Data handling */
+.handling { display: grid; grid-template-columns: 1fr 1.4fr; gap: clamp(40px, 5vw, 80px); align-items: start; }
+.handling-list li { padding: 22px 0 22px 24px; border-bottom: 1px solid var(--hairline); position: relative; font-size: 16px; line-height: 1.5; color: var(--text); }
+.handling-list li:last-child { border-bottom: none; }
+.handling-list li::before { content: ''; position: absolute; left: 0; top: 30px; width: 12px; height: 1.5px; background: var(--accent); }
+.handling-list li strong { font-weight: 600; }
+@media (max-width: 880px) { .handling { grid-template-columns: 1fr; } }
+
+/* Sub-processors list */
+.subproc { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0; border-top: 1px solid var(--hairline); border-left: 1px solid var(--hairline); }
+.subproc-row { padding: 18px 22px; border-right: 1px solid var(--hairline); border-bottom: 1px solid var(--hairline); display: flex; flex-direction: column; gap: 4px; }
+.subproc-row strong { font-size: 14.5px; font-weight: 600; color: var(--text); }
+.subproc-row span { font-size: 13px; color: var(--text-tertiary); }
+@media (max-width: 880px) { .subproc { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 540px) { .subproc { grid-template-columns: 1fr; } }
+
+/* Vuln disclosure */
+.vuln { padding: clamp(36px, 4vw, 56px) 0; border: none; border-top: 1px solid var(--hairline); border-bottom: 1px solid var(--hairline); border-radius: 0; }
+.vuln h3 { font-size: clamp(24px, 2.5vw, 32px); font-weight: 500; letter-spacing: -0.02em; margin-bottom: 16px; }
+.vuln p { font-size: 16px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 16px; max-width: 60ch; }
+
+footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid var(--hairline); margin-top: 56px; }
+.footer-grid { display: grid; grid-template-columns: 1.6fr repeat(4, 1fr); gap: 56px; }
+.footer-brand-block .nav-brand { font-size: 24px; }
+.footer-brand-block p { margin-top: 18px; font-size: 14.5px; color: var(--text-secondary); line-height: 1.6; max-width: 36ch; }
+.footer-brand-block address { margin-top: 16px; font-size: 13px; color: var(--text-tertiary); line-height: 1.55; font-style: normal; }
+.footer-brand-block address a { color: var(--text); }
+.footer-col h5 { font-size: 11px; font-weight: 700; letter-spacing: 0.10em; text-transform: uppercase; color: var(--text-tertiary); margin-bottom: 18px; }
+.footer-col a { display: block; font-size: 14px; color: var(--text); padding: 5px 0; }
+.footer-col a:hover { color: var(--accent-deep); }
+.footer-bottom { margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--hairline); display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; font-size: 12.5px; color: var(--text-tertiary); }
+.footer-bottom-links { display: flex; gap: 20px; }
+.footer-bottom-links a { color: var(--text-tertiary); }
+.footer-bottom-links a:hover { color: var(--text); }
+@media (max-width: 1000px) { .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; } .footer-brand-block { grid-column: 1 / -1; } }
+@media (max-width: 600px) { .footer-grid { grid-template-columns: 1fr; } .footer-brand-block { grid-column: auto; } }
+
+.reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.7s var(--ease), transform 0.7s var(--ease); }
+.reveal.in-view { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } html { scroll-behavior: auto; } }
+</style>
+</head>
+
+<body>
+
+<header class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-brand" aria-label="Inspirelabs"><img src="assets/brand/inspirelabs-logo.svg" alt="Inspirelabs" /></a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="products.html" class="nav-link">Products</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="careers.html" class="nav-link">Careers</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="hero-grid"></div>
+  <div class="container hero-inner">
+    <div class="hero-eyebrow">Trust &amp; security</div>
+    <h1 class="display-1">Trust &amp; security at Inspirelabs.</h1>
+  </div>
+</section>
+
+<!-- Editorial intro -->
+<section style="border-top: 1px solid var(--hairline);">
+  <div class="container">
+    <div class="reveal editorial">
+      <h2 class="section-title-xl" style="text-align: left; margin: 0 0 32px;">Our standing instruction</h2>
+      <p>Inspirelabs operates a network with 200M+ monthly users, 4,500+ brand partners and a quarter of a billion daily events. The trust those numbers represent is not an output of the business. It is the business.</p>
+      <p>We treat data security, privacy and platform integrity as a single first-class operating discipline, owned by the CTO, audited every quarter, and held to the same standard the operating company is held to. The pages that follow are the public version of our security posture. The full posture is available under NDA.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Compliance posture -->
+<section style="border-top: 1px solid var(--hairline);">
+  <div class="container">
+    <div class="reveal">
+      <h2 class="section-title-xl">Compliance posture</h2>
+      <p class="biz-intro" style="margin-bottom: 40px;">We hold ourselves to four overlapping standards. Audit reports and SoC artefacts are available to enterprise prospects under NDA.</p>
+    </div>
+    <div class="compliance reveal">
+      <article class="compliance-card">
+        <div class="compliance-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2L4 6v6c0 5 3.5 9.5 8 10 4.5-.5 8-5 8-10V6l-8-4z"/><path d="M9 12l2 2 4-4"/></svg>
+        </div>
+        <h4>SOC 2 Type II</h4>
+        <p>Independently audited annually. Security, availability and confidentiality criteria.</p>
+        <div class="compliance-status">Current</div>
+      </article>
+      <article class="compliance-card">
+        <div class="compliance-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 12l2 2 4-4"/></svg>
+        </div>
+        <h4>ISO 27001</h4>
+        <p>Certified information security management system. Re-certified on a 3-year cycle.</p>
+        <div class="compliance-status">Certified</div>
+      </article>
+      <article class="compliance-card">
+        <div class="compliance-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2v20M2 12h20"/></svg>
+        </div>
+        <h4>DPDP-compliant</h4>
+        <p>India&rsquo;s Digital Personal Data Protection Act. Full processing-record inventory and consent fabric.</p>
+        <div class="compliance-status">Compliant</div>
+      </article>
+      <article class="compliance-card">
+        <div class="compliance-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg>
+        </div>
+        <h4>GDPR-aligned</h4>
+        <p>Aligned for European data subjects. Lawful basis tracking, DSAR fulfilment, sub-processor disclosure.</p>
+        <div class="compliance-status">Aligned</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Data handling -->
+<section style="border-top: 1px solid var(--hairline);">
+  <div class="container">
+    <div class="handling reveal">
+      <div>
+        <h2 class="section-title-xl">Data handling</h2>
+        <p class="biz-intro">Five standing instructions every team that touches user data is held to. The list below is the public-facing version. Engineering teams work to a longer internal data-handling spec.</p>
+      </div>
+      <ul class="handling-list">
+        <li><strong>Encryption everywhere.</strong> AES-256 at rest, TLS 1.3 in transit. Keys rotated on a published schedule.</li>
+        <li><strong>Least-privilege access.</strong> Role-based access controls, mandatory SSO with MFA, and per-environment access reviews every quarter.</li>
+        <li><strong>Tokenised PII.</strong> Personal data is tokenised before it crosses a service boundary. Raw PII never leaves the primary store.</li>
+        <li><strong>No cross-product PII leakage.</strong> Each property has its own data plane. We do not aggregate user PII across the portfolio.</li>
+        <li><strong>Auditable on demand.</strong> Every access, every write, every model decision is logged and audit-trail accessible for at least seven years.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Sub-processors -->
+<section style="border-top: 1px solid var(--hairline);">
+  <div class="container">
+    <div class="reveal">
+      <h2 class="section-title-xl">Sub-processors</h2>
+      <p class="biz-intro" style="margin-bottom: 40px;">Listed in alphabetical order. Each sub-processor is reviewed annually and contractually held to data-protection terms equal to or stronger than ours.</p>
+    </div>
+    <div class="subproc reveal">
+      <div class="subproc-row"><strong>Amazon Web Services</strong><span>Cloud infrastructure (Mumbai region)</span></div>
+      <div class="subproc-row"><strong>Cloudflare</strong><span>Edge network &amp; DDoS</span></div>
+      <div class="subproc-row"><strong>Datadog</strong><span>Observability</span></div>
+      <div class="subproc-row"><strong>Google Cloud</strong><span>Analytics &amp; BigQuery</span></div>
+      <div class="subproc-row"><strong>HubSpot</strong><span>CRM &amp; marketing automation</span></div>
+      <div class="subproc-row"><strong>Mailgun</strong><span>Transactional email</span></div>
+      <div class="subproc-row"><strong>Mixpanel</strong><span>Product analytics</span></div>
+      <div class="subproc-row"><strong>Sentry</strong><span>Application error tracking</span></div>
+      <div class="subproc-row"><strong>Stripe</strong><span>Payment processing</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- Vulnerability disclosure -->
+<section style="border-top: 1px solid var(--hairline);">
+  <div class="container">
+    <div class="vuln reveal">
+      <h2 class="section-title-xl">Vulnerability disclosure</h2>
+      <h3>Found something? Tell us.</h3>
+      <p>If you have identified a vulnerability in any Inspirelabs property, please write to <a href="mailto:security@inspirelabs.com" class="tlink">security@inspirelabs.com</a> with a clear reproduction. We acknowledge inside one business day, triage inside three, and patch on a published severity-based timeline.</p>
+      <p>We commit to not pursuing legal action against good-faith researchers who follow responsible disclosure. We list named contributors on our public security acknowledgements page once the issue is fixed.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Privacy + Terms links -->
+<section class="tight" style="border-top: 1px solid var(--hairline);">
+  <div class="container reveal" style="display: flex; gap: 28px; flex-wrap: wrap; align-items: center; justify-content: space-between;">
+    <div style="font-size: 14px; color: var(--text-tertiary); letter-spacing: 0.04em; text-transform: uppercase; font-weight: 600;">Continue reading</div>
+    <div style="display: flex; gap: 24px; flex-wrap: wrap;">
+      <a href="privacy.html" class="tlink">Privacy policy</a>
+      <a href="terms.html" class="tlink">Terms of service</a>
+      <a href="mailto:security@inspirelabs.com" class="tlink">security@inspirelabs.com</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand-block">
+        <a href="index.html" class="nav-brand" aria-label="Inspirelabs"><img src="assets/brand/inspirelabs-logo.svg" alt="Inspirelabs" /></a>
+        <p>The Hyderabad-based parent company behind GrabOn, GrabCash, GrabShare, RankDrive and Alternatives.co. Bootstrapped, profitable, and building since 2013.</p>
+        <address>
+          21st Floor, OneWest Building<br/>
+          Financial District, Gachibowli<br/>
+          Hyderabad 500032, India<br/><br/>
+          <a href="tel:+914032537070">040-32537070</a> &middot; <a href="mailto:contact@inspirelabs.com">contact@inspirelabs.com</a>
+        </address>
+      </div>
+      <div class="footer-col">
+        <h5>Our products</h5>
+        <a href="https://www.grabon.in" target="_blank" rel="noopener">GrabOn</a>
+        <a href="https://www.grabcash.in" target="_blank" rel="noopener">GrabCash</a>
+        <a href="https://www.grabshare.com" target="_blank" rel="noopener">GrabShare</a>
+        <a href="https://www.rankdrive.com" target="_blank" rel="noopener">RankDrive</a>
+        <a href="https://alternatives.co" target="_blank" rel="noopener">Alternatives.co</a>
+      </div>
+      <div class="footer-col">
+        <h5>What we do</h5>
+        <a href="products.html">Products</a>
+        <a href="services.html">Services</a>
+        <a href="ai-agents.html">AI Agents</a>
+        <a href="platform.html">Platform</a>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <a href="about.html">About</a>
+        <a href="careers.html">Careers</a>
+        <a href="partnership.html">Partner with us</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h5>Trust &amp; legal</h5>
+        <a href="trust.html">Trust &amp; security</a>
+        <a href="privacy.html">Privacy policy</a>
+        <a href="terms.html">Terms</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>&copy; <span data-year>2026</span> Inspirelabs Solutions Ltd. Bootstrapped in Hyderabad since 2013.</div>
+      <div class="footer-bottom-links">
+        <a href="about.html">About</a>
+        <a href="careers.html">Careers</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+(() => { const nav = document.getElementById('nav'); if (!nav) return; const onScroll = () => { if (window.scrollY > 8) nav.classList.add('scrolled'); else nav.classList.remove('scrolled'); }; window.addEventListener('scroll', onScroll, { passive: true }); onScroll(); })();
+(() => { const els = document.querySelectorAll('.reveal'); if (!('IntersectionObserver' in window)) { els.forEach(e => e.classList.add('in-view')); return; } const io = new IntersectionObserver((entries) => { entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in-view'); io.unobserve(en.target); } }); }, { rootMargin: '0px 0px -10% 0px', threshold: 0.05 }); els.forEach(e => io.observe(e)); })();
+(() => { const y = new Date().getFullYear(); document.querySelectorAll('[data-year]').forEach(e => { e.textContent = y; }); })();
+</script>
+
+</body>
+</html>

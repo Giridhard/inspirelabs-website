@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="Atmospheric gradient mesh">
+  <title>Atmospheric gradient mesh</title>
+  <defs>
+    <radialGradient id="gm-violet" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#5B5CFF" stop-opacity="0.85"/>
+      <stop offset="60%" stop-color="#4040DD" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#4040DD" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="gm-coral" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FF7058" stop-opacity="0.75"/>
+      <stop offset="55%" stop-color="#D8523D" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#D8523D" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="gm-sky" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#008EE6" stop-opacity="0.8"/>
+      <stop offset="55%" stop-color="#006BB0" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#006BB0" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="gm-purple" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#7940C9" stop-opacity="0.7"/>
+      <stop offset="55%" stop-color="#5A2A9A" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#5A2A9A" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="gm-navy" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#28538F" stop-opacity="0.55"/>
+      <stop offset="60%" stop-color="#1A3760" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#1A3760" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="gm-blur" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="50"/>
+    </filter>
+  </defs>
+  <g filter="url(#gm-blur)">
+    <circle cx="380" cy="280" r="420" fill="url(#gm-violet)"/>
+    <circle cx="1240" cy="220" r="360" fill="url(#gm-coral)"/>
+    <circle cx="1380" cy="700" r="440" fill="url(#gm-sky)"/>
+    <circle cx="520" cy="780" r="380" fill="url(#gm-purple)"/>
+    <circle cx="860" cy="460" r="300" fill="url(#gm-navy)"/>
+  </g>
+</svg>

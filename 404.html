@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Page Not Found | Inspirelabs</title>
+<meta name="description" content="We couldn't find the page you were looking for. It might have moved or never existed at all." />
+<meta name="theme-color" content="#FFFFFF" />
+<meta name="robots" content="noindex" />
+<link rel="canonical" href="https://inspirelabs.com/404.html?v=v3-404-style-sync" />
+<link rel="icon" type="image/svg+xml" href="assets/brand/inspirelabs-mark.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300..900&family=JetBrains+Mono:wght@400..700&display=swap" rel="stylesheet" />
+
+<style>
+:root {
+  --white: #FFFFFF;
+  --bg: #FFFFFF;
+  --text: #0E0F0A;
+  --text-secondary: #6F7583;
+  --text-tertiary: #8C92A0;
+  --hairline: #ECEEF2;
+  --line: #DEE1E8;
+  --accent: #FF7A45;
+  --accent-soft: #FFE7DC;
+  --accent-deep: #E55E2A;
+  --tile-dark: #0F1117;
+  --max-w: 1800px;
+  --pad-x: clamp(20px, 3vw, 56px);
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Brand: JetBrains Mono on all small labels / eyebrows / metadata */
+.hero-eyebrow,
+.hero-stamp,
+.about-hero-eyebrow,
+.section-eyebrow,
+.plan-list-year,
+.about-num-lbl,
+.deliver-row-num,
+.pillar-eyebrow,
+.numbers-cell-lbl,
+.biz-tile-tag,
+.bleed-photo-stamp,
+.fact-eyebrow,
+.tile-eyebrow,
+.category-eyebrow,
+.kpi-label,
+.tag-label,
+.service-eyebrow,
+.product-eyebrow,
+.career-eyebrow,
+.trust-eyebrow,
+.insight-eyebrow,
+.chapter-tag,
+.chapter-num,
+.eyebrow,
+.meta-row,
+.mono { font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace; }
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Hanken Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: var(--bg); color: var(--text);
+  font-size: 17px; font-weight: 400; line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  min-height: 100vh;
+  display: flex; flex-direction: column;
+}
+img, svg { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; cursor: pointer; border: none; background: none; color: inherit; }
+ul, ol { list-style: none; }
+::selection { background: var(--accent); color: var(--white); }
+.container { width: min(88%, var(--max-w)); margin: 0 auto; padding: 0 var(--pad-x); }
+@media (max-width: 1100px) { .container { width: 100%; } }
+
+.nav {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: saturate(140%) blur(14px);
+  -webkit-backdrop-filter: saturate(140%) blur(14px);
+  padding: 22px 0;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.25s var(--ease);
+}
+.nav.scrolled { border-bottom-color: var(--hairline); }
+.nav-inner { display: flex; align-items: center; justify-content: space-between; gap: 32px; }
+.nav-brand { display: inline-flex; align-items: center; color: var(--text); line-height: 1; }
+
+.nav-brand img { height: 24px; width: auto; display: block; }
+.footer-brand-block .nav-brand img { height: 32px; }
+.nav.on-hero .nav-brand img { filter: invert(1) brightness(2); }
+.nav-links { display: flex; gap: 36px; align-items: center; }
+.nav-link { font-size: 15px; font-weight: 500; color: var(--text); padding: 10px 0; position: relative; transition: color 0.2s var(--ease); }
+.nav-link:hover { color: var(--accent-deep); }
+.nav-toggle { display: none; width: 36px; height: 36px; }
+.nav-toggle span { display: block; width: 22px; height: 1.5px; background: var(--text); margin: 5px auto; }
+@media (max-width: 880px) { .nav-links { display: none; } .nav-toggle { display: block; } }
+
+h1, h2, h3, h4, h5 { color: var(--text); font-weight: 400; letter-spacing: -0.02em; line-height: 1.06; text-wrap: balance; }
+p, .lead, .section-intro { text-wrap: pretty; }
+.display-1 { font-size: clamp(48px, 6.4vw, 124px); font-weight: 400; letter-spacing: -0.03em; line-height: 1.04; }
+.display-2 { font-size: clamp(36px, 5vw, 72px); font-weight: 400; letter-spacing: -0.025em; line-height: 1.06; }
+
+.tlink {
+  display: inline-block; font-size: 15px; font-weight: 500; color: var(--text);
+  padding-bottom: 2px; border-bottom: 1.5px solid var(--text);
+  transition: color 0.2s var(--ease), border-color 0.2s var(--ease);
+}
+.tlink:hover { color: var(--accent-deep); border-color: var(--accent); }
+
+main { flex: 1; }
+
+.notfound {
+  position: relative;
+  min-height: calc(100vh - 80px);
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  text-align: center;
+  padding: clamp(60px, 10vh, 120px) 0;
+  overflow: hidden;
+}
+.notfound-grid {
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(to right, rgba(15, 17, 23, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15, 17, 23, 0.05) 1px, transparent 1px);
+  background-size: 88px 88px;
+  background-position: -1px -1px;
+  mask-image: radial-gradient(ellipse 50% 60% at 50% 40%, black 0%, transparent 75%);
+  -webkit-mask-image: radial-gradient(ellipse 50% 60% at 50% 40%, black 0%, transparent 75%);
+  pointer-events: none;
+  z-index: 0;
+}
+.notfound-inner { position: relative; z-index: 1; }
+
+.big-404 {
+  font-size: clamp(140px, 26vw, 360px);
+  font-weight: 800;
+  line-height: 0.9;
+  letter-spacing: -0.05em;
+  color: transparent;
+  -webkit-text-stroke: 2px var(--accent);
+  text-stroke: 2px var(--accent);
+  margin-bottom: 32px;
+  font-feature-settings: 'tnum';
+}
+
+.notfound h1 {
+  max-width: 18ch;
+  margin: 0 auto;
+}
+.notfound-lead {
+  margin-top: 24px;
+  font-size: clamp(16px, 1.3vw, 19px);
+  line-height: 1.55;
+  color: var(--text-secondary);
+  max-width: 56ch;
+  margin-left: auto; margin-right: auto;
+}
+.notfound-cta { margin-top: 40px; }
+
+footer {
+  padding: 32px 0;
+  background: var(--white);
+  border-top: 1px solid var(--hairline);
+}
+.footer-mini {
+  display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+  font-size: 12.5px;
+  color: var(--text-tertiary);
+}
+.footer-mini-links { display: flex; gap: 20px; }
+.footer-mini-links a { color: var(--text-tertiary); }
+.footer-mini-links a:hover { color: var(--text); }
+</style>
+</head>
+
+<body>
+
+<header class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-brand" aria-label="Inspirelabs"><img src="assets/brand/inspirelabs-logo.svg" alt="Inspirelabs" /></a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="products.html" class="nav-link">Products</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="careers.html" class="nav-link">Careers</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+
+<section class="notfound">
+  <div class="notfound-grid"></div>
+  <div class="container notfound-inner">
+    <div class="big-404" aria-hidden="true">404</div>
+    <h1 class="display-2">Lost in the Inspirelabs void?</h1>
+    <p class="notfound-lead">We couldn&rsquo;t find the page you were looking for. It might have moved or never existed at all.</p>
+    <div class="notfound-cta">
+      <a href="index.html" class="tlink">Go back home</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand-block">
+        <a href="index.html" class="nav-brand" aria-label="Inspirelabs"><img src="assets/brand/inspirelabs-logo.svg" alt="Inspirelabs" /></a>
+        <p>The Hyderabad-based parent company behind GrabOn, GrabCash, GrabShare, RankDrive and Alternatives.co. Bootstrapped, profitable, and building since 2013.</p>
+        <address>
+          21st Floor, OneWest Building<br/>
+          Financial District, Gachibowli<br/>
+          Hyderabad 500032, India<br/><br/>
+          <a href="tel:+914032537070">040-32537070</a> &middot; <a href="mailto:contact@inspirelabs.com">contact@inspirelabs.com</a>
+        </address>
+      </div>
+      <div class="footer-col">
+        <h5>Our products</h5>
+        <a href="https://www.grabon.in" target="_blank" rel="noopener">GrabOn</a>
+        <a href="https://www.grabcash.in" target="_blank" rel="noopener">GrabCash</a>
+        <a href="https://www.grabshare.com" target="_blank" rel="noopener">GrabShare</a>
+        <a href="https://www.rankdrive.com" target="_blank" rel="noopener">RankDrive</a>
+        <a href="https://alternatives.co" target="_blank" rel="noopener">Alternatives.co</a>
+      </div>
+      <div class="footer-col">
+        <h5>What we do</h5>
+        <a href="products.html">Products</a>
+        <a href="services.html">Services</a>
+        <a href="ai-agents.html">AI Agents</a>
+        <a href="platform.html">Platform</a>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <a href="about.html">About</a>
+        <a href="careers.html">Careers</a>
+        <a href="partnership.html">Partner with us</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h5>Trust &amp; legal</h5>
+        <a href="trust.html">Trust &amp; security</a>
+        <a href="privacy.html">Privacy policy</a>
+        <a href="terms.html">Terms</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>&copy; <span data-year>2026</span> Inspirelabs Solutions Ltd. Bootstrapped in Hyderabad since 2013.</div>
+      <div class="footer-bottom-links">
+        <a href="about.html">About</a>
+        <a href="careers.html">Careers</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+(() => {
+  const nav = document.getElementById('nav');
+  if (!nav) return;
+  const onScroll = () => {
+    if (window.scrollY > 8) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+})();
+
+(() => {
+  const y = new Date().getFullYear();
+  document.querySelectorAll('[data-year]').forEach(e => { e.textContent = y; });
+})();
+</script>
+
+</body>
+</html>

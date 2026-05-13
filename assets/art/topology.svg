@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 800" role="img" aria-label="Network topology constellation">
+  <title>Network topology constellation</title>
+  <defs>
+    <linearGradient id="tp-l1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#5B5CFF" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#008EE6" stop-opacity="0.15"/>
+    </linearGradient>
+    <linearGradient id="tp-l2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7940C9" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#5B5CFF" stop-opacity="0.1"/>
+    </linearGradient>
+    <linearGradient id="tp-l3" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#008EE6" stop-opacity="0.65"/>
+      <stop offset="100%" stop-color="#4040DD" stop-opacity="0.1"/>
+    </linearGradient>
+    <radialGradient id="tp-halo-v" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#5B5CFF" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#5B5CFF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="tp-halo-s" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#008EE6" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#008EE6" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="tp-halo-p" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#7940C9" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#7940C9" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="tp-blur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="38"/>
+    </filter>
+  </defs>
+  <g filter="url(#tp-blur)">
+    <circle cx="260" cy="220" r="190" fill="url(#tp-halo-v)"/>
+    <circle cx="1050" cy="540" r="220" fill="url(#tp-halo-s)"/>
+    <circle cx="780" cy="180" r="170" fill="url(#tp-halo-p)"/>
+  </g>
+  <g fill="none" stroke-width="0.6">
+    <path d="M 260,220 C 480,140 640,260 780,180" stroke="url(#tp-l1)"/>
+    <path d="M 780,180 C 920,240 1000,420 1050,540" stroke="url(#tp-l2)"/>
+    <path d="M 260,220 C 420,400 600,500 1050,540" stroke="url(#tp-l3)" stroke-dasharray="3 4"/>
+    <path d="M 460,640 C 600,560 720,600 1050,540" stroke="url(#tp-l1)"/>
+    <path d="M 140,520 C 320,460 400,560 460,640" stroke="url(#tp-l2)" stroke-dasharray="2 5"/>
+    <path d="M 260,220 C 180,360 160,460 140,520" stroke="url(#tp-l3)"/>
+    <path d="M 1240,300 C 1100,260 920,200 780,180" stroke="url(#tp-l1)" stroke-dasharray="4 3"/>
+    <path d="M 1240,300 C 1180,420 1120,500 1050,540" stroke="url(#tp-l2)"/>
+    <path d="M 920,700 C 1000,640 1020,580 1050,540" stroke="url(#tp-l3)"/>
+    <path d="M 460,640 C 660,720 800,720 920,700" stroke="url(#tp-l1)" stroke-dasharray="1 4"/>
+  </g>
+  <g>
+    <circle cx="260" cy="220" r="6" fill="#5B5CFF"/>
+    <circle cx="780" cy="180" r="7" fill="#7940C9"/>
+    <circle cx="1240" cy="300" r="5" fill="#008EE6"/>
+    <circle cx="1050" cy="540" r="8" fill="#5B5CFF"/>
+    <circle cx="920" cy="700" r="5" fill="#4040DD"/>
+    <circle cx="460" cy="640" r="6" fill="#008EE6"/>
+    <circle cx="140" cy="520" r="4" fill="#7940C9"/>
+    <circle cx="600" cy="380" r="3.5" fill="#5B5CFF"/>
+    <circle cx="880" cy="420" r="3" fill="#008EE6"/>
+  </g>
+</svg>
