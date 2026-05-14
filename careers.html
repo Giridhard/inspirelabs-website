@@ -400,6 +400,22 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
   .inside-stat:nth-child(2n) { border-right: none; }
 }
 
+
+/* === 5 questions: 2-col with illustration === */
+.ask-grid { display: grid; grid-template-columns: minmax(0, 0.85fr) minmax(0, 1fr); gap: clamp(40px, 5vw, 80px); align-items: center; }
+@media (max-width: 980px) { .ask-grid { grid-template-columns: 1fr; gap: 32px; } }
+.ask-illustration svg { width: 100%; height: auto; max-width: 360px; display: block; margin: 0 auto; }
+.ask-content .section-head { margin-bottom: clamp(28px, 3vw, 40px); }
+
+/* === Benefits as cards === */
+.benefits-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(16px, 1.6vw, 24px); }
+@media (max-width: 880px) { .benefits-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 540px) { .benefits-grid { grid-template-columns: 1fr; } }
+.benefit-card { padding: clamp(24px, 2.4vw, 32px); border: 1px solid var(--hairline); border-radius: 6px; background: var(--white); display: flex; flex-direction: column; gap: 12px; transition: background 0.25s var(--ease); }
+.benefit-card:hover { background: var(--accent-soft); }
+.benefit-card-tag { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); font-weight: 700; }
+.benefit-card h3 { font-size: clamp(18px, 1.4vw, 22px); font-weight: 500; letter-spacing: -0.02em; line-height: 1.2; margin: 0; color: var(--text); }
+.benefit-card p { font-size: 14.5px; line-height: 1.55; color: var(--text-secondary); margin: 0; }
 </style>
 </head>
 
@@ -426,7 +442,6 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
 <section class="hero">
   <div class="hero-grid"></div>
   <div class="container hero-inner">
-    <div class="hero-eyebrow">Careers</div>
     <h1 class="display-1">We hire operators. Then we hand them the room.</h1>
     <p class="hero-sub">Twelve years bootstrapped, five platforms in market, people who joined in their twenties still here in their forties. The room is built to make you sharper, then it expects you to keep it sharp.</p>
   </div>
@@ -449,11 +464,51 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
 <!-- WHAT WE ASK -->
 <section class="section-body">
   <div class="container">
-    <div class="section-head reveal">
-      <h2 class="section-title">When we meet a candidate, we ask ourselves five questions.</h2>
-      <p class="section-intro">The yes or no on each is the interview. The rest is paperwork.</p>
-    </div>
-    <div class="criteria-list reveal">
+    <div class="ask-grid reveal">
+      <div class="ask-illustration" aria-hidden="true">
+        <svg viewBox="0 0 320 360" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <pattern id="askGrid" width="32" height="32" patternUnits="userSpaceOnUse">
+              <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#0E0F0A" stroke-width="0.5" stroke-opacity="0.05"/>
+            </pattern>
+          </defs>
+          <rect width="320" height="360" fill="url(#askGrid)"/>
+          <!-- 5 staggered numbered squares -->
+          <g>
+            <rect x="40" y="30" width="60" height="60" rx="10" fill="#FF7A45"/>
+            <text x="70" y="68" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="22" font-weight="700" fill="#FFFFFF">01</text>
+          </g>
+          <g>
+            <rect x="180" y="80" width="60" height="60" rx="10" fill="#0E0F0A"/>
+            <text x="210" y="118" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="22" font-weight="700" fill="#FFFFFF">02</text>
+          </g>
+          <g>
+            <rect x="80" y="150" width="60" height="60" rx="10" fill="#6F7583"/>
+            <text x="110" y="188" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="22" font-weight="700" fill="#FFFFFF">03</text>
+          </g>
+          <g>
+            <rect x="200" y="220" width="60" height="60" rx="10" fill="#FF7A45" fill-opacity="0.85"/>
+            <text x="230" y="258" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="22" font-weight="700" fill="#FFFFFF">04</text>
+          </g>
+          <g>
+            <rect x="60" y="270" width="60" height="60" rx="10" fill="none" stroke="#8C92A0" stroke-width="2" stroke-dasharray="6 4"/>
+            <text x="90" y="308" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="22" font-weight="700" fill="#8C92A0">05</text>
+          </g>
+          <!-- thin connecting lines -->
+          <g stroke="#FF7A45" stroke-width="1" stroke-opacity="0.35" fill="none">
+            <path d="M 100 60 Q 140 45 180 110"/>
+            <path d="M 210 140 Q 175 145 140 180"/>
+            <path d="M 140 210 Q 175 220 200 250"/>
+            <path d="M 200 280 Q 160 290 120 300"/>
+          </g>
+        </svg>
+      </div>
+      <div class="ask-content">
+        <div class="section-head">
+          <h2 class="section-title">When we meet a candidate, we ask ourselves five questions.</h2>
+          <p class="section-intro">The yes or no on each is the interview. The rest is paperwork.</p>
+        </div>
+        <div class="criteria-list">
       <article class="criteria-row">
         <div class="criteria-num">01</div>
         <h3>Are they smarter than us in the room?</h3>
@@ -478,67 +533,6 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
   </div>
 </section>
 
-<!-- OPEN ROLES -->
-<section class="section-body" id="open-roles">
-  <div class="container">
-    <div class="section-head reveal">
-      <h2 class="section-title">Open roles.</h2>
-      <p class="section-intro">We hire across four broad tracks. If your work fits, write to the address on the card and tell us where you have shipped.</p>
-    </div>
-    <div class="roles-grid reveal">
-      <article class="role-card">
-        <div class="role-card-track">Engineering</div>
-        <h3>Build the platforms shoppers come back to.</h3>
-        <p>Backend, frontend, data, infra and ML. We run a single stack across five products. Engineers here own a service from design to on-call.</p>
-        <ul class="role-card-list">
-          <li>Senior Backend Engineer</li>
-          <li>Senior Frontend Engineer</li>
-          <li>ML / Search Engineer</li>
-          <li>Site Reliability Engineer</li>
-        </ul>
-        <a href="mailto:careers@inspirelabs.com?subject=Engineering%20%C2%B7%20Inspirelabs" class="tlink">Write to engineering &rarr;</a>
-      </article>
-      <article class="role-card">
-        <div class="role-card-track">Product &amp; Design</div>
-        <h3>Own one of the five platforms end&#8209;to&#8209;end.</h3>
-        <p>Product and design operators who want a P&amp;L, not a Jira queue. You will sit between brand partners, the engineering team, and the founder.</p>
-        <ul class="role-card-list">
-          <li>Product Manager, GrabCash / GrabShare</li>
-          <li>Product Manager, RankDrive</li>
-          <li>Senior Product Designer</li>
-          <li>Brand &amp; Marketing Designer</li>
-        </ul>
-        <a href="mailto:careers@inspirelabs.com?subject=Product%20%26%20Design%20%C2%B7%20Inspirelabs" class="tlink">Write to product &rarr;</a>
-      </article>
-      <article class="role-card">
-        <div class="role-card-track">Growth</div>
-        <h3>Run the demand engine that 4,500 brands grow on.</h3>
-        <p>SEO, GEO, performance, lifecycle, partnerships, content. Operators who can move a number and explain why it moved.</p>
-        <ul class="role-card-list">
-          <li>SEO Lead, RankDrive</li>
-          <li>Performance Marketing Manager</li>
-          <li>Lifecycle &amp; CRM Manager</li>
-          <li>Editorial / Content Lead</li>
-        </ul>
-        <a href="mailto:careers@inspirelabs.com?subject=Growth%20%C2%B7%20Inspirelabs" class="tlink">Write to growth &rarr;</a>
-      </article>
-      <article class="role-card">
-        <div class="role-card-track">Operations &amp; G&amp;A</div>
-        <h3>Run the room that runs the platforms.</h3>
-        <p>Finance, people, legal, compliance, customer ops. The functions that make the operating standard hold across the network.</p>
-        <ul class="role-card-list">
-          <li>Senior Manager, Finance</li>
-          <li>Talent Partner</li>
-          <li>Legal &amp; Compliance Counsel</li>
-          <li>Customer Operations Lead</li>
-        </ul>
-        <a href="mailto:careers@inspirelabs.com?subject=Operations%20%C2%B7%20Inspirelabs" class="tlink">Write to operations &rarr;</a>
-      </article>
-    </div>
-    <p class="roles-foot reveal">Don&rsquo;t see your role? Write to <a href="mailto:careers@inspirelabs.com" class="tlink">careers@inspirelabs.com</a> anyway. We read every note.</p>
-  </div>
-</section>
-
 <!-- A DECADE IN -->
 <section class="section-body">
   <div class="container">
@@ -559,54 +553,32 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
       <h2 class="section-title">How we care for the team.</h2>
       <p class="section-intro">From day one, the programmes we fund for every full-time teammate.</p>
     </div>
-    <div class="benefits-list reveal">
-      <div class="benefit-row">
-        <div class="benefit-tag">Leave</div>
-        <div class="benefit-text"><strong>24 paid leaves a year.</strong> Six sick. Six casual. Twelve annual. On top of ten public holidays across the calendar.</div>
-      </div>
-      <div class="benefit-row">
-        <div class="benefit-tag">Health</div>
-        <div class="benefit-text"><strong>Comprehensive health insurance.</strong> Group coverage with no cooling period, family-coverage options, and annual check-ups for every teammate.</div>
-      </div>
-      <div class="benefit-row">
-        <div class="benefit-tag">Wellness</div>
-        <div class="benefit-text"><strong>Health First, the 90-day challenge.</strong> An annual campaign to build healthy habits, supported by wellness rooms, recreation zones, and a cafeteria stocked through the day.</div>
-      </div>
-      <div class="benefit-row">
-        <div class="benefit-tag">Growth</div>
-        <div class="benefit-text"><strong>Learn at Work and the Young Leaders Programme.</strong> Brown-bag sessions, cross-team learning, and a leadership track that hands operators real ownership of outcomes.</div>
-      </div>
-      <div class="benefit-row">
-        <div class="benefit-tag">Belonging</div>
-        <div class="benefit-text"><strong>Festivals from every tradition.</strong> Iftars, Diwali, Christmas, Women&rsquo;s Day, Sports Week, annual outings. Part of the year, not a calendar afterthought.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- WHERE YOU WILL WORK -->
-<section class="section-body">
-  <div class="container">
-    <div class="careers-place-head reveal">
-      <h2 class="careers-place-title">Where you&rsquo;ll work.</h2>
-      <p class="careers-place-intro">One office, one team, one operating standard. The platforms ship from a building in Gachibowli, Hyderabad. The company has not had a second headquarters since 2013.</p>
-    </div>
-    <div class="careers-place-mosaic reveal">
-      <figure class="careers-place-cell careers-place-cell--lg"><img src="assets/culture/studio-1.jpg" alt="The Inspirelabs workspace" loading="lazy" /></figure>
-      <figure class="careers-place-cell careers-place-cell--md"><img src="assets/culture/studio-2.jpg" alt="An open-plan bay where teams ship" loading="lazy" /></figure>
-      <figure class="careers-place-cell careers-place-cell--md"><img src="assets/culture/office-bay.jpg" alt="A focused work area" loading="lazy" /></figure>
-      <figure class="careers-place-cell careers-place-cell--sm"><img src="assets/culture/studio-4.jpg" alt="A meeting nook" loading="lazy" /></figure>
-      <figure class="careers-place-cell careers-place-cell--sm"><img src="assets/culture/studio-5.jpg" alt="Quiet booth for deep work" loading="lazy" /></figure>
-      <figure class="careers-place-cell careers-place-cell--wide"><img src="assets/culture/studio-6.jpg" alt="The Inspirelabs Hyderabad office" loading="lazy" /></figure>
-      <div class="careers-place-cell careers-place-cell--address">
-        <div class="careers-place-eyebrow">The address</div>
-        <address class="careers-place-addr">
-          21st Floor, OneWest Building<br/>
-          Financial District, Gachibowli<br/>
-          Hyderabad 500032, India
-        </address>
-        <a href="contact.html" class="tlink careers-place-link">Get directions &rarr;</a>
-      </div>
+    <div class="benefits-grid reveal">
+      <article class="benefit-card">
+        <div class="benefit-card-tag">Leave</div>
+        <h3>24 paid leaves a year.</h3>
+        <p>Six sick. Six casual. Twelve annual. On top of ten public holidays across the calendar.</p>
+      </article>
+      <article class="benefit-card">
+        <div class="benefit-card-tag">Health</div>
+        <h3>Comprehensive health insurance.</h3>
+        <p>Group coverage with no cooling period, family-coverage options, and annual check-ups for every teammate.</p>
+      </article>
+      <article class="benefit-card">
+        <div class="benefit-card-tag">Wellness</div>
+        <h3>Health First, the 90-day challenge.</h3>
+        <p>An annual campaign to build healthy habits, supported by wellness rooms, recreation zones, and a cafeteria stocked through the day.</p>
+      </article>
+      <article class="benefit-card">
+        <div class="benefit-card-tag">Growth</div>
+        <h3>Learn at Work and the Young Leaders Programme.</h3>
+        <p>Brown-bag sessions, cross-team learning, and a leadership track that hands operators real ownership of outcomes.</p>
+      </article>
+      <article class="benefit-card">
+        <div class="benefit-card-tag">Belonging</div>
+        <h3>Festivals from every tradition.</h3>
+        <p>Iftars, Diwali, Christmas, Women&rsquo;s Day, Sports Week, annual outings. Part of the year, not a calendar afterthought.</p>
+      </article>
     </div>
   </div>
 </section>

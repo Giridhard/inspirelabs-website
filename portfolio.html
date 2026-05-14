@@ -433,8 +433,8 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
 .prod-platform-intro { font-size: clamp(16px, 1.2vw, 18.5px); line-height: 1.7; color: var(--text-secondary); margin: 0 auto; max-width: 64ch; }
 .prod-platform-layers { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(16px, 1.6vw, 24px); margin-bottom: clamp(48px, 5vw, 72px); }
 @media (max-width: 880px) { .prod-platform-layers { grid-template-columns: 1fr; } }
-.prod-platform-layer { padding: clamp(28px, 2.6vw, 40px); border: 1px solid var(--hairline); border-radius: 6px; background: var(--white); display: flex; flex-direction: column; gap: 14px; }
-.prod-platform-layer.is-accent { border-color: var(--accent); }
+.prod-platform-layer { padding: clamp(28px, 2.6vw, 40px); border: 1px solid var(--hairline); border-radius: 6px; background: var(--white); display: flex; flex-direction: column; gap: 14px; transition: background 0.25s var(--ease); }
+.prod-platform-layer:hover { background: var(--accent-soft); }
 .prod-platform-layer-num { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); font-weight: 700; }
 .prod-platform-layer h3 { font-size: clamp(18px, 1.4vw, 22px); font-weight: 500; letter-spacing: -0.018em; line-height: 1.25; margin: 0; color: var(--text); }
 .prod-platform-layer p { font-size: 14.5px; line-height: 1.6; color: var(--text-secondary); margin: 0; }
@@ -1038,23 +1038,19 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
 <section class="prod-platform">
   <div class="container">
     <div class="prod-platform-head reveal">
-      <div class="prod-platform-eyebrow">The platform underneath</div>
       <h2 class="prod-platform-title">One platform. Five properties.</h2>
       <p class="prod-platform-intro">Every platform above runs on the same Inspirelabs stack. Three layers we wrote ourselves: data, distribution, intelligence. Brands buy the network. The network runs on the platform. The platform is what we have actually been building for a decade.</p>
     </div>
     <div class="prod-platform-layers reveal">
       <article class="prod-platform-layer">
-        <div class="prod-platform-layer-num">01 &middot; Data</div>
         <h3>Where every signal lands.</h3>
         <p>Every click, scroll, search, redirect, install and purchase across the network lands in one warehouse. Billions of events a quarter, attributed at the offer level, fed back into ranking, ad allocation, cashback decisioning and creator payouts.</p>
       </article>
-      <article class="prod-platform-layer is-accent">
-        <div class="prod-platform-layer-num">02 &middot; Distribution</div>
+      <article class="prod-platform-layer">
         <h3>Where intent meets the brand.</h3>
         <p>Five properties working in concert. Coupon-led discovery on GrabOn. Cashback-led conversion on GrabCash. Creator-led commerce on GrabShare. Buyer-led research on Alternatives.co. Search-revenue on RankDrive. One audience, five entry points, one operating standard.</p>
       </article>
       <article class="prod-platform-layer">
-        <div class="prod-platform-layer-num">03 &middot; Intelligence</div>
         <h3>Where the platform learns.</h3>
         <p>A fleet of 12 specialised agents reads the data, decides where to act, and writes the next experiment. Every agent has a golden dataset, a regression suite and a human-in-the-loop reviewer. Nothing ships to production without an eval.</p>
       </article>
