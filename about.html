@@ -446,6 +446,8 @@ section { padding: clamp(64px, 7vw, 110px) 0; position: relative; }
 .about-mark-title { font-size: clamp(34px, 4vw, 56px); font-weight: 400; letter-spacing: -0.025em; line-height: 1.08; margin: 0 0 28px; max-width: 16ch; }
 .about-mark-body { font-size: clamp(16.5px, 1.25vw, 19px); line-height: 1.7; color: var(--text-secondary); margin: 0 0 18px; max-width: 56ch; }
 .about-mark-body:last-of-type { margin-bottom: clamp(32px, 3vw, 44px); }
+.about-mark-body em { font-style: normal; color: var(--text); font-weight: 500; }
+.about-mark-body em .accent-dot { color: var(--accent); }
 .about-mark-palette { display: flex; gap: clamp(20px, 2vw, 32px); align-items: center; padding-top: clamp(28px, 3vw, 40px); border-top: 1px solid var(--hairline); }
 .about-mark-swatch { display: flex; align-items: center; gap: 10px; }
 .swatch-chip { width: 22px; height: 22px; border-radius: 4px; display: inline-block; }
@@ -978,8 +980,8 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
       <div class="about-mark-text reveal">
         <div class="about-mark-eyebrow">The mark</div>
         <h2 class="about-mark-title">Built. And building.</h2>
-        <p class="about-mark-body">A 2&times;2 grid of cells. The filled cells stand for what we operate today; the dashed cell is the next bet. Room for growth is part of the mark.</p>
-        <p class="about-mark-body">Sits naturally next to Linear, Notion, Figma. Brands where the wordmark is calm because the product is loud. The single orange cell signals the platform we are building right now.</p>
+        <p class="about-mark-body">Each filled cell is a platform we built and run today &mdash; discovery, performance, creator commerce. The fourth cell is dashed because the next bet hasn&rsquo;t been built yet. As soon as it ships, the dashes go solid and a new dashed cell opens beside it.</p>
+        <p class="about-mark-body">Which is why the wordmark reads &lsquo;<em>Always building<span class="accent-dot">.</span></em>&rsquo; &mdash; not as a slogan, but as the operating reality. Twelve years in, the grid is never finished. The mark grows because the company grows: one filled cell at a time, never more than one bet ahead.</p>
         <div class="about-mark-palette" aria-label="Brand palette">
           <div class="about-mark-swatch"><span class="swatch-chip" style="background:#06101D"></span><span class="swatch-hex">#06101D</span></div>
           <div class="about-mark-swatch"><span class="swatch-chip" style="background:#FFFFFF; box-shadow: inset 0 0 0 1px var(--hairline);"></span><span class="swatch-hex">#FFFFFF</span></div>
