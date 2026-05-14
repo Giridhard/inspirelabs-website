@@ -7,6 +7,18 @@
 <meta name="description" content="Awareness, Discovery, Engagement, Acquisition. The Inspirelabs services taxonomy: 24 services across four pillars, run on a single growth platform." />
 <meta name="theme-color" content="#FFFFFF" />
 <link rel="canonical" href="https://inspirelabs.com/services.html" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Services, Four pillars of growth | Inspirelabs" />
+<meta property="og:description" content="Awareness, Discovery, Engagement, Acquisition. The Inspirelabs services taxonomy: 24 services across four pillars, run on a single growth platform." />
+<meta property="og:url" content="https://inspirelabs.com/services.html" />
+<meta property="og:image" content="https://inspirelabs.com/assets/brand/inspirelabs-share-card.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:site_name" content="Inspirelabs" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Services, Four pillars of growth | Inspirelabs" />
+<meta name="twitter:description" content="Awareness, Discovery, Engagement, Acquisition. The Inspirelabs services taxonomy: 24 services across four pillars, run on a single growth platform." />
+<meta name="twitter:image" content="https://inspirelabs.com/assets/brand/inspirelabs-share-card.png" />
 <link rel="icon" type="image/svg+xml" href="assets/brand/inspirelabs-mark.svg" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -65,10 +77,22 @@ ul, ol { list-style: none; }
 .nav-links { display: flex; gap: 36px; align-items: center; }
 .nav-link { font-size: 15px; font-weight: 500; color: var(--text); padding: 10px 0; position: relative; transition: color 0.2s var(--ease); }
 .nav-link:hover { color: var(--accent-deep); }
+.nav-link:focus-visible { outline: 2px solid var(--accent); outline-offset: 6px; border-radius: 2px; }
+.nav-brand:focus-visible { outline: 2px solid var(--accent); outline-offset: 6px; border-radius: 2px; }
+.nav-toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
 .nav-link.active::after { content: ''; position: absolute; bottom: 4px; left: 0; right: 0; height: 2px; background: var(--accent); }
 .nav-toggle { display: none; width: 36px; height: 36px; }
 .nav-toggle span { display: block; width: 22px; height: 1.5px; background: var(--text); margin: 5px auto; }
-@media (max-width: 880px) { .nav-links { display: none; } .nav-toggle { display: block; } }
+@media (max-width: 880px) {
+  .nav-links { position: fixed; top: 0; left: 0; right: 0; height: 100vh; height: 100svh; background: var(--white); flex-direction: column; justify-content: center; align-items: center; gap: 28px; transform: translateY(-100%); transition: transform 0.3s var(--ease); z-index: 99; padding: 96px 24px 40px; display: flex; }
+  .nav.is-open .nav-links { transform: translateY(0); }
+  .nav-toggle { display: block; position: relative; z-index: 101; cursor: pointer; }
+  .nav-toggle span { transition: transform 0.25s var(--ease), opacity 0.2s var(--ease); transform-origin: center; }
+  .nav.is-open .nav-toggle span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+  .nav.is-open .nav-toggle span:nth-child(2) { opacity: 0; }
+  .nav.is-open .nav-toggle span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+  .nav-link { font-size: 22px; padding: 8px 0; }
+}
 
 h1, h2, h3, h4, h5 { color: var(--text); font-weight: 400; letter-spacing: -0.02em; line-height: 1.06; text-wrap: balance; }
 p, .lead, .section-intro { text-wrap: pretty; }
@@ -85,6 +109,7 @@ section.tight { padding: clamp(32px, 3.5vw, 55px) 0; }
 .section-intro { font-size: clamp(15px, 1.2vw, 17px); line-height: 1.6; color: var(--text-secondary); max-width: 64ch; }
 .tlink { display: inline-block; font-size: 15px; font-weight: 500; color: var(--text); padding-bottom: 2px; border-bottom: 1.5px solid var(--text); transition: color 0.2s var(--ease), border-color 0.2s var(--ease); }
 .tlink:hover { color: var(--accent-deep); border-color: var(--accent); }
+.tlink:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; border-radius: 2px; }
 
 .hero {
   position: relative;
@@ -109,8 +134,9 @@ section.tight { padding: clamp(32px, 3.5vw, 55px) 0; }
   margin: 0 auto;
 }
 .hero-text-center .hero-eyebrow { margin-bottom: clamp(28px, 3vw, 40px); }
-.hero-text-center .hero-eyebrow::before { display: none; }
-.hero-text-center h1 { max-width: 18ch; margin: 0 auto; }
+.hero-text-center .hero-eyebrow::before,
+.next-tease .hero-eyebrow::before { display: none; }
+.hero-text-center h1 { max-width: none; margin: 0 auto; font-size: clamp(40px, 5.6vw, 96px); letter-spacing: -0.028em; line-height: 1.04; text-wrap: balance; }
 .hero-text-center .hero-lead {
   margin: clamp(24px, 2.4vw, 36px) auto 0;
   max-width: 56ch;
@@ -119,7 +145,7 @@ section.tight { padding: clamp(32px, 3.5vw, 55px) 0; }
   color: var(--text-secondary);
 }
 
-/* Pillar editorial row under hero — hairline, no boxes */
+/* Pillar editorial row under hero, hairline, no boxes */
 .pillar-row {
   padding: clamp(56px, 6.5vw, 96px) 0;
 }
@@ -203,7 +229,7 @@ section.tight { padding: clamp(32px, 3.5vw, 55px) 0; }
 @media (max-width: 1000px) { .brand-grid { grid-template-columns: repeat(4, 1fr); } }
 @media (max-width: 640px) { .brand-grid { grid-template-columns: repeat(3, 1fr); } }
 
-/* By category — editorial hairline rows */
+/* By category, editorial hairline rows */
 .cats-block { padding: clamp(64px, 7vw, 110px) 0; background: var(--white); }
 .categories {
   display: grid;
@@ -262,7 +288,7 @@ section.tight { padding: clamp(32px, 3.5vw, 55px) 0; }
   font-weight: 600;
 }
 
-/* Case studies — clean light cards */
+/* Case studies, clean light cards */
 .cases-block { padding: clamp(80px, 9vw, 140px) 0; background: var(--white); }
 .cases-grid {
   display: grid;
@@ -324,7 +350,7 @@ section.tight { padding: clamp(32px, 3.5vw, 55px) 0; }
   margin: 0;
 }
 
-/* How we work — three-up editorial */
+/* How we work, three-up editorial */
 .how-block { padding: clamp(64px, 7vw, 110px) 0; }
 .how-head { margin-bottom: clamp(40px, 4.5vw, 64px); max-width: 64ch; }
 .how-head h2 { font-size: clamp(30px, 3.2vw, 48px); font-weight: 400; letter-spacing: -0.025em; line-height: 1.1; }
@@ -348,7 +374,7 @@ section.tight { padding: clamp(32px, 3.5vw, 55px) 0; }
 }
 .how-cell p { font-size: 15.5px; line-height: 1.55; color: var(--text-secondary); }
 
-/* Taller hero specifically for the deliver hero — vertically centered headline */
+/* Taller hero specifically for the deliver hero, vertically centered headline */
 .hero-deliver {
   min-height: 100vh;
   min-height: 100svh;
@@ -356,7 +382,7 @@ section.tight { padding: clamp(32px, 3.5vw, 55px) 0; }
 }
 .hero-deliver .hero-grid { display: none; }
 
-/* Hero background — scattered ghosted words across the entire hero */
+/* Hero background, scattered ghosted words across the entire hero */
 .hero-bg-words {
   position: absolute;
   top: 0; bottom: 0;
@@ -519,7 +545,7 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
   margin: 0;
 }
 
-/* === We deliver — editorial hairline rows (matches home reasons-grid) === */
+/* === We deliver, editorial hairline rows (matches home reasons-grid) === */
 .deliver-list {
   padding: clamp(48px, 5.5vw, 90px) 0;
   background: var(--white);
@@ -563,7 +589,7 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
   max-width: 50ch;
 }
 
-/* === Experts wall — neutral hairline tags === */
+/* === Experts wall, neutral hairline tags === */
 .experts-wall {
   padding: clamp(48px, 5.5vw, 90px) 0;
   background: var(--white);
@@ -600,15 +626,15 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
 <header class="nav" id="nav">
   <div class="container nav-inner">
     <a href="index.html" class="nav-brand" aria-label="Inspirelabs"><img class="brand-logo" src="assets/brand/inspirelabs-wordmark.png" alt="Inspirelabs" /></a>
-    <nav class="nav-links" aria-label="Primary">
+    <nav class="nav-links" id="primary-nav" aria-label="Primary">
       <a href="index.html" class="nav-link">Home</a>
       <a href="products.html" class="nav-link">Products</a>
-      <a href="services.html" class="nav-link active">Services</a>
+      <a href="services.html" class="nav-link active" aria-current="page">Services</a>
       <a href="about.html" class="nav-link">About</a>
       <a href="careers.html" class="nav-link">Careers</a>
       <a href="contact.html" class="nav-link">Contact</a>
     </nav>
-    <button class="nav-toggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span><span></span></button>
   </div>
 </header>
 
@@ -618,7 +644,7 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
   <div class="hero-grid"></div>
   <div class="container hero-inner">
     <div class="hero-text-center">
-      <h1 class="display-1">Growth, built in&#8209;house. Run for your brand.</h1>
+      <h1 class="display-1">In an industry of middlemen, we are the operator.</h1>
       <p class="hero-lead">Awareness, discovery, engagement, acquisition. Twenty-four services across four pillars, every one of them pressure-tested across our own five platforms before it ships to yours.</p>
     </div>
   </div>
@@ -976,9 +1002,10 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
 </section>
 
 <!-- Closing CTA -->
-<section>
+<section class="next-tease tight">
   <div class="container" style="text-align: center; max-width: 760px; margin: 0 auto;">
-    <h2 class="display-3" style="margin-bottom: 24px;">Ready to run growth in&#8209;house?</h2>
+    <div class="hero-eyebrow">Start a conversation</div>
+    <h2 class="display-3" style="margin-top: 24px; margin-bottom: 24px;">Ready to run growth in&#8209;house?</h2>
     <p class="biz-intro" style="margin-bottom: 32px;">One operating standard. First-party data from a 200M-user network you do not have to build. Twenty-four services under one roof.</p>
     <a href="contact.html" class="tlink">Talk to us about your growth &rarr;</a>
   </div>
@@ -1000,7 +1027,7 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
         </address>
       </div>
       <div class="footer-col">
-        <h5>Our products</h5>
+        <h5>Our portfolio</h5>
         <a href="https://www.grabon.in" target="_blank" rel="noopener">GrabOn</a>
         <a href="https://www.grabcash.in" target="_blank" rel="noopener">GrabCash</a>
         <a href="https://www.grabshare.com" target="_blank" rel="noopener">GrabShare</a>
@@ -1013,6 +1040,7 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
         <a href="services.html">Services</a>
         <a href="ai-agents.html">AI Agents</a>
         <a href="platform.html">Platform</a>
+        <a href="insights.html">Insights</a>
       </div>
       <div class="footer-col">
         <h5>Company</h5>
@@ -1031,16 +1059,26 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
     <div class="footer-bottom">
       <div>&copy; <span data-year>2026</span> Inspirelabs Solutions Ltd. Bootstrapped in Hyderabad since 2013.</div>
       <div class="footer-bottom-links">
-        <a href="about.html">About</a>
-        <a href="careers.html">Careers</a>
-        <a href="contact.html">Contact</a>
-      </div>
+ <a href="privacy.html">Privacy</a>
+ <a href="terms.html">Terms</a>
+ <a href="trust.html">Trust &amp; security</a>
+ </div>
     </div>
   </div>
 </footer>
 
 <script>
 (() => { const nav = document.getElementById('nav'); if (!nav) return; const onScroll = () => { if (window.scrollY > 8) nav.classList.add('scrolled'); else nav.classList.remove('scrolled'); }; window.addEventListener('scroll', onScroll, { passive: true }); onScroll(); })();
+(() => {
+  const nav = document.getElementById('nav');
+  if (!nav) return;
+  const btn = nav.querySelector('.nav-toggle');
+  if (!btn) return;
+  const close = () => { nav.classList.remove('is-open'); btn.setAttribute('aria-expanded', 'false'); btn.setAttribute('aria-label', 'Open menu'); document.body.style.overflow = ''; };
+  btn.addEventListener('click', () => { const open = !nav.classList.contains('is-open'); nav.classList.toggle('is-open', open); btn.setAttribute('aria-expanded', String(open)); btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu'); document.body.style.overflow = open ? 'hidden' : ''; });
+  nav.querySelectorAll('.nav-link').forEach(a => a.addEventListener('click', close));
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
+})();
 (() => { const els = document.querySelectorAll('.reveal'); if (!('IntersectionObserver' in window)) { els.forEach(e => e.classList.add('in-view')); return; } const io = new IntersectionObserver((entries) => { entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in-view'); io.unobserve(en.target); } }); }, { rootMargin: '0px 0px -10% 0px', threshold: 0.05 }); els.forEach(e => io.observe(e)); })();
 (() => { const y = new Date().getFullYear(); document.querySelectorAll('[data-year]').forEach(e => { e.textContent = y; }); })();
 </script>

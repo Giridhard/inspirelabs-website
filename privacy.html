@@ -7,6 +7,18 @@
 <meta name="description" content="How Inspirelabs Solutions Ltd. collects, uses and safeguards information across our five properties." />
 <meta name="theme-color" content="#FFFFFF" />
 <link rel="canonical" href="https://inspirelabs.com/privacy.html" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Privacy Policy | Inspirelabs" />
+<meta property="og:description" content="How Inspirelabs Solutions Ltd. collects, uses and safeguards information across our five properties." />
+<meta property="og:url" content="https://inspirelabs.com/privacy.html" />
+<meta property="og:image" content="https://inspirelabs.com/assets/brand/inspirelabs-share-card.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:site_name" content="Inspirelabs" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Privacy Policy | Inspirelabs" />
+<meta name="twitter:description" content="How Inspirelabs Solutions Ltd. collects, uses and safeguards information across our five properties." />
+<meta name="twitter:image" content="https://inspirelabs.com/assets/brand/inspirelabs-share-card.png" />
 <link rel="icon" type="image/svg+xml" href="assets/brand/inspirelabs-mark.svg" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -94,9 +106,21 @@ ul, ol { list-style: none; }
 .nav-links { display: flex; gap: 36px; align-items: center; }
 .nav-link { font-size: 15px; font-weight: 500; color: var(--text); padding: 10px 0; position: relative; transition: color 0.2s var(--ease); }
 .nav-link:hover { color: var(--accent-deep); }
+.nav-link:focus-visible { outline: 2px solid var(--accent); outline-offset: 6px; border-radius: 2px; }
+.nav-brand:focus-visible { outline: 2px solid var(--accent); outline-offset: 6px; border-radius: 2px; }
+.nav-toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
 .nav-toggle { display: none; width: 36px; height: 36px; }
 .nav-toggle span { display: block; width: 22px; height: 1.5px; background: var(--text); margin: 5px auto; }
-@media (max-width: 880px) { .nav-links { display: none; } .nav-toggle { display: block; } }
+@media (max-width: 880px) {
+  .nav-links { position: fixed; top: 0; left: 0; right: 0; height: 100vh; height: 100svh; background: var(--white); flex-direction: column; justify-content: center; align-items: center; gap: 28px; transform: translateY(-100%); transition: transform 0.3s var(--ease); z-index: 99; padding: 96px 24px 40px; display: flex; }
+  .nav.is-open .nav-links { transform: translateY(0); }
+  .nav-toggle { display: block; position: relative; z-index: 101; cursor: pointer; }
+  .nav-toggle span { transition: transform 0.25s var(--ease), opacity 0.2s var(--ease); transform-origin: center; }
+  .nav.is-open .nav-toggle span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+  .nav.is-open .nav-toggle span:nth-child(2) { opacity: 0; }
+  .nav.is-open .nav-toggle span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+  .nav-link { font-size: 22px; padding: 8px 0; }
+}
 
 h1, h2, h3, h4, h5 { color: var(--text); font-weight: 400; letter-spacing: -0.02em; line-height: 1.06; text-wrap: balance; }
 p, .lead, .section-intro { text-wrap: pretty; }
@@ -119,6 +143,7 @@ p, .lead, .section-intro { text-wrap: pretty; }
   transition: color 0.2s var(--ease), border-color 0.2s var(--ease);
 }
 .tlink:hover { color: var(--accent-deep); border-color: var(--accent); }
+.tlink:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; border-radius: 2px; }
 
 /* Hero */
 .legal-hero {
@@ -272,7 +297,7 @@ footer {
 <header class="nav" id="nav">
   <div class="container nav-inner">
     <a href="index.html" class="nav-brand" aria-label="Inspirelabs"><img class="brand-logo" src="assets/brand/inspirelabs-wordmark.png" alt="Inspirelabs" /></a>
-    <nav class="nav-links" aria-label="Primary">
+    <nav class="nav-links" id="primary-nav" aria-label="Primary">
       <a href="index.html" class="nav-link">Home</a>
       <a href="products.html" class="nav-link">Products</a>
       <a href="services.html" class="nav-link">Services</a>
@@ -280,7 +305,7 @@ footer {
       <a href="careers.html" class="nav-link">Careers</a>
       <a href="contact.html" class="nav-link">Contact</a>
     </nav>
-    <button class="nav-toggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span><span></span></button>
   </div>
 </header>
 
@@ -416,7 +441,7 @@ footer {
         </address>
       </div>
       <div class="footer-col">
-        <h5>Our products</h5>
+        <h5>Our portfolio</h5>
         <a href="https://www.grabon.in" target="_blank" rel="noopener">GrabOn</a>
         <a href="https://www.grabcash.in" target="_blank" rel="noopener">GrabCash</a>
         <a href="https://www.grabshare.com" target="_blank" rel="noopener">GrabShare</a>
@@ -429,6 +454,7 @@ footer {
         <a href="services.html">Services</a>
         <a href="ai-agents.html">AI Agents</a>
         <a href="platform.html">Platform</a>
+        <a href="insights.html">Insights</a>
       </div>
       <div class="footer-col">
         <h5>Company</h5>
@@ -447,10 +473,10 @@ footer {
     <div class="footer-bottom">
       <div>&copy; <span data-year>2026</span> Inspirelabs Solutions Ltd. Bootstrapped in Hyderabad since 2013.</div>
       <div class="footer-bottom-links">
-        <a href="about.html">About</a>
-        <a href="careers.html">Careers</a>
-        <a href="contact.html">Contact</a>
-      </div>
+ <a href="privacy.html">Privacy</a>
+ <a href="terms.html">Terms</a>
+ <a href="trust.html">Trust &amp; security</a>
+ </div>
     </div>
   </div>
 </footer>
@@ -470,6 +496,17 @@ footer {
 (() => {
   const y = new Date().getFullYear();
   document.querySelectorAll('[data-year]').forEach(e => { e.textContent = y; });
+})();
+
+(() => {
+  const nav = document.getElementById('nav');
+  if (!nav) return;
+  const btn = nav.querySelector('.nav-toggle');
+  if (!btn) return;
+  const close = () => { nav.classList.remove('is-open'); btn.setAttribute('aria-expanded', 'false'); btn.setAttribute('aria-label', 'Open menu'); document.body.style.overflow = ''; };
+  btn.addEventListener('click', () => { const open = !nav.classList.contains('is-open'); nav.classList.toggle('is-open', open); btn.setAttribute('aria-expanded', String(open)); btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu'); document.body.style.overflow = open ? 'hidden' : ''; });
+  nav.querySelectorAll('.nav-link').forEach(a => a.addEventListener('click', close));
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
 })();
 </script>
 

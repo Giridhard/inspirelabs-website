@@ -7,6 +7,18 @@
 <meta name="description" content="GrabOn, GrabCash, GrabShare, RankDrive, Alternatives.co. Five properties, one operating company. The Inspirelabs portfolio in detail." />
 <meta name="theme-color" content="#FFFFFF" />
 <link rel="canonical" href="https://inspirelabs.com/products.html" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Products, Five platforms that compound | Inspirelabs" />
+<meta property="og:description" content="GrabOn, GrabCash, GrabShare, RankDrive, Alternatives.co. Five properties, one operating company. The Inspirelabs portfolio in detail." />
+<meta property="og:url" content="https://inspirelabs.com/products.html" />
+<meta property="og:image" content="https://inspirelabs.com/assets/brand/inspirelabs-share-card.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:site_name" content="Inspirelabs" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Products, Five platforms that compound | Inspirelabs" />
+<meta name="twitter:description" content="GrabOn, GrabCash, GrabShare, RankDrive, Alternatives.co. Five properties, one operating company. The Inspirelabs portfolio in detail." />
+<meta name="twitter:image" content="https://inspirelabs.com/assets/brand/inspirelabs-share-card.png" />
 <link rel="icon" type="image/svg+xml" href="assets/brand/inspirelabs-mark.svg" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -65,10 +77,22 @@ ul, ol { list-style: none; }
 .nav-links { display: flex; gap: 36px; align-items: center; }
 .nav-link { font-size: 15px; font-weight: 500; color: var(--text); padding: 10px 0; position: relative; transition: color 0.2s var(--ease); }
 .nav-link:hover { color: var(--accent-deep); }
+.nav-link:focus-visible { outline: 2px solid var(--accent); outline-offset: 6px; border-radius: 2px; }
+.nav-brand:focus-visible { outline: 2px solid var(--accent); outline-offset: 6px; border-radius: 2px; }
+.nav-toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
 .nav-link.active::after { content: ''; position: absolute; bottom: 4px; left: 0; right: 0; height: 2px; background: var(--accent); }
 .nav-toggle { display: none; width: 36px; height: 36px; }
 .nav-toggle span { display: block; width: 22px; height: 1.5px; background: var(--text); margin: 5px auto; }
-@media (max-width: 880px) { .nav-links { display: none; } .nav-toggle { display: block; } }
+@media (max-width: 880px) {
+  .nav-links { position: fixed; top: 0; left: 0; right: 0; height: 100vh; height: 100svh; background: var(--white); flex-direction: column; justify-content: center; align-items: center; gap: 28px; transform: translateY(-100%); transition: transform 0.3s var(--ease); z-index: 99; padding: 96px 24px 40px; display: flex; }
+  .nav.is-open .nav-links { transform: translateY(0); }
+  .nav-toggle { display: block; position: relative; z-index: 101; cursor: pointer; }
+  .nav-toggle span { transition: transform 0.25s var(--ease), opacity 0.2s var(--ease); transform-origin: center; }
+  .nav.is-open .nav-toggle span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+  .nav.is-open .nav-toggle span:nth-child(2) { opacity: 0; }
+  .nav.is-open .nav-toggle span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+  .nav-link { font-size: 22px; padding: 8px 0; }
+}
 
 h1, h2, h3, h4, h5 { color: var(--text); font-weight: 400; letter-spacing: -0.02em; line-height: 1.06; text-wrap: balance; }
 p, .lead, .section-intro { text-wrap: pretty; }
@@ -85,6 +109,7 @@ section.tight { padding: clamp(32px, 3.5vw, 55px) 0; }
 .section-intro { font-size: clamp(15px, 1.2vw, 17px); line-height: 1.6; color: var(--text-secondary); max-width: 64ch; }
 .tlink { display: inline-block; font-size: 15px; font-weight: 500; color: var(--text); padding-bottom: 2px; border-bottom: 1.5px solid var(--text); transition: color 0.2s var(--ease), border-color 0.2s var(--ease); }
 .tlink:hover { color: var(--accent-deep); border-color: var(--accent); }
+.tlink:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; border-radius: 2px; }
 .tlink-light { color: var(--white); border-bottom-color: rgba(255,255,255,0.6); }
 .tlink-light:hover { color: var(--white); border-bottom-color: var(--white); }
 
@@ -105,14 +130,15 @@ section.tight { padding: clamp(32px, 3.5vw, 55px) 0; }
 .hero h1 .line { display: block; }
 .hero h1 .line + .line { margin-top: 0.2em; }
 
-/* Products page brand-book hero — centered text */
+/* Products page brand-book hero, centered text */
 .hero-text-center {
   text-align: center;
   max-width: 920px;
   margin: 0 auto clamp(36px, 4vw, 56px);
 }
 .hero-text-center .hero-eyebrow { margin-bottom: clamp(28px, 3vw, 40px); }
-.hero-text-center .hero-eyebrow::before { display: none; }
+.hero-text-center .hero-eyebrow::before,
+.next-tease .hero-eyebrow::before { display: none; }
 .hero-text-center h1 {
   max-width: 18ch;
   margin: 0 auto;
@@ -271,8 +297,15 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
 }
 .prod-row-content h2 { margin-bottom: 24px; max-width: 22ch; }
 .prod-row-content .biz-intro { margin-bottom: 40px; max-width: 56ch; }
+.prod-row-url { font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 13px; color: var(--text-tertiary); letter-spacing: 0.02em; display: inline-block; margin: 16px 0 18px; transition: color 0.2s var(--ease); }
+.prod-row-url:hover { color: var(--accent); }
+.prod-row-regions { display: flex; align-items: center; gap: 12px; margin-top: 28px; flex-wrap: wrap; }
+.prod-row-regions-label { font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-tertiary); font-weight: 600; margin-right: 4px; }
+.prod-row-region { display: inline-flex; align-items: center; gap: 8px; padding: 7px 14px; border: 1px solid var(--hairline); border-radius: 999px; font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12.5px; font-weight: 500; color: var(--text); transition: border-color 0.2s var(--ease), color 0.2s var(--ease), background 0.2s var(--ease); }
+.prod-row-region:hover { border-color: var(--text); color: var(--accent); background: var(--accent-soft); }
+.prod-row-region img { width: 18px; height: 12px; object-fit: cover; display: block; border-radius: 2px; }
 .prod-row-stats {
-  display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 24px;
   padding: 28px 0;
   border-top: 1px solid var(--hairline);
   border-bottom: 1px solid var(--hairline);
@@ -285,10 +318,12 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
   font-weight: 400; letter-spacing: -0.03em; line-height: 1;
   color: var(--tone, var(--text));
 }
+.prod-row-stat--text .prod-row-stat-num { font-size: clamp(17px, 1.4vw, 21px); font-weight: 600; letter-spacing: -0.01em; line-height: 1.2; color: var(--text); }
 .prod-row-stat-lbl { font-size: 13px; color: var(--text-secondary); }
+.prod-row-stat--text .prod-row-stat-lbl { font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 600; color: var(--text-tertiary); order: -1; margin-bottom: 4px; }
 .prod-row-content .tlink { align-self: flex-start; }
 
-/* Per-product brand zone tint — soft radial gradient behind each row */
+/* Per-product brand zone tint, soft radial gradient behind each row */
 .prod-row { position: relative; overflow: hidden; isolation: isolate; }
 .prod-row > .container { position: relative; z-index: 1; }
 .prod-row::before {
@@ -311,7 +346,7 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
   top: 120px;
   aspect-ratio: 5 / 4;
   display: flex; align-items: center; justify-content: center;
-  /* Entry state — mockup slides in from its alternation side */
+  /* Entry state, mockup slides in from its alternation side */
   opacity: 0;
   transform: translateX(-80px) translateY(20px) scale(0.96);
   transition: opacity 1s var(--ease), transform 1.1s var(--ease);
@@ -670,15 +705,15 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
 <header class="nav" id="nav">
   <div class="container nav-inner">
     <a href="index.html" class="nav-brand" aria-label="Inspirelabs"><img class="brand-logo" src="assets/brand/inspirelabs-wordmark.png" alt="Inspirelabs" /></a>
-    <nav class="nav-links" aria-label="Primary">
+    <nav class="nav-links" id="primary-nav" aria-label="Primary">
       <a href="index.html" class="nav-link">Home</a>
-      <a href="products.html" class="nav-link active">Products</a>
+      <a href="products.html" class="nav-link active" aria-current="page">Products</a>
       <a href="services.html" class="nav-link">Services</a>
       <a href="about.html" class="nav-link">About</a>
       <a href="careers.html" class="nav-link">Careers</a>
       <a href="contact.html" class="nav-link">Contact</a>
     </nav>
-    <button class="nav-toggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span><span></span></button>
   </div>
 </header>
 
@@ -713,16 +748,21 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
       <div class="prod-row-content">
         <div class="prod-row-lockup">
           <img src="assets/logos/grabon-real.png" alt="GrabOn" class="prod-row-logo" />
-          <span class="prod-row-tag">An Inspirelabs company</span>
+          <span class="prod-row-tag">Flagship</span>
         </div>
-        <h2 class="section-title-xl">India&rsquo;s most-trusted source of high-intent commerce traffic.</h2>
-        <p class="biz-intro">GrabOn is the property that started Inspirelabs. Twelve years on, it is one of the most-visited commerce destinations in the country. 200M+ shoppers a month land on GrabOn looking for verified offers from 4,500+ brands. Editorial-led, expert-verified, served on a stack we built ourselves.</p>
+        <h2 class="section-title-xl">India&rsquo;s most-trusted destination for verified deals.</h2>
+        <p class="biz-intro">Two hundred million shoppers come to GrabOn every month to find offers from 4,500 brands across travel, fashion, food, electronics, recharges, and OTT. Twelve years of search authority compounded into one commerce-intent network, and the product people come back to.</p>
         <div class="prod-row-stats">
-          <div class="prod-row-stat"><span class="prod-row-stat-num count-up" style="--tone:#28538F;">200M+</span><span class="prod-row-stat-lbl">Monthly shoppers</span></div>
-          <div class="prod-row-stat"><span class="prod-row-stat-num count-up" style="--tone:#28538F;">4,500+</span><span class="prod-row-stat-lbl">Brand partners</span></div>
-          <div class="prod-row-stat"><span class="prod-row-stat-num count-up" style="--tone:#28538F;">200K+</span><span class="prod-row-stat-lbl">Live offers</span></div>
+          <div class="prod-row-stat"><span class="prod-row-stat-num count-up" style="--tone:#28538F;">200M+</span><span class="prod-row-stat-lbl">Shoppers / Mo</span></div>
+          <div class="prod-row-stat"><span class="prod-row-stat-num count-up" style="--tone:#28538F;">4,500+</span><span class="prod-row-stat-lbl">Brands</span></div>
+          <div class="prod-row-stat"><span class="prod-row-stat-num count-up" style="--tone:#28538F;">&#8377;2,500&nbsp;Cr+</span><span class="prod-row-stat-lbl">Savings unlocked</span></div>
         </div>
-        <a href="https://www.grabon.in" target="_blank" rel="noopener" class="tlink">Visit GrabOn &rarr;</a>
+        <div class="prod-row-regions">
+          <span class="prod-row-regions-label">Available in</span>
+          <a href="https://www.grabon.in" target="_blank" rel="noopener" class="prod-row-region"><img src="assets/logos/flag-in.png" alt="India" /><span>grabon.in</span></a>
+          <a href="https://www.grabon.com" target="_blank" rel="noopener" class="prod-row-region"><img src="assets/logos/flag-us.png" alt="United States" /><span>grabon.com</span></a>
+          <a href="https://www.grabonuae.ae" target="_blank" rel="noopener" class="prod-row-region"><img src="assets/logos/flag-uae.svg" alt="United Arab Emirates" /><span>grabonuae.ae</span></a>
+        </div>
       </div>
       <div class="prod-row-visual">
         <div class="mockup mockup--grabon">
@@ -857,7 +897,7 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
           <span class="prod-row-tag">An Inspirelabs company</span>
         </div>
         <h2 class="section-title-xl">Search-revenue intelligence for growth teams.</h2>
-        <p class="biz-intro">RankDrive is SEO software written by operators who actually run growth. Daily, ML-prioritised actions that map directly to revenue. Track keywords, GEO citations, AI Overview presence and SGE coverage in one platform built by the team that runs SEO across our 200M-user network. Most SEO tools tell you where you rank. RankDrive tells you which actions move the rankings that move revenue.</p>
+        <p class="biz-intro">Keywords mapped to rupees. The search-revenue operating layer for growth teams, daily ML-prioritised actions, GEO citations, AI-overview presence. Built by the team that runs SEO across 200 million monthly visitors, then productised for everyone else.</p>
         <div class="prod-row-stats">
           <div class="prod-row-stat"><span class="prod-row-stat-num count-up" style="--tone:#FF7058;">1</span><span class="prod-row-stat-lbl">Action queue, not a dashboard</span></div>
           <div class="prod-row-stat"><span class="prod-row-stat-num count-up" style="--tone:#FF7058;">200M</span><span class="prod-row-stat-lbl">Users of network it was built on</span></div>
@@ -969,7 +1009,6 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
   <div class="container" style="text-align:center; max-width: 720px; margin: 0 auto;">
     <div class="hero-eyebrow">What&rsquo;s next</div>
     <h2 class="display-3" style="margin-top: 24px;">More platforms in the works. Same room, same standard.</h2>
-    <p class="biz-intro" style="margin-top: 24px;">We&rsquo;ve launched a property a year on average since 2013. Each one solves a real problem inside the operating company first, then opens up to brands.</p>
   </div>
 </section>
 
@@ -989,7 +1028,7 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
         </address>
       </div>
       <div class="footer-col">
-        <h5>Our products</h5>
+        <h5>Our portfolio</h5>
         <a href="https://www.grabon.in" target="_blank" rel="noopener">GrabOn</a>
         <a href="https://www.grabcash.in" target="_blank" rel="noopener">GrabCash</a>
         <a href="https://www.grabshare.com" target="_blank" rel="noopener">GrabShare</a>
@@ -1002,6 +1041,7 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
         <a href="services.html">Services</a>
         <a href="ai-agents.html">AI Agents</a>
         <a href="platform.html">Platform</a>
+        <a href="insights.html">Insights</a>
       </div>
       <div class="footer-col">
         <h5>Company</h5>
@@ -1020,16 +1060,26 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
     <div class="footer-bottom">
       <div>&copy; <span data-year>2026</span> Inspirelabs Solutions Ltd. Bootstrapped in Hyderabad since 2013.</div>
       <div class="footer-bottom-links">
-        <a href="about.html">About</a>
-        <a href="careers.html">Careers</a>
-        <a href="contact.html">Contact</a>
-      </div>
+ <a href="privacy.html">Privacy</a>
+ <a href="terms.html">Terms</a>
+ <a href="trust.html">Trust &amp; security</a>
+ </div>
     </div>
   </div>
 </footer>
 
 <script>
 (() => { const nav = document.getElementById('nav'); if (!nav) return; const onScroll = () => { if (window.scrollY > 8) nav.classList.add('scrolled'); else nav.classList.remove('scrolled'); }; window.addEventListener('scroll', onScroll, { passive: true }); onScroll(); })();
+(() => {
+  const nav = document.getElementById('nav');
+  if (!nav) return;
+  const btn = nav.querySelector('.nav-toggle');
+  if (!btn) return;
+  const close = () => { nav.classList.remove('is-open'); btn.setAttribute('aria-expanded', 'false'); btn.setAttribute('aria-label', 'Open menu'); document.body.style.overflow = ''; };
+  btn.addEventListener('click', () => { const open = !nav.classList.contains('is-open'); nav.classList.toggle('is-open', open); btn.setAttribute('aria-expanded', String(open)); btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu'); document.body.style.overflow = open ? 'hidden' : ''; });
+  nav.querySelectorAll('.nav-link').forEach(a => a.addEventListener('click', close));
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
+})();
 (() => { const els = document.querySelectorAll('.reveal'); if (!('IntersectionObserver' in window)) { els.forEach(e => e.classList.add('in-view')); return; } const io = new IntersectionObserver((entries) => { entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in-view'); io.unobserve(en.target); } }); }, { rootMargin: '0px 0px -10% 0px', threshold: 0.05 }); els.forEach(e => io.observe(e)); })();
 (() => { const y = new Date().getFullYear(); document.querySelectorAll('[data-year]').forEach(e => { e.textContent = y; }); })();
 
@@ -1120,7 +1170,7 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
   counters.forEach(c => io.observe(c));
 })();
 
-// Row-active — light up the brand-tinted background when a product row crosses viewport center
+// Row-active, light up the brand-tinted background when a product row crosses viewport center
 (() => {
   const rows = document.querySelectorAll('.prod-row');
   if (!rows.length || !('IntersectionObserver' in window)) {

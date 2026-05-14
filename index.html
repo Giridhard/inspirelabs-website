@@ -8,8 +8,59 @@
 <meta name="theme-color" content="#FFFFFF" />
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Inspirelabs, The growth infrastructure 4,500+ brands run on." />
-<meta property="og:description" content="Six platforms. 4,500+ brands. 200M+ monthly users. One operating company in Hyderabad, built since 2013." />
+<meta property="og:description" content="Five platforms. 4,500+ brands. 200M+ monthly users. One operating company in Hyderabad, built since 2013." />
 <link rel="canonical" href="https://inspirelabs.com/" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Inspirelabs",
+  "legalName": "Inspirelabs Solutions Ltd.",
+  "url": "https://inspirelabs.com/",
+  "logo": "https://inspirelabs.com/assets/brand/inspirelabs-wordmark.png",
+  "description": "Hyderabad-based parent company behind GrabOn, GrabCash, GrabShare, RankDrive and Alternatives.co. Five live platforms, 4,500+ brand partners, 200M+ monthly users. Bootstrapped since 2013.",
+  "foundingDate": "2013",
+  "founder": { "@type": "Person", "name": "Ashok Reddy" },
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "21st Floor, OneWest Building, Financial District, Gachibowli",
+    "addressLocality": "Hyderabad",
+    "postalCode": "500032",
+    "addressCountry": "IN"
+  },
+  "contactPoint": [{
+    "@type": "ContactPoint",
+    "telephone": "+91-40-32537070",
+    "contactType": "customer service",
+    "email": "contact@inspirelabs.com",
+    "areaServed": "Worldwide"
+  }],
+  "sameAs": [
+    "https://www.grabon.in",
+    "https://www.grabcash.in",
+    "https://www.grabshare.com",
+    "https://www.rankdrive.com",
+    "https://alternatives.co"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Inspirelabs",
+  "url": "https://inspirelabs.com/"
+}
+</script>
+<meta property="og:url" content="https://inspirelabs.com/" />
+<meta property="og:image" content="https://inspirelabs.com/assets/brand/inspirelabs-share-card.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:site_name" content="Inspirelabs" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Inspirelabs, The growth infrastructure 4,500+ brands run on." />
+<meta name="twitter:description" content="Inspirelabs Solutions Ltd. is the Hyderabad-based parent company behind GrabOn, GrabCash, GrabShare, RankDrive and Alternatives.co. We build and run the platforms that ambitious brands grow on." />
+<meta name="twitter:image" content="https://inspirelabs.com/assets/brand/inspirelabs-share-card.png" />
 <link rel="icon" type="image/svg+xml" href="assets/brand/inspirelabs-mark.svg" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -109,13 +160,25 @@ ul, ol { list-style: none; }
 .nav-links { display: flex; gap: 36px; align-items: center; }
 .nav-link { font-size: 15px; font-weight: 500; color: var(--text); padding: 10px 0; position: relative; transition: color 0.2s var(--ease); }
 .nav-link:hover { color: var(--accent-deep); }
+.nav-link:focus-visible { outline: 2px solid var(--accent); outline-offset: 6px; border-radius: 2px; }
+.nav-brand:focus-visible { outline: 2px solid var(--accent); outline-offset: 6px; border-radius: 2px; }
+.nav-toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
 .nav-link.active::after {
   content: ''; position: absolute; bottom: 4px; left: 0; right: 0;
   height: 2px; background: var(--accent);
 }
 .nav-toggle { display: none; width: 36px; height: 36px; }
 .nav-toggle span { display: block; width: 22px; height: 1.5px; background: var(--text); margin: 5px auto; }
-@media (max-width: 880px) { .nav-links { display: none; } .nav-toggle { display: block; } }
+@media (max-width: 880px) {
+  .nav-links { position: fixed; top: 0; left: 0; right: 0; height: 100vh; height: 100svh; background: var(--white); flex-direction: column; justify-content: center; align-items: center; gap: 28px; transform: translateY(-100%); transition: transform 0.3s var(--ease); z-index: 99; padding: 96px 24px 40px; display: flex; }
+  .nav.is-open .nav-links { transform: translateY(0); }
+  .nav-toggle { display: block; position: relative; z-index: 101; cursor: pointer; }
+  .nav-toggle span { transition: transform 0.25s var(--ease), opacity 0.2s var(--ease); transform-origin: center; }
+  .nav.is-open .nav-toggle span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+  .nav.is-open .nav-toggle span:nth-child(2) { opacity: 0; }
+  .nav.is-open .nav-toggle span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+  .nav-link { font-size: 22px; padding: 8px 0; }
+}
 
 /* ── Type primitives ──────────────────────────────────────────── */
 h1, h2, h3, h4, h5 { color: var(--text); font-weight: 400; letter-spacing: -0.02em; line-height: 1.06; text-wrap: balance; }
@@ -125,9 +188,9 @@ p, .lead, .section-intro { text-wrap: pretty; }
 .display-1 { font-size: clamp(46px, 6.4vw, 122px); font-weight: 400; letter-spacing: -0.03em; line-height: 1.04; }
 /* hero headline: each sentence on its own line with eternal-style breathing room between */
 .hero h1 { max-width: 100%; overflow-wrap: break-word; }
-.hero h1 .line { display: block; white-space: nowrap; max-width: 100%; }
-.hero h1 .line + .line { margin-top: 0.4em; }   /* eternal has a big visible gap between line 1 and line 2 */
-@media (max-width: 1024px) { .hero h1 .line { white-space: normal; } }
+.hero h1 .line { display: block; white-space: nowrap; max-width: 100%; text-wrap: balance; }
+.hero h1 .line + .line { margin-top: 0.15em; }
+@media (max-width: 1180px) { .hero h1 .line { white-space: normal; } }
 .display-2 { font-size: clamp(36px, 5vw, 72px); font-weight: 400; letter-spacing: -0.025em; line-height: 1.06; }
 .display-3 { font-size: clamp(24px, 3vw, 36px); font-weight: 400; letter-spacing: -0.02em; line-height: 1.15; }
 .lead { font-size: clamp(16px, 1.3vw, 19px); line-height: 1.55; color: var(--text-secondary); max-width: 60ch; }
@@ -177,6 +240,7 @@ section.section-bleed { padding: 0; }
   transition: color 0.2s var(--ease), border-color 0.2s var(--ease);
 }
 .tlink:hover { color: var(--accent-deep); border-color: var(--accent); }
+.tlink:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; border-radius: 2px; }
 .tlink-sm { font-size: 14px; }
 .tlink-light { color: var(--white); border-bottom-color: rgba(255,255,255,0.6); }
 .tlink-light:hover { color: var(--white); border-bottom-color: var(--white); }
@@ -214,7 +278,22 @@ section.section-bleed { padding: 0; }
 }
 .hero-stamp::before { content: ''; width: 28px; height: 1.5px; background: var(--accent); }
 .hero-inner { position: relative; z-index: 1; }
-.hero h1 { max-width: none; }    /* let the two-sentence headline use full container width */
+.hero h1 { max-width: none; margin: 0 auto; font-size: clamp(40px, 5.6vw, 96px); letter-spacing: -0.028em; line-height: 1.04; text-wrap: balance; }
+.hero-lead { font-size: clamp(17px, 1.4vw, 21px); line-height: 1.55; color: var(--text-secondary); max-width: 60ch; margin: clamp(28px, 3vw, 40px) auto 0; text-align: center; }
+
+/* Positioning manifesto section */
+.positioning-section { padding: clamp(64px, 7vw, 112px) 0; border-top: 1px solid var(--hairline); }
+.positioning-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: clamp(40px, 5vw, 80px); align-items: center; }
+.positioning-eyebrow { font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); margin-bottom: 28px; }
+.positioning-title { font-size: clamp(32px, 4.4vw, 64px); font-weight: 500; letter-spacing: -0.025em; line-height: 1.08; color: var(--text); margin-bottom: clamp(20px, 2vw, 28px); text-wrap: balance; }
+.positioning-accent { color: var(--accent); }
+.positioning-body { font-size: clamp(15.5px, 1.15vw, 17.5px); line-height: 1.65; color: var(--text-secondary); max-width: 56ch; margin-bottom: 12px; text-wrap: pretty; }
+.positioning-features { display: flex; gap: 28px; flex-wrap: wrap; margin-top: clamp(24px, 2.4vw, 32px); padding-top: clamp(18px, 1.8vw, 24px); border-top: 1px solid var(--hairline); list-style: none; padding-left: 0; }
+.positioning-features li { display: inline-flex; align-items: center; gap: 8px; font-size: 13.5px; font-weight: 500; color: var(--text-secondary); }
+.positioning-features .pf-icon { display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; border-radius: 50%; background: var(--accent-soft); color: var(--accent); font-size: 13px; line-height: 1; font-weight: 700; }
+.positioning-diagram { width: 100%; display: flex; align-items: center; justify-content: center; }
+.positioning-diagram svg { width: 100%; height: auto; max-width: 760px; display: block; }
+@media (max-width: 880px) { .positioning-grid { grid-template-columns: 1fr; gap: clamp(32px, 5vw, 56px); } .positioning-features { gap: 18px; } }
 .hero-foot {
   margin-top: clamp(56px, 8vw, 100px);
   display: flex; align-items: flex-end; justify-content: space-between;
@@ -376,19 +455,24 @@ section.section-bleed { padding: 0; }
   overflow: hidden;
 }
 .pillar:last-child { border-right: none; }
-.pillar:hover { color: var(--white); }
-.pillar:hover h3 { color: var(--white); }
-.pillar:hover p { color: rgba(255, 255, 255, 0.86); }
-.pillar:hover .pillar-eyebrow { color: var(--white); opacity: 0.85; }
-.pillar:hover .pillar-list { color: rgba(255, 255, 255, 0.72); border-top-color: rgba(255,255,255,0.24); }
-.pillar:hover .pillar-arrow { opacity: 1; transform: translateY(0); color: var(--white); }
-.pillar:hover .pillar-products { color: rgba(255, 255, 255, 0.86); }
+.pillar.pillar-awareness:hover,
+.pillar.pillar-discovery:hover,
+.pillar.pillar-engagement:hover,
+.pillar.pillar-acquisition:hover { background: #FAFAFA; }
+.pillar:hover .pillar-eyebrow { color: var(--accent); opacity: 1; }
+.pillar:hover .pillar-arrow { opacity: 1; transform: translateY(0); color: var(--accent); }
 
-.pillar.pillar-awareness:hover    { background: linear-gradient(135deg, #28538F 0%, #7940C9 100%); }
-.pillar.pillar-discovery:hover    { background: linear-gradient(135deg, #FF7058 0%, #008CE2 100%); }
-.pillar.pillar-engagement:hover   { background: linear-gradient(135deg, #7940C9 0%, #008EE6 100%); }
-.pillar.pillar-acquisition:hover  { background: linear-gradient(135deg, #008EE6 0%, #28538F 100%); }
-
+.pillar-num {
+  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  margin-bottom: 14px;
+  transition: color 0.55s var(--ease);
+}
+.pillar:hover .pillar-num { color: rgba(255,255,255,0.6); }
 .pillar-eyebrow {
   font-size: 13px;
   font-weight: 700;
@@ -424,7 +508,6 @@ section.section-bleed { padding: 0; }
   transition: color 0.55s var(--ease);
 }
 .pillar-products strong { font-weight: 600; color: var(--text); }
-.pillar:hover .pillar-products strong { color: var(--white); }
 .pillar-list {
   font-size: 12px;
   letter-spacing: 0.08em;
@@ -553,8 +636,22 @@ section.section-bleed { padding: 0; }
 .vm-block-sub { font-size: 16px !important; font-weight: 300 !important; line-height: 1.55 !important; color: #414A5D !important; letter-spacing: normal !important; margin-top: 18px; }
 @media (max-width: 800px) { .vm-grid { grid-template-columns: 1fr; gap: 48px; } }
 
-/* ── Delivered-for-brands proof section (immediately after products) ── */
-.delivered-section { padding: clamp(48px, 5.5vw, 90px) 0; background: var(--white); }
+/* ── Delivered / Compounding section (immediately after positioning) ── */
+.delivered-section { padding: clamp(56px, 6vw, 96px) 0 clamp(80px, 8vw, 128px); background: var(--white); border-top: 1px solid var(--hairline); }
+.compounding-head { max-width: 78ch; margin-bottom: clamp(40px, 4vw, 56px); }
+.compounding-rule { width: 56px; height: 2px; background: var(--accent); margin-top: 20px; }
+.compounding-title { font-size: clamp(28px, 3vw, 42px); font-weight: 600; letter-spacing: -0.025em; line-height: 1.1; color: var(--text); margin-bottom: 0; }
+.compounding-sub { font-size: clamp(15px, 1.15vw, 17px); color: var(--text-secondary); line-height: 1.55; }
+
+.compounding-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; margin-bottom: clamp(40px, 4vw, 64px); border-top: 1px solid var(--hairline); border-bottom: 1px solid var(--hairline); }
+.compounding-stat { padding: clamp(28px, 2.6vw, 40px) clamp(20px, 1.8vw, 32px); display: flex; flex-direction: column; gap: 10px; border-right: 1px solid var(--hairline); }
+.compounding-stat:last-child { border-right: none; }
+.compounding-stat-val { font-size: clamp(36px, 3.8vw, 54px); font-weight: 500; letter-spacing: -0.035em; line-height: 1; color: var(--text); white-space: nowrap; display: inline-flex; align-items: baseline; gap: 0.04em; }
+.compounding-stat-val .accent { color: var(--accent); font-size: 0.6em; font-weight: 600; line-height: 1; transform: translateY(-0.18em); }
+.compounding-stat-lbl { font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text); line-height: 1.45; font-weight: 700; margin-top: 4px; }
+.compounding-stat-desc { font-size: 13.5px; line-height: 1.5; color: var(--text-secondary); margin-top: 4px; max-width: 32ch; }
+@media (max-width: 1024px) { .compounding-stats { grid-template-columns: repeat(2, 1fr); } .compounding-stat:nth-child(2n) { border-right: none; } .compounding-stat:nth-child(-n+2) { border-bottom: 1px solid var(--hairline); } }
+@media (max-width: 540px) { .compounding-stats { grid-template-columns: 1fr; } .compounding-stat { border-right: none; border-bottom: 1px solid var(--hairline); } .compounding-stat:last-child { border-bottom: none; } }
 .delivered-head { max-width: 78ch; margin-bottom: clamp(64px, 6vw, 88px); }
 
 .delivered-stats {
@@ -637,6 +734,33 @@ section.section-bleed { padding: 0; }
   to { transform: translateX(-50%); }
 }
 
+/* ── Trusted-by strip under hero ─────────────────────────────── */
+.trusted-strip { padding: clamp(40px, 4.5vw, 72px) 0 clamp(40px, 4vw, 64px); border-top: 1px solid var(--hairline); border-bottom: 1px solid var(--hairline); }
+.trusted-label { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-tertiary); font-weight: 600; text-align: center; margin-bottom: clamp(24px, 2.4vw, 36px); }
+.trusted-marquee { position: relative; overflow: hidden; mask-image: linear-gradient(to right, transparent 0, #000 6%, #000 94%, transparent 100%); -webkit-mask-image: linear-gradient(to right, transparent 0, #000 6%, #000 94%, transparent 100%); }
+.trusted-track { display: flex; gap: clamp(48px, 5vw, 80px); width: max-content; animation: trustedMarquee 45s linear infinite; align-items: center; }
+.trusted-marquee:hover .trusted-track { animation-play-state: paused; }
+.trusted-track img { height: 28px; width: auto; flex-shrink: 0; object-fit: contain; opacity: 0.55; filter: grayscale(1); transition: opacity 0.3s var(--ease), filter 0.3s var(--ease); }
+.trusted-track img:hover { opacity: 1; filter: grayscale(0); }
+@keyframes trustedMarquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+/* ── Final CTA strip at end of home ──────────────────────────── */
+.final-cta { padding: clamp(80px, 9vw, 140px) 0; background: #0A0A0A; color: var(--white); border-top: 1px solid var(--hairline); }
+.final-cta-inner { max-width: 880px; margin: 0 auto; text-align: center; }
+.final-cta-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); font-weight: 700; margin-bottom: 22px; display: inline-block; }
+.final-cta h2 { font-size: clamp(32px, 4vw, 60px); font-weight: 400; letter-spacing: -0.025em; line-height: 1.08; color: var(--white); margin: 0 0 22px; text-wrap: balance; }
+.final-cta-accent { color: var(--accent); }
+.final-cta-sub { font-size: clamp(16px, 1.2vw, 19px); color: rgba(255,255,255,0.72); line-height: 1.6; margin: 0 auto clamp(36px, 4vw, 56px); max-width: 56ch; }
+.final-cta-actions { display: inline-flex; gap: 18px; flex-wrap: wrap; justify-content: center; }
+.final-cta-btn { display: inline-flex; align-items: center; gap: 10px; padding: 14px 28px; background: var(--accent); color: var(--white); font-weight: 600; font-size: 15px; letter-spacing: -0.005em; border-radius: 999px; transition: background 0.2s var(--ease), transform 0.2s var(--ease); }
+.final-cta-btn:hover { background: var(--accent-deep); transform: translateY(-1px); }
+.final-cta-btn:focus-visible { outline: 2px solid var(--white); outline-offset: 4px; }
+.final-cta-btn--ghost { background: transparent; border: 1px solid rgba(255,255,255,0.4); color: var(--white); }
+.final-cta-btn--ghost:hover { background: rgba(255,255,255,0.08); border-color: var(--white); }
+
+/* ── Portfolio card stat (small mono stat at top of each biz-card) ── */
+.biz-card-stat { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); font-weight: 700; margin: 18px 0 4px; }
+
 /* ── Inside Inspirelabs (Life at the company) ─────────────────── */
 .inside-section { padding: clamp(48px, 5.5vw, 90px) 0; background: var(--white); }
 .inside-head { margin-bottom: clamp(48px, 5vw, 64px); }
@@ -702,7 +826,11 @@ section.section-bleed { padding: 0; }
   .inside-stat:nth-child(2n) { border-right: none; }
 }
 
-/* Why brands trust — compact editorial rows, label + body */
+/* Why brands trust, compact editorial rows, label + body */
+.trust-head { margin-bottom: clamp(48px, 5vw, 72px); }
+.trust-head .biz-intro { max-width: none; }
+.trust-tagline { font-size: clamp(20px, 1.6vw, 26px); font-weight: 500; letter-spacing: -0.015em; line-height: 1.35; color: var(--text); margin: 18px 0 18px; text-wrap: balance; }
+.trust-tagline-accent { color: var(--accent); }
 .reasons-grid {
   display: flex;
   flex-direction: column;
@@ -778,8 +906,11 @@ section.section-bleed { padding: 0; }
 }
 
 /* ── Built to compound, big stats row ──────────────────────────── */
-.compound-section { background: #0A0A0A; color: var(--white); padding: clamp(48px, 5.5vw, 90px) 0; }
+.compound-section { background: #0A0A0A; color: var(--white); padding: clamp(96px, 10vw, 160px) 0; }
 .compound-section .section-title-xl { color: var(--white); }
+.compound-section .compound-manifesto { font-weight: 500; line-height: 1.08; max-width: none; text-wrap: balance; margin-bottom: 28px; }
+.compound-section .compound-manifesto::after { display: none; }
+.compound-manifesto-accent { color: var(--accent); }
 .compound-section .biz-intro { color: rgba(255,255,255,0.78); }
 .compound-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; margin-top: clamp(48px, 5vw, 80px); border-top: 1px solid rgba(255,255,255,0.12); }
 .compound-stat { padding: clamp(32px, 3vw, 48px) clamp(24px, 2vw, 32px); border-right: 1px solid rgba(255,255,255,0.12); border-bottom: 1px solid rgba(255,255,255,0.12); }
@@ -853,7 +984,7 @@ section.section-bleed { padding: 0; }
 .values-section { padding: clamp(48px, 5.5vw, 90px) 0 0; }
 .vm-section { padding: clamp(28px, 3vw, 48px) 0 clamp(48px, 5.5vw, 90px); }
 .values-head { margin-bottom: clamp(48px, 5vw, 72px); max-width: 80ch; }
-/* Values — 2-column hairline editorial grid (was Why-trust's format) */
+/* Values, 2-column hairline editorial grid (was Why-trust's format) */
 .values-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -871,7 +1002,7 @@ section.section-bleed { padding: 0; }
   align-items: start;
   position: relative;
 }
-.value-card-idx { display: none; }    /* index removed — using the value name as the label */
+.value-card-idx { display: none; }    /* index removed, using the value name as the label */
 .value-card-num {
   font-size: clamp(14px, 1.05vw, 16px);
   font-weight: 600;
@@ -1059,11 +1190,12 @@ footer {
 .reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.7s var(--ease), transform 0.7s var(--ease); }
 .reveal.in-view { opacity: 1; transform: none; }
 @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } html { scroll-behavior: auto; } }
+@media (prefers-reduced-motion: reduce) { .brand-marquee-track { animation: none !important; } }
 
 /* ── Section art (Eternal-style abstract illustrations) ────────── */
 .section-art { max-width: 100%; height: auto; max-height: 320px; margin: 0 auto; opacity: 0.9; display: block; }
 
-/* Staggered children — start invisible, animate with delay based on --stagger-i */
+/* Staggered children, start invisible, animate with delay based on --stagger-i */
 .reveal.stagger > * {
   opacity: 0;
   transform: translateY(20px);
@@ -1088,15 +1220,15 @@ footer {
 <header class="nav" id="nav">
  <div class="container nav-inner">
  <a href="index.html" class="nav-brand" aria-label="Inspirelabs"><img class="brand-logo" src="assets/brand/inspirelabs-wordmark.png" alt="Inspirelabs" /></a>
- <nav class="nav-links" aria-label="Primary">
- <a href="index.html" class="nav-link active">Home</a>
+ <nav class="nav-links" id="primary-nav" aria-label="Primary">
+ <a href="index.html" class="nav-link active" aria-current="page">Home</a>
  <a href="products.html" class="nav-link">Products</a>
  <a href="services.html" class="nav-link">Services</a>
  <a href="about.html" class="nav-link">About</a>
  <a href="careers.html" class="nav-link">Careers</a>
  <a href="contact.html" class="nav-link">Contact</a>
  </nav>
- <button class="nav-toggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+ <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span><span></span></button>
  </div>
 </header>
 
@@ -1108,7 +1240,8 @@ footer {
 <section class="hero">
  <div class="hero-grid parallax" data-parallax="40"></div>
  <div class="container hero-inner">
- <h1 class="display-1"><span class="line">Inspirelabs isn&rsquo;t a digital agency.</span><span class="line">We&rsquo;re growth infrastructure.</span></h1>
+ <h1 class="display-1">Growth infrastructure powering 4,500+&nbsp;brands and 200&nbsp;million users.</h1>
+ <p class="lead hero-lead">Five live platforms, one operating company, twelve years bootstrapped. Built in Hyderabad. Strategic partners build with us. Ambitious people build here.</p>
 
  <div class="hero-foot">
  <a href="#our-products" class="hero-scroll" aria-label="Scroll to next section">
@@ -1121,10 +1254,54 @@ footer {
  </div>
  <div>
  <div class="founder-note-text">A note from our Founder &amp; CEO, <strong>Ashok Reddy</strong></div>
- <a href="#" class="tlink tlink-sm" style="margin-top: 6px;">Read the founder letter</a>
+ <a href="about.html" class="tlink tlink-sm" style="margin-top: 6px;">Read the founder letter</a>
  </div>
  </div>
  </div>
+ </div>
+</section>
+
+<!-- ===========================================================
+ TRUSTED BY, customer logo strip directly under hero
+ =========================================================== -->
+<section class="trusted-strip">
+ <div class="container">
+  <div class="trusted-label reveal">Trusted by 4,500+ brands the world grows on</div>
+  <div class="trusted-marquee reveal">
+   <div class="trusted-track">
+    <img src="assets/logos/adidas.svg" alt="Adidas" loading="lazy" />
+    <img src="assets/logos/samsung.svg" alt="Samsung" loading="lazy" />
+    <img src="assets/logos/airbnb.svg" alt="Airbnb" loading="lazy" />
+    <img src="assets/logos/uber.svg" alt="Uber" loading="lazy" />
+    <img src="assets/logos/netflix.svg" alt="Netflix" loading="lazy" />
+    <img src="assets/logos/spotify.svg" alt="Spotify" loading="lazy" />
+    <img src="assets/logos/paypal.svg" alt="PayPal" loading="lazy" />
+    <img src="assets/logos/americanexpress.svg" alt="American Express" loading="lazy" />
+    <img src="assets/logos/shopify.svg" alt="Shopify" loading="lazy" />
+    <img src="assets/logos/ebay.svg" alt="eBay" loading="lazy" />
+    <img src="assets/logos/swiggy.svg" alt="Swiggy" loading="lazy" />
+    <img src="assets/logos/zomato.svg" alt="Zomato" loading="lazy" />
+    <img src="assets/logos/nike.svg" alt="Nike" loading="lazy" />
+    <img src="assets/logos/starbucks.svg" alt="Starbucks" loading="lazy" />
+    <img src="assets/logos/dell.svg" alt="Dell" loading="lazy" />
+    <!-- duplicate set for seamless loop -->
+    <img src="assets/logos/adidas.svg" alt="" aria-hidden="true" loading="lazy" />
+    <img src="assets/logos/samsung.svg" alt="" aria-hidden="true" loading="lazy" />
+    <img src="assets/logos/airbnb.svg" alt="" aria-hidden="true" loading="lazy" />
+    <img src="assets/logos/uber.svg" alt="" aria-hidden="true" loading="lazy" />
+    <img src="assets/logos/netflix.svg" alt="" aria-hidden="true" loading="lazy" />
+    <img src="assets/logos/spotify.svg" alt="" aria-hidden="true" loading="lazy" />
+    <img src="assets/logos/paypal.svg" alt="" aria-hidden="true" loading="lazy" />
+    <img src="assets/logos/americanexpress.svg" alt="" aria-hidden="true" loading="lazy" />
+    <img src="assets/logos/shopify.svg" alt="" aria-hidden="true" loading="lazy" />
+    <img src="assets/logos/ebay.svg" alt="" aria-hidden="true" loading="lazy" />
+    <img src="assets/logos/swiggy.svg" alt="" aria-hidden="true" loading="lazy" />
+    <img src="assets/logos/zomato.svg" alt="" aria-hidden="true" loading="lazy" />
+    <img src="assets/logos/nike.svg" alt="" aria-hidden="true" loading="lazy" />
+    <img src="assets/logos/starbucks.svg" alt="" aria-hidden="true" loading="lazy" />
+    <img src="assets/logos/dell.svg" alt="" aria-hidden="true" loading="lazy" />
+   </div>
+  </div>
  </div>
 </section>
 
@@ -1135,7 +1312,7 @@ footer {
  <div class="container">
  <div class="biz-head reveal">
  <div class="biz-head-text">
- <h2 class="section-title-xl">Our products</h2>
+ <h2 class="section-title-xl">Our portfolio</h2>
  <p class="biz-intro">Five platforms operated end-to-end. A consumer coupons marketplace (GrabOn), an affiliate earnings network for everyday creators (GrabCash), a creator-led commerce layer (GrabShare), a search-revenue intelligence engine for growth teams (RankDrive), and the global discovery layer for B2B software (Alternatives.co).</p>
  </div>
  <div class="biz-arrows-abs">
@@ -1151,6 +1328,7 @@ footer {
  <a href="https://www.grabon.in" target="_blank" rel="noopener" class="biz-tile brand-grabon" aria-label="GrabOn, an Inspirelabs company">
  <img src="assets/logos/grabon-real.png" alt="GrabOn" class="biz-tile-logo" />
  </a>
+ <div class="biz-card-stat">200M+ shoppers / month &middot; Live since 2013</div>
  <h3>India&rsquo;s leading coupons and deals marketplace.</h3>
  <p>200 million shoppers a month find verified offers from 4,500+ brands. Travel, fashion, food, electronics, recharges, OTT. The most trusted commerce-intent destination in the country, operated since 2013.</p>
  <a href="https://www.grabon.in" target="_blank" rel="noopener" class="tlink">Learn more</a>
@@ -1160,6 +1338,7 @@ footer {
  <a href="https://www.grabcash.in" target="_blank" rel="noopener" class="biz-tile brand-grabcash" aria-label="GrabCash, an Inspirelabs company">
  <img src="assets/logos/grabcash-real.png" alt="GrabCash" class="biz-tile-logo" />
  </a>
+ <div class="biz-card-stat">Performance affiliate &middot; Server-side attribution</div>
  <h3>Turn your network into income.</h3>
  <p>Affiliate marketing made effortless. Students, homemakers, and creators share deals with their network and earn when their network shops. No influencer status required, no upfront cost, no inventory.</p>
  <a href="https://www.grabcash.in" target="_blank" rel="noopener" class="tlink">Learn more</a>
@@ -1169,6 +1348,7 @@ footer {
  <a href="https://www.grabshare.com" target="_blank" rel="noopener" class="biz-tile brand-grabshare" aria-label="GrabShare, an Inspirelabs company">
  <img src="assets/logos/grabshare-real.png" alt="GrabShare" class="biz-tile-logo" />
  </a>
+ <div class="biz-card-stat">Creator commerce &middot; Revenue-share model</div>
  <h3>Where creators turn audience into commerce.</h3>
  <p>A creator-led storefront layer where verified voices curate the products they love, brands attribute revenue, and audiences shop with trust. Built for India&rsquo;s social commerce era.</p>
  <a href="https://www.grabshare.com" target="_blank" rel="noopener" class="tlink">Learn more</a>
@@ -1178,6 +1358,7 @@ footer {
  <a href="https://www.rankdrive.com" target="_blank" rel="noopener" class="biz-tile brand-rankdrive" aria-label="RankDrive, an Inspirelabs company">
  <img src="assets/logos/rankdrive-real.png" alt="RankDrive" class="biz-tile-logo" />
  </a>
+ <div class="biz-card-stat">Built on a 200M-visitor SEO authority</div>
  <h3>Search-revenue intelligence for growth teams.</h3>
  <p>From keywords to revenue, in one operating layer. Daily ML-prioritised actions, GEO citations, and SGE presence tracking. Built by the team that runs SEO at the scale of 200 million monthly visitors.</p>
  <a href="https://www.rankdrive.com" target="_blank" rel="noopener" class="tlink">Learn more</a>
@@ -1187,6 +1368,7 @@ footer {
  <a href="https://alternatives.co" target="_blank" rel="noopener" class="biz-tile brand-alternatives" aria-label="Alternatives.co, an Inspirelabs company">
  <img src="assets/logos/alternatives-real.png" alt="Alternatives.co" class="biz-tile-logo" />
  </a>
+ <div class="biz-card-stat">1,100+ software profiles &middot; 574K buyers / month</div>
  <h3>The platform where leaders find software.</h3>
  <p>1,100+ software profiles, 574,000 buyers a month. Free for buyers, free to list. Vendors only pay when qualified intent reaches them. The discovery layer for every modern B2B software decision.</p>
  <a href="https://alternatives.co" target="_blank" rel="noopener" class="tlink">Learn more</a>
@@ -1198,33 +1380,38 @@ footer {
 </section>
 
 <!-- ===========================================================
- WHAT WE'VE DELIVERED — proof section showing brand impact
+ WHAT WE'VE DELIVERED, proof section showing brand impact
  =========================================================== -->
 <section class="delivered-section">
  <div class="container">
- <div class="delivered-head reveal">
- <h2 class="section-title-xl">Outcomes brands grow on.</h2>
- <p class="biz-intro">Four numbers that compound every quarter. The metrics we hold ourselves accountable to.</p>
+ <div class="compounding-head reveal">
+  <h2 class="compounding-title">Compounding at internet scale.</h2>
+  <div class="compounding-rule" aria-hidden="true"></div>
  </div>
 
- <div class="delivered-stats reveal">
- <div class="delivered-stat">
- <div class="delivered-stat-val">1B<span class="accent">+</span></div>
- <div class="delivered-stat-lbl">Conversions routed to partner brand sites</div>
+ <div class="compounding-stats reveal">
+  <div class="compounding-stat">
+   <div class="compounding-stat-val">1B<span class="accent">+</span></div>
+   <div class="compounding-stat-lbl">Conversions &middot; QTR</div>
+   <p class="compounding-stat-desc">Buyer intents routed to partner brand sites every quarter.</p>
+  </div>
+  <div class="compounding-stat">
+   <div class="compounding-stat-val">&#8377;2,500&nbsp;Cr<span class="accent">+</span></div>
+   <div class="compounding-stat-lbl">Shopper Savings</div>
+   <p class="compounding-stat-desc">Discounts and cashback returned to Indian households since 2013.</p>
+  </div>
+  <div class="compounding-stat">
+   <div class="compounding-stat-val">4,500<span class="accent">+</span></div>
+   <div class="compounding-stat-lbl">Brands &middot; Active</div>
+   <p class="compounding-stat-desc">From Adidas to Zomato, the network of partners live today.</p>
+  </div>
+  <div class="compounding-stat">
+   <div class="compounding-stat-val">200M<span class="accent">+</span></div>
+   <div class="compounding-stat-lbl">Shoppers &middot; MO</div>
+   <p class="compounding-stat-desc">Monthly buyer audience across the platforms we operate.</p>
+  </div>
  </div>
- <div class="delivered-stat">
- <div class="delivered-stat-val">&#8377;2,500 Cr<span class="accent">+</span></div>
- <div class="delivered-stat-lbl">Unlocked in savings for Indian shoppers</div>
- </div>
- <div class="delivered-stat">
- <div class="delivered-stat-val">4,500<span class="accent">+</span></div>
- <div class="delivered-stat-lbl">Brand partners on the network today</div>
- </div>
- <div class="delivered-stat">
- <div class="delivered-stat-val">200M<span class="accent">+</span></div>
- <div class="delivered-stat-lbl">Monthly shoppers across the network</div>
- </div>
- </div>
+
 
  <div class="delivered-brands-block reveal">
  <div class="delivered-brands-label">The brands that grow on our network</div>
@@ -1279,7 +1466,7 @@ footer {
 <section class="compound-section">
  <div class="container">
  <div class="reveal">
- <h2 class="section-title-xl">The company</h2>
+ <h2 class="section-title-xl compound-manifesto">Most martech companies sell tools.<br/><span class="compound-manifesto-accent">We run the surfaces.</span></h2>
  <p class="biz-intro">Twelve years. Zero outside capital. One operating standard. The numbers below are the result of operating consistency, not capital infusion. Bootstrapped since day one, profitable since year three, and still hiring like it&rsquo;s year one.</p>
  </div>
 
@@ -1305,67 +1492,14 @@ footer {
 </section>
 
 <!-- ===========================================================
- FOUR-PILLAR FRAMEWORK, Awareness · Discovery · Engagement · Acquisition
- =========================================================== -->
-<section class="pillars">
- <div class="container">
- <div class="pillars-head reveal">
- <h2 class="section-title-xl">The Inspirelabs framework</h2>
- <p class="biz-intro">Four pillars. Twenty-four services. One outcome, real revenue. Awareness, Discovery, Engagement, Acquisition. Every service in every pillar built and run in-house, every service measured against the same number.</p>
- </div>
-
- <div class="pillars-grid reveal">
- <article class="pillar pillar-awareness">
- <div class="pillar-eyebrow">Awareness</div>
- <h3>Get the brand in front of the right audience.</h3>
- <p>Influencer-led campaigns, owned-network placements, paid social calibrated for top-of-funnel recall, not vanity reach.</p>
- <div class="pillar-products">Powered by &nbsp;<strong>GrabOn</strong> + <strong>GrabShare</strong></div>
- <div class="pillar-list">Influencer &middot; Social &middot; Media houses</div>
- <span class="pillar-arrow">&rarr;</span>
- </article>
-
- <article class="pillar pillar-discovery">
- <div class="pillar-eyebrow">Discovery</div>
- <h3>Be found at every layer of intent.</h3>
- <p>SEO, GEO, SGE and ASO so your brand surfaces wherever buyers begin, including AI-mediated answers.</p>
- <div class="pillar-products">Powered by &nbsp;<strong>RankDrive</strong> + <strong>Alternatives.co</strong></div>
- <div class="pillar-list">SEO &middot; GEO &middot; SGE &middot; ASO &middot; Content</div>
- <span class="pillar-arrow">&rarr;</span>
- </article>
-
- <article class="pillar pillar-engagement">
- <div class="pillar-eyebrow">Engagement</div>
- <h3>Turn visits into recurring relationships.</h3>
- <p>Strategic alliances, lifecycle programmes and bank-partnered rewards that turn curiosity into recurring engagement.</p>
- <div class="pillar-products">Powered by &nbsp;<strong>GrabShare</strong> + <strong>GrabCash</strong></div>
- <div class="pillar-list">Alliances &middot; Lifecycle &middot; Loyalty</div>
- <span class="pillar-arrow">&rarr;</span>
- </article>
-
- <article class="pillar pillar-acquisition">
- <div class="pillar-eyebrow">Acquisition</div>
- <h3>Convert intent into paid customers.</h3>
- <p>Performance affiliate, demand network, creator commerce. Server-side attribution. Paid only on result.</p>
- <div class="pillar-products">Powered by &nbsp;<strong>GrabCash</strong> + <strong>GrabOn</strong></div>
- <div class="pillar-list">Affiliate &middot; Demand network &middot; Creator</div>
- <span class="pillar-arrow">&rarr;</span>
- </article>
- </div>
-
- <div class="pillars-foot">
- <a href="services.html" class="tlink">See the full services taxonomy</a>
- </div>
- </div>
-</section>
-
-<!-- ===========================================================
  WHY BRANDS TRUST INSPIRELABS, the differentiators
  =========================================================== -->
 <section>
  <div class="container">
- <div class="reveal">
+ <div class="reveal trust-head">
  <h2 class="section-title-xl">Why brands trust Inspirelabs</h2>
- <p class="biz-intro">In an industry of agencies, intermediaries, and middlemen, we built something different. An operating company that owns the entire growth stack. Five platforms, twenty-four services, one standard. Awareness, discovery, engagement, acquisition, all built and run in-house, all measured against the same number, real revenue.</p>
+ <p class="trust-tagline">In an industry of middlemen, <span class="trust-tagline-accent">we are the operator.</span></p>
+ <p class="biz-intro">An operating company that owns the entire growth stack. Five platforms, twenty-four services, one standard. Awareness, discovery, engagement, acquisition, all built and run in-house, all measured against the same number, real revenue.</p>
  </div>
 
  <div class="reasons-grid reveal">
@@ -1373,30 +1507,81 @@ footer {
  <span class="reason-card-idx">01</span>
  <div class="reason-card-num">Built in-house</div>
  <div class="reason-card-body"> <h3>Engineered, not assembled.</h3>
- <p>Every platform and every service runs on our own stack. No white-label tools, no rebranded vendor software, no agency layer charging by the hour. The product is the moat.</p>
+ <p>Every platform and every service runs on our own stack. No white-label tools, no rebranded vendor software, no agency layer charging by the hour. The product is the moat. The team that builds it is the second.</p>
  </div>
  </article>
  <article class="reason-card reason-fullstack">
  <span class="reason-card-idx">02</span>
- <div class="reason-card-num">Full-stack services</div>
- <div class="reason-card-body"> <h3>Twenty-four services, four pillars, one room.</h3>
- <p>SEO, GEO, ASO, influencer, affiliate, programmatic, lifecycle, loyalty, brand campaigns, editorial, creator commerce, bank partnerships and more. Whatever a brand needs to grow, we run it end-to-end under one operating standard.</p>
+ <div class="reason-card-num">Full-stack</div>
+ <div class="reason-card-body"> <h3>Twenty-four services. One room.</h3>
+ <p>SEO, GEO, ASO, influencer, affiliate, programmatic, lifecycle, loyalty, brand campaigns, editorial, creator commerce, bank partnerships, and a dozen more. Whatever a brand needs to grow, we run it end-to-end under a single operating standard.</p>
  </div>
  </article>
  <article class="reason-card reason-owneddemand">
  <span class="reason-card-idx">03</span>
  <div class="reason-card-num">Owned demand</div>
- <div class="reason-card-body"> <h3>We own the surfaces, not just the spend.</h3>
- <p>200 million shoppers a month show up on platforms we operate. We don&rsquo;t rent attention from gatekeepers. We attract intent at the source and route it to where it converts.</p>
+ <div class="reason-card-body"> <h3>We own the surfaces, not the spend.</h3>
+ <p>200 million shoppers show up on platforms we operate. We don&rsquo;t rent attention from gatekeepers. We attract intent at the source, then route it to where it converts, on rails we built ourselves.</p>
  </div>
  </article>
  <article class="reason-card reason-network">
  <span class="reason-card-idx">04</span>
- <div class="reason-card-num">Twelve-year network effect</div>
- <div class="reason-card-body"> <h3>What we built compounds.</h3>
- <p>Twelve years of search authority, creator relationships, brand partnerships and operational know-how. Every new partner plugs into a network that has been compounding since 2013.</p>
+ <div class="reason-card-num">Compounding</div>
+ <div class="reason-card-body"> <h3>Twelve years that earn interest.</h3>
+ <p>Twelve years of search authority, creator relationships, brand partnerships, and operational know-how. Every new partner plugs into a network that has been compounding since 2013, and doesn&rsquo;t reset on a funding round.</p>
  </div>
  </article>
+ </div>
+ </div>
+</section>
+
+<!-- ===========================================================
+ FOUR-PILLAR FRAMEWORK, Awareness · Discovery · Engagement · Acquisition
+ =========================================================== -->
+<section class="pillars">
+ <div class="container">
+ <div class="pillars-head reveal">
+ <h2 class="section-title-xl">The Inspirelabs framework</h2>
+ <p class="trust-tagline">Four pillars. <span class="trust-tagline-accent">One number that matters.</span></p>
+ <p class="biz-intro">A brand grows by being seen, found, engaged, and converted, in that order. We built the platforms, then the services, then the operating standard underneath all of it. Twenty-four services across four pillars. Every one of them measured against the same number: real revenue, attributed.</p>
+ </div>
+
+ <div class="pillars-grid reveal">
+ <article class="pillar pillar-awareness">
+ <div class="pillar-eyebrow">Awareness</div>
+ <h3>Show up where the audience already is.</h3>
+ <p>Influencer-led campaigns, owned-network placements, paid social calibrated for recall, not vanity reach. We put the brand where the next buyer is, not where the dashboard tells us to.</p>
+ <div class="pillar-products">Powered by &nbsp;<strong>GrabOn</strong> + <strong>GrabShare</strong></div>
+ <div class="pillar-list">Influencer &middot; Social &middot; Earned</div>
+ </article>
+
+ <article class="pillar pillar-discovery">
+ <div class="pillar-eyebrow">Discovery</div>
+ <h3>Be found at every layer of intent.</h3>
+ <p>SEO, GEO, SGE, and ASO so a brand surfaces wherever buyers actually begin, including AI-mediated answers. Run by the same team behind 200M-visitor authority.</p>
+ <div class="pillar-products">Powered by &nbsp;<strong>RankDrive</strong> + <strong>Alternatives.co</strong></div>
+ <div class="pillar-list">SEO &middot; GEO &middot; SGE &middot; ASO &middot; Content</div>
+ </article>
+
+ <article class="pillar pillar-engagement">
+ <div class="pillar-eyebrow">Engagement</div>
+ <h3>Turn one visit into a relationship.</h3>
+ <p>Strategic alliances, lifecycle programmes, bank-partnered rewards. Curiosity becomes habit. Habit becomes a number on the revenue chart.</p>
+ <div class="pillar-products">Powered by &nbsp;<strong>GrabShare</strong> + <strong>GrabCash</strong></div>
+ <div class="pillar-list">Alliances &middot; Lifecycle &middot; Loyalty</div>
+ </article>
+
+ <article class="pillar pillar-acquisition">
+ <div class="pillar-eyebrow">Acquisition</div>
+ <h3>Convert intent into paid customers.</h3>
+ <p>Performance affiliate, demand network, creator commerce. Server-side attribution, no leaks, no last-click theatrics. You pay when revenue arrives.</p>
+ <div class="pillar-products">Powered by &nbsp;<strong>GrabCash</strong> + <strong>GrabOn</strong></div>
+ <div class="pillar-list">Affiliate &middot; Demand &middot; Creator</div>
+ </article>
+ </div>
+
+ <div class="pillars-foot">
+ <a href="services.html" class="tlink">See the full services taxonomy</a>
  </div>
  </div>
 </section>
@@ -1543,6 +1728,23 @@ footer {
  </div>
 </section>
 
+<!-- ===========================================================
+ FINAL CTA, full-width closing pull
+ =========================================================== -->
+<section class="final-cta">
+ <div class="container">
+  <div class="final-cta-inner reveal">
+   <span class="final-cta-eyebrow">Ready when you are</span>
+   <h2>Grow on the same network <span class="final-cta-accent">4,500 brands run on.</span></h2>
+   <p class="final-cta-sub">One operating company. Five live platforms. Twelve years of compounding work. Tell us the growth problem, we will route you to the right operator.</p>
+   <div class="final-cta-actions">
+    <a href="contact.html" class="final-cta-btn">Talk to us</a>
+    <a href="partnership.html" class="final-cta-btn final-cta-btn--ghost">Explore partnership</a>
+   </div>
+  </div>
+ </div>
+</section>
+
 </main>
 
 <!-- ===========================================================
@@ -1563,7 +1765,7 @@ footer {
  </div>
 
  <div class="footer-col">
- <h5>Our products</h5>
+ <h5>Our portfolio</h5>
  <a href="https://www.grabon.in" target="_blank" rel="noopener">GrabOn</a>
  <a href="https://www.grabcash.in" target="_blank" rel="noopener">GrabCash</a>
  <a href="https://www.grabshare.com" target="_blank" rel="noopener">GrabShare</a>
@@ -1598,9 +1800,9 @@ footer {
  <div class="footer-bottom">
  <div>© <span data-year>2026</span> Inspirelabs Solutions Ltd. Bootstrapped in Hyderabad since 2013.</div>
  <div class="footer-bottom-links">
- <a href="about.html">About</a>
- <a href="careers.html">Careers</a>
- <a href="contact.html">Contact</a>
+ <a href="privacy.html">Privacy</a>
+ <a href="terms.html">Terms</a>
+ <a href="trust.html">Trust &amp; security</a>
  </div>
  </div>
  </div>
@@ -1617,6 +1819,29 @@ footer {
   };
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
+})();
+
+// Mobile menu toggle
+(() => {
+  const nav = document.getElementById('nav');
+  if (!nav) return;
+  const btn = nav.querySelector('.nav-toggle');
+  if (!btn) return;
+  const close = () => {
+    nav.classList.remove('is-open');
+    btn.setAttribute('aria-expanded', 'false');
+    btn.setAttribute('aria-label', 'Open menu');
+    document.body.style.overflow = '';
+  };
+  btn.addEventListener('click', () => {
+    const open = !nav.classList.contains('is-open');
+    nav.classList.toggle('is-open', open);
+    btn.setAttribute('aria-expanded', String(open));
+    btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    document.body.style.overflow = open ? 'hidden' : '';
+  });
+  nav.querySelectorAll('.nav-link').forEach(a => a.addEventListener('click', close));
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
 })();
 
 // Reveal-on-scroll
@@ -1655,7 +1880,7 @@ footer {
   document.querySelectorAll('[data-year]').forEach(e => { e.textContent = y; });
 })();
 
-// Staggered reveal — children of .stagger fade up sequentially when parent enters viewport
+// Staggered reveal, children of .stagger fade up sequentially when parent enters viewport
 (() => {
   const containers = document.querySelectorAll('.reveal.stagger');
   if (!('IntersectionObserver' in window)) {
@@ -1676,7 +1901,7 @@ footer {
   containers.forEach(c => io.observe(c));
 })();
 
-// Parallax — elements with .parallax translate -Y based on viewport-relative scroll
+// Parallax, elements with .parallax translate -Y based on viewport-relative scroll
 (() => {
   const elems = document.querySelectorAll('.parallax');
   if (!elems.length || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
@@ -1702,7 +1927,7 @@ footer {
   updateParallax();
 })();
 
-// Counter-up — elements with .count-up animate from 0 to their final number on enter
+// Counter-up, elements with .count-up animate from 0 to their final number on enter
 (() => {
   const counters = document.querySelectorAll('.count-up');
   if (!counters.length) return;

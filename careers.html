@@ -7,6 +7,18 @@
 <meta name="description" content="We hire operators. People who have shipped, owned a number, and held the standard. Build your decade at Inspirelabs in Hyderabad. Write to careers@inspirelabs.com." />
 <meta name="theme-color" content="#FFFFFF" />
 <link rel="canonical" href="https://inspirelabs.com/careers.html" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Careers at Inspirelabs" />
+<meta property="og:description" content="We hire operators. People who have shipped, owned a number, and held the standard. Build your decade at Inspirelabs in Hyderabad. Write to careers@inspirelabs.com." />
+<meta property="og:url" content="https://inspirelabs.com/careers.html" />
+<meta property="og:image" content="https://inspirelabs.com/assets/brand/inspirelabs-share-card.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:site_name" content="Inspirelabs" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Careers at Inspirelabs" />
+<meta name="twitter:description" content="We hire operators. People who have shipped, owned a number, and held the standard. Build your decade at Inspirelabs in Hyderabad. Write to careers@inspirelabs.com." />
+<meta name="twitter:image" content="https://inspirelabs.com/assets/brand/inspirelabs-share-card.png" />
 <link rel="icon" type="image/svg+xml" href="assets/brand/inspirelabs-mark.svg" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -43,10 +55,22 @@ ul, ol { list-style: none; }
 .nav-links { display: flex; gap: 36px; align-items: center; }
 .nav-link { font-size: 15px; font-weight: 500; color: var(--text); padding: 10px 0; position: relative; transition: color 0.2s var(--ease); }
 .nav-link:hover { color: var(--accent-deep); }
+.nav-link:focus-visible { outline: 2px solid var(--accent); outline-offset: 6px; border-radius: 2px; }
+.nav-brand:focus-visible { outline: 2px solid var(--accent); outline-offset: 6px; border-radius: 2px; }
+.nav-toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
 .nav-link.active::after { content: ''; position: absolute; bottom: 4px; left: 0; right: 0; height: 2px; background: var(--accent); }
 .nav-toggle { display: none; width: 36px; height: 36px; }
 .nav-toggle span { display: block; width: 22px; height: 1.5px; background: var(--text); margin: 5px auto; }
-@media (max-width: 880px) { .nav-links { display: none; } .nav-toggle { display: block; } }
+@media (max-width: 880px) {
+  .nav-links { position: fixed; top: 0; left: 0; right: 0; height: 100vh; height: 100svh; background: var(--white); flex-direction: column; justify-content: center; align-items: center; gap: 28px; transform: translateY(-100%); transition: transform 0.3s var(--ease); z-index: 99; padding: 96px 24px 40px; display: flex; }
+  .nav.is-open .nav-links { transform: translateY(0); }
+  .nav-toggle { display: block; position: relative; z-index: 101; cursor: pointer; }
+  .nav-toggle span { transition: transform 0.25s var(--ease), opacity 0.2s var(--ease); transform-origin: center; }
+  .nav.is-open .nav-toggle span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+  .nav.is-open .nav-toggle span:nth-child(2) { opacity: 0; }
+  .nav.is-open .nav-toggle span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+  .nav-link { font-size: 22px; padding: 8px 0; }
+}
 
 h1, h2, h3, h4, h5 { color: var(--text); font-weight: 400; letter-spacing: -0.02em; line-height: 1.06; text-wrap: balance; }
 p, .lead, .section-intro { text-wrap: pretty; }
@@ -54,7 +78,7 @@ p, .lead, .section-intro { text-wrap: pretty; }
 
 section { padding: clamp(64px, 7vw, 110px) 0; position: relative; }
 
-/* Hero — same pattern as products/services */
+/* Hero, same pattern as products/services */
 .hero {
   position: relative;
   min-height: 100vh;
@@ -108,7 +132,7 @@ section { padding: clamp(64px, 7vw, 110px) 0; position: relative; }
   max-width: 56ch;
 }
 
-/* Editorial 2-column — heading left, body right (matches about-origin) */
+/* Editorial 2-column, heading left, body right (matches about-origin) */
 .editorial-grid {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr);
@@ -130,7 +154,7 @@ section { padding: clamp(64px, 7vw, 110px) 0; position: relative; }
 .editorial-body p:last-child { margin-bottom: 0; }
 .editorial-body strong { color: var(--text); font-weight: 600; }
 
-/* Criteria — compact ordered list */
+/* Criteria, compact ordered list */
 .criteria-list {
   display: flex; flex-direction: column;
   gap: clamp(14px, 1.4vw, 18px);
@@ -155,7 +179,7 @@ section { padding: clamp(64px, 7vw, 110px) 0; position: relative; }
   max-width: 40ch;
 }
 
-/* Benefits — services-style plan list */
+/* Benefits, services-style plan list */
 .benefits-list { border-top: 1px solid var(--hairline); }
 .benefit-row {
   display: grid; grid-template-columns: 180px 1fr;
@@ -179,18 +203,65 @@ section { padding: clamp(64px, 7vw, 110px) 0; position: relative; }
 @media (max-width: 700px) { .benefit-row { grid-template-columns: 1fr; gap: 8px; } }
 
 /* Vision / mantra moment */
-.careers-mantra { padding: clamp(80px, 10vw, 160px) 0; border-top: 1px solid var(--hairline); background: var(--warm); }
-.careers-mantra-inner { text-align: center; max-width: 28ch; margin: 0 auto; }
+/* Open roles */
+.roles-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: clamp(20px, 2vw, 32px); }
+@media (max-width: 880px) { .roles-grid { grid-template-columns: 1fr; } }
+.role-card { padding: clamp(28px, 2.6vw, 40px); border: 1px solid var(--hairline); border-radius: 6px; display: flex; flex-direction: column; transition: border-color 0.2s var(--ease), box-shadow 0.2s var(--ease); }
+.role-card:hover { border-color: var(--text); box-shadow: 0 2px 0 0 var(--accent); }
+.role-card-track { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); font-weight: 700; margin-bottom: 18px; }
+.role-card h3 { font-size: clamp(20px, 1.6vw, 26px); font-weight: 500; letter-spacing: -0.02em; line-height: 1.2; margin: 0 0 12px; color: var(--text); }
+.role-card p { font-size: clamp(14.5px, 1.05vw, 16px); line-height: 1.55; color: var(--text-secondary); margin: 0 0 22px; }
+.role-card-list { list-style: none; padding: 0; margin: 0 0 28px; border-top: 1px solid var(--hairline); }
+.role-card-list li { padding: 12px 0; border-bottom: 1px solid var(--hairline); font-size: 14.5px; font-weight: 500; color: var(--text); }
+.role-card .tlink { margin-top: auto; align-self: flex-start; }
+.roles-foot { font-size: clamp(14.5px, 1.05vw, 16px); color: var(--text-secondary); margin-top: clamp(32px, 3vw, 48px); text-align: center; }
+
+/* Where you'll work, mosaic */
+.careers-place-head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: clamp(56px, 7vw, 120px); align-items: start; margin-bottom: clamp(48px, 5vw, 72px); }
+@media (max-width: 980px) { .careers-place-head { grid-template-columns: 1fr; gap: 24px; } }
+.careers-place-title { font-size: clamp(34px, 4vw, 56px); font-weight: 400; letter-spacing: -0.025em; line-height: 1.08; margin: 0; max-width: 14ch; }
+.careers-place-intro { font-size: clamp(16.5px, 1.25vw, 19px); line-height: 1.7; color: var(--text-secondary); margin: 0; max-width: 56ch; }
+.careers-place-mosaic { display: grid; grid-template-columns: repeat(12, 1fr); grid-auto-rows: 180px; gap: 12px; }
+.careers-place-cell { margin: 0; overflow: hidden; border-radius: 6px; background: var(--accent-soft); position: relative; }
+.careers-place-cell img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.6s var(--ease); }
+.careers-place-cell:hover img { transform: scale(1.04); }
+.careers-place-cell--lg { grid-column: span 7; grid-row: span 2; }
+.careers-place-cell--md { grid-column: span 5; grid-row: span 1; }
+.careers-place-cell--sm { grid-column: span 4; grid-row: span 1; }
+.careers-place-cell--wide { grid-column: span 8; grid-row: span 2; }
+.careers-place-cell--address { grid-column: span 4; grid-row: span 2; background: var(--text); color: var(--white); border-radius: 6px; padding: clamp(24px, 2.4vw, 36px); display: flex; flex-direction: column; justify-content: space-between; overflow: visible; }
+.careers-place-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); font-weight: 700; }
+.careers-place-addr { font-style: normal; font-size: clamp(15px, 1.2vw, 18px); line-height: 1.55; color: var(--white); font-weight: 500; letter-spacing: -0.01em; }
+.careers-place-link { color: var(--white) !important; border-bottom-color: rgba(255,255,255,0.4) !important; align-self: flex-start; }
+.careers-place-link:hover { color: var(--accent) !important; border-bottom-color: var(--accent) !important; }
+@media (max-width: 980px) {
+  .careers-place-mosaic { grid-template-columns: repeat(6, 1fr); grid-auto-rows: 160px; }
+  .careers-place-cell--lg { grid-column: span 6; grid-row: span 2; }
+  .careers-place-cell--md { grid-column: span 3; }
+  .careers-place-cell--sm { grid-column: span 3; }
+  .careers-place-cell--wide { grid-column: span 6; grid-row: span 2; }
+  .careers-place-cell--address { grid-column: span 6; grid-row: span 1; flex-direction: row; align-items: center; gap: 24px; }
+}
+@media (max-width: 540px) {
+  .careers-place-mosaic { grid-template-columns: 1fr; grid-auto-rows: 200px; }
+  .careers-place-cell, .careers-place-cell--lg, .careers-place-cell--md, .careers-place-cell--sm, .careers-place-cell--wide, .careers-place-cell--address { grid-column: span 1; grid-row: span 1; }
+  .careers-place-cell--address { flex-direction: column; align-items: flex-start; height: auto; min-height: 200px; }
+}
+
+.careers-mantra { padding: clamp(72px, 8vw, 120px) 0; border-top: 1px solid var(--hairline); background: var(--warm); }
+.careers-mantra-inner { text-align: center; max-width: 880px; margin: 0 auto; }
 .careers-mantra-eyebrow {
   font-family: 'JetBrains Mono', monospace;
   font-size: 11px; letter-spacing: 0.10em; text-transform: uppercase;
   color: var(--text-tertiary); font-weight: 500;
-  margin-bottom: 32px; display: block;
+  margin-bottom: 28px; display: block;
 }
 .careers-mantra-text {
-  font-size: clamp(32px, 4.4vw, 68px);
-  font-weight: 400; letter-spacing: -0.03em; line-height: 1.1;
+  font-size: clamp(28px, 3.4vw, 48px);
+  font-weight: 400; letter-spacing: -0.025em; line-height: 1.15;
   color: var(--text);
+  max-width: 22ch; margin: 0 auto;
+  text-wrap: balance;
 }
 .careers-mantra-body {
   margin-top: 36px;
@@ -199,35 +270,41 @@ section { padding: clamp(64px, 7vw, 110px) 0; position: relative; }
   max-width: 52ch; margin-left: auto; margin-right: auto;
 }
 
-/* Apply CTA — centered */
+/* Apply CTA, centered */
 .careers-apply { padding: clamp(80px, 9vw, 140px) 0; border-top: 1px solid var(--hairline); }
 .careers-apply-inner { text-align: center; max-width: 60ch; margin: 0 auto; }
+.careers-apply-grid { display: grid; grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.2fr); gap: clamp(48px, 6vw, 96px); align-items: start; }
+@media (max-width: 880px) { .careers-apply-grid { grid-template-columns: 1fr; gap: 40px; } }
+.careers-apply-text h2 { font-size: clamp(30px, 3.6vw, 48px); font-weight: 400; letter-spacing: -0.025em; line-height: 1.1; margin: 14px 0 18px; max-width: 14ch; }
+.careers-apply-text p { font-size: clamp(15.5px, 1.15vw, 17.5px); line-height: 1.65; color: var(--text-secondary); margin: 0 0 14px; max-width: 44ch; }
+.careers-apply-mail-fallback { font-size: 14px; color: var(--text-tertiary); margin-top: 18px; }
+.careers-apply-form { display: flex; flex-direction: column; gap: 22px; }
+.careers-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+@media (max-width: 540px) { .careers-form-row { grid-template-columns: 1fr; } }
+.careers-form-field { display: flex; flex-direction: column; gap: 8px; }
+.careers-form-field label { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.10em; text-transform: uppercase; color: var(--text-tertiary); font-weight: 600; }
+.careers-form-field input,
+.careers-form-field select,
+.careers-form-field textarea { background: transparent; border: 0; border-bottom: 1px solid var(--line); padding: 10px 0; font-size: 16px; color: var(--text); outline: none; transition: border-color 0.2s var(--ease); width: 100%; font-family: inherit; }
+.careers-form-field input:focus,
+.careers-form-field select:focus,
+.careers-form-field textarea:focus { border-bottom-color: var(--accent); }
+.careers-form-field input:focus-visible,
+.careers-form-field select:focus-visible,
+.careers-form-field textarea:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; border-radius: 2px; }
+.careers-form-field textarea { min-height: 120px; resize: vertical; }
+.careers-form-field input::placeholder,
+.careers-form-field textarea::placeholder { color: var(--text-tertiary); }
+.careers-form-submit-wrap { padding-top: 12px; }
+.careers-form-submit { display: inline-flex; align-items: center; gap: 10px; padding: 14px 32px; background: var(--text); color: var(--white); font-weight: 600; font-size: 15px; letter-spacing: -0.005em; border-radius: 999px; transition: background 0.2s var(--ease), transform 0.2s var(--ease); cursor: pointer; }
+.careers-form-submit:hover { background: var(--accent); transform: translateY(-1px); }
+.careers-form-submit:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
 .careers-apply-eyebrow {
   font-family: 'JetBrains Mono', monospace;
   font-size: 11px; letter-spacing: 0.10em; text-transform: uppercase;
   color: var(--text-tertiary); font-weight: 500;
   margin-bottom: 32px; display: block;
 }
-.careers-apply h2 {
-  font-size: clamp(40px, 5.4vw, 76px);
-  font-weight: 400; letter-spacing: -0.03em; line-height: 1.04;
-  margin: 0 auto 28px; max-width: 18ch;
-}
-.careers-apply p {
-  font-size: clamp(16px, 1.2vw, 18px);
-  line-height: 1.65; color: var(--text-secondary);
-  max-width: 52ch; margin: 0 auto 40px;
-}
-.careers-apply-mail {
-  display: inline-block;
-  font-size: clamp(20px, 2vw, 26px);
-  font-weight: 500; color: var(--text);
-  padding-bottom: 4px;
-  border-bottom: 1.5px solid var(--text);
-  letter-spacing: -0.01em;
-  transition: color 0.2s var(--ease), border-color 0.2s var(--ease);
-}
-.careers-apply-mail:hover { color: var(--accent-deep); border-color: var(--accent); }
 
 /* Footer */
 footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid var(--hairline); }
@@ -257,15 +334,15 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
 <header class="nav" id="nav">
   <div class="container nav-inner">
     <a href="index.html" class="nav-brand" aria-label="Inspirelabs"><img class="brand-logo" src="assets/brand/inspirelabs-wordmark.png" alt="Inspirelabs" /></a>
-    <nav class="nav-links" aria-label="Primary">
+    <nav class="nav-links" id="primary-nav" aria-label="Primary">
       <a href="index.html" class="nav-link">Home</a>
       <a href="products.html" class="nav-link">Products</a>
       <a href="services.html" class="nav-link">Services</a>
       <a href="about.html" class="nav-link">About</a>
-      <a href="careers.html" class="nav-link active">Careers</a>
+      <a href="careers.html" class="nav-link active" aria-current="page">Careers</a>
       <a href="contact.html" class="nav-link">Contact</a>
     </nav>
-    <button class="nav-toggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span><span></span></button>
   </div>
 </header>
 
@@ -327,6 +404,67 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
   </div>
 </section>
 
+<!-- OPEN ROLES -->
+<section class="section-body" id="open-roles">
+  <div class="container">
+    <div class="section-head reveal">
+      <h2 class="section-title">Open roles.</h2>
+      <p class="section-intro">We hire across four broad tracks. If your work fits, write to the address on the card and tell us where you have shipped.</p>
+    </div>
+    <div class="roles-grid reveal">
+      <article class="role-card">
+        <div class="role-card-track">Engineering</div>
+        <h3>Build the platforms shoppers come back to.</h3>
+        <p>Backend, frontend, data, infra and ML. We run a single stack across five products. Engineers here own a service from design to on-call.</p>
+        <ul class="role-card-list">
+          <li>Senior Backend Engineer</li>
+          <li>Senior Frontend Engineer</li>
+          <li>ML / Search Engineer</li>
+          <li>Site Reliability Engineer</li>
+        </ul>
+        <a href="mailto:careers@inspirelabs.com?subject=Engineering%20%C2%B7%20Inspirelabs" class="tlink">Write to engineering &rarr;</a>
+      </article>
+      <article class="role-card">
+        <div class="role-card-track">Product &amp; Design</div>
+        <h3>Own one of the five platforms end&#8209;to&#8209;end.</h3>
+        <p>Product and design operators who want a P&amp;L, not a Jira queue. You will sit between brand partners, the engineering team, and the founder.</p>
+        <ul class="role-card-list">
+          <li>Product Manager, GrabCash / GrabShare</li>
+          <li>Product Manager, RankDrive</li>
+          <li>Senior Product Designer</li>
+          <li>Brand &amp; Marketing Designer</li>
+        </ul>
+        <a href="mailto:careers@inspirelabs.com?subject=Product%20%26%20Design%20%C2%B7%20Inspirelabs" class="tlink">Write to product &rarr;</a>
+      </article>
+      <article class="role-card">
+        <div class="role-card-track">Growth</div>
+        <h3>Run the demand engine that 4,500 brands grow on.</h3>
+        <p>SEO, GEO, performance, lifecycle, partnerships, content. Operators who can move a number and explain why it moved.</p>
+        <ul class="role-card-list">
+          <li>SEO Lead, RankDrive</li>
+          <li>Performance Marketing Manager</li>
+          <li>Lifecycle &amp; CRM Manager</li>
+          <li>Editorial / Content Lead</li>
+        </ul>
+        <a href="mailto:careers@inspirelabs.com?subject=Growth%20%C2%B7%20Inspirelabs" class="tlink">Write to growth &rarr;</a>
+      </article>
+      <article class="role-card">
+        <div class="role-card-track">Operations &amp; G&amp;A</div>
+        <h3>Run the room that runs the platforms.</h3>
+        <p>Finance, people, legal, compliance, customer ops. The functions that make the operating standard hold across the network.</p>
+        <ul class="role-card-list">
+          <li>Senior Manager, Finance</li>
+          <li>Talent Partner</li>
+          <li>Legal &amp; Compliance Counsel</li>
+          <li>Customer Operations Lead</li>
+        </ul>
+        <a href="mailto:careers@inspirelabs.com?subject=Operations%20%C2%B7%20Inspirelabs" class="tlink">Write to operations &rarr;</a>
+      </article>
+    </div>
+    <p class="roles-foot reveal">Don&rsquo;t see your role? Write to <a href="mailto:careers@inspirelabs.com" class="tlink">careers@inspirelabs.com</a> anyway. We read every note.</p>
+  </div>
+</section>
+
 <!-- A DECADE IN -->
 <section class="section-body">
   <div class="container">
@@ -372,6 +510,33 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
   </div>
 </section>
 
+<!-- WHERE YOU WILL WORK -->
+<section class="section-body">
+  <div class="container">
+    <div class="careers-place-head reveal">
+      <h2 class="careers-place-title">Where you&rsquo;ll work.</h2>
+      <p class="careers-place-intro">One office, one team, one operating standard. The platforms ship from a building in Gachibowli, Hyderabad. The company has not had a second headquarters since 2013.</p>
+    </div>
+    <div class="careers-place-mosaic reveal">
+      <figure class="careers-place-cell careers-place-cell--lg"><img src="assets/culture/office-bay.jpg" alt="Inspirelabs office bay in Hyderabad" loading="lazy" /></figure>
+      <figure class="careers-place-cell careers-place-cell--md"><img src="assets/culture/team-meet.jpg" alt="A team meeting in progress" loading="lazy" /></figure>
+      <figure class="careers-place-cell careers-place-cell--md"><img src="assets/culture/cafeteria.jpg" alt="Inspirelabs cafeteria" loading="lazy" /></figure>
+      <figure class="careers-place-cell careers-place-cell--sm"><img src="assets/culture/team-collab.jpg" alt="Operators collaborating on a build" loading="lazy" /></figure>
+      <figure class="careers-place-cell careers-place-cell--sm"><img src="assets/culture/studio-3.jpg" alt="A focused workspace" loading="lazy" /></figure>
+      <figure class="careers-place-cell careers-place-cell--wide"><img src="assets/culture/team-portrait.jpg" alt="Inspirelabs team portrait" loading="lazy" /></figure>
+      <div class="careers-place-cell careers-place-cell--address">
+        <div class="careers-place-eyebrow">The address</div>
+        <address class="careers-place-addr">
+          21st Floor, OneWest Building<br/>
+          Financial District, Gachibowli<br/>
+          Hyderabad 500032, India
+        </address>
+        <a href="contact.html" class="tlink careers-place-link">Get directions &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- THE ROOM (mantra) -->
 <section class="careers-mantra">
   <div class="container">
@@ -386,11 +551,58 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
 <!-- APPLY -->
 <section class="careers-apply">
   <div class="container">
-    <div class="careers-apply-inner reveal">
-      <span class="careers-apply-eyebrow">Ready</span>
-      <h2>Write to us.</h2>
-      <p>Tell us what you have shipped. Tell us the problem you would not let go. Tell us the team you held the standard with. We read every note.</p>
-      <a href="mailto:careers@inspirelabs.com" class="careers-apply-mail">careers@inspirelabs.com</a>
+    <div class="careers-apply-grid reveal">
+      <div class="careers-apply-text">
+        <span class="careers-apply-eyebrow">Apply</span>
+        <h2>Tell us what you have shipped.</h2>
+        <p>Tell us the problem you would not let go. Tell us the team you held the standard with. We read every note.</p>
+        <p class="careers-apply-mail-fallback">Or write directly to <a href="mailto:careers@inspirelabs.com" class="tlink">careers@inspirelabs.com</a></p>
+      </div>
+      <!-- TODO: Replace YOUR_FORM_ID with the Formspree form ID. Or swap action= for any other backend (Greenhouse, Lever, custom). -->
+      <form class="careers-apply-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <div class="careers-form-row">
+          <div class="careers-form-field">
+            <label for="apply-name">Name</label>
+            <input id="apply-name" name="name" type="text" autocomplete="name" required />
+          </div>
+          <div class="careers-form-field">
+            <label for="apply-email">Email</label>
+            <input id="apply-email" name="email" type="email" autocomplete="email" required />
+          </div>
+        </div>
+        <div class="careers-form-row">
+          <div class="careers-form-field">
+            <label for="apply-track">Track</label>
+            <select id="apply-track" name="track" required>
+              <option value="">Choose one</option>
+              <option>Engineering</option>
+              <option>Product &amp; Design</option>
+              <option>Growth</option>
+              <option>Operations &amp; G&amp;A</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="careers-form-field">
+            <label for="apply-role">Role you&rsquo;re applying for</label>
+            <input id="apply-role" name="role" type="text" placeholder="e.g. Senior Backend Engineer" />
+          </div>
+        </div>
+        <div class="careers-form-field">
+          <label for="apply-portfolio">Portfolio or LinkedIn</label>
+          <input id="apply-portfolio" name="portfolio" type="url" autocomplete="url" placeholder="https://" />
+        </div>
+        <div class="careers-form-field">
+          <label for="apply-resume">Resume link (Drive / Dropbox / personal site)</label>
+          <input id="apply-resume" name="resume" type="url" placeholder="https://" />
+        </div>
+        <div class="careers-form-field">
+          <label for="apply-note">Note</label>
+          <textarea id="apply-note" name="note" required placeholder="What have you shipped? What problem would you not let go?"></textarea>
+        </div>
+        <div class="careers-form-submit-wrap">
+          <button class="careers-form-submit" type="submit">Send application</button>
+        </div>
+      </form>
     </div>
   </div>
 </section>
@@ -411,7 +623,7 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
         </address>
       </div>
       <div class="footer-col">
-        <h5>Our products</h5>
+        <h5>Our portfolio</h5>
         <a href="https://www.grabon.in" target="_blank" rel="noopener">GrabOn</a>
         <a href="https://www.grabcash.in" target="_blank" rel="noopener">GrabCash</a>
         <a href="https://www.grabshare.com" target="_blank" rel="noopener">GrabShare</a>
@@ -424,6 +636,7 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
         <a href="services.html">Services</a>
         <a href="ai-agents.html">AI Agents</a>
         <a href="platform.html">Platform</a>
+        <a href="insights.html">Insights</a>
       </div>
       <div class="footer-col">
         <h5>Company</h5>
@@ -442,16 +655,26 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
     <div class="footer-bottom">
       <div>&copy; <span data-year>2026</span> Inspirelabs Solutions Ltd. Bootstrapped in Hyderabad since 2013.</div>
       <div class="footer-bottom-links">
-        <a href="about.html">About</a>
-        <a href="careers.html">Careers</a>
-        <a href="contact.html">Contact</a>
-      </div>
+ <a href="privacy.html">Privacy</a>
+ <a href="terms.html">Terms</a>
+ <a href="trust.html">Trust &amp; security</a>
+ </div>
     </div>
   </div>
 </footer>
 
 <script>
 (() => { const nav = document.getElementById('nav'); if (!nav) return; const onScroll = () => { if (window.scrollY > 8) nav.classList.add('scrolled'); else nav.classList.remove('scrolled'); }; window.addEventListener('scroll', onScroll, { passive: true }); onScroll(); })();
+(() => {
+  const nav = document.getElementById('nav');
+  if (!nav) return;
+  const btn = nav.querySelector('.nav-toggle');
+  if (!btn) return;
+  const close = () => { nav.classList.remove('is-open'); btn.setAttribute('aria-expanded', 'false'); btn.setAttribute('aria-label', 'Open menu'); document.body.style.overflow = ''; };
+  btn.addEventListener('click', () => { const open = !nav.classList.contains('is-open'); nav.classList.toggle('is-open', open); btn.setAttribute('aria-expanded', String(open)); btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu'); document.body.style.overflow = open ? 'hidden' : ''; });
+  nav.querySelectorAll('.nav-link').forEach(a => a.addEventListener('click', close));
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
+})();
 (() => { const els = document.querySelectorAll('.reveal'); if (!('IntersectionObserver' in window)) { els.forEach(e => e.classList.add('in-view')); return; } const io = new IntersectionObserver((entries) => { entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in-view'); io.unobserve(en.target); } }); }, { rootMargin: '0px 0px -10% 0px', threshold: 0.05 }); els.forEach(e => io.observe(e)); })();
 (() => { const y = new Date().getFullYear(); document.querySelectorAll('[data-year]').forEach(e => { e.textContent = y; }); })();
 </script>

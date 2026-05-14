@@ -7,6 +7,18 @@
 <meta name="description" content="Inspirelabs is a Hyderabad operating company building for India's consumer internet. Founded 2013 by Ashok Reddy. Five platforms. 4,500 brand partners. 200 million monthly shoppers. Bootstrapped, profitable, here for the second decade." />
 <meta name="theme-color" content="#FFFFFF" />
 <link rel="canonical" href="https://inspirelabs.com/about.html" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="About Inspirelabs" />
+<meta property="og:description" content="Inspirelabs is a Hyderabad operating company building for India's consumer internet. Founded 2013 by Ashok Reddy. Five platforms. 4,500 brand partners. 200 million monthly shoppers. Bootstrapped, profitable, here for the second decade." />
+<meta property="og:url" content="https://inspirelabs.com/about.html" />
+<meta property="og:image" content="https://inspirelabs.com/assets/brand/inspirelabs-share-card.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:site_name" content="Inspirelabs" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="About Inspirelabs" />
+<meta name="twitter:description" content="Inspirelabs is a Hyderabad operating company building for India's consumer internet. Founded 2013 by Ashok Reddy. Five platforms. 4,500 brand partners. 200 million monthly shoppers. Bootstrapped, profitable, here for the second decade." />
+<meta name="twitter:image" content="https://inspirelabs.com/assets/brand/inspirelabs-share-card.png" />
 <link rel="icon" type="image/svg+xml" href="assets/brand/inspirelabs-mark.svg" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -43,10 +55,22 @@ ul, ol { list-style: none; }
 .nav-links { display: flex; gap: 36px; align-items: center; }
 .nav-link { font-size: 15px; font-weight: 500; color: var(--text); padding: 10px 0; position: relative; transition: color 0.2s var(--ease); }
 .nav-link:hover { color: var(--accent-deep); }
+.nav-link:focus-visible { outline: 2px solid var(--accent); outline-offset: 6px; border-radius: 2px; }
+.nav-brand:focus-visible { outline: 2px solid var(--accent); outline-offset: 6px; border-radius: 2px; }
+.nav-toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
 .nav-link.active::after { content: ''; position: absolute; bottom: 4px; left: 0; right: 0; height: 2px; background: var(--accent); }
 .nav-toggle { display: none; width: 36px; height: 36px; }
 .nav-toggle span { display: block; width: 22px; height: 1.5px; background: var(--text); margin: 5px auto; }
-@media (max-width: 880px) { .nav-links { display: none; } .nav-toggle { display: block; } }
+@media (max-width: 880px) {
+  .nav-links { position: fixed; top: 0; left: 0; right: 0; height: 100vh; height: 100svh; background: var(--white); flex-direction: column; justify-content: center; align-items: center; gap: 28px; transform: translateY(-100%); transition: transform 0.3s var(--ease); z-index: 99; padding: 96px 24px 40px; display: flex; }
+  .nav.is-open .nav-links { transform: translateY(0); }
+  .nav-toggle { display: block; position: relative; z-index: 101; cursor: pointer; }
+  .nav-toggle span { transition: transform 0.25s var(--ease), opacity 0.2s var(--ease); transform-origin: center; }
+  .nav.is-open .nav-toggle span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+  .nav.is-open .nav-toggle span:nth-child(2) { opacity: 0; }
+  .nav.is-open .nav-toggle span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+  .nav-link { font-size: 22px; padding: 8px 0; }
+}
 
 h1, h2, h3, h4, h5 { color: var(--text); font-weight: 400; letter-spacing: -0.02em; line-height: 1.06; text-wrap: balance; }
 p, .lead, .section-intro { text-wrap: pretty; }
@@ -54,7 +78,7 @@ p, .lead, .section-intro { text-wrap: pretty; }
 
 section { padding: clamp(64px, 7vw, 110px) 0; position: relative; }
 
-/* Hero — same pattern as products/services */
+/* Hero, same pattern as products/services */
 .hero {
   position: relative;
   min-height: 100vh;
@@ -93,8 +117,103 @@ section { padding: clamp(64px, 7vw, 110px) 0; position: relative; }
   margin: clamp(24px, 2.4vw, 36px) auto 0;
 }
 
+/* Journey timeline, alternating spine with icon markers */
+.about-timeline { padding: clamp(80px, 9vw, 140px) 0; border-top: 1px solid var(--hairline); }
+.about-timeline-head { margin-bottom: clamp(48px, 5vw, 72px); text-align: center; }
+.about-timeline-kicker { font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); font-weight: 700; margin-bottom: 16px; display: inline-flex; align-items: center; gap: 14px; }
+.about-timeline-kicker::after { content: ''; width: 56px; height: 2px; background: var(--accent); display: inline-block; }
+.about-timeline-title { font-size: clamp(34px, 4vw, 56px); font-weight: 400; letter-spacing: -0.025em; line-height: 1.08; margin: 0 auto 18px; max-width: 22ch; }
+.about-timeline-intro { font-size: clamp(16.5px, 1.25vw, 19px); line-height: 1.65; color: var(--text-secondary); margin: 0 auto; max-width: 56ch; }
+
+.about-timeline-track { list-style: none; padding: 0; margin: 0 auto; max-width: 1080px; position: relative; }
+.about-timeline-track::before { content: ''; position: absolute; left: 50%; top: 32px; bottom: 32px; width: 2px; background: var(--text); transform: translateX(-1px); z-index: 0; }
+.about-timeline-row { display: grid; grid-template-columns: 1fr 80px 1fr; align-items: center; margin-bottom: clamp(40px, 4vw, 64px); position: relative; }
+.about-timeline-row:last-child { margin-bottom: 0; }
+.about-timeline-marker { grid-column: 2; width: 64px; height: 64px; border-radius: 50%; background: var(--accent); display: flex; align-items: center; justify-content: center; margin: 0 auto; z-index: 1; box-shadow: 0 0 0 4px var(--white); transition: transform 0.2s var(--ease); }
+.about-timeline-marker svg { width: 28px; height: 28px; color: var(--white); stroke-width: 2; }
+.about-timeline-row:nth-child(even) .about-timeline-marker { background: #2A6FB5; }
+.about-timeline-row:nth-child(3n) .about-timeline-marker { background: #1FA0A7; }
+.about-timeline-row.is-current .about-timeline-marker { background: var(--accent); transform: scale(1.05); }
+
+.about-timeline-card { background: #F4F4F2; padding: clamp(20px, 2vw, 28px) clamp(22px, 2.4vw, 32px); border-radius: 8px; position: relative; }
+.about-timeline-row[data-side="right"] .about-timeline-card { grid-column: 3; margin-left: clamp(18px, 2vw, 28px); }
+.about-timeline-row[data-side="left"] .about-timeline-card { grid-column: 1; margin-right: clamp(18px, 2vw, 28px); }
+.about-timeline-row[data-side="right"] .about-timeline-card::before { content: ''; position: absolute; left: -10px; top: 28px; width: 0; height: 0; border-top: 10px solid transparent; border-bottom: 10px solid transparent; border-right: 10px solid #F4F4F2; }
+.about-timeline-row[data-side="left"] .about-timeline-card::before { content: ''; position: absolute; right: -10px; top: 28px; width: 0; height: 0; border-top: 10px solid transparent; border-bottom: 10px solid transparent; border-left: 10px solid #F4F4F2; }
+
+.about-timeline-card-header { font-size: clamp(15px, 1.15vw, 17px); font-weight: 700; color: var(--text); margin-bottom: 12px; letter-spacing: 0.02em; text-transform: uppercase; }
+.about-timeline-card-header .year { color: var(--accent); }
+.about-timeline-card-list { list-style: none; padding: 0; margin: 0; }
+.about-timeline-card-list li { font-size: clamp(14px, 1.05vw, 15.5px); line-height: 1.55; color: var(--text-secondary); padding: 3px 0; }
+.about-timeline-card-text { font-size: clamp(14.5px, 1.1vw, 16px); line-height: 1.6; color: var(--text-secondary); margin: 0; }
+
+@media (max-width: 760px) {
+  .about-timeline-track::before { left: 32px; }
+  .about-timeline-row { grid-template-columns: 64px 1fr; gap: 16px; margin-bottom: 28px; }
+  .about-timeline-marker { grid-column: 1; }
+  .about-timeline-row[data-side="right"] .about-timeline-card,
+  .about-timeline-row[data-side="left"] .about-timeline-card { grid-column: 2; margin: 0; }
+  .about-timeline-row[data-side="right"] .about-timeline-card::before,
+  .about-timeline-row[data-side="left"] .about-timeline-card::before {
+    left: -10px; right: auto;
+    border-right: 10px solid #F4F4F2; border-left: none;
+  }
+}
+
+/* Awards & Recognition, editorial format matching the rest of the page */
+.about-recognition { padding: clamp(80px, 9vw, 140px) 0; border-top: 1px solid var(--hairline); }
+.about-awards { list-style: none; padding: 0; margin: 0 0 clamp(56px, 6vw, 88px); }
+.about-award { display: grid; grid-template-columns: 140px 1fr 80px; gap: clamp(20px, 2.4vw, 40px); padding: clamp(22px, 2.4vw, 32px) 0; border-top: 1px solid var(--hairline); align-items: baseline; }
+.about-award:last-child { border-bottom: 1px solid var(--hairline); }
+.about-award-source { font-size: clamp(15px, 1.15vw, 17px); font-weight: 600; color: var(--text); letter-spacing: -0.01em; }
+.about-award-title { font-size: clamp(15px, 1.15vw, 17px); font-weight: 400; color: var(--text-secondary); line-height: 1.5; }
+.about-award-year { font-size: clamp(15px, 1.15vw, 17px); color: var(--text-tertiary); font-weight: 500; text-align: right; }
+@media (max-width: 720px) { .about-award { grid-template-columns: 1fr; gap: 4px; } .about-award-year { text-align: left; font-size: 13px; } }
+
+.about-press { padding-top: 0; }
+.about-press-head { text-align: center; margin-bottom: clamp(28px, 3vw, 44px); }
+.about-press-title { font-size: clamp(26px, 2.6vw, 36px); font-weight: 400; letter-spacing: -0.02em; line-height: 1.1; color: var(--text); margin: 0 0 10px; }
+.about-press-title em { font-family: 'Instrument Serif', Georgia, serif; font-style: italic; color: var(--accent); font-weight: 400; }
+.about-press-sub { font-size: clamp(14px, 1.05vw, 16px); color: var(--text-secondary); margin: 0; }
+.about-press-marquee { position: relative; overflow: hidden; mask-image: linear-gradient(to right, transparent 0, #000 5%, #000 95%, transparent 100%); -webkit-mask-image: linear-gradient(to right, transparent 0, #000 5%, #000 95%, transparent 100%); margin-bottom: 14px; }
+.about-press-marquee:last-child { margin-bottom: 0; }
+.about-press-track { display: flex; gap: 14px; width: max-content; animation: pressMarquee 55s linear infinite; align-items: center; }
+.about-press-track--reverse { animation: pressMarqueeReverse 60s linear infinite; }
+.about-press-marquee:hover .about-press-track { animation-play-state: paused; }
+@keyframes pressMarquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@keyframes pressMarqueeReverse { from { transform: translateX(-50%); } to { transform: translateX(0); } }
+.about-press-track .press-card { flex: 0 0 180px; min-height: 84px; }
+.about-press-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 14px; }
+.press-card { background: var(--white); border: 1px solid var(--hairline); border-radius: 6px; padding: 18px 18px; min-height: 84px; display: flex; align-items: center; justify-content: center; gap: 12px; text-align: left; transition: border-color 0.2s var(--ease), transform 0.2s var(--ease), box-shadow 0.2s var(--ease); }
+.press-card:hover { border-color: var(--text); transform: translateY(-2px); box-shadow: 0 4px 12px rgba(14, 15, 10, 0.06); }
+.press-card img { width: 32px; height: 32px; object-fit: contain; flex-shrink: 0; border-radius: 4px; }
+.press-card span { font-size: 14px; font-weight: 600; color: var(--text); letter-spacing: -0.01em; line-height: 1.2; }
+/* Per-publication typographic flavour */
+.press-card--ft span { font-family: Georgia, 'Times New Roman', serif; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; font-size: 13px; }
+.press-card--et span { font-family: Georgia, 'Times New Roman', serif; font-weight: 700; font-size: 14px; letter-spacing: -0.01em; }
+.press-card--bs span { font-family: Georgia, 'Times New Roman', serif; font-weight: 600; font-size: 14px; }
+.press-card--hindu span { font-family: Georgia, 'Times New Roman', serif; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; font-size: 13px; }
+.press-card--bizline span { font-family: Georgia, 'Times New Roman', serif; font-style: italic; font-weight: 700; font-size: 16px; text-transform: lowercase; letter-spacing: -0.02em; }
+.press-card--biztoday span { font-family: 'Hanken Grotesk', sans-serif; font-weight: 800; letter-spacing: -0.02em; font-size: 14px; }
+.press-card--cnbc span { font-family: 'Hanken Grotesk', sans-serif; font-weight: 800; letter-spacing: 0.02em; font-size: 13px; text-transform: uppercase; }
+.press-card--ys span { font-family: 'Hanken Grotesk', sans-serif; font-weight: 700; font-size: 15px; letter-spacing: -0.02em; }
+.press-card--inc42 span { font-family: 'Hanken Grotesk', sans-serif; font-weight: 800; letter-spacing: -0.03em; font-size: 16px; }
+.press-card--vc span { font-family: 'Hanken Grotesk', sans-serif; font-weight: 700; letter-spacing: -0.01em; font-size: 14px; }
+.press-card--print span { font-family: Georgia, 'Times New Roman', serif; font-weight: 700; font-size: 15px; letter-spacing: -0.01em; }
+.press-card--week span { font-family: Georgia, 'Times New Roman', serif; font-weight: 700; font-size: 15px; }
+.press-card--newsmin span { font-family: 'Hanken Grotesk', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: -0.01em; }
+.press-card--deccan span { font-family: Georgia, 'Times New Roman', serif; font-weight: 700; font-size: 14px; }
+.press-card--tribune span { font-family: Georgia, 'Times New Roman', serif; font-style: italic; font-weight: 700; font-size: 14px; }
+.press-card--midday span { font-family: Georgia, 'Times New Roman', serif; font-weight: 700; font-size: 15px; }
+.press-card--hans span { font-family: Georgia, 'Times New Roman', serif; font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: 0.04em; }
+.press-card--techcircle span { font-family: 'Hanken Grotesk', sans-serif; font-weight: 800; letter-spacing: -0.01em; font-size: 14px; }
+.press-card--techstory span { font-family: 'Hanken Grotesk', sans-serif; font-weight: 700; font-size: 14px; }
+.press-card--devdiscourse span { font-family: 'Hanken Grotesk', sans-serif; font-weight: 700; font-size: 13px; }
+.press-card--scoop span { font-family: 'Hanken Grotesk', sans-serif; font-weight: 800; font-size: 13px; text-transform: uppercase; letter-spacing: 0.04em; }
+
 /* Numbers bar */
 .about-numbers { padding: clamp(64px, 7vw, 110px) 0; }
+.hero-numbers { margin-top: clamp(56px, 6vw, 96px); }
 .about-numbers-grid {
   display: grid; grid-template-columns: repeat(4, 1fr);
   border-top: 1px solid var(--hairline);
@@ -123,7 +242,7 @@ section { padding: clamp(64px, 7vw, 110px) 0; position: relative; }
 @media (max-width: 900px) { .about-numbers-grid { grid-template-columns: repeat(2, 1fr); } .about-num:nth-child(2n) { border-right: none; } }
 @media (max-width: 520px) { .about-numbers-grid { grid-template-columns: 1fr; } .about-num { border-right: none; } }
 
-/* Origin narrative — 2-column editorial (matches services pillar pattern) */
+/* Origin narrative, 2-column editorial (matches services pillar pattern) */
 .about-origin { padding: clamp(80px, 9vw, 140px) 0; border-top: 1px solid var(--hairline); }
 .about-origin-grid {
   display: grid;
@@ -146,61 +265,80 @@ section { padding: clamp(64px, 7vw, 110px) 0; position: relative; }
 .about-origin-body p:last-child { margin-bottom: 0; }
 .about-origin-body strong { color: var(--text); font-weight: 600; }
 
-/* Founder note — Eternal pattern with small photo + date/title row */
-.about-founder { padding: clamp(80px, 9vw, 140px) 0; border-top: 1px solid var(--hairline); background: var(--white); }
-.about-founder-head {
+/* Founder note, Eternal pattern with small photo + date/title row */
+.about-founder { padding: clamp(80px, 9vw, 140px) 0; border-top: 1px solid var(--hairline); background: var(--warm); }
+.about-founder-grid {
   display: grid;
-  grid-template-columns: 140px 1fr;
-  gap: clamp(28px, 3vw, 48px);
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.4fr);
+  gap: clamp(48px, 6vw, 96px);
   align-items: start;
-  margin-bottom: clamp(48px, 5vw, 80px);
 }
-@media (max-width: 640px) { .about-founder-head { grid-template-columns: 110px 1fr; gap: 20px; } }
+@media (max-width: 880px) {
+  .about-founder-grid { grid-template-columns: 1fr; gap: 40px; }
+}
+.about-founder-aside { position: sticky; top: 100px; }
+@media (max-width: 880px) { .about-founder-aside { position: static; } }
 .about-founder-photo {
-  width: 140px; height: 140px;
-  border-radius: 8px;
+  aspect-ratio: 4 / 5;
+  width: 100%;
+  max-width: 380px;
+  border-radius: 4px;
   overflow: hidden;
   background: var(--accent-soft);
+  margin-bottom: 28px;
 }
-@media (max-width: 640px) { .about-founder-photo { width: 110px; height: 110px; } }
-.about-founder-photo img { width: 100%; height: 100%; object-fit: cover; }
-.about-founder-meta { display: flex; flex-direction: column; gap: 14px; padding-top: 14px; }
-.about-founder-date {
+.about-founder-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.about-founder-name {
+  font-size: clamp(20px, 1.6vw, 24px);
+  font-weight: 500; letter-spacing: -0.015em;
+  margin: 0 0 4px;
+  color: var(--text);
+}
+.about-founder-role {
   font-family: 'JetBrains Mono', monospace;
   font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase;
   color: var(--text-tertiary); font-weight: 500;
+  margin: 0;
 }
-.about-founder-title {
-  font-size: clamp(28px, 3.4vw, 48px);
-  font-weight: 500; letter-spacing: -0.025em; line-height: 1.12;
-  margin: 0; max-width: 22ch;
-  color: var(--text);
+.about-founder-eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--accent); font-weight: 700;
+  margin-bottom: 20px;
 }
 .about-founder-summary {
-  font-size: clamp(18px, 1.5vw, 22px);
-  font-weight: 500; letter-spacing: -0.015em;
-  line-height: 1.4; color: var(--text);
-  margin: 0 0 clamp(40px, 4vw, 64px);
-  padding-bottom: clamp(40px, 4vw, 64px);
-  border-bottom: 1px solid var(--hairline);
-  max-width: 76ch;
+  font-size: clamp(24px, 2.6vw, 38px);
+  font-weight: 400; letter-spacing: -0.02em;
+  line-height: 1.2; color: var(--text);
+  margin: 0 0 clamp(36px, 4vw, 56px);
+  text-wrap: balance;
 }
-.about-founder-body { max-width: 76ch; }
+.about-founder-summary::after {
+  content: ''; display: block;
+  width: 56px; height: 2px;
+  background: var(--accent);
+  margin-top: clamp(28px, 3vw, 40px);
+}
+.about-founder-body { max-width: 60ch; }
 .about-founder-body p {
-  font-size: clamp(16.5px, 1.25vw, 19px);
-  line-height: 1.7; color: var(--text-secondary);
+  font-size: clamp(16px, 1.2vw, 18px);
+  line-height: 1.75; color: var(--text-secondary);
   margin: 0 0 22px;
 }
 .about-founder-body p:last-child { margin-bottom: 0; }
 .about-founder-body p strong { color: var(--text); font-weight: 600; }
 .about-founder-sig {
-  margin-top: 48px; display: flex; flex-direction: column; gap: 6px;
+  margin-top: 48px;
+  padding-top: 32px;
+  border-top: 1px solid var(--hairline);
+  display: flex; flex-direction: column; gap: 4px;
 }
 .about-founder-sig-name {
-  font-family: 'Hanken Grotesk', sans-serif;
+  font-family: Georgia, 'Times New Roman', serif;
   font-size: clamp(22px, 2vw, 28px);
   font-style: italic; font-weight: 400;
-  letter-spacing: -0.02em; line-height: 1;
+  letter-spacing: -0.01em; line-height: 1;
+  color: var(--text);
 }
 .about-founder-sig-title {
   font-family: 'JetBrains Mono', monospace;
@@ -208,7 +346,87 @@ section { padding: clamp(64px, 7vw, 110px) 0; position: relative; }
   color: var(--text-tertiary);
 }
 
-/* Three positions — compact 3-column grid */
+/* Where we work, Hyderabad office mosaic */
+.about-place { padding: clamp(80px, 9vw, 140px) 0; border-top: 1px solid var(--hairline); }
+.about-place-head { margin-bottom: clamp(48px, 5vw, 72px); display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: clamp(56px, 7vw, 120px); align-items: start; }
+@media (max-width: 980px) { .about-place-head { grid-template-columns: 1fr; gap: 24px; } }
+.about-place-title { font-size: clamp(34px, 4vw, 56px); font-weight: 400; letter-spacing: -0.025em; line-height: 1.08; margin: 0; max-width: 22ch; text-wrap: balance; }
+.about-place-intro { font-size: clamp(16.5px, 1.25vw, 19px); line-height: 1.7; color: var(--text-secondary); margin: 0; max-width: 56ch; }
+
+.about-place-mosaic {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: 180px;
+  gap: 12px;
+}
+.about-place-cell { margin: 0; overflow: hidden; border-radius: 6px; background: var(--accent-soft); position: relative; }
+.about-place-cell img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.6s var(--ease); }
+.about-place-cell:hover img { transform: scale(1.04); }
+.about-place-cell--lg { grid-column: span 7; grid-row: span 2; }
+.about-place-cell--md { grid-column: span 5; grid-row: span 1; }
+.about-place-cell--sm { grid-column: span 4; grid-row: span 1; }
+.about-place-cell--wide { grid-column: span 8; grid-row: span 2; }
+.about-place-cell--address {
+  grid-column: span 4; grid-row: span 2;
+  background: var(--text); color: var(--white);
+  border-radius: 6px;
+  padding: clamp(24px, 2.4vw, 36px);
+  display: flex; flex-direction: column; justify-content: space-between;
+  overflow: visible;
+}
+.about-place-cell--address::after { display: none; }
+.about-place-eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--accent); font-weight: 700;
+}
+.about-place-addr {
+  font-style: normal;
+  font-size: clamp(15px, 1.2vw, 18px);
+  line-height: 1.55;
+  color: var(--white);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+.about-place-link {
+  color: var(--white) !important;
+  border-bottom-color: rgba(255,255,255,0.4) !important;
+  align-self: flex-start;
+}
+.about-place-link:hover {
+  color: var(--accent) !important;
+  border-bottom-color: var(--accent) !important;
+}
+@media (max-width: 980px) {
+  .about-place-mosaic { grid-template-columns: repeat(6, 1fr); grid-auto-rows: 160px; }
+  .about-place-cell--lg { grid-column: span 6; grid-row: span 2; }
+  .about-place-cell--md { grid-column: span 3; }
+  .about-place-cell--sm { grid-column: span 3; }
+  .about-place-cell--wide { grid-column: span 6; grid-row: span 2; }
+  .about-place-cell--address { grid-column: span 6; grid-row: span 1; flex-direction: row; align-items: center; gap: 24px; }
+}
+@media (max-width: 540px) {
+  .about-place-mosaic { grid-template-columns: 1fr; grid-auto-rows: 200px; }
+  .about-place-cell, .about-place-cell--lg, .about-place-cell--md, .about-place-cell--sm, .about-place-cell--wide, .about-place-cell--address { grid-column: span 1; grid-row: span 1; }
+  .about-place-cell--address { flex-direction: column; align-items: flex-start; height: auto; min-height: 200px; }
+}
+
+/* The mark, brand identity callout */
+.about-mark { padding: clamp(80px, 9vw, 140px) 0; border-top: 1px solid var(--hairline); }
+.about-mark-grid { display: grid; grid-template-columns: minmax(0, 0.75fr) minmax(0, 1.1fr); gap: clamp(48px, 6vw, 96px); align-items: center; }
+@media (max-width: 880px) { .about-mark-grid { grid-template-columns: 1fr; gap: 40px; } }
+.about-mark-visual { display: flex; align-items: center; justify-content: center; }
+.about-mark-svg { width: 100%; max-width: 320px; height: auto; display: block; }
+.about-mark-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); font-weight: 700; margin-bottom: 22px; }
+.about-mark-title { font-size: clamp(34px, 4vw, 56px); font-weight: 400; letter-spacing: -0.025em; line-height: 1.08; margin: 0 0 28px; max-width: 16ch; }
+.about-mark-body { font-size: clamp(16.5px, 1.25vw, 19px); line-height: 1.7; color: var(--text-secondary); margin: 0 0 18px; max-width: 56ch; }
+.about-mark-body:last-of-type { margin-bottom: clamp(32px, 3vw, 44px); }
+.about-mark-palette { display: flex; gap: clamp(20px, 2vw, 32px); align-items: center; padding-top: clamp(28px, 3vw, 40px); border-top: 1px solid var(--hairline); }
+.about-mark-swatch { display: flex; align-items: center; gap: 10px; }
+.swatch-chip { width: 22px; height: 22px; border-radius: 4px; display: inline-block; }
+.swatch-hex { font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.04em; color: var(--text-tertiary); font-weight: 600; }
+
+/* Three positions, compact 3-column grid */
 .about-beliefs { padding: clamp(80px, 9vw, 140px) 0; border-top: 1px solid var(--hairline); }
 .about-beliefs-head { max-width: 70ch; margin-bottom: clamp(48px, 5vw, 72px); }
 .about-beliefs-title {
@@ -252,28 +470,7 @@ section { padding: clamp(64px, 7vw, 110px) 0; position: relative; }
   max-width: 36ch;
 }
 
-/* Vision statement — centered editorial moment */
-.about-vision { padding: clamp(80px, 10vw, 160px) 0; border-top: 1px solid var(--hairline); background: var(--warm); }
-.about-vision-inner { text-align: center; max-width: 24ch; margin: 0 auto; }
-.about-vision-eyebrow {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 11px; letter-spacing: 0.10em; text-transform: uppercase;
-  color: var(--text-tertiary); font-weight: 500;
-  margin-bottom: 32px; display: block;
-}
-.about-vision-text {
-  font-size: clamp(36px, 5vw, 80px);
-  font-weight: 400; letter-spacing: -0.03em;
-  line-height: 1.06; color: var(--text);
-}
-.about-vision-attrib {
-  margin-top: 40px;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 11px; letter-spacing: 0.10em; text-transform: uppercase;
-  color: var(--text-tertiary); font-weight: 500;
-}
-
-/* Doors CTA — 3-col hairline grid (services-style) */
+/* Doors CTA, 3-col hairline grid (services-style) */
 .about-doors { padding: clamp(64px, 7vw, 110px) 0; border-top: 1px solid var(--hairline); }
 .about-doors-head { margin-bottom: clamp(40px, 4vw, 56px); }
 .about-doors-title {
@@ -333,6 +530,7 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
 .reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.7s var(--ease), transform 0.7s var(--ease); }
 .reveal.in-view { opacity: 1; transform: none; }
 @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } html { scroll-behavior: auto; } }
+@media (prefers-reduced-motion: reduce) { .about-press-track { animation: none !important; } }
 </style>
 </head>
 
@@ -341,15 +539,15 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
 <header class="nav" id="nav">
   <div class="container nav-inner">
     <a href="index.html" class="nav-brand" aria-label="Inspirelabs"><img class="brand-logo" src="assets/brand/inspirelabs-wordmark.png" alt="Inspirelabs" /></a>
-    <nav class="nav-links" aria-label="Primary">
+    <nav class="nav-links" id="primary-nav" aria-label="Primary">
       <a href="index.html" class="nav-link">Home</a>
       <a href="products.html" class="nav-link">Products</a>
       <a href="services.html" class="nav-link">Services</a>
-      <a href="about.html" class="nav-link active">About</a>
+      <a href="about.html" class="nav-link active" aria-current="page">About</a>
       <a href="careers.html" class="nav-link">Careers</a>
       <a href="contact.html" class="nav-link">Contact</a>
     </nav>
-    <button class="nav-toggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span><span></span></button>
   </div>
 </header>
 
@@ -359,16 +557,9 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
 <section class="hero">
   <div class="hero-grid"></div>
   <div class="container hero-inner">
-    <div class="hero-eyebrow">About</div>
-    <h1 class="display-1">A Hyderabad company. Built one platform at a time.</h1>
-    <p class="hero-sub">Bootstrapped in 2013. Five platforms in production, 4,500 brands on the network, a billion conversions routed a year. No outside capital, then or now.</p>
-  </div>
-</section>
+    <h1 class="display-1">Twelve years.<br/>Zero capital.<br/>One standard.</h1>
 
-<!-- NUMBERS -->
-<section class="about-numbers">
-  <div class="container">
-    <div class="about-numbers-grid reveal">
+    <div class="about-numbers-grid reveal hero-numbers">
       <div class="about-num">
         <div class="about-num-val">12</div>
         <div class="about-num-lbl">Years of compounding work</div>
@@ -390,14 +581,177 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
 </section>
 
 <!-- ORIGIN -->
-<section class="about-origin">
+<section class="about-founder">
   <div class="container">
-    <div class="about-origin-grid reveal">
-      <h2 class="about-origin-title">Twelve years in one room.</h2>
-      <div class="about-origin-body">
-        <p>Inspirelabs started in a 600 sq ft office above a bookstore in Begumpet, Hyderabad. Eight people. One product. A line of credit on a personal card. The product was GrabOn. The brief was simple: build the most trusted coupons site in India, and earn every visit.</p>
-        <p>Twelve years on, GrabOn is one of five platforms we run. The other four are GrabCash, GrabShare, RankDrive and Alternatives.co. Together they route a billion conversions a year and have unlocked over <strong>&#8377;2,500 crore</strong> in savings for shoppers. None of it was paid for with outside money. Bootstrapped since the first hire. Profitable since year three.</p>
-        <p>The wall in the founder's room still carries the line we wrote in 2013. <strong>It is always Day 1.</strong> Day 2 is the day the work gets safer. The day a meeting replaces a decision. We are not interested in Day 2.</p>
+    <div class="about-founder-grid">
+      <aside class="about-founder-aside reveal">
+        <div class="about-founder-photo">
+          <img src="assets/founders/ashok-reddy.jpg" alt="Ashok Reddy, founder of Inspirelabs" loading="lazy" />
+        </div>
+        <h3 class="about-founder-name">Ashok Reddy</h3>
+        <p class="about-founder-role">Founder &middot; Since 2013</p>
+      </aside>
+      <div class="about-founder-content reveal">
+        <div class="about-founder-eyebrow">A note from our founder</div>
+        <h2 class="about-founder-summary">I wanted to build a company that earned its reputation slowly. Twelve years on, that is still the only rule.</h2>
+        <div class="about-founder-body">
+          <p>Dear reader,</p>
+          <p>I started Inspirelabs in 2013 with no investors and no plan beyond the next twelve months. The first product was GrabOn. I gave myself one rule. If the work is useful, the rest follows. That rule is still the only rule.</p>
+          <p>Twelve years on, GrabOn is one of five platforms we run. The others are GrabCash, GrabShare, RankDrive and Alternatives.co. Together they route a billion conversions a year and have unlocked over &#8377;2,500 crore in savings for shoppers. We have not raised a rupee. Bootstrapped since the first hire. Profitable since year three.</p>
+          <p>In many ways we feel like we have broken some ice. We have shown that ordinary people with conviction and hard work can come together, defy the odds, and in under two decades build something durable. The journey has created real wealth, not just for me, but for the operators who built it with me and their families. That is the side-effect, not the goal. The goal has always been to do something worthwhile with the time we have.</p>
+          <p><strong>The only company I am interested in is the one that exists in 2035.</strong> Not the one that wins the quarter that ends on Friday. If you are working with us, hiring us, partnering with us, or reading us for the first time, that is the frame. The work compounds when you give it the time it asks for. I have given it twelve. I plan to give it twelve more.</p>
+          <p>To everyone who has built this place with me, the operators, the brands, the shoppers, the families who put up with the late nights, thank you. The receipts are still stacking.</p>
+        </div>
+        <div class="about-founder-sig">
+          <span class="about-founder-sig-name">Ashok Reddy</span>
+          <span class="about-founder-sig-title">Founder, Inspirelabs Solutions Ltd.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- JOURNEY TIMELINE -->
+<section class="about-timeline">
+  <div class="container">
+    <div class="about-timeline-head reveal">
+      <h2 class="about-timeline-title">From day one to year twelve.</h2>
+      <p class="about-timeline-intro">Every milestone here is what the work earned, not what we announced.</p>
+    </div>
+    <ol class="about-timeline-track reveal">
+      <li class="about-timeline-row" data-side="right">
+        <div class="about-timeline-marker" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09zM12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2zM9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg>
+        </div>
+        <div class="about-timeline-card">
+          <div class="about-timeline-card-header"><span class="year">2013</span></div>
+          <p class="about-timeline-card-text">Inspirelabs starts with GrabOn, a coupon site out of Hyderabad. First brand partner signed before the website was indexed.</p>
+        </div>
+      </li>
+
+      <li class="about-timeline-row" data-side="left">
+        <div class="about-timeline-card">
+          <div class="about-timeline-card-header"><span class="year">2016</span></div>
+          <p class="about-timeline-card-text">Profitable for the third year. Crosses the first 10M monthly shoppers.</p>
+        </div>
+        <div class="about-timeline-marker" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+        </div>
+      </li>
+
+      <li class="about-timeline-row" data-side="right">
+        <div class="about-timeline-marker" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </div>
+        <div class="about-timeline-card">
+          <div class="about-timeline-card-header"><span class="year">2019</span></div>
+          <p class="about-timeline-card-text">RankDrive spun out of the SEO team that runs GrabOn. Internal tool first, product later.</p>
+        </div>
+      </li>
+
+      <li class="about-timeline-row" data-side="left">
+        <div class="about-timeline-card">
+          <div class="about-timeline-card-header"><span class="year">2021</span></div>
+          <p class="about-timeline-card-text">Alternatives.co launched. The B2B discovery layer. The bet that B2B SaaS would need its own marketplace.</p>
+        </div>
+        <div class="about-timeline-marker" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+        </div>
+      </li>
+
+      <li class="about-timeline-row" data-side="right">
+        <div class="about-timeline-marker" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>
+        </div>
+        <div class="about-timeline-card">
+          <div class="about-timeline-card-header"><span class="year">2023</span></div>
+          <p class="about-timeline-card-text">Ten years bootstrapped. 4,500-brand network live across the portfolio.</p>
+        </div>
+      </li>
+
+      <li class="about-timeline-row" data-side="left">
+        <div class="about-timeline-card">
+          <div class="about-timeline-card-header"><span class="year">2024</span></div>
+          <p class="about-timeline-card-text">GrabShare and GrabCash ship. The creator and affiliate layers finish the four-pillar engine.</p>
+        </div>
+        <div class="about-timeline-marker" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+      </li>
+
+      <li class="about-timeline-row is-current" data-side="right">
+        <div class="about-timeline-marker" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        </div>
+        <div class="about-timeline-card">
+          <div class="about-timeline-card-header"><span class="year">2026</span></div>
+          <p class="about-timeline-card-text">Inspirelabs Solutions Ltd. operating as a parent company. The sixth platform under construction.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- AWARDS & RECOGNITION -->
+<section class="about-recognition">
+  <div class="container">
+    <div class="about-press reveal">
+      <div class="about-press-head">
+        <h3 class="about-press-title">Featured <em>in</em>.</h3>
+        <p class="about-press-sub">A short list of the rooms we&rsquo;ve been written about in.</p>
+      </div>
+      <!-- TODO: Replace each <span>Name</span> below with <img src="assets/logos/press/<file>.svg" alt="..."/> when real publication logos are available. -->
+      <div class="about-press-marquee">
+        <div class="about-press-track">
+          <div class="press-card press-card--ft"><img src="assets/logos/press/financial-times.png" alt="Financial Times" loading="lazy" /><span>Financial Times</span></div>
+          <div class="press-card press-card--et"><img src="assets/logos/press/economic-times.png" alt="The Economic Times" loading="lazy" /><span>The Economic Times</span></div>
+          <div class="press-card press-card--bs"><img src="assets/logos/press/business-standard.png" alt="Business Standard" loading="lazy" /><span>Business Standard</span></div>
+          <div class="press-card press-card--hindu"><img src="assets/logos/press/the-hindu.png" alt="The Hindu" loading="lazy" /><span>The Hindu</span></div>
+          <div class="press-card press-card--bizline"><img src="assets/logos/press/businessline.png" alt="businessline" loading="lazy" /><span>businessline</span></div>
+          <div class="press-card press-card--biztoday"><img src="assets/logos/press/business-today.png" alt="Business Today" loading="lazy" /><span>Business Today</span></div>
+          <div class="press-card press-card--cnbc"><img src="assets/logos/press/cnbc-awaaz.png" alt="CNBC Awaaz" loading="lazy" /><span>CNBC Awaaz</span></div>
+          <div class="press-card press-card--ys"><img src="assets/logos/press/yourstory.png" alt="YourStory" loading="lazy" /><span>YourStory</span></div>
+          <div class="press-card press-card--inc42"><img src="assets/logos/press/inc42.png" alt="Inc42" loading="lazy" /><span>Inc42</span></div>
+          <div class="press-card press-card--vc"><img src="assets/logos/press/vccircle.png" alt="VCCircle" loading="lazy" /><span>VCCircle</span></div>
+          <div class="press-card press-card--print"><img src="assets/logos/press/theprint.png" alt="ThePrint" loading="lazy" /><span>ThePrint</span></div>
+          <!-- duplicate set for seamless infinite loop -->
+          <div class="press-card press-card--ft" aria-hidden="true"><img src="assets/logos/press/financial-times.png" alt="" loading="lazy" /><span>Financial Times</span></div>
+          <div class="press-card press-card--et" aria-hidden="true"><img src="assets/logos/press/economic-times.png" alt="" loading="lazy" /><span>The Economic Times</span></div>
+          <div class="press-card press-card--bs" aria-hidden="true"><img src="assets/logos/press/business-standard.png" alt="" loading="lazy" /><span>Business Standard</span></div>
+          <div class="press-card press-card--hindu" aria-hidden="true"><img src="assets/logos/press/the-hindu.png" alt="" loading="lazy" /><span>The Hindu</span></div>
+          <div class="press-card press-card--bizline" aria-hidden="true"><img src="assets/logos/press/businessline.png" alt="" loading="lazy" /><span>businessline</span></div>
+          <div class="press-card press-card--biztoday" aria-hidden="true"><img src="assets/logos/press/business-today.png" alt="" loading="lazy" /><span>Business Today</span></div>
+          <div class="press-card press-card--cnbc" aria-hidden="true"><img src="assets/logos/press/cnbc-awaaz.png" alt="" loading="lazy" /><span>CNBC Awaaz</span></div>
+          <div class="press-card press-card--ys" aria-hidden="true"><img src="assets/logos/press/yourstory.png" alt="" loading="lazy" /><span>YourStory</span></div>
+          <div class="press-card press-card--inc42" aria-hidden="true"><img src="assets/logos/press/inc42.png" alt="" loading="lazy" /><span>Inc42</span></div>
+          <div class="press-card press-card--vc" aria-hidden="true"><img src="assets/logos/press/vccircle.png" alt="" loading="lazy" /><span>VCCircle</span></div>
+          <div class="press-card press-card--print" aria-hidden="true"><img src="assets/logos/press/theprint.png" alt="" loading="lazy" /><span>ThePrint</span></div>
+        </div>
+      </div>
+      <div class="about-press-marquee">
+        <div class="about-press-track about-press-track--reverse">
+          <div class="press-card press-card--week"><img src="assets/logos/press/the-week.png" alt="The Week" loading="lazy" /><span>The Week</span></div>
+          <div class="press-card press-card--newsmin"><img src="assets/logos/press/the-news-minute.png" alt="The News Minute" loading="lazy" /><span>The News Minute</span></div>
+          <div class="press-card press-card--deccan"><img src="assets/logos/press/deccan-herald.png" alt="Deccan Herald" loading="lazy" /><span>Deccan Herald</span></div>
+          <div class="press-card press-card--tribune"><img src="assets/logos/press/the-tribune.png" alt="The Tribune" loading="lazy" /><span>The Tribune</span></div>
+          <div class="press-card press-card--midday"><img src="assets/logos/press/mid-day.png" alt="Mid Day" loading="lazy" /><span>Mid Day</span></div>
+          <div class="press-card press-card--hans"><img src="assets/logos/press/hans-india.png" alt="Hans India" loading="lazy" /><span>Hans India</span></div>
+          <div class="press-card press-card--techcircle"><img src="assets/logos/press/techcircle.png" alt="TechCircle" loading="lazy" /><span>TechCircle</span></div>
+          <div class="press-card press-card--techstory"><img src="assets/logos/press/techstory.png" alt="TechStory" loading="lazy" /><span>TechStory</span></div>
+          <div class="press-card press-card--devdiscourse"><img src="assets/logos/press/devdiscourse.png" alt="Devdiscourse" loading="lazy" /><span>Devdiscourse</span></div>
+          <div class="press-card press-card--scoop"><img src="assets/logos/press/scoopwhoop.png" alt="ScoopWhoop" loading="lazy" /><span>ScoopWhoop</span></div>
+          <!-- duplicate set for seamless infinite loop -->
+          <div class="press-card press-card--week" aria-hidden="true"><img src="assets/logos/press/the-week.png" alt="" loading="lazy" /><span>The Week</span></div>
+          <div class="press-card press-card--newsmin" aria-hidden="true"><img src="assets/logos/press/the-news-minute.png" alt="" loading="lazy" /><span>The News Minute</span></div>
+          <div class="press-card press-card--deccan" aria-hidden="true"><img src="assets/logos/press/deccan-herald.png" alt="" loading="lazy" /><span>Deccan Herald</span></div>
+          <div class="press-card press-card--tribune" aria-hidden="true"><img src="assets/logos/press/the-tribune.png" alt="" loading="lazy" /><span>The Tribune</span></div>
+          <div class="press-card press-card--midday" aria-hidden="true"><img src="assets/logos/press/mid-day.png" alt="" loading="lazy" /><span>Mid Day</span></div>
+          <div class="press-card press-card--hans" aria-hidden="true"><img src="assets/logos/press/hans-india.png" alt="" loading="lazy" /><span>Hans India</span></div>
+          <div class="press-card press-card--techcircle" aria-hidden="true"><img src="assets/logos/press/techcircle.png" alt="" loading="lazy" /><span>TechCircle</span></div>
+          <div class="press-card press-card--techstory" aria-hidden="true"><img src="assets/logos/press/techstory.png" alt="" loading="lazy" /><span>TechStory</span></div>
+          <div class="press-card press-card--devdiscourse" aria-hidden="true"><img src="assets/logos/press/devdiscourse.png" alt="" loading="lazy" /><span>Devdiscourse</span></div>
+          <div class="press-card press-card--scoop" aria-hidden="true"><img src="assets/logos/press/scoopwhoop.png" alt="" loading="lazy" /><span>ScoopWhoop</span></div>
+        </div>
       </div>
     </div>
   </div>
@@ -436,41 +790,56 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
   </div>
 </section>
 
-<!-- FOUNDER NOTE — Eternal pattern -->
-<section class="about-founder">
+<!-- WHERE WE WORK -->
+<section class="about-place">
   <div class="container">
-    <div class="about-founder-head reveal">
-      <div class="about-founder-photo">
-        <img src="assets/founders/ashok-reddy.jpg" alt="Ashok Reddy, founder of Inspirelabs" loading="lazy" />
-      </div>
-      <div class="about-founder-meta">
-        <span class="about-founder-date">Since 2013</span>
-        <h2 class="about-founder-title">A note from our Founder, Ashok Reddy</h2>
-      </div>
+    <div class="about-place-head reveal">
+      <h2 class="about-place-title">Built in Hyderabad. Twelve years and counting.</h2>
+      <p class="about-place-intro">One office, one team, one operating standard. The platforms ship from a building in Gachibowli. The company has not had a second headquarters since 2013.</p>
     </div>
-    <p class="about-founder-summary reveal">I wanted to build a company that earned its reputation slowly. Twelve years on, that is still the only rule.</p>
-    <div class="about-founder-body reveal">
-      <p>Dear reader,</p>
-      <p>I started Inspirelabs in 2013 with no investors and no plan beyond the next twelve months. The first product was GrabOn. I gave myself one rule. If the work is useful, the rest follows. That rule is still the only rule.</p>
-      <p>Twelve years on, GrabOn is one of five platforms we run. The others are GrabCash, GrabShare, RankDrive and Alternatives.co. Together they route a billion conversions a year and have unlocked over &#8377;2,500 crore in savings for shoppers. We have not raised a rupee. Bootstrapped since the first hire. Profitable since year three.</p>
-      <p>In many ways we feel like we have broken some ice. We have shown that ordinary people with conviction and hard work can come together, defy the odds, and in under two decades build something durable. The journey has created real wealth, not just for me, but for the operators who built it with me and their families. That is the side-effect, not the goal. The goal has always been to do something worthwhile with the time we have.</p>
-      <p><strong>The only company I am interested in is the one that exists in 2035.</strong> Not the one that wins the quarter that ends on Friday. If you are working with us, hiring us, partnering with us, or reading us for the first time, that is the frame. The work compounds when you give it the time it asks for. I have given it twelve. I plan to give it twelve more.</p>
-      <p>To everyone who has built this place with me &mdash; the operators, the brands, the shoppers, the families who put up with the late nights &mdash; thank you. The receipts are still stacking.</p>
-      <div class="about-founder-sig">
-        <span class="about-founder-sig-name">Ashok Reddy</span>
-        <span class="about-founder-sig-title">Founder, Inspirelabs Solutions Ltd.</span>
+    <div class="about-place-mosaic reveal">
+      <figure class="about-place-cell about-place-cell--lg"><img src="assets/culture/office-bay.jpg" alt="Inspirelabs office bay in Hyderabad" loading="lazy" /></figure>
+      <figure class="about-place-cell about-place-cell--md"><img src="assets/culture/team-meet.jpg" alt="A team meeting in progress" loading="lazy" /></figure>
+      <figure class="about-place-cell about-place-cell--md"><img src="assets/culture/cafeteria.jpg" alt="Inspirelabs cafeteria" loading="lazy" /></figure>
+      <figure class="about-place-cell about-place-cell--sm"><img src="assets/culture/team-collab.jpg" alt="Operators collaborating on a build" loading="lazy" /></figure>
+      <figure class="about-place-cell about-place-cell--sm"><img src="assets/culture/studio-3.jpg" alt="A focused workspace" loading="lazy" /></figure>
+      <figure class="about-place-cell about-place-cell--wide"><img src="assets/culture/team-portrait.jpg" alt="Inspirelabs team portrait" loading="lazy" /></figure>
+      <div class="about-place-cell about-place-cell--address">
+        <div class="about-place-eyebrow">The address</div>
+        <address class="about-place-addr">
+          21st Floor, OneWest Building<br/>
+          Financial District, Gachibowli<br/>
+          Hyderabad 500032, India
+        </address>
+        <a href="contact.html" class="tlink about-place-link">Get directions &rarr;</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- VISION -->
-<section class="about-vision">
+<!-- THE MARK -->
+<section class="about-mark">
   <div class="container">
-    <div class="about-vision-inner reveal">
-      <span class="about-vision-eyebrow">Vision</span>
-      <h2 class="about-vision-text">We are here to help businesses succeed.</h2>
-      <div class="about-vision-attrib">Inspirelabs &middot; Since 2013</div>
+    <div class="about-mark-grid">
+      <div class="about-mark-visual reveal">
+        <svg class="about-mark-svg" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Inspirelabs mark">
+          <rect x="20"  y="20"  width="92" height="92" rx="14" fill="#FF7A45"/>
+          <rect x="128" y="20"  width="92" height="92" rx="14" fill="#06101D"/>
+          <rect x="20"  y="128" width="92" height="92" rx="14" fill="#6F7583"/>
+          <rect x="129" y="129" width="90" height="90" rx="13" fill="none" stroke="#8C92A0" stroke-width="2" stroke-dasharray="6 5"/>
+        </svg>
+      </div>
+      <div class="about-mark-text reveal">
+        <div class="about-mark-eyebrow">The mark</div>
+        <h2 class="about-mark-title">Built. And building.</h2>
+        <p class="about-mark-body">A 2&times;2 grid of cells. The filled cells stand for what we operate today; the dashed cell is the next bet. Room for growth is part of the mark.</p>
+        <p class="about-mark-body">Sits naturally next to Linear, Notion, Figma. Brands where the wordmark is calm because the product is loud. The single orange cell signals the platform we are building right now.</p>
+        <div class="about-mark-palette" aria-label="Brand palette">
+          <div class="about-mark-swatch"><span class="swatch-chip" style="background:#06101D"></span><span class="swatch-hex">#06101D</span></div>
+          <div class="about-mark-swatch"><span class="swatch-chip" style="background:#FFFFFF; box-shadow: inset 0 0 0 1px var(--hairline);"></span><span class="swatch-hex">#FFFFFF</span></div>
+          <div class="about-mark-swatch"><span class="swatch-chip" style="background:#FF7A45"></span><span class="swatch-hex">#FF7A45</span></div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -479,7 +848,7 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
 <section class="about-doors">
   <div class="container">
     <div class="about-doors-head reveal">
-      <h2 class="about-doors-title">Three ways in from here.</h2>
+      <h2 class="about-doors-title">We are here to help businesses succeed.</h2>
     </div>
     <div class="about-doors-grid reveal">
       <a href="careers.html" class="about-door">
@@ -517,7 +886,7 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
         </address>
       </div>
       <div class="footer-col">
-        <h5>Our products</h5>
+        <h5>Our portfolio</h5>
         <a href="https://www.grabon.in" target="_blank" rel="noopener">GrabOn</a>
         <a href="https://www.grabcash.in" target="_blank" rel="noopener">GrabCash</a>
         <a href="https://www.grabshare.com" target="_blank" rel="noopener">GrabShare</a>
@@ -530,6 +899,7 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
         <a href="services.html">Services</a>
         <a href="ai-agents.html">AI Agents</a>
         <a href="platform.html">Platform</a>
+        <a href="insights.html">Insights</a>
       </div>
       <div class="footer-col">
         <h5>Company</h5>
@@ -548,16 +918,26 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
     <div class="footer-bottom">
       <div>&copy; <span data-year>2026</span> Inspirelabs Solutions Ltd. Bootstrapped in Hyderabad since 2013.</div>
       <div class="footer-bottom-links">
-        <a href="about.html">About</a>
-        <a href="careers.html">Careers</a>
-        <a href="contact.html">Contact</a>
-      </div>
+ <a href="privacy.html">Privacy</a>
+ <a href="terms.html">Terms</a>
+ <a href="trust.html">Trust &amp; security</a>
+ </div>
     </div>
   </div>
 </footer>
 
 <script>
 (() => { const nav = document.getElementById('nav'); if (!nav) return; const onScroll = () => { if (window.scrollY > 8) nav.classList.add('scrolled'); else nav.classList.remove('scrolled'); }; window.addEventListener('scroll', onScroll, { passive: true }); onScroll(); })();
+(() => {
+  const nav = document.getElementById('nav');
+  if (!nav) return;
+  const btn = nav.querySelector('.nav-toggle');
+  if (!btn) return;
+  const close = () => { nav.classList.remove('is-open'); btn.setAttribute('aria-expanded', 'false'); btn.setAttribute('aria-label', 'Open menu'); document.body.style.overflow = ''; };
+  btn.addEventListener('click', () => { const open = !nav.classList.contains('is-open'); nav.classList.toggle('is-open', open); btn.setAttribute('aria-expanded', String(open)); btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu'); document.body.style.overflow = open ? 'hidden' : ''; });
+  nav.querySelectorAll('.nav-link').forEach(a => a.addEventListener('click', close));
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
+})();
 (() => { const els = document.querySelectorAll('.reveal'); if (!('IntersectionObserver' in window)) { els.forEach(e => e.classList.add('in-view')); return; } const io = new IntersectionObserver((entries) => { entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in-view'); io.unobserve(en.target); } }); }, { rootMargin: '0px 0px -10% 0px', threshold: 0.05 }); els.forEach(e => io.observe(e)); })();
 (() => { const y = new Date().getFullYear(); document.querySelectorAll('[data-year]').forEach(e => { e.textContent = y; }); })();
 </script>
