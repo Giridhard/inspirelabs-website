@@ -4,12 +4,12 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Contact Us | Inspirelabs</title>
-<meta name="description" content="Have a question, a brand growth problem to solve, or a partnership to discuss? Pick the right inbox and we will reply." />
+<meta name="description" content="A real operator on the other side of the inbox. Pick the right route — partnerships, press, investors, careers — and we reply within one working day." />
 <meta name="theme-color" content="#FFFFFF" />
 <link rel="canonical" href="https://inspirelabs.com/contact.html" />
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Contact Us | Inspirelabs" />
-<meta property="og:description" content="Have a question, a brand growth problem to solve, or a partnership to discuss? Pick the right inbox and we will reply." />
+<meta property="og:description" content="A real operator on the other side of the inbox. Pick the right route — partnerships, press, investors, careers — and we reply within one working day." />
 <meta property="og:url" content="https://inspirelabs.com/contact.html" />
 <meta property="og:image" content="https://inspirelabs.com/assets/brand/inspirelabs-share-card.png" />
 <meta property="og:image:width" content="1200" />
@@ -17,7 +17,7 @@
 <meta property="og:site_name" content="Inspirelabs" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Contact Us | Inspirelabs" />
-<meta name="twitter:description" content="Have a question, a brand growth problem to solve, or a partnership to discuss? Pick the right inbox and we will reply." />
+<meta name="twitter:description" content="A real operator on the other side of the inbox. Pick the right route — partnerships, press, investors, careers — and we reply within one working day." />
 <meta name="twitter:image" content="https://inspirelabs.com/assets/brand/inspirelabs-share-card.png" />
 <link rel="icon" type="image/svg+xml" href="assets/brand/inspirelabs-mark.svg" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -28,6 +28,7 @@
 :root {
   --white: #FFFFFF;
   --bg: #FFFFFF;
+  --cream: #FAF7F1;
   --text: #0E0F0A;
   --text-secondary: #6F7583;
   --text-tertiary: #8C92A0;
@@ -42,7 +43,6 @@
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Brand: JetBrains Mono on all small labels / eyebrows / metadata */
 .hero-eyebrow,
 .hero-stamp,
 .about-hero-eyebrow,
@@ -162,13 +162,13 @@ section.section-tight-top { padding-top: 0; }
 .tlink:hover { color: var(--accent-deep); border-color: var(--accent); }
 .tlink:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; border-radius: 2px; }
 
+/* ── Hero ── */
 .hero {
   position: relative;
-  min-height: 100vh;
-  min-height: 100svh;
-  padding: clamp(64px, 8vh, 120px) 0;
+  min-height: 86vh;
+  min-height: 86svh;
+  padding: clamp(64px, 8vh, 120px) 0 clamp(56px, 7vh, 96px);
   overflow: hidden;
-  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -180,41 +180,152 @@ section.section-tight-top { padding-top: 0; }
     linear-gradient(to bottom, rgba(15, 17, 23, 0.05) 1px, transparent 1px);
   background-size: 88px 88px;
   background-position: -1px -1px;
-  mask-image: radial-gradient(ellipse 50% 60% at 50% 30%, black 0%, transparent 75%);
-  -webkit-mask-image: radial-gradient(ellipse 50% 60% at 50% 30%, black 0%, transparent 75%);
+  mask-image: radial-gradient(ellipse 60% 65% at 30% 35%, black 0%, transparent 75%);
+  -webkit-mask-image: radial-gradient(ellipse 60% 65% at 30% 35%, black 0%, transparent 75%);
   pointer-events: none;
   z-index: 0;
 }
 .hero-inner { position: relative; z-index: 1; }
-.hero h1 { max-width: 18ch; margin: 0 auto; }
-.hero-lead {
-  margin-top: 24px;
-  font-size: clamp(16px, 1.3vw, 19px);
-  line-height: 1.55;
+.contact-hero-eyebrow {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-size: 12px; letter-spacing: 0.10em; text-transform: uppercase;
+  color: var(--text-secondary); font-weight: 600;
+  margin-bottom: 28px;
+}
+.contact-hero-eyebrow .live-dot {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: #16A34A;
+  box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.55);
+  animation: livePulse 2s var(--ease) infinite;
+}
+@keyframes livePulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.55); }
+  60% { box-shadow: 0 0 0 8px rgba(22, 163, 74, 0); }
+}
+.contact-hero h1 { max-width: 18ch; }
+.contact-hero-lead {
+  margin-top: 28px;
+  font-size: clamp(17px, 1.45vw, 22px);
+  line-height: 1.5;
   color: var(--text-secondary);
   max-width: 56ch;
-  margin-left: auto; margin-right: auto;
+  font-weight: 300;
 }
+.contact-hero-meta {
+  margin-top: 56px;
+  display: flex; flex-wrap: wrap;
+  gap: clamp(28px, 3vw, 56px);
+  border-top: 1px solid var(--hairline);
+  padding-top: 28px;
+}
+.contact-hero-meta-item { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.contact-hero-meta-lbl {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; letter-spacing: 0.10em; text-transform: uppercase;
+  color: var(--text-tertiary); font-weight: 600;
+}
+.contact-hero-meta-val {
+  font-size: clamp(15px, 1.1vw, 17px); color: var(--text); font-weight: 500;
+  letter-spacing: -0.01em;
+}
+.contact-hero-meta-val a { color: var(--text); border-bottom: 1px solid transparent; transition: border-color 0.2s var(--ease), color 0.2s var(--ease); }
+.contact-hero-meta-val a:hover { color: var(--accent-deep); border-bottom-color: var(--accent); }
 
-/* Two col body */
+/* ── Operator standby band: 3 priority routes ── */
+.standby {
+  background: var(--cream);
+  border-top: 1px solid var(--hairline);
+  border-bottom: 1px solid var(--hairline);
+  padding: clamp(56px, 7vw, 96px) 0;
+}
+.standby-head {
+  display: flex; align-items: end; justify-content: space-between;
+  gap: 32px; flex-wrap: wrap;
+  margin-bottom: clamp(36px, 4vw, 56px);
+}
+.standby-head h2 {
+  font-size: clamp(28px, 3vw, 44px); font-weight: 500;
+  letter-spacing: -0.02em; line-height: 1.12;
+  max-width: 22ch;
+}
+.standby-head-meta {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--text-secondary); font-weight: 600;
+}
+.standby-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: clamp(20px, 2vw, 28px);
+}
+@media (max-width: 880px) { .standby-grid { grid-template-columns: 1fr; } }
+.standby-card {
+  background: var(--white);
+  border: 1px solid var(--hairline);
+  border-radius: 10px;
+  padding: clamp(28px, 2.6vw, 40px);
+  display: flex; flex-direction: column;
+  gap: 16px;
+  transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease), border-color 0.3s var(--ease);
+}
+.standby-card:hover { transform: translateY(-3px); box-shadow: 0 18px 44px -28px rgba(15,17,23,0.18); border-color: var(--line); }
+.standby-card-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; letter-spacing: 0.10em; text-transform: uppercase;
+  color: var(--accent); font-weight: 700;
+}
+.standby-card h3 {
+  font-size: clamp(20px, 1.8vw, 24px); font-weight: 500;
+  letter-spacing: -0.02em; line-height: 1.18;
+}
+.standby-card p {
+  font-size: 14.5px; line-height: 1.55;
+  color: var(--text-secondary);
+}
+.standby-card-cta {
+  margin-top: auto;
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 14.5px; font-weight: 500;
+  color: var(--text);
+  padding-bottom: 2px;
+  border-bottom: 1.5px solid var(--text);
+  align-self: flex-start;
+  transition: color 0.2s var(--ease), border-color 0.2s var(--ease);
+}
+.standby-card-cta::after { content: '→'; transition: transform 0.2s var(--ease); }
+.standby-card:hover .standby-card-cta { color: var(--accent-deep); border-color: var(--accent); }
+.standby-card:hover .standby-card-cta::after { transform: translateX(3px); }
+
+/* ── Two col body (form + HQ photo) ── */
 .contact-body {
   display: grid;
   grid-template-columns: 1.05fr 1fr;
-  gap: clamp(32px, 4vw, 64px);
+  gap: clamp(40px, 4.5vw, 80px);
   align-items: start;
 }
 @media (max-width: 880px) {
   .contact-body { grid-template-columns: 1fr; }
 }
 
-/* Form */
-.contact-form { display: flex; flex-direction: column; gap: 18px; }
-.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.contact-form-head { margin-bottom: 32px; }
+.contact-form-head h2 {
+  font-size: clamp(28px, 2.8vw, 40px); font-weight: 500;
+  letter-spacing: -0.02em; line-height: 1.12;
+  margin-bottom: 14px;
+  max-width: 18ch;
+}
+.contact-form-head p {
+  font-size: clamp(15px, 1.15vw, 17px); line-height: 1.55;
+  color: var(--text-secondary); max-width: 48ch;
+}
+
+.contact-form { display: flex; flex-direction: column; gap: 20px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
 @media (max-width: 600px) { .form-row { grid-template-columns: 1fr; } }
-.form-field { display: flex; flex-direction: column; gap: 6px; }
+.form-field { display: flex; flex-direction: column; gap: 7px; }
 .form-field label {
-  font-size: 12px;
-  letter-spacing: 0.06em;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--text-tertiary);
   font-weight: 600;
@@ -226,7 +337,7 @@ section.section-tight-top { padding-top: 0; }
   background: transparent;
   border: 0;
   border-bottom: 1px solid var(--line);
-  padding: 10px 0;
+  padding: 11px 0;
   font-size: 16px;
   color: var(--text);
   outline: none;
@@ -239,24 +350,42 @@ section.section-tight-top { padding-top: 0; }
 .form-field input:focus-visible,
 .form-field select:focus-visible,
 .form-field textarea:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; border-radius: 2px; }
-.form-field textarea { min-height: 120px; resize: vertical; }
-.form-submit-wrap { padding-top: 12px; }
+.form-field textarea { min-height: 130px; resize: vertical; }
+.form-submit-wrap { padding-top: 14px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
 .form-submit {
-  display: inline-block;
+  display: inline-flex; align-items: center; gap: 10px;
   font-size: 15px; font-weight: 500;
-  color: var(--text);
-  padding-bottom: 2px;
-  border-bottom: 1.5px solid var(--text);
-  background: none; cursor: pointer;
-  transition: color 0.2s var(--ease), border-color 0.2s var(--ease);
+  color: var(--white);
+  background: var(--text);
+  padding: 14px 26px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.2s var(--ease), transform 0.2s var(--ease);
 }
-.form-submit:hover { color: var(--accent-deep); border-bottom-color: var(--accent); }
+.form-submit::after { content: '→'; transition: transform 0.2s var(--ease); }
+.form-submit:hover { background: var(--accent-deep); transform: translateY(-1px); }
+.form-submit:hover::after { transform: translateX(3px); }
+.form-submit:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+.form-fineprint {
+  font-size: 13px;
+  color: var(--text-tertiary);
+  max-width: 32ch;
+  line-height: 1.5;
+}
 
-/* Image with HQ overlay */
+/* ── HQ panel ── */
+.hq-panel {
+  position: sticky; top: 96px;
+  border: 1px solid var(--hairline);
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--white);
+  box-shadow: 0 22px 60px -34px rgba(15,17,23,0.15);
+}
+@media (max-width: 880px) { .hq-panel { position: static; } }
 .hq-photo-wrap {
   position: relative;
-  aspect-ratio: 4/5;
-  border-radius: 8px;
+  aspect-ratio: 16/10;
   overflow: hidden;
   background: var(--tile-dark);
 }
@@ -264,81 +393,188 @@ section.section-tight-top { padding-top: 0; }
   position: absolute; inset: 0;
   width: 100%; height: 100%;
   object-fit: cover;
-  opacity: 0.85;
+  opacity: 0.92;
 }
 .hq-photo-wrap::after {
   content: '';
   position: absolute; inset: 0;
-  background: linear-gradient(180deg, rgba(15,17,23,0) 35%, rgba(15,17,23,0.85) 100%);
+  background: linear-gradient(180deg, rgba(15,17,23,0) 30%, rgba(15,17,23,0.78) 100%);
 }
 .hq-photo-overlay {
   position: absolute; left: 0; right: 0; bottom: 0;
-  padding: clamp(28px, 3vw, 40px);
+  padding: clamp(22px, 2.4vw, 32px);
   z-index: 2;
   color: var(--white);
 }
 .hq-photo-overlay-label {
-  font-size: 11px; letter-spacing: 0.12em;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; letter-spacing: 0.10em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.65);
+  color: rgba(255,255,255,0.78);
   font-weight: 600;
-  margin-bottom: 14px;
+  margin-bottom: 10px;
   display: flex; align-items: center; gap: 12px;
 }
 .hq-photo-overlay-label::before {
   content: ''; width: 24px; height: 1.5px; background: var(--accent);
 }
 .hq-photo-overlay h3 {
-  font-size: clamp(22px, 2.4vw, 30px);
+  font-size: clamp(22px, 2.2vw, 28px);
   font-weight: 500;
   letter-spacing: -0.02em;
   color: var(--white);
   line-height: 1.15;
-  margin-bottom: 10px;
 }
-.hq-photo-overlay address {
-  font-size: 14.5px;
-  color: rgba(255,255,255,0.8);
-  line-height: 1.6;
-  font-style: normal;
-}
-.hq-photo-overlay address a { color: var(--white); }
 
-/* Direct routes grid */
-.routes-grid {
+.hq-meta {
+  padding: clamp(24px, 2.4vw, 32px);
+  display: flex; flex-direction: column; gap: 22px;
+}
+.hq-meta-block { display: flex; flex-direction: column; gap: 6px; }
+.hq-meta-lbl {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; letter-spacing: 0.10em; text-transform: uppercase;
+  color: var(--text-tertiary); font-weight: 600;
+}
+.hq-meta-val {
+  font-size: 15.5px; color: var(--text);
+  line-height: 1.55; font-style: normal;
+  font-weight: 400;
+}
+.hq-meta-val a {
+  color: var(--text);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s var(--ease), color 0.2s var(--ease);
+}
+.hq-meta-val a:hover { color: var(--accent-deep); border-bottom-color: var(--accent); }
+.hq-meta-row {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 22px;
+  padding-top: 18px; border-top: 1px solid var(--hairline);
+}
+@media (max-width: 460px) { .hq-meta-row { grid-template-columns: 1fr; } }
+.hq-meta-cta {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 14.5px; font-weight: 500;
+  color: var(--text);
+  padding: 12px 18px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  align-self: flex-start;
+  transition: border-color 0.2s var(--ease), color 0.2s var(--ease), transform 0.2s var(--ease);
+}
+.hq-meta-cta:hover { border-color: var(--text); color: var(--accent-deep); transform: translateY(-1px); }
+.hq-meta-cta-row { display: flex; gap: 12px; flex-wrap: wrap; padding-top: 4px; }
+
+/* ── Inboxes grid ── */
+.inboxes-section { background: var(--white); }
+.inboxes-head {
+  display: flex; align-items: end; justify-content: space-between;
+  gap: 32px; flex-wrap: wrap;
+  margin-bottom: clamp(36px, 4vw, 56px);
+}
+.inboxes-head .section-title-xl { margin-bottom: 0; }
+.inboxes-head p {
+  font-size: clamp(15px, 1.15vw, 17px); line-height: 1.55;
+  color: var(--text-secondary); max-width: 38ch;
+}
+.inboxes-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  column-gap: clamp(32px, 3vw, 56px);
-  row-gap: 0;
-  margin-top: 32px;
+  grid-template-columns: repeat(3, 1fr);
   border-top: 1px solid var(--hairline);
+  border-left: 1px solid var(--hairline);
 }
-.route-card {
-  border: none;
+.inbox-card {
+  border-right: 1px solid var(--hairline);
   border-bottom: 1px solid var(--hairline);
-  background: none;
-  padding: clamp(28px, 3vw, 40px) 0;
-  display: flex; flex-direction: column; gap: 8px;
+  padding: clamp(28px, 2.6vw, 40px);
+  display: flex; flex-direction: column; gap: 12px;
+  background: var(--white);
+  transition: background 0.25s var(--ease);
+  position: relative;
 }
-.route-card h3 {
-  font-size: 17px; font-weight: 600;
-  letter-spacing: -0.015em; color: var(--text);
+.inbox-card:hover { background: var(--cream); }
+.inbox-card-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; letter-spacing: 0.10em;
+  color: var(--text-tertiary); font-weight: 700;
 }
-.route-card p {
-  font-size: 14px;
+.inbox-card h3 {
+  font-size: clamp(19px, 1.6vw, 22px); font-weight: 500;
+  letter-spacing: -0.018em; line-height: 1.18;
+  color: var(--text);
+}
+.inbox-card p {
+  font-size: 14.5px;
   color: var(--text-secondary);
-  line-height: 1.5;
+  line-height: 1.55;
   margin-bottom: 8px;
+  max-width: 32ch;
 }
-.route-card a { font-size: 14px; }
-@media (max-width: 1000px) { .routes-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 540px) { .routes-grid { grid-template-columns: 1fr; } }
+.inbox-card-mail {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13.5px;
+  color: var(--text);
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 2px;
+  align-self: flex-start;
+  margin-top: auto;
+  word-break: break-word;
+  transition: color 0.2s var(--ease), border-color 0.2s var(--ease);
+}
+.inbox-card-mail:hover { color: var(--accent-deep); border-color: var(--accent); }
+@media (max-width: 1000px) { .inboxes-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .inboxes-grid { grid-template-columns: 1fr; } }
+
+/* ── Reassurance band ── */
+.assurance {
+  background: var(--text);
+  color: var(--white);
+}
+.assurance-inner {
+  display: grid; grid-template-columns: 1.1fr 1fr;
+  gap: clamp(40px, 5vw, 80px);
+  align-items: center;
+}
+@media (max-width: 880px) { .assurance-inner { grid-template-columns: 1fr; } }
+.assurance h2 {
+  font-size: clamp(30px, 3.2vw, 48px); font-weight: 500;
+  letter-spacing: -0.02em; line-height: 1.12;
+  color: var(--white);
+  max-width: 18ch;
+}
+.assurance h2 em {
+  font-style: normal;
+  color: var(--accent);
+}
+.assurance p {
+  font-size: clamp(15px, 1.15vw, 18px); line-height: 1.6;
+  color: rgba(255,255,255,0.72);
+  max-width: 52ch;
+  margin-top: 24px;
+}
+.assurance-stats {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  border-top: 1px solid rgba(255,255,255,0.14);
+  padding-top: 32px;
+}
+.assurance-stat-val {
+  font-size: clamp(36px, 3.6vw, 56px); font-weight: 400;
+  letter-spacing: -0.025em; line-height: 1;
+  color: var(--white);
+}
+.assurance-stat-lbl {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase;
+  color: rgba(255,255,255,0.55);
+  font-weight: 600;
+  margin-top: 12px;
+}
 
 footer {
   padding: 88px 0 32px;
   background: var(--white);
   border-top: 1px solid var(--hairline);
-  margin-top: 56px;
 }
 .footer-grid { display: grid; grid-template-columns: 1.6fr repeat(4, 1fr); gap: 56px; }
 .footer-brand-block .nav-brand { font-size: 24px; }
@@ -380,116 +616,261 @@ footer {
 
 <main>
 
-<section class="hero">
+<!-- HERO -->
+<section class="hero contact-hero">
   <div class="hero-grid"></div>
   <div class="container hero-inner">
-    <h1 class="display-1">We&rsquo;d love to hear from you.</h1>
-    <p class="hero-lead">Have a question, a brand growth problem to solve, or a partnership to discuss? Pick the right inbox below.</p>
-  </div>
-</section>
+    <div class="contact-hero-eyebrow"><span class="live-dot" aria-hidden="true"></span>Inboxes are open. A real operator is on the other side.</div>
+    <h1 class="display-1">Let&rsquo;s talk about the growth problem you&rsquo;re trying to solve.</h1>
+    <p class="contact-hero-lead">Brand partnerships, integration, press, investor relations or careers &mdash; pick the right route below and you reach the team that owns the answer. No gatekeepers, no auto-replies.</p>
 
-<section class="section-tight-top">
-  <div class="container">
-    <div class="contact-body reveal">
-      <!-- TODO: Replace YOUR_FORM_ID with the Formspree form ID (https://formspree.io). Or swap action= for any other form backend (Web3Forms, Netlify Forms, your own endpoint). -->
-      <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-        <div class="form-row">
-          <div class="form-field">
-            <label for="company">Select company</label>
-            <select id="company" name="company" required>
-              <option value="">Choose one</option>
-              <option>Inspirelabs (parent)</option>
-              <option>GrabOn</option>
-              <option>GrabCash</option>
-              <option>GrabShare</option>
-              <option>RankDrive</option>
-              <option>Alternatives.co</option>
-            </select>
-          </div>
-          <div class="form-field">
-            <label for="topic">How can we help?</label>
-            <select id="topic" name="topic" required>
-              <option value="">Choose one</option>
-              <option>Brand partnership</option>
-              <option>Press &amp; media</option>
-              <option>Investor relations</option>
-              <option>Careers</option>
-              <option>Something else</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="form-row">
-          <div class="form-field">
-            <label for="name">Name</label>
-            <input id="name" name="name" type="text" autocomplete="name" required />
-          </div>
-          <div class="form-field">
-            <label for="email">Email</label>
-            <input id="email" name="email" type="email" autocomplete="email" required />
-          </div>
-        </div>
-
-        <div class="form-field">
-          <label for="mobile">Mobile</label>
-          <input id="mobile" name="mobile" type="tel" autocomplete="tel" />
-        </div>
-
-        <div class="form-field">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" required placeholder="Tell us a little about what you are working on."></textarea>
-        </div>
-
-        <div class="form-submit-wrap">
-          <button class="form-submit" type="submit">Send the message</button>
-        </div>
-      </form>
-
-      <div class="hq-photo-wrap">
-        <!-- TODO: Swap gradient placeholder for a real photo of the Hyderabad HQ. -->
-        <img src="assets/art/gradient-mesh.svg" alt="Inspirelabs HQ" loading="lazy" />
-        <div class="hq-photo-overlay">
-          <div class="hq-photo-overlay-label">Inspirelabs HQ</div>
-          <h3>Hyderabad, India</h3>
-          <address>
-            21st Floor, OneWest Building<br/>
-            Financial District, Gachibowli<br/>
-            Hyderabad 500032<br/><br/>
-            <a href="tel:+914032537070">040-32537070</a> &middot; <a href="mailto:contact@inspirelabs.com">contact@inspirelabs.com</a>
-          </address>
-        </div>
+    <div class="contact-hero-meta">
+      <div class="contact-hero-meta-item">
+        <div class="contact-hero-meta-lbl">Reply window</div>
+        <div class="contact-hero-meta-val">Within 1 working day</div>
+      </div>
+      <div class="contact-hero-meta-item">
+        <div class="contact-hero-meta-lbl">Operating hours</div>
+        <div class="contact-hero-meta-val">Mon&ndash;Fri &middot; 10:00&ndash;19:00 IST</div>
+      </div>
+      <div class="contact-hero-meta-item">
+        <div class="contact-hero-meta-lbl">General desk</div>
+        <div class="contact-hero-meta-val"><a href="mailto:contact@inspirelabs.com">contact@inspirelabs.com</a></div>
+      </div>
+      <div class="contact-hero-meta-item">
+        <div class="contact-hero-meta-lbl">Phone</div>
+        <div class="contact-hero-meta-val"><a href="tel:+914032537070">040-3253 7070</a></div>
       </div>
     </div>
   </div>
 </section>
 
-<section style="border-top: 1px solid var(--hairline);">
+<!-- OPERATOR STANDBY: 3 priority routes -->
+<section class="standby">
   <div class="container">
-    <div class="reveal">
-      <h2 class="section-title-xl">Direct inboxes</h2>
-      <p class="biz-intro">Skip the form. Use the right inbox and you reach the team that owns the answer.</p>
+    <div class="standby-head reveal">
+      <h2>Three reasons most people write in.</h2>
+      <div class="standby-head-meta">/ FAST&nbsp;TRACKS</div>
+    </div>
+    <div class="standby-grid reveal">
+      <a class="standby-card" href="mailto:partnerships@inspirelabs.com?subject=Brand%20partnership%20%C2%B7%20Inspirelabs">
+        <div class="standby-card-num">/ 01 &middot; BRANDS</div>
+        <h3>You want a performance partnership across the network.</h3>
+        <p>Pure performance. Paid only on the conversion. Distribution across 4,500+ brands and 200M+ users, run by a named operator on your weekly review.</p>
+        <span class="standby-card-cta">Talk to partnerships</span>
+      </a>
+      <a class="standby-card" href="mailto:integrations@inspirelabs.com?subject=Tech%20integration%20%C2%B7%20Inspirelabs">
+        <div class="standby-card-num">/ 02 &middot; INTEGRATION</div>
+        <h3>You build a platform our customers use.</h3>
+        <p>Affiliate, attribution, CDP, ESP, BI, ad platforms. Server-to-server, API-first, with a published partner spec and a direct line to engineering.</p>
+        <span class="standby-card-cta">Talk to integrations</span>
+      </a>
+      <a class="standby-card" href="mailto:careers@inspirelabs.com?subject=Joining%20the%20team%20%C2%B7%20Inspirelabs">
+        <div class="standby-card-num">/ 03 &middot; CAREERS</div>
+        <h3>You want to join the room where the work is built.</h3>
+        <p>Tell us what you have shipped, the problem you would not let go, and the team you held the standard with. We read every note.</p>
+        <span class="standby-card-cta">Talk to people-ops</span>
+      </a>
+    </div>
+  </div>
+</section>
 
-      <div class="routes-grid">
-        <article class="route-card">
-          <h3>Brands</h3>
-          <p>Performance partnerships, integration, joint go-to-market.</p>
-          <a href="mailto:partnerships@inspirelabs.com" class="tlink">partnerships@inspirelabs.com</a>
-        </article>
-        <article class="route-card">
-          <h3>Investors</h3>
-          <p>Institutional and structural enquiries, governance.</p>
-          <a href="mailto:investors@inspirelabs.com" class="tlink">investors@inspirelabs.com</a>
-        </article>
-        <article class="route-card">
-          <h3>Press</h3>
-          <p>Story enquiries, executive interviews and brand assets.</p>
-          <a href="mailto:press@inspirelabs.com" class="tlink">press@inspirelabs.com</a>
-        </article>
-        <article class="route-card">
-          <h3>Careers</h3>
-          <p>Referral submissions and conversations with people-ops.</p>
-          <a href="mailto:careers@inspirelabs.com" class="tlink">careers@inspirelabs.com</a>
-        </article>
+<!-- FORM + HQ -->
+<section>
+  <div class="container">
+    <div class="contact-body reveal">
+      <div>
+        <div class="contact-form-head">
+          <h2>Or send us a longer note.</h2>
+          <p>If your question doesn&rsquo;t fit a single inbox, write here. We&rsquo;ll route it to the right operator and reply with a name and a next step.</p>
+        </div>
+
+        <!-- TODO: Replace YOUR_FORM_ID with the Formspree form ID (https://formspree.io). Or swap action= for any other form backend (Web3Forms, Netlify Forms, your own endpoint). -->
+        <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <div class="form-row">
+            <div class="form-field">
+              <label for="company">Which company</label>
+              <select id="company" name="company" required>
+                <option value="">Choose one</option>
+                <option>Inspirelabs (parent)</option>
+                <option>GrabOn</option>
+                <option>GrabCash</option>
+                <option>GrabShare</option>
+                <option>RankDrive</option>
+                <option>Alternatives.co</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="topic">What it&rsquo;s about</label>
+              <select id="topic" name="topic" required>
+                <option value="">Choose one</option>
+                <option>Brand partnership</option>
+                <option>Tech integration</option>
+                <option>Strategic alliance</option>
+                <option>Press &amp; media</option>
+                <option>Investor relations</option>
+                <option>Careers</option>
+                <option>Something else</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label for="name">Your name</label>
+              <input id="name" name="name" type="text" autocomplete="name" required />
+            </div>
+            <div class="form-field">
+              <label for="email">Work email</label>
+              <input id="email" name="email" type="email" autocomplete="email" required />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label for="org">Company / organisation</label>
+              <input id="org" name="organisation" type="text" autocomplete="organization" />
+            </div>
+            <div class="form-field">
+              <label for="mobile">Phone (optional)</label>
+              <input id="mobile" name="mobile" type="tel" autocomplete="tel" />
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="message">Tell us a bit about it</label>
+            <textarea id="message" name="message" required placeholder="What you&rsquo;re trying to solve, the audience, the timing &mdash; whatever helps us route this well."></textarea>
+          </div>
+
+          <div class="form-submit-wrap">
+            <button class="form-submit" type="submit">Send the message</button>
+            <p class="form-fineprint">We reply with a name and a next step. No drip campaigns, no chasing.</p>
+          </div>
+        </form>
+      </div>
+
+      <aside class="hq-panel">
+        <div class="hq-photo-wrap">
+          <!-- TODO: Swap gradient placeholder for a real photo of the Hyderabad HQ. -->
+          <img src="assets/art/gradient-mesh.svg" alt="Inspirelabs HQ in Hyderabad" loading="lazy" />
+          <div class="hq-photo-overlay">
+            <div class="hq-photo-overlay-label">Inspirelabs HQ</div>
+            <h3>Hyderabad, India</h3>
+          </div>
+        </div>
+        <div class="hq-meta">
+          <div class="hq-meta-block">
+            <div class="hq-meta-lbl">Address</div>
+            <address class="hq-meta-val">
+              21st Floor, OneWest Building<br/>
+              Financial District, Gachibowli<br/>
+              Hyderabad 500032, India
+            </address>
+          </div>
+          <div class="hq-meta-row">
+            <div class="hq-meta-block">
+              <div class="hq-meta-lbl">Phone</div>
+              <div class="hq-meta-val"><a href="tel:+914032537070">040-3253 7070</a></div>
+            </div>
+            <div class="hq-meta-block">
+              <div class="hq-meta-lbl">General desk</div>
+              <div class="hq-meta-val"><a href="mailto:contact@inspirelabs.com">contact@inspirelabs.com</a></div>
+            </div>
+          </div>
+          <div class="hq-meta-row">
+            <div class="hq-meta-block">
+              <div class="hq-meta-lbl">Hours</div>
+              <div class="hq-meta-val">Monday&ndash;Friday<br/>10:00&ndash;19:00&nbsp;IST</div>
+            </div>
+            <div class="hq-meta-block">
+              <div class="hq-meta-lbl">Visiting</div>
+              <div class="hq-meta-val">By appointment.<br/>Email ahead, please.</div>
+            </div>
+          </div>
+          <div class="hq-meta-cta-row">
+            <a class="hq-meta-cta" href="https://www.google.com/maps/search/?api=1&query=OneWest+Building+Financial+District+Gachibowli+Hyderabad" target="_blank" rel="noopener">Open in Maps &rarr;</a>
+            <a class="hq-meta-cta" href="mailto:contact@inspirelabs.com?subject=Visit%20request%20%C2%B7%20Inspirelabs%20HQ">Request a visit</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- INBOXES -->
+<section class="inboxes-section" style="border-top: 1px solid var(--hairline);">
+  <div class="container">
+    <div class="inboxes-head reveal">
+      <h2 class="section-title-xl">Direct inboxes</h2>
+      <p>Skip the form. Use the right address and you reach the team that owns the answer &mdash; usually within one working day.</p>
+    </div>
+
+    <div class="inboxes-grid reveal">
+      <article class="inbox-card">
+        <div class="inbox-card-num">/ 01 &middot; BRAND PARTNERSHIPS</div>
+        <h3>Brands</h3>
+        <p>Performance partnerships, joint go-to-market, distribution across the portfolio.</p>
+        <a href="mailto:partnerships@inspirelabs.com" class="inbox-card-mail">partnerships@inspirelabs.com</a>
+      </article>
+      <article class="inbox-card">
+        <div class="inbox-card-num">/ 02 &middot; TECH INTEGRATION</div>
+        <h3>Integrations</h3>
+        <p>Affiliate, attribution, CDP, ESP, BI, ad platforms. Talk to engineering directly.</p>
+        <a href="mailto:integrations@inspirelabs.com" class="inbox-card-mail">integrations@inspirelabs.com</a>
+      </article>
+      <article class="inbox-card">
+        <div class="inbox-card-num">/ 03 &middot; STRATEGIC</div>
+        <h3>Alliances</h3>
+        <p>Banks, marketplaces, category leaders, large publishers. Multi-year, jointly built.</p>
+        <a href="mailto:alliances@inspirelabs.com" class="inbox-card-mail">alliances@inspirelabs.com</a>
+      </article>
+      <article class="inbox-card">
+        <div class="inbox-card-num">/ 04 &middot; PRESS &amp; MEDIA</div>
+        <h3>Press</h3>
+        <p>Story enquiries, executive interviews, brand assets and quotable data.</p>
+        <a href="mailto:press@inspirelabs.com" class="inbox-card-mail">press@inspirelabs.com</a>
+      </article>
+      <article class="inbox-card">
+        <div class="inbox-card-num">/ 05 &middot; INVESTORS</div>
+        <h3>Investor relations</h3>
+        <p>Institutional and structural enquiries, governance, audited reporting.</p>
+        <a href="mailto:investors@inspirelabs.com" class="inbox-card-mail">investors@inspirelabs.com</a>
+      </article>
+      <article class="inbox-card">
+        <div class="inbox-card-num">/ 06 &middot; CAREERS</div>
+        <h3>Careers</h3>
+        <p>Open applications, referral submissions, conversations with people-ops.</p>
+        <a href="mailto:careers@inspirelabs.com" class="inbox-card-mail">careers@inspirelabs.com</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ASSURANCE BAND -->
+<section class="assurance tight">
+  <div class="container">
+    <div class="assurance-inner">
+      <div>
+        <h2>One reply. <em>Within one working day.</em> From a real operator.</h2>
+        <p>Twelve years of running the surfaces. No outsourced support desks, no aliases that vanish. Whoever replies has the authority to say yes, no, or send you to the right partner.</p>
+      </div>
+      <div class="assurance-stats">
+        <div>
+          <div class="assurance-stat-val">&lt; 24h</div>
+          <div class="assurance-stat-lbl">Median first reply</div>
+        </div>
+        <div>
+          <div class="assurance-stat-val">100%</div>
+          <div class="assurance-stat-lbl">Notes read by a human</div>
+        </div>
+        <div>
+          <div class="assurance-stat-val">12 yrs</div>
+          <div class="assurance-stat-lbl">Building since 2013</div>
+        </div>
+        <div>
+          <div class="assurance-stat-val">1 desk</div>
+          <div class="assurance-stat-lbl">Hyderabad, India</div>
+        </div>
       </div>
     </div>
   </div>

@@ -644,16 +644,6 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
 .svc-partner-type ul li:last-child { border-bottom: none; }
 .svc-partner-type ul li::before { content: ''; position: absolute; left: 0; top: 14px; width: 8px; height: 1.5px; background: var(--accent); }
 .svc-partner-type a.tlink { margin-top: auto; align-self: flex-start; }
-.svc-partner-flow { display: grid; grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.6fr); gap: clamp(40px, 5vw, 80px); align-items: start; }
-@media (max-width: 880px) { .svc-partner-flow { grid-template-columns: 1fr; gap: 32px; } }
-.svc-partner-flow-head h3 { font-size: clamp(24px, 2.4vw, 32px); font-weight: 500; letter-spacing: -0.02em; line-height: 1.15; margin: 0 0 12px; color: var(--text); }
-.svc-partner-flow-head p { font-size: clamp(15px, 1.15vw, 17px); line-height: 1.6; color: var(--text-secondary); margin: 0; max-width: 36ch; }
-.svc-partner-steps { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 22px clamp(24px, 2vw, 36px); }
-@media (max-width: 540px) { .svc-partner-steps { grid-template-columns: 1fr; } }
-.svc-partner-steps li { padding: 22px 0 0; border-top: 1px solid var(--hairline); display: flex; flex-direction: column; gap: 8px; }
-.svc-partner-step-num { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.10em; color: var(--accent); font-weight: 700; }
-.svc-partner-steps h4 { font-size: clamp(17px, 1.4vw, 20px); font-weight: 500; letter-spacing: -0.018em; line-height: 1.2; margin: 0; color: var(--text); }
-.svc-partner-steps p { font-size: 14.5px; line-height: 1.55; color: var(--text-secondary); margin: 0; }
 </style>
 </head>
 
@@ -1075,18 +1065,6 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
         </ul>      </article>
     </div>
 
-    <div class="svc-partner-flow reveal">
-      <div class="svc-partner-flow-head">
-        <h3>How an engagement starts.</h3>
-        <p>No surprises, no theatrical pitch decks. Four steps from first email to a partnership that ships.</p>
-      </div>
-      <ol class="svc-partner-steps">
-        <li><span class="svc-partner-step-num">/STEP 01</span><h4>First conversation</h4><p>A 30-minute working call. You describe the growth problem. We say yes, no, or send you to the right partner.</p></li>
-        <li><span class="svc-partner-step-num">/STEP 02</span><h4>NDA &amp; scoping</h4><p>Mutual NDA, data-room access, and a written scoping document with the operating cadence, owners and deliverables.</p></li>
-        <li><span class="svc-partner-step-num">/STEP 03</span><h4>Pilot</h4><p>A 60- to 90-day pilot with a published success metric. If the pilot does not clear the bar, we say so first.</p></li>
-        <li><span class="svc-partner-step-num">/STEP 04</span><h4>Launch</h4><p>The pilot becomes a program. A named operator joins your weekly review. The standing meeting becomes the contract.</p></li>
-      </ol>
-    </div>
   </div>
 </section>
 

@@ -416,6 +416,12 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
 .benefit-card-tag { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); font-weight: 700; }
 .benefit-card h3 { font-size: clamp(18px, 1.4vw, 22px); font-weight: 500; letter-spacing: -0.02em; line-height: 1.2; margin: 0; color: var(--text); }
 .benefit-card p { font-size: 14.5px; line-height: 1.55; color: var(--text-secondary); margin: 0; }
+
+/* === Careers apply: mailto-only === */
+.careers-apply-mailto { display: flex; flex-direction: column; gap: 18px; align-items: flex-start; }
+.careers-apply-mail-btn { display: inline-flex; align-items: center; padding: 16px 32px; background: var(--text); color: var(--white); font-weight: 600; font-size: 16px; letter-spacing: -0.005em; border-radius: 999px; transition: background 0.2s var(--ease), transform 0.2s var(--ease); }
+.careers-apply-mail-btn:hover { background: var(--accent); transform: translateY(-1px); }
+.careers-apply-mail-note { font-size: 14.5px; color: var(--text-secondary); line-height: 1.55; max-width: 44ch; margin: 0; }
 </style>
 </head>
 
@@ -574,17 +580,11 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
         <h3>Learn at Work and the Young Leaders Programme.</h3>
         <p>Brown-bag sessions, cross-team learning, and a leadership track that hands operators real ownership of outcomes.</p>
       </article>
-      <article class="benefit-card">
-        <div class="benefit-card-tag">Belonging</div>
-        <h3>Festivals from every tradition.</h3>
-        <p>Iftars, Diwali, Christmas, Women&rsquo;s Day, Sports Week, annual outings. Part of the year, not a calendar afterthought.</p>
-      </article>
     </div>
   </div>
 </section>
 
 <!-- THE ROOM (mantra) -->
- =========================================================== -->
 <section class="inside-section">
  <div class="container">
  <div class="inside-head reveal">
@@ -669,51 +669,10 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
         <p>Tell us the problem you would not let go. Tell us the team you held the standard with. We read every note.</p>
         <p class="careers-apply-mail-fallback">Or write directly to <a href="mailto:careers@inspirelabs.com" class="tlink">careers@inspirelabs.com</a></p>
       </div>
-      <!-- TODO: Replace YOUR_FORM_ID with the Formspree form ID. Or swap action= for any other backend (Greenhouse, Lever, custom). -->
-      <form class="careers-apply-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-        <div class="careers-form-row">
-          <div class="careers-form-field">
-            <label for="apply-name">Name</label>
-            <input id="apply-name" name="name" type="text" autocomplete="name" required />
-          </div>
-          <div class="careers-form-field">
-            <label for="apply-email">Email</label>
-            <input id="apply-email" name="email" type="email" autocomplete="email" required />
-          </div>
-        </div>
-        <div class="careers-form-row">
-          <div class="careers-form-field">
-            <label for="apply-track">Track</label>
-            <select id="apply-track" name="track" required>
-              <option value="">Choose one</option>
-              <option>Engineering</option>
-              <option>Product &amp; Design</option>
-              <option>Growth</option>
-              <option>Operations &amp; G&amp;A</option>
-              <option>Other</option>
-            </select>
-          </div>
-          <div class="careers-form-field">
-            <label for="apply-role">Role you&rsquo;re applying for</label>
-            <input id="apply-role" name="role" type="text" placeholder="e.g. Senior Backend Engineer" />
-          </div>
-        </div>
-        <div class="careers-form-field">
-          <label for="apply-portfolio">Portfolio or LinkedIn</label>
-          <input id="apply-portfolio" name="portfolio" type="url" autocomplete="url" placeholder="https://" />
-        </div>
-        <div class="careers-form-field">
-          <label for="apply-resume">Resume link (Drive / Dropbox / personal site)</label>
-          <input id="apply-resume" name="resume" type="url" placeholder="https://" />
-        </div>
-        <div class="careers-form-field">
-          <label for="apply-note">Note</label>
-          <textarea id="apply-note" name="note" required placeholder="What have you shipped? What problem would you not let go?"></textarea>
-        </div>
-        <div class="careers-form-submit-wrap">
-          <button class="careers-form-submit" type="submit">Send application</button>
-        </div>
-      </form>
+      <div class="careers-apply-mailto">
+        <a href="mailto:careers@inspirelabs.com?subject=Application%20%C2%B7%20Inspirelabs" class="careers-apply-mail-btn">Email careers@inspirelabs.com</a>
+        <p class="careers-apply-mail-note">Tell us what you have shipped, the problem you would not let go, and the team you held the standard with.</p>
+      </div>
     </div>
   </div>
 </section>

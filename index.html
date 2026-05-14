@@ -914,18 +914,6 @@ section.section-bleed { padding: 0; }
 }
 @media (max-width: 900px) { .outcomes-grid { grid-template-columns: 1fr; } }
 
-/* ── Values grid (6 cards) ──────────────────────────────────────── */
-.values-section { padding: clamp(48px, 5.5vw, 90px) 0 0; }
-.vm-section { padding: clamp(28px, 3vw, 48px) 0 clamp(48px, 5.5vw, 90px); }
-.values-head { margin-bottom: clamp(48px, 5vw, 72px); max-width: 80ch; }
-/* Values, 2-column hairline editorial grid (was Why-trust's format) */
-.values-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: clamp(48px, 5vw, 96px);
-  row-gap: 0;
-  border-top: 1px solid var(--hairline);
-}
 .value-card {
   padding: clamp(36px, 3vw, 52px) 0;
   border-bottom: 1px solid var(--hairline);
@@ -968,6 +956,8 @@ section.section-bleed { padding: 0; }
   .values-grid { grid-template-columns: 1fr; column-gap: 0; }
   .value-card { grid-template-columns: 1fr; row-gap: 14px; }
 }
+
+.vm-section { padding: clamp(48px, 5.5vw, 90px) 0; }
 
 /* ── Working at Inspirelabs ───────────────────────────────────── */
 .culture-teaser { margin-top: 24px; max-width: 980px; }
@@ -1479,59 +1469,6 @@ footer {
 <!-- ===========================================================
  OUR VALUES, six official values from the employee handbook
  =========================================================== -->
-<section class="values-section">
- <div class="container">
- <div class="values-head reveal">
- <h2 class="section-title-xl">Our values</h2>
- <p class="biz-intro">The DNA that lets one operating company run five very different businesses. Six principles we hire for, promote for, and make daily decisions against.</p>
- </div>
- <div class="values-grid reveal">
- <article class="value-card">
- <span class="value-card-idx">01</span>
- <div class="value-card-num">Customer Centric</div>
- <div class="value-card-body"> <h3>Above and beyond, every time.</h3>
- <p>Without keeping our customers and clients as priority, we cannot grow, sustain, or excel as a business. We go above and beyond to keep them happy.</p>
- </div>
- </article>
- <article class="value-card">
- <span class="value-card-idx">02</span>
- <div class="value-card-num">Ownership</div>
- <div class="value-card-body"> <h3>We act like owners. Because we are.</h3>
- <p>We care about the outcome of our work as much as an owner would. We take full accountability and are proactive to get things done with the best possible result.</p>
- </div>
- </article>
- <article class="value-card">
- <span class="value-card-idx">03</span>
- <div class="value-card-num">Curiosity</div>
- <div class="value-card-body"> <h3>The never-ending desire to learn.</h3>
- <p>We&rsquo;re always thinking about how we can make things better. Whether it is our product, our process, or anything else.</p>
- </div>
- </article>
- <article class="value-card">
- <span class="value-card-idx">04</span>
- <div class="value-card-num">Solution Focused</div>
- <div class="value-card-body"> <h3>90% on the solution. 10% on the problem.</h3>
- <p>Identifying a problem is easy. Solving it is where we make impact. We focus 90% of our time on solutions and 10% on the problem.</p>
- </div>
- </article>
- <article class="value-card">
- <span class="value-card-idx">05</span>
- <div class="value-card-num">Results Oriented</div>
- <div class="value-card-body"> <h3>Driven by results, accountable to them.</h3>
- <p>Being intensely result oriented in everything we do is the defining characteristic of high performers. We are driven by results, and we hold ourselves accountable to them.</p>
- </div>
- </article>
- <article class="value-card">
- <span class="value-card-idx">06</span>
- <div class="value-card-num">Collaborative</div>
- <div class="value-card-body"> <h3>Working together. In harmony. With integrity.</h3>
- <p>We believe in the power of working together in harmony and integrity. The best work compounds when people share the lift.</p>
- </div>
- </article>
- </div>
- </div>
-</section>
-
 <!-- ===========================================================
  OUR VISION + OUR MISSION
  =========================================================== -->
