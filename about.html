@@ -569,6 +569,7 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
   color: var(--accent-deep);
   margin: 0;
   line-height: 1.2;
+  transition: color 0.25s var(--ease);
 }
 .value-card-body { display: flex; flex-direction: column; }
 .value-card h3 {
@@ -579,6 +580,20 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
   color: var(--text);
   margin: 0 0 10px;
   text-wrap: pretty;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 4px;
+  transition: color 0.25s var(--ease);
+}
+.value-card h3::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  transition: width 0.4s var(--ease);
 }
 .value-card p {
   font-size: 15px;
@@ -588,6 +603,21 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
   text-wrap: pretty;
   margin: 0;
 }
+.value-card::before {
+  content: '';
+  position: absolute;
+  left: 0; right: 0; top: 0;
+  height: 1px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.45s var(--ease);
+  pointer-events: none;
+}
+.value-card:hover::before { transform: scaleX(1); }
+.value-card:hover .value-card-num { color: var(--text); }
+.value-card:hover h3 { color: var(--accent-deep); }
+.value-card:hover h3::after { width: 56px; }
 @media (max-width: 900px) {
   .values-grid { grid-template-columns: 1fr; column-gap: 0; }
   .value-card { grid-template-columns: 1fr; row-gap: 14px; }
