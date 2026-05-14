@@ -6,7 +6,7 @@
 <title>Contact Us | Inspirelabs</title>
 <meta name="description" content="Have a question, a brand growth problem to solve, or a partnership to discuss? Pick the right inbox and we will reply." />
 <meta name="theme-color" content="#FFFFFF" />
-<link rel="canonical" href="https://inspirelabs.com/contact.html?v=v3-contact-style-sync" />
+<link rel="canonical" href="https://inspirelabs.com/contact.html" />
 <link rel="icon" type="image/svg+xml" href="assets/brand/inspirelabs-mark.svg" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -355,7 +355,8 @@ footer {
 <section class="section-tight-top">
   <div class="container">
     <div class="contact-body reveal">
-      <form class="contact-form" onsubmit="event.preventDefault(); alert('Thanks. We will be in touch.');">
+      <!-- TODO: Replace YOUR_FORM_ID with the Formspree form ID (https://formspree.io). Or swap action= for any other form backend (Web3Forms, Netlify Forms, your own endpoint). -->
+      <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
         <div class="form-row">
           <div class="form-field">
             <label for="company">Select company</label>
@@ -409,7 +410,8 @@ footer {
       </form>
 
       <div class="hq-photo-wrap">
-        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80" alt="Inspirelabs HQ" loading="lazy" />
+        <!-- TODO: Swap gradient placeholder for a real photo of the Hyderabad HQ. -->
+        <img src="assets/art/gradient-mesh.svg" alt="Inspirelabs HQ" loading="lazy" />
         <div class="hq-photo-overlay">
           <div class="hq-photo-overlay-label">Inspirelabs HQ</div>
           <h3>Hyderabad, India</h3>

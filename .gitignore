@@ -16,3 +16,12 @@ culture.html
 *.bak
 *.tmp
 .fuse_hidden*
+
+# Build/upload dumps
+*.zip
+assets/logos/from-user/
+
+# OS / IDE
+Thumbs.db
+.idea/
+.vscode/

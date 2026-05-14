@@ -6,7 +6,7 @@
 <title>Partner with us | Inspirelabs</title>
 <meta name="description" content="Partner with the Inspirelabs network. Brand partnerships, tech integrations and strategic alliances. 4,500+ brands already grow with us." />
 <meta name="theme-color" content="#FFFFFF" />
-<link rel="canonical" href="https://inspirelabs.com/partnership.html?v=v3-partnership-style-sync" />
+<link rel="canonical" href="https://inspirelabs.com/partnership.html" />
 <link rel="icon" type="image/svg+xml" href="assets/brand/inspirelabs-mark.svg" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -288,7 +288,8 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
         <p>For tech &amp; integration: <a href="mailto:tech@inspirelabs.com" class="tlink">tech@inspirelabs.com</a></p>
         <p>For strategic alliances: <a href="mailto:strategy@inspirelabs.com" class="tlink">strategy@inspirelabs.com</a></p>
       </div>
-      <form onsubmit="event.preventDefault(); alert('Thanks. We will get back to you within two business days.'); this.reset();">
+      <!-- TODO: Replace YOUR_FORM_ID with the Formspree form ID (https://formspree.io). Or swap action= for any other form backend. -->
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
         <div class="field-row">
           <div class="field"><label for="firstname">First name</label><input id="firstname" name="firstname" required /></div>
           <div class="field"><label for="lastname">Last name</label><input id="lastname" name="lastname" required /></div>
@@ -309,7 +310,7 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
           <label for="message">What is the partnership about?</label>
           <textarea id="message" name="message" placeholder="The growth problem, the surface, the timeline you have in mind."></textarea>
         </div>
-        <a href="#" onclick="this.closest('form').requestSubmit(); return false;" class="tlink form-submit">Send the email</a>
+        <button type="submit" class="tlink form-submit">Send the email</button>
       </form>
     </div>
   </div>

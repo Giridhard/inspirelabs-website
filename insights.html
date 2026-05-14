@@ -6,7 +6,7 @@
 <title>Insights | Long-form thinking from Inspirelabs</title>
 <meta name="description" content="Long-form thinking from the operating team at Inspirelabs. Essays on growth infrastructure, performance media, search, content and creator commerce." />
 <meta name="theme-color" content="#FFFFFF" />
-<link rel="canonical" href="https://inspirelabs.com/insights.html?v=v3-insights-style-sync" />
+<link rel="canonical" href="https://inspirelabs.com/insights.html" />
 <link rel="icon" type="image/svg+xml" href="assets/brand/inspirelabs-mark.svg" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -303,9 +303,10 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
       <h2 class="section-title-xl">Subscribe</h2>
       <h3>Get monthly notes from the operating team.</h3>
       <p>One email a month. Long-form essays, frameworks and notes on how the network is compounding. Written by leadership. No marketing automation.</p>
-      <form class="subscribe-form" onsubmit="event.preventDefault(); alert('Thanks. You will get the next issue on the first of the month.'); this.reset();">
-        <input type="email" required placeholder="you@company.com" aria-label="Email" />
-        <a href="#" onclick="this.closest('form').requestSubmit(); return false;" class="tlink">Subscribe</a>
+      <!-- TODO: Replace YOUR_FORM_ID with the Formspree form ID, or swap action= for any newsletter backend (Buttondown, ConvertKit, Substack embed, etc.). -->
+      <form class="subscribe-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <input type="email" name="email" required placeholder="you@company.com" aria-label="Email" />
+        <button type="submit" class="tlink">Subscribe</button>
       </form>
     </div>
   </div>
