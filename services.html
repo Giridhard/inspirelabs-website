@@ -503,6 +503,88 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
   margin: 0;
   text-wrap: pretty;
 }
+.svc-pillar-outcome {
+  margin-top: clamp(20px, 2vw, 28px);
+  padding-top: 18px;
+  border-top: 1px solid var(--hairline);
+  display: flex; flex-direction: column; gap: 6px;
+}
+.svc-pillar-outcome-lbl {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; letter-spacing: 0.10em; text-transform: uppercase;
+  color: var(--text-tertiary); font-weight: 600;
+}
+.svc-pillar-outcome-val {
+  font-size: 15.5px; line-height: 1.45; color: var(--text);
+  font-weight: 500; letter-spacing: -0.005em;
+}
+.svc-pillar-outcome-val em {
+  font-style: normal;
+  color: var(--tone, var(--accent-deep));
+}
+
+/* ── Activities & Initiatives ──────────────────────────────── */
+.svc-activities { padding: clamp(80px, 9vw, 130px) 0; border-top: 1px solid var(--hairline); }
+.svc-activities-head {
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+  gap: clamp(32px, 4vw, 64px);
+  align-items: end;
+  margin-bottom: clamp(40px, 4vw, 64px);
+}
+@media (max-width: 880px) { .svc-activities-head { grid-template-columns: 1fr; gap: 24px; } }
+.svc-activities-eyebrow {
+  display: inline-flex; align-items: center; gap: 12px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--text); font-weight: 700;
+  margin-bottom: 22px;
+}
+.svc-activities-eyebrow::before {
+  content: ''; width: 12px; height: 12px;
+  background: var(--accent); border-radius: 2px;
+}
+.svc-activities-eyebrow .meta {
+  color: var(--text-tertiary); font-weight: 500;
+}
+.svc-activities-title {
+  font-size: clamp(30px, 3.4vw, 48px); font-weight: 400;
+  letter-spacing: -0.025em; line-height: 1.1;
+  margin: 0; max-width: 18ch;
+}
+.svc-activities-intro {
+  font-size: clamp(16px, 1.2vw, 18px); line-height: 1.65;
+  color: var(--text-secondary); margin: 0; max-width: 52ch;
+  text-wrap: pretty;
+}
+.svc-activities-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: clamp(16px, 1.6vw, 24px);
+}
+@media (max-width: 1000px) { .svc-activities-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 540px)  { .svc-activities-grid { grid-template-columns: 1fr; } }
+.svc-activity {
+  padding: clamp(22px, 2vw, 28px);
+  border: 1px solid var(--hairline);
+  border-radius: 10px;
+  background: var(--white);
+  display: flex; flex-direction: column; gap: 10px;
+  transition: border-color 0.25s var(--ease), transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
+}
+.svc-activity:hover {
+  border-color: var(--line);
+  transform: translateY(-3px);
+  box-shadow: 0 18px 42px -28px rgba(15,17,23,0.18);
+}
+.svc-activity h3 {
+  font-size: clamp(15.5px, 1.2vw, 17.5px); font-weight: 600;
+  letter-spacing: -0.012em; line-height: 1.25;
+  color: var(--text); margin: 0;
+}
+.svc-activity p {
+  font-size: 14px; line-height: 1.55;
+  color: var(--text-secondary); margin: 0;
+  text-wrap: pretty;
+}
 .svc-pillar-services {
   list-style: none; padding: 0; margin: 0;
   display: grid;
@@ -686,6 +768,10 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
         <span class="svc-pillar-label">Awareness</span>
         <h2 class="svc-pillar-claim">Reach the right audience, on the right surface, at the right cost.</h2>
         <p class="svc-pillar-lead">Awareness is the work of getting a brand in front of people who do not know it yet. We do not treat it as vanity spend. Every dollar gets asked the same question every acquisition dollar gets asked. First-party data from 200M network users lets us model actual lift, not impressions.</p>
+        <div class="svc-pillar-outcome">
+          <div class="svc-pillar-outcome-lbl">Outcome for brands</div>
+          <div class="svc-pillar-outcome-val"><em>Reach, recall, and category visibility.</em></div>
+        </div>
       </div>
         <ol class="svc-pillar-services">
           <li class="svc-pillar-service">
@@ -737,6 +823,10 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
         <span class="svc-pillar-label">Discovery</span>
         <h2 class="svc-pillar-claim">Be found when the buyer is searching. Everywhere they search.</h2>
         <p class="svc-pillar-lead">Discovery is where intent peaks and incumbency breaks. Search has fractured across Google, AI Overviews, generative answers, app stores and comparison sites. The brand that owns discovery in 2026 owns the decade after. We run all of it, on the same stack RankDrive uses to rank 200K+ pages.</p>
+        <div class="svc-pillar-outcome">
+          <div class="svc-pillar-outcome-lbl">Outcome for brands</div>
+          <div class="svc-pillar-outcome-val"><em>Demand capture when users actively search.</em></div>
+        </div>
       </div>
         <ol class="svc-pillar-services">
           <li class="svc-pillar-service">
@@ -788,6 +878,10 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
         <span class="svc-pillar-label">Engagement</span>
         <h2 class="svc-pillar-claim">Turn one purchase into a decade of compounding.</h2>
         <p class="svc-pillar-lead">Engagement is the longest-tail return on growth spend. Most brands underweight it because the wins are slow and hard to attribute. We overweight it because every compounding brand on our network got there on the back of an engaged base. Lifecycle, loyalty, alliances, partnerships, editorial.</p>
+        <div class="svc-pillar-outcome">
+          <div class="svc-pillar-outcome-lbl">Outcome for brands</div>
+          <div class="svc-pillar-outcome-val"><em>Repeat touchpoints and stronger purchase intent.</em></div>
+        </div>
       </div>
         <ol class="svc-pillar-services">
           <li class="svc-pillar-service">
@@ -839,6 +933,10 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
         <span class="svc-pillar-label">Acquisition</span>
         <h2 class="svc-pillar-claim">Pure performance. Paid on the action. Attributed server-side.</h2>
         <p class="svc-pillar-lead">Acquisition is where the contract is cleanest: the brand pays only when the action happens. Twelve years of building the affiliate, demand and creator-commerce network through GrabOn, GrabCash and GrabShare is what makes that contract honest at scale.</p>
+        <div class="svc-pillar-outcome">
+          <div class="svc-pillar-outcome-lbl">Outcome for brands</div>
+          <div class="svc-pillar-outcome-val"><em>Lower CAC, measurable conversions, and revenue.</em></div>
+        </div>
       </div>
         <ol class="svc-pillar-services">
           <li class="svc-pillar-service">
@@ -878,6 +976,53 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
             </div>
           </li>
         </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ACTIVITIES & INITIATIVES (what runs every quarter) -->
+<section class="svc-activities">
+  <div class="container">
+    <div class="svc-activities-head reveal">
+      <div>
+        <div class="svc-activities-eyebrow">Activities &amp; Initiatives <span class="meta">/ what we run every quarter</span></div>
+        <h2 class="svc-activities-title">Eight running programs. One operating cadence.</h2>
+      </div>
+      <p class="svc-activities-intro">The work that ships every quarter on the Inspirelabs growth platform. Performance, search, social commerce, rewards, merchant ops, alliances, and the agentic AI layer that connects them.</p>
+    </div>
+    <div class="svc-activities-grid reveal">
+      <article class="svc-activity">
+        <h3>Performance GTM</h3>
+        <p>Google, Meta, Bing, programmatic, affiliate, and coupon led campaigns.</p>
+      </article>
+      <article class="svc-activity">
+        <h3>Search &amp; Discovery</h3>
+        <p>SEO, ASO, SGE, GEO, RankDrive, AI content, keyword monitoring.</p>
+      </article>
+      <article class="svc-activity">
+        <h3>Creator &amp; Social Commerce</h3>
+        <p>GrabShare storefronts, influencer campaigns, social led distribution.</p>
+      </article>
+      <article class="svc-activity">
+        <h3>Rewards &amp; Retention</h3>
+        <p>GrabCash, cashback, lifecycle nudges, merchant funded rewards.</p>
+      </article>
+      <article class="svc-activity">
+        <h3>Merchant Growth</h3>
+        <p>Offer management, onboarding, campaign analytics, self serve dashboards.</p>
+      </article>
+      <article class="svc-activity">
+        <h3>Strategic Partnerships</h3>
+        <p>Banks, telecom, OTT, fintech, e-commerce, travel, consumer tech.</p>
+      </article>
+      <article class="svc-activity">
+        <h3>Agentic AI Ops</h3>
+        <p>Automated research, campaign execution, SEO, reporting, forecasting.</p>
+      </article>
+      <article class="svc-activity">
+        <h3>AI Native Operating Layer</h3>
+        <p>Repeatable GTM work as automated execution loops across the business.</p>
+      </article>
     </div>
   </div>
 </section>
