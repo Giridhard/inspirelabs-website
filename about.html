@@ -550,6 +550,48 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
   row-gap: 0;
   border-top: 1px solid var(--hairline);
 }
+.value-card {
+  padding: clamp(36px, 3vw, 52px) 0;
+  border-bottom: 1px solid var(--hairline);
+  background: none;
+  display: grid;
+  grid-template-columns: minmax(160px, 28%) 1fr;
+  column-gap: clamp(24px, 2vw, 40px);
+  align-items: start;
+  position: relative;
+}
+.value-card-idx { display: none; }
+.value-card-num {
+  font-size: clamp(14px, 1.05vw, 16px);
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  text-transform: none;
+  color: var(--accent-deep);
+  margin: 0;
+  line-height: 1.2;
+}
+.value-card-body { display: flex; flex-direction: column; }
+.value-card h3 {
+  font-size: clamp(20px, 1.7vw, 26px);
+  font-weight: 500;
+  letter-spacing: -0.018em;
+  line-height: 1.2;
+  color: var(--text);
+  margin: 0 0 10px;
+  text-wrap: pretty;
+}
+.value-card p {
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.55;
+  color: #414A5D;
+  text-wrap: pretty;
+  margin: 0;
+}
+@media (max-width: 900px) {
+  .values-grid { grid-template-columns: 1fr; column-gap: 0; }
+  .value-card { grid-template-columns: 1fr; row-gap: 14px; }
+}
 </style>
 </head>
 
