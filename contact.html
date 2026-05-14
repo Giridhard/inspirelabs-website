@@ -104,6 +104,12 @@ ul, ol { list-style: none; }
 .nav-brand .brand-logo { height: 26px; width: auto; display: block; }
 .footer-brand-block .nav-brand .brand-logo { height: 34px; }
 .nav.on-hero .nav-brand .brand-logo { filter: invert(1) brightness(2); }
+.nav-brand .brand-sep { display: inline-block; width: 1px; height: 22px; background: var(--line); margin: 0 14px; }
+.nav-brand .brand-tagline { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 13px; font-weight: 500; letter-spacing: -0.005em; color: var(--text); white-space: nowrap; }
+.nav-brand .brand-tagline-accent { color: var(--accent); }
+.nav.on-hero .nav-brand .brand-sep { background: rgba(255,255,255,0.25); }
+.nav.on-hero .nav-brand .brand-tagline { color: var(--white); }
+@media (max-width: 540px) { .nav-brand .brand-sep, .nav-brand .brand-tagline { display: none; } }
 .nav-links { display: flex; gap: 36px; align-items: center; }
 .nav-link { font-size: 15px; font-weight: 500; color: var(--text); padding: 10px 0; position: relative; transition: color 0.2s var(--ease); }
 .nav-link:hover { color: var(--accent-deep); }
@@ -357,7 +363,7 @@ footer {
 
 <header class="nav" id="nav">
   <div class="container nav-inner">
-    <a href="index.html" class="nav-brand" aria-label="Inspirelabs"><img class="brand-logo" src="assets/brand/inspirelabs-wordmark.png" alt="Inspirelabs" /></a>
+    <a href="index.html" class="nav-brand" aria-label="Inspirelabs, Always building"><img class="brand-logo" src="assets/brand/inspirelabs-wordmark.png" alt="Inspirelabs" /><span class="brand-sep" aria-hidden="true"></span><span class="brand-tagline">Always <span class="brand-tagline-accent">building.</span></span></a>
     <nav class="nav-links" id="primary-nav" aria-label="Primary">
       <a href="index.html" class="nav-link">Home</a>
       <a href="products.html" class="nav-link">Products</a>
@@ -493,7 +499,7 @@ footer {
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand-block">
-        <a href="index.html" class="nav-brand" aria-label="Inspirelabs"><img class="brand-logo" src="assets/brand/inspirelabs-wordmark.png" alt="Inspirelabs" /></a>
+        <a href="index.html" class="nav-brand" aria-label="Inspirelabs, Always building"><img class="brand-logo" src="assets/brand/inspirelabs-wordmark.png" alt="Inspirelabs" /><span class="brand-sep" aria-hidden="true"></span><span class="brand-tagline">Always <span class="brand-tagline-accent">building.</span></span></a>
         <p>The Hyderabad-based parent company behind GrabOn, GrabCash, GrabShare, RankDrive and Alternatives.co. Bootstrapped, profitable, and building since 2013.</p>
         <address>
           21st Floor, OneWest Building<br/>

@@ -52,6 +52,12 @@ ul, ol { list-style: none; }
 .nav-brand .brand-logo { height: 26px; width: auto; display: block; }
 .footer-brand-block .nav-brand .brand-logo { height: 34px; }
 .nav.on-hero .nav-brand .brand-logo { filter: invert(1) brightness(2); }
+.nav-brand .brand-sep { display: inline-block; width: 1px; height: 22px; background: var(--line); margin: 0 14px; }
+.nav-brand .brand-tagline { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 13px; font-weight: 500; letter-spacing: -0.005em; color: var(--text); white-space: nowrap; }
+.nav-brand .brand-tagline-accent { color: var(--accent); }
+.nav.on-hero .nav-brand .brand-sep { background: rgba(255,255,255,0.25); }
+.nav.on-hero .nav-brand .brand-tagline { color: var(--white); }
+@media (max-width: 540px) { .nav-brand .brand-sep, .nav-brand .brand-tagline { display: none; } }
 .nav-links { display: flex; gap: 36px; align-items: center; }
 .nav-link { font-size: 15px; font-weight: 500; color: var(--text); padding: 10px 0; position: relative; transition: color 0.2s var(--ease); }
 .nav-link:hover { color: var(--accent-deep); }
@@ -326,6 +332,72 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
 .reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.7s var(--ease), transform 0.7s var(--ease); }
 .reveal.in-view { opacity: 1; transform: none; }
 @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } html { scroll-behavior: auto; } }
+
+/* ── Inside Inspirelabs (Life at the company) ─────────────────── */
+.inside-section { padding: clamp(48px, 5.5vw, 90px) 0; background: var(--white); }
+.inside-head { margin-bottom: clamp(48px, 5vw, 64px); }
+.inside-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: clamp(20px, 2vw, 32px);
+  margin-top: clamp(40px, 4vw, 60px);
+}
+.inside-tile {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  background: #0F1117;
+}
+.inside-tile-img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.inside-tile:hover .inside-tile-img { transform: scale(1.05); }
+.inside-tile-caption {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: clamp(24px, 2vw, 36px);
+  background: linear-gradient(to top, rgba(0,0,0,0.78) 0%, rgba(0,0,0,0) 70%);
+  color: var(--white);
+  z-index: 2;
+}
+.inside-tile-eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 10px;
+}
+.inside-tile-title {
+  font-size: clamp(20px, 1.7vw, 26px);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.18;
+  color: var(--white);
+}
+.inside-stats {
+  margin-top: clamp(56px, 5vw, 72px);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid var(--hairline);
+}
+.inside-stat {
+  padding: clamp(28px, 2.4vw, 40px) clamp(20px, 1.6vw, 28px);
+  border-right: 1px solid var(--hairline);
+}
+.inside-stat:last-child { border-right: none; }
+.inside-stat-val { font-size: clamp(28px, 2.6vw, 40px); font-weight: 500; letter-spacing: -0.025em; line-height: 1; color: var(--text); }
+.inside-stat-lbl { font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-tertiary); margin-top: 14px; line-height: 1.4; }
+@media (max-width: 900px) {
+  .inside-grid { grid-template-columns: 1fr; }
+  .inside-stats { grid-template-columns: repeat(2, 1fr); }
+  .inside-stat:nth-child(2n) { border-right: none; }
+}
+
 </style>
 </head>
 
@@ -333,7 +405,7 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
 
 <header class="nav" id="nav">
   <div class="container nav-inner">
-    <a href="index.html" class="nav-brand" aria-label="Inspirelabs"><img class="brand-logo" src="assets/brand/inspirelabs-wordmark.png" alt="Inspirelabs" /></a>
+    <a href="index.html" class="nav-brand" aria-label="Inspirelabs, Always building"><img class="brand-logo" src="assets/brand/inspirelabs-wordmark.png" alt="Inspirelabs" /><span class="brand-sep" aria-hidden="true"></span><span class="brand-tagline">Always <span class="brand-tagline-accent">building.</span></span></a>
     <nav class="nav-links" id="primary-nav" aria-label="Primary">
       <a href="index.html" class="nav-link">Home</a>
       <a href="products.html" class="nav-link">Products</a>
@@ -538,6 +610,71 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
 </section>
 
 <!-- THE ROOM (mantra) -->
+ =========================================================== -->
+<section class="inside-section">
+ <div class="container">
+ <div class="inside-head reveal">
+ <h2 class="section-title-xl">Inside Inspirelabs</h2>
+ <p class="biz-intro">A studio of operators who&rsquo;d rather build than pitch. We celebrate together, we ship together, and we leave the office knowing what we made today will outlive the next quarter.</p>
+ </div>
+
+ <div class="inside-grid reveal">
+ <div class="inside-tile">
+ <img class="inside-tile-img" src="assets/culture/team-collab.jpg" alt="The Inspirelabs team" loading="lazy" />
+ <div class="inside-tile-caption">
+ <div class="inside-tile-eyebrow">The Crew</div>
+ <div class="inside-tile-title">One operating standard, six core values.</div>
+ </div>
+ </div>
+ <div class="inside-tile">
+ <img class="inside-tile-img" src="assets/culture/team-portrait.jpg" alt="An Inspirelabs town-hall in progress" loading="lazy" />
+ <div class="inside-tile-caption">
+ <div class="inside-tile-eyebrow">The Townhall</div>
+ <div class="inside-tile-title">Where every decision gets explained.</div>
+ </div>
+ </div>
+ <div class="inside-tile">
+ <img class="inside-tile-img" src="assets/culture/cafeteria.jpg" alt="Cafeteria with art" loading="lazy" />
+ <div class="inside-tile-caption">
+ <div class="inside-tile-eyebrow">The Cafe</div>
+ <div class="inside-tile-title">Where ideas get loud.</div>
+ </div>
+ </div>
+ <div class="inside-tile">
+ <img class="inside-tile-img" src="assets/culture/team-meet.jpg" alt="Team meet at Inspirelabs" loading="lazy" />
+ <div class="inside-tile-caption">
+ <div class="inside-tile-eyebrow">Celebrations</div>
+ <div class="inside-tile-title">Iftars. Sports week. Women&rsquo;s Day. Anniversaries.</div>
+ </div>
+ </div>
+ </div>
+
+ <div class="inside-stats reveal">
+ <div class="inside-stat">
+ <div class="inside-stat-val">24</div>
+ <div class="inside-stat-lbl">Paid leaves a year (sick, casual, annual)</div>
+ </div>
+ <div class="inside-stat">
+ <div class="inside-stat-val">10</div>
+ <div class="inside-stat-lbl">Public holidays across the calendar year</div>
+ </div>
+ <div class="inside-stat">
+ <div class="inside-stat-val">5-day</div>
+ <div class="inside-stat-lbl">Work week with eight productive hours</div>
+ </div>
+ <div class="inside-stat">
+ <div class="inside-stat-val">90 days</div>
+ <div class="inside-stat-lbl">Health First wellness challenge, every year</div>
+ </div>
+ </div>
+
+ <div class="reveal" style="margin-top: clamp(40px, 4vw, 56px);">
+ <a href="about.html" class="tlink">See life at Inspirelabs</a>
+ </div>
+ </div>
+</section>
+
+
 <section class="careers-mantra">
   <div class="container">
     <div class="careers-mantra-inner reveal">
@@ -613,7 +750,7 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand-block">
-        <a href="index.html" class="nav-brand" aria-label="Inspirelabs"><img class="brand-logo" src="assets/brand/inspirelabs-wordmark.png" alt="Inspirelabs" /></a>
+        <a href="index.html" class="nav-brand" aria-label="Inspirelabs, Always building"><img class="brand-logo" src="assets/brand/inspirelabs-wordmark.png" alt="Inspirelabs" /><span class="brand-sep" aria-hidden="true"></span><span class="brand-tagline">Always <span class="brand-tagline-accent">building.</span></span></a>
         <p>The Hyderabad-based parent company behind GrabOn, GrabCash, GrabShare, RankDrive and Alternatives.co. Bootstrapped, profitable, and building since 2013.</p>
         <address>
           21st Floor, OneWest Building<br/>
