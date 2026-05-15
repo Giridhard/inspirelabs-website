@@ -153,6 +153,29 @@ section { padding: clamp(64px, 7vw, 110px) 0; position: relative; }
   font-weight: 400; letter-spacing: -0.025em; line-height: 1.1;
   margin: 0; max-width: 14ch;
 }
+.editorial-aside { display: flex; flex-direction: column; gap: clamp(24px, 3vw, 36px); align-items: flex-start; }
+.editorial-illustration {
+  width: 100%; max-width: 420px;
+  margin-top: 8px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--warm, #FAF7F1);
+  padding: clamp(16px, 1.6vw, 22px);
+  border: 1px solid var(--hairline);
+}
+.editorial-illustration img { width: 100%; height: auto; display: block; }
+@media (max-width: 980px) { .editorial-illustration { max-width: 360px; margin: 8px auto 0; } }
+
+/* Benefits section: illustration band above the grid */
+.benefits-illustration {
+  margin: 0 auto clamp(36px, 4vw, 56px);
+  max-width: 460px;
+  padding: clamp(20px, 2vw, 28px);
+  border-radius: 10px;
+  background: var(--warm, #FAF7F1);
+  border: 1px solid var(--hairline);
+}
+.benefits-illustration img { width: 100%; height: auto; display: block; }
 .editorial-body p {
   font-size: clamp(16.5px, 1.25vw, 19px);
   line-height: 1.7; color: var(--text-secondary);
@@ -404,7 +427,8 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
 /* === 5 questions: 2-col with illustration === */
 .ask-grid { display: grid; grid-template-columns: minmax(0, 0.85fr) minmax(0, 1fr); gap: clamp(40px, 5vw, 80px); align-items: center; }
 @media (max-width: 980px) { .ask-grid { grid-template-columns: 1fr; gap: 32px; } }
-.ask-illustration svg { width: 100%; height: auto; max-width: 360px; display: block; margin: 0 auto; }
+.ask-illustration { display: flex; align-items: center; justify-content: center; padding: clamp(20px, 2vw, 28px); border-radius: 10px; background: var(--warm, #FAF7F1); border: 1px solid var(--hairline); }
+.ask-illustration img { width: 100%; height: auto; max-width: 420px; display: block; }
 .ask-content .section-head { margin-bottom: clamp(28px, 3vw, 40px); }
 
 /* === Benefits as cards === */
@@ -457,7 +481,12 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
 <section class="section-body">
   <div class="container">
     <div class="editorial-grid reveal">
-      <h2 class="editorial-title">We do not hire resumes. We hire receipts.</h2>
+      <div class="editorial-aside">
+        <h2 class="editorial-title">We do not hire resumes. We hire receipts.</h2>
+        <figure class="editorial-illustration" aria-hidden="true">
+          <img src="assets/illustrations/careers/04-build-together.png" alt="" loading="lazy" />
+        </figure>
+      </div>
       <div class="editorial-body">
         <p>The people who do well here have shipped something. They have owned a number. They have stood next to a problem and refused to leave the room until it was fixed. Where you went to school does not feature in the conversation. Neither does the title you are leaving behind.</p>
         <p>What we look for is simple. <strong>Evidence.</strong> A repository. A revenue line. A user count. A story about a bad quarter you walked through. A team that would work with you again. If you have receipts, the rest of the interview takes care of itself.</p>
@@ -471,44 +500,9 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
 <section class="section-body">
   <div class="container">
     <div class="ask-grid reveal">
-      <div class="ask-illustration" aria-hidden="true">
-        <svg viewBox="0 0 320 360" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <pattern id="askGrid" width="32" height="32" patternUnits="userSpaceOnUse">
-              <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#0E0F0A" stroke-width="0.5" stroke-opacity="0.05"/>
-            </pattern>
-          </defs>
-          <rect width="320" height="360" fill="url(#askGrid)"/>
-          <!-- 5 staggered numbered squares -->
-          <g>
-            <rect x="40" y="30" width="60" height="60" rx="10" fill="#FF7A45"/>
-            <text x="70" y="68" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="22" font-weight="700" fill="#FFFFFF">01</text>
-          </g>
-          <g>
-            <rect x="180" y="80" width="60" height="60" rx="10" fill="#0E0F0A"/>
-            <text x="210" y="118" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="22" font-weight="700" fill="#FFFFFF">02</text>
-          </g>
-          <g>
-            <rect x="80" y="150" width="60" height="60" rx="10" fill="#6F7583"/>
-            <text x="110" y="188" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="22" font-weight="700" fill="#FFFFFF">03</text>
-          </g>
-          <g>
-            <rect x="200" y="220" width="60" height="60" rx="10" fill="#FF7A45" fill-opacity="0.85"/>
-            <text x="230" y="258" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="22" font-weight="700" fill="#FFFFFF">04</text>
-          </g>
-          <g>
-            <rect x="60" y="270" width="60" height="60" rx="10" fill="none" stroke="#8C92A0" stroke-width="2" stroke-dasharray="6 4"/>
-            <text x="90" y="308" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="22" font-weight="700" fill="#8C92A0">05</text>
-          </g>
-          <!-- thin connecting lines -->
-          <g stroke="#FF7A45" stroke-width="1" stroke-opacity="0.35" fill="none">
-            <path d="M 100 60 Q 140 45 180 110"/>
-            <path d="M 210 140 Q 175 145 140 180"/>
-            <path d="M 140 210 Q 175 220 200 250"/>
-            <path d="M 200 280 Q 160 290 120 300"/>
-          </g>
-        </svg>
-      </div>
+      <figure class="ask-illustration" aria-hidden="true">
+        <img src="assets/illustrations/careers/02-hurdle.png" alt="" loading="lazy" />
+      </figure>
       <div class="ask-content">
         <div class="section-head">
           <h2 class="section-title">When we meet a candidate, we ask ourselves five questions.</h2>
@@ -543,7 +537,12 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
 <section class="section-body">
   <div class="container">
     <div class="editorial-grid reveal">
-      <h2 class="editorial-title">A decade in, the math changes.</h2>
+      <div class="editorial-aside">
+        <h2 class="editorial-title">A decade in, the math changes.</h2>
+        <figure class="editorial-illustration" aria-hidden="true">
+          <img src="assets/illustrations/careers/03-compound.png" alt="" loading="lazy" />
+        </figure>
+      </div>
       <div class="editorial-body">
         <p>When you give a decade to one operating company, you start watching the consequences of your own decisions land. A feature you shipped in 2018 is still earning the company money in 2026. A junior you hired in 2020 is now the person other juniors come to. The titles stop being interesting. The receipts start stacking.</p>
         <p>People who join Inspirelabs in their twenties tend to still be here in their forties. They buy houses on these salaries. They put children through school. They watch the company they helped build cross another zero. <strong>The compounding is not a metaphor.</strong> It is the reason to be here in the first place.</p>
@@ -559,6 +558,9 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
       <h2 class="section-title">How we care for the team.</h2>
       <p class="section-intro">From day one, the programmes we fund for every full-time teammate.</p>
     </div>
+    <figure class="benefits-illustration reveal" aria-hidden="true">
+      <img src="assets/illustrations/careers/05-growth.png" alt="" loading="lazy" />
+    </figure>
     <div class="benefits-grid reveal">
       <article class="benefit-card">
         <div class="benefit-card-tag">Leave</div>
