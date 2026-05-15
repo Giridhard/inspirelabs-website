@@ -541,6 +541,103 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
   margin: 0; max-width: 44ch;
   text-wrap: pretty;
 }
+
+/* ════════════════════════════════════════════════════════
+   Cream positioning band (mirrors about-company)
+   ════════════════════════════════════════════════════════ */
+.careers-positioning {
+  padding: clamp(80px, 9vw, 140px) 0;
+  border-top: 1px solid var(--hairline);
+  background: var(--warm);
+}
+.careers-positioning-eyebrow {
+  display: inline-flex; align-items: center; gap: 12px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--text); font-weight: 700;
+  margin-bottom: 28px;
+}
+.careers-positioning-eyebrow::before {
+  content: ''; width: 12px; height: 12px;
+  background: var(--accent); border-radius: 2px;
+  display: inline-block;
+}
+.careers-positioning-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: clamp(40px, 5vw, 80px);
+  align-items: start;
+}
+@media (max-width: 880px) { .careers-positioning-grid { grid-template-columns: 1fr; gap: 36px; } }
+.careers-positioning-title {
+  font-size: clamp(40px, 5vw, 76px); font-weight: 400;
+  letter-spacing: -0.03em; line-height: 1.04;
+  margin: 0; max-width: 16ch;
+}
+.careers-positioning-body p {
+  font-size: clamp(16px, 1.2vw, 18px); line-height: 1.7;
+  color: var(--text-secondary); margin: 0 0 22px;
+  text-wrap: pretty; max-width: 56ch;
+}
+.careers-positioning-body p:last-of-type { margin-bottom: clamp(28px, 3vw, 36px); }
+.careers-positioning-tags {
+  display: flex; flex-wrap: wrap; gap: 12px;
+}
+.careers-positioning-tag {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11.5px; letter-spacing: 0.10em; text-transform: uppercase;
+  font-weight: 700; color: var(--text);
+  padding: 12px 18px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--white);
+}
+.careers-positioning-tag--filled {
+  background: var(--text); color: var(--white); border-color: var(--text);
+}
+.careers-positioning-tag--filled .dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--accent); display: inline-block;
+}
+
+/* Soft single-line CTA section (mirrors about-doors) */
+.careers-doors {
+  padding: clamp(80px, 9vw, 140px) 0;
+  border-top: 1px solid var(--hairline);
+  text-align: center;
+}
+.careers-doors-eyebrow {
+  display: inline-block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--accent); font-weight: 700;
+  margin-bottom: clamp(28px, 3vw, 40px);
+}
+.careers-doors-title {
+  font-size: clamp(36px, 4.5vw, 72px); font-weight: 400;
+  letter-spacing: -0.025em; line-height: 1.08;
+  margin: 0 auto clamp(36px, 4vw, 56px);
+  max-width: 22ch;
+}
+.careers-doors-cta {
+  display: inline-flex; align-items: center; gap: 12px;
+  padding: 16px 32px;
+  background: var(--text); color: var(--white);
+  font-size: 16px; font-weight: 500; letter-spacing: -0.01em;
+  border-radius: 999px;
+  transition: background 0.25s var(--ease), transform 0.25s var(--ease);
+}
+.careers-doors-cta::after { content: '→'; transition: transform 0.25s var(--ease); }
+.careers-doors-cta:hover { background: var(--accent-deep); transform: translateY(-1px); }
+.careers-doors-cta:hover::after { transform: translateX(4px); }
+.careers-doors-cta:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+.careers-doors-note {
+  margin: clamp(28px, 3vw, 40px) auto 0;
+  font-size: 15px; line-height: 1.6;
+  color: var(--text-tertiary); max-width: 48ch;
+  text-wrap: pretty;
+}
 </style>
 </head>
 
@@ -563,16 +660,16 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
 
 <main>
 
-<!-- HERO -->
+<!-- ════════ HERO (mirrors about hero) ════════ -->
 <section class="hero">
   <div class="hero-grid"></div>
   <div class="container hero-inner">
-    <h1 class="display-1">We hire operators. Then we hand them the room.</h1>
-    <p class="hero-sub">Twelve years bootstrapped, five platforms in market, people who joined in their twenties still here in their forties. The room is built to make you sharper, then it expects you to keep it sharp.</p>
+    <h1 class="display-1">We hire operators.<br/>Then we hand them the room.</h1>
+    <p class="hero-sub">Twelve years bootstrapped. Five platforms in market. People who joined in their twenties, still here in their forties. The room is built to make you sharper, then it expects you to keep it sharp.</p>
   </div>
 </section>
 
-<!-- HOW WE HIRE -->
+<!-- ════════ NOTE ON HIRING (mirrors about-founder magazine spread) ════════ -->
 <section class="section-body">
   <div class="container">
     <div class="editorial-grid reveal">
@@ -583,15 +680,35 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
         </figure>
       </div>
       <div class="editorial-body">
-        <p>The people who do well here have shipped something. They have owned a number. They have stood next to a problem and refused to leave the room until it was fixed. Where you went to school does not feature in the conversation. Neither does the title you are leaving behind.</p>
-        <p>What we look for is simple. <strong>Evidence.</strong> A repository. A revenue line. A user count. A story about a bad quarter you walked through. A team that would work with you again. If you have receipts, the rest of the interview takes care of itself.</p>
+        <p>The people who do well here have shipped something. They have owned a number. They have stood next to a problem and refused to leave the room until it was fixed.</p>
+        <p>Where you went to school does not feature in the conversation. Neither does the title you are leaving behind. <strong>Show us a repository. A revenue line. A user count. A bad quarter you walked through. A team that would work with you again.</strong> If you have receipts, the rest of the interview takes care of itself.</p>
         <p>Most hires come through people already on the team. That is by design. The fastest way in is to be referred by an operator who has held the standard with you before. If that is not you yet, write to us anyway. We read every note.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- WHAT WE ASK -->
+<!-- ════════ POSITIONING BAND (mirrors about-company cream band) ════════ -->
+<section class="careers-positioning">
+  <div class="container">
+    <div class="careers-positioning-eyebrow">The room</div>
+    <div class="careers-positioning-grid reveal">
+      <h2 class="careers-positioning-title">A small operating company with a deep bench.</h2>
+      <div class="careers-positioning-body">
+        <p>Inspirelabs is a Hyderabad-based parent operating five consumer-facing platforms that 4,500+ brands run on and 200M+ people come back to. We do this with a deliberately small team. Operator density, not org chart depth.</p>
+        <p>People join in their twenties and tend to still be here in their forties. They buy houses on these salaries. They put children through school. They watch the company they helped build cross another zero.</p>
+        <div class="careers-positioning-tags">
+          <span class="careers-positioning-tag">Hyderabad</span>
+          <span class="careers-positioning-tag">Bootstrapped</span>
+          <span class="careers-positioning-tag">Since 2013</span>
+          <span class="careers-positioning-tag careers-positioning-tag--filled"><span class="dot"></span>Profitable</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ FIVE QUESTIONS (mirrors about-team-depth hairline grid) ════════ -->
 <section class="section-body">
   <div class="container">
     <div class="careers-head reveal">
@@ -641,7 +758,7 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
   </div>
 </section>
 
-<!-- A DECADE IN -->
+<!-- ════════ A DECADE IN (mirrors about-founder magazine spread again) ════════ -->
 <section class="section-body">
   <div class="container">
     <div class="editorial-grid reveal">
@@ -659,7 +776,7 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
   </div>
 </section>
 
-<!-- BENEFITS -->
+<!-- ════════ PROGRAMMES (mirrors about-values 2-col hairline grid) ════════ -->
 <section class="section-body">
   <div class="container">
     <div class="careers-head reveal">
@@ -694,96 +811,13 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
   </div>
 </section>
 
-<!-- THE ROOM (mantra) -->
-<section class="inside-section">
- <div class="container">
- <div class="inside-head reveal">
- <h2 class="section-title-xl">Inside Inspirelabs</h2>
- <p class="biz-intro">A studio of operators who&rsquo;d rather build than pitch. We celebrate together, we ship together, and we leave the office knowing what we made today will outlive the next quarter.</p>
- </div>
-
- <div class="inside-grid reveal">
- <div class="inside-tile">
- <img class="inside-tile-img" src="assets/culture/team-collab.jpg" alt="The Inspirelabs team" loading="lazy" />
- <div class="inside-tile-caption">
- <div class="inside-tile-eyebrow">The Crew</div>
- <div class="inside-tile-title">One operating standard, six core values.</div>
- </div>
- </div>
- <div class="inside-tile">
- <img class="inside-tile-img" src="assets/culture/team-portrait.jpg" alt="An Inspirelabs town-hall in progress" loading="lazy" />
- <div class="inside-tile-caption">
- <div class="inside-tile-eyebrow">The Townhall</div>
- <div class="inside-tile-title">Where every decision gets explained.</div>
- </div>
- </div>
- <div class="inside-tile">
- <img class="inside-tile-img" src="assets/culture/cafeteria.jpg" alt="Cafeteria with art" loading="lazy" />
- <div class="inside-tile-caption">
- <div class="inside-tile-eyebrow">The Cafe</div>
- <div class="inside-tile-title">Where ideas get loud.</div>
- </div>
- </div>
- <div class="inside-tile">
- <img class="inside-tile-img" src="assets/culture/team-meet.jpg" alt="Team meet at Inspirelabs" loading="lazy" />
- <div class="inside-tile-caption">
- <div class="inside-tile-eyebrow">Celebrations</div>
- <div class="inside-tile-title">Iftars. Sports week. Women&rsquo;s Day. Anniversaries.</div>
- </div>
- </div>
- </div>
-
- <div class="inside-stats reveal">
- <div class="inside-stat">
- <div class="inside-stat-val">24</div>
- <div class="inside-stat-lbl">Paid leaves a year (sick, casual, annual)</div>
- </div>
- <div class="inside-stat">
- <div class="inside-stat-val">10</div>
- <div class="inside-stat-lbl">Public holidays across the calendar year</div>
- </div>
- <div class="inside-stat">
- <div class="inside-stat-val">5-day</div>
- <div class="inside-stat-lbl">Work week with eight productive hours</div>
- </div>
- <div class="inside-stat">
- <div class="inside-stat-val">90 days</div>
- <div class="inside-stat-lbl">Health First wellness challenge, every year</div>
- </div>
- </div>
-
- <div class="reveal" style="margin-top: clamp(40px, 4vw, 56px);">
- <a href="about.html" class="tlink">See life at Inspirelabs</a>
- </div>
- </div>
-</section>
-
-
-<section class="careers-mantra">
+<!-- ════════ APPLY CTA (mirrors about-doors soft CTA) ════════ -->
+<section class="careers-doors">
   <div class="container">
-    <div class="careers-mantra-inner reveal">
-      <span class="careers-mantra-eyebrow">The room</span>
-      <h2 class="careers-mantra-text">This place is built to make you sharper.</h2>
-      <p class="careers-mantra-body">The work asks for hard hours, real ownership, and the willingness to sit slightly outside your comfort. You will feel a little stretched. A little under-prepared for the size of the problem in front of you. That is the room. That is also the only room where the compounding happens.</p>
-    </div>
-  </div>
-</section>
-
-<!-- APPLY -->
-<section class="careers-apply">
-  <div class="container">
-    <div class="careers-apply-grid reveal">
-      <div class="careers-apply-text">
-        <span class="careers-apply-eyebrow">Apply</span>
-        <h2>Tell us what you have shipped.</h2>
-        <p>Tell us the problem you would not let go. Tell us the team you held the standard with. We read every note.</p>
-        <p class="careers-apply-mail-fallback">Or write directly to <a href="mailto:careers@inspirelabs.com" class="tlink">careers@inspirelabs.com</a></p>
-      </div>
-      <div class="careers-apply-mailto">
-        <a href="mailto:careers@inspirelabs.com?subject=Application%20%C2%B7%20Inspirelabs" class="careers-apply-mail-btn">Email careers@inspirelabs.com</a>
-        <p class="careers-apply-mail-note">Tell us what you have shipped, the problem you would not let go, and the team you held the standard with.</p>
-      </div>
-    </div>
+    <div class="careers-doors-eyebrow">Want in?</div>
+    <h2 class="careers-doors-title">Tell us what you&rsquo;ve shipped.</h2>
+    <a href="mailto:careers@inspirelabs.com?subject=Application%20%C2%B7%20Inspirelabs" class="careers-doors-cta">Email careers@inspirelabs.com</a>
+    <p class="careers-doors-note">Tell us what you have shipped, the problem you would not let go, and the team you held the standard with. We read every note.</p>
   </div>
 </section>
 
