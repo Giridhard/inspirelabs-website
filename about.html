@@ -323,64 +323,69 @@ section { padding: clamp(64px, 7vw, 110px) 0; position: relative; }
 
 /* ── Team & Operating Depth ─────────────────────────────────── */
 .about-team-depth { padding: clamp(80px, 9vw, 140px) 0; border-top: 1px solid var(--hairline); }
-.about-team-depth-head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: clamp(32px, 4vw, 64px); align-items: end; margin-bottom: clamp(48px, 5vw, 72px); }
-@media (max-width: 880px) { .about-team-depth-head { grid-template-columns: 1fr; gap: 24px; } }
-.about-team-depth-eyebrow {
-  display: inline-flex; align-items: center; gap: 12px;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase;
-  color: var(--text); font-weight: 700;
-  margin-bottom: 22px;
-}
-.about-team-depth-eyebrow::before {
-  content: ''; width: 12px; height: 12px;
-  background: var(--accent); border-radius: 2px;
-  display: inline-block;
-}
+.about-team-depth-head { max-width: 70ch; margin-bottom: clamp(48px, 5vw, 72px); }
 .about-team-depth-title {
-  font-size: clamp(34px, 4vw, 56px); font-weight: 400;
-  letter-spacing: -0.025em; line-height: 1.08;
-  margin: 0; max-width: 14ch;
+  font-size: clamp(30px, 3.6vw, 52px); font-weight: 400;
+  letter-spacing: -0.025em; line-height: 1.1;
+  margin-bottom: 16px; max-width: 22ch;
 }
 .about-team-depth-intro {
-  font-size: clamp(16px, 1.25vw, 19px); line-height: 1.65;
-  color: var(--text-secondary); margin: 0; max-width: 50ch;
-  text-wrap: pretty;
+  font-size: clamp(15.5px, 1.2vw, 18px); line-height: 1.55;
+  color: var(--text-secondary); max-width: 56ch;
 }
-.about-team-depth-grid { display: flex; flex-direction: column; }
-.depth-card {
+.about-team-depth-grid {
   display: grid;
-  grid-template-columns: 64px 1fr;
-  gap: clamp(24px, 2.5vw, 40px);
-  padding: clamp(28px, 3vw, 40px) 0;
+  grid-template-columns: 1fr 1fr;
+  column-gap: clamp(48px, 5vw, 96px);
+  row-gap: 0;
   border-top: 1px solid var(--hairline);
-  align-items: start;
+}
+@media (max-width: 880px) { .about-team-depth-grid { grid-template-columns: 1fr; column-gap: 0; } }
+.depth-card {
+  padding: clamp(36px, 3vw, 52px) 0;
+  border-bottom: 1px solid var(--hairline);
+  display: flex; flex-direction: column;
+  gap: 14px;
   position: relative;
-  transition: padding-left 0.3s var(--ease);
 }
-.depth-card:last-child { border-bottom: 1px solid var(--hairline); }
-.depth-card-icon {
-  width: 52px; height: 52px;
-  display: flex; align-items: center; justify-content: center;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  color: var(--text);
-  background: var(--white);
-  transition: background 0.3s var(--ease), color 0.3s var(--ease), border-color 0.3s var(--ease);
+.depth-card-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; letter-spacing: 0.12em;
+  color: var(--accent-deep); font-weight: 700;
 }
-.depth-card-icon svg { width: 22px; height: 22px; }
-.depth-card-body { max-width: 64ch; }
-.depth-card-body h3 {
-  font-size: clamp(20px, 1.7vw, 24px); font-weight: 500;
-  letter-spacing: -0.02em; line-height: 1.2;
-  margin: 0 0 10px; color: var(--text);
+.depth-card h3 {
+  font-size: clamp(22px, 2.2vw, 28px); font-weight: 500;
+  letter-spacing: -0.02em; line-height: 1.18;
+  margin: 0; color: var(--text);
+  max-width: 22ch;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 4px;
+  transition: color 0.25s var(--ease);
 }
-.depth-card-body p {
-  font-size: 15.5px; line-height: 1.6;
+.depth-card h3::after {
+  content: '';
+  position: absolute; left: 0; bottom: -2px;
+  width: 0; height: 2px;
+  background: var(--accent);
+  transition: width 0.4s var(--ease);
+}
+.depth-card p {
+  font-size: clamp(15px, 1.15vw, 17px); line-height: 1.6;
   color: var(--text-secondary); margin: 0;
-  text-wrap: pretty;
+  max-width: 44ch; text-wrap: pretty;
 }
-.depth-card:hover .depth-card-icon { background: var(--accent); border-color: var(--accent); color: var(--white); }
+.depth-card::before {
+  content: '';
+  position: absolute; left: 0; right: 0; top: 0;
+  height: 1px; background: var(--accent);
+  transform: scaleX(0); transform-origin: left center;
+  transition: transform 0.45s var(--ease);
+  pointer-events: none;
+}
+.depth-card:hover::before { transform: scaleX(1); }
+.depth-card:hover h3 { color: var(--accent-deep); }
+.depth-card:hover h3::after { width: 56px; }
 
 /* ── Company positioning band ───────────────────────────────── */
 .about-company { padding: clamp(80px, 9vw, 140px) 0; border-top: 1px solid var(--hairline); background: var(--warm); }
@@ -856,57 +861,6 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
   </div>
 </section>
 
-<!-- TEAM & OPERATING DEPTH -->
-<section class="about-team-depth">
-  <div class="container">
-    <div class="about-team-depth-head reveal">
-      <div>
-        <div class="about-team-depth-eyebrow">Team &amp; Operating Depth</div>
-        <h2 class="about-team-depth-title">Four operating layers. One company.</h2>
-      </div>
-      <p class="about-team-depth-intro">The depth that lets one parent run five very different businesses without losing the operating standard. AI native at every layer, with humans on the call where it matters.</p>
-    </div>
-    <div class="about-team-depth-grid reveal">
-      <article class="depth-card">
-        <div class="depth-card-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M7 12h10"/></svg>
-        </div>
-        <div class="depth-card-body">
-          <h3>Founder&rsquo;s Office</h3>
-          <p>Drives strategic initiatives across growth, GTM, product, partnerships, and new bets, with AI automation embedded into planning, tracking, and decision workflows.</p>
-        </div>
-      </article>
-      <article class="depth-card">
-        <div class="depth-card-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 5l6 6m0 0l-6 6m6-6h2m6-6l-6 6m0 0l6 6"/><circle cx="3.5" cy="5" r="1.5"/><circle cx="3.5" cy="19" r="1.5"/><circle cx="20.5" cy="5" r="1.5"/><circle cx="20.5" cy="19" r="1.5"/></svg>
-        </div>
-        <div class="depth-card-body">
-          <h3>Agentic AI &amp; Decision Systems</h3>
-          <p>Builds agentic workflows that automate research, SEO intelligence, campaign planning, content operations, performance reporting, forecasting, and execution orchestration.</p>
-        </div>
-      </article>
-      <article class="depth-card">
-        <div class="depth-card-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.4"/><rect x="14" y="3" width="7" height="7" rx="1.4"/><rect x="3" y="14" width="7" height="7" rx="1.4"/><circle cx="17.5" cy="17.5" r="3.5"/></svg>
-        </div>
-        <div class="depth-card-body">
-          <h3>Product, Tech, Growth &amp; Merchant Ops</h3>
-          <p>Runs consumer platforms, partner integrations, campaign delivery, merchant growth operations, SEO systems, and AI assisted product experimentation.</p>
-        </div>
-      </article>
-      <article class="depth-card">
-        <div class="depth-card-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"/><circle cx="17" cy="9.5" r="2.4"/><path d="M3 19c0-3 2.7-5 6-5s6 2 6 5"/><path d="M14.5 19c0-2 1.5-3.6 4-3.6s4 1.6 4 3.6"/></svg>
-        </div>
-        <div class="depth-card-body">
-          <h3>Hyderabad based operating bench</h3>
-          <p>Deep operating experience across commerce, marketing, analytics, partnerships, and automation. Built across consumer tech, growth, product, engineering, merchant ops, and AI.</p>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
 <!-- JOURNEY TIMELINE -->
 <section class="about-timeline">
   <div class="container">
@@ -1069,6 +1023,38 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
           <span class="about-company-tag about-company-tag--filled"><span class="dot"></span>Profitable</span>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM & OPERATING DEPTH -->
+<section class="about-team-depth">
+  <div class="container">
+    <div class="about-team-depth-head reveal">
+      <h2 class="about-team-depth-title">Four operating layers. One company.</h2>
+      <p class="about-team-depth-intro">The depth that lets one parent run five very different businesses without losing the operating standard. AI native at every layer, with humans on the call where it matters.</p>
+    </div>
+    <div class="about-team-depth-grid reveal">
+      <article class="depth-card">
+        <div class="depth-card-num">/ 01</div>
+        <h3>Founder&rsquo;s Office</h3>
+        <p>Drives strategic initiatives across growth, GTM, product, partnerships, and new bets, with AI automation embedded into planning, tracking, and decision workflows.</p>
+      </article>
+      <article class="depth-card">
+        <div class="depth-card-num">/ 02</div>
+        <h3>Agentic AI &amp; Decision Systems</h3>
+        <p>Builds agentic workflows that automate research, SEO intelligence, campaign planning, content operations, performance reporting, forecasting, and execution orchestration.</p>
+      </article>
+      <article class="depth-card">
+        <div class="depth-card-num">/ 03</div>
+        <h3>Product, Tech, Growth &amp; Merchant Ops</h3>
+        <p>Runs consumer platforms, partner integrations, campaign delivery, merchant growth operations, SEO systems, and AI assisted product experimentation.</p>
+      </article>
+      <article class="depth-card">
+        <div class="depth-card-num">/ 04</div>
+        <h3>Hyderabad based operating bench</h3>
+        <p>Deep operating experience across commerce, marketing, analytics, partnerships, and automation. Built across consumer tech, growth, product, engineering, merchant ops, and AI.</p>
+      </article>
     </div>
   </div>
 </section>
