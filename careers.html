@@ -155,27 +155,24 @@ section { padding: clamp(64px, 7vw, 110px) 0; position: relative; }
 }
 .editorial-aside { display: flex; flex-direction: column; gap: clamp(24px, 3vw, 36px); align-items: flex-start; }
 .editorial-illustration {
-  width: 100%; max-width: 420px;
-  margin-top: 8px;
-  border-radius: 10px;
-  overflow: hidden;
-  background: var(--warm, #FAF7F1);
-  padding: clamp(16px, 1.6vw, 22px);
-  border: 1px solid var(--hairline);
+  width: 100%; max-width: 360px;
+  margin: 8px 0 0;
 }
-.editorial-illustration img { width: 100%; height: auto; display: block; }
-@media (max-width: 980px) { .editorial-illustration { max-width: 360px; margin: 8px auto 0; } }
+.editorial-illustration img {
+  width: 100%; height: auto; display: block;
+  mix-blend-mode: multiply;
+}
+@media (max-width: 980px) { .editorial-illustration { max-width: 320px; margin: 8px auto 0; } }
 
 /* Benefits section: illustration band above the grid */
 .benefits-illustration {
   margin: 0 auto clamp(36px, 4vw, 56px);
-  max-width: 460px;
-  padding: clamp(20px, 2vw, 28px);
-  border-radius: 10px;
-  background: var(--warm, #FAF7F1);
-  border: 1px solid var(--hairline);
+  max-width: 420px;
 }
-.benefits-illustration img { width: 100%; height: auto; display: block; }
+.benefits-illustration img {
+  width: 100%; height: auto; display: block;
+  mix-blend-mode: multiply;
+}
 .editorial-body p {
   font-size: clamp(16.5px, 1.25vw, 19px);
   line-height: 1.7; color: var(--text-secondary);
@@ -427,8 +424,8 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
 /* === 5 questions: 2-col with illustration === */
 .ask-grid { display: grid; grid-template-columns: minmax(0, 0.85fr) minmax(0, 1fr); gap: clamp(40px, 5vw, 80px); align-items: center; }
 @media (max-width: 980px) { .ask-grid { grid-template-columns: 1fr; gap: 32px; } }
-.ask-illustration { display: flex; align-items: center; justify-content: center; padding: clamp(20px, 2vw, 28px); border-radius: 10px; background: var(--warm, #FAF7F1); border: 1px solid var(--hairline); }
-.ask-illustration img { width: 100%; height: auto; max-width: 420px; display: block; }
+.ask-illustration { display: flex; align-items: center; justify-content: center; }
+.ask-illustration img { width: 100%; height: auto; max-width: 420px; display: block; mix-blend-mode: multiply; }
 .ask-content .section-head { margin-bottom: clamp(28px, 3vw, 40px); }
 
 /* === Benefits as cards === */
