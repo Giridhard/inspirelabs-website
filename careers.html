@@ -538,7 +538,7 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
   font-size: clamp(30px, 3.4vw, 48px);
   font-weight: 500; letter-spacing: -0.022em; line-height: 1.1;
   margin: 0 0 clamp(28px, 3vw, 40px);
-  max-width: 18ch; color: var(--text);
+  max-width: 22ch; color: var(--text);
 }
 .hire-clean-content p {
   font-size: clamp(16.5px, 1.25vw, 19px);
@@ -546,7 +546,9 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
   color: var(--text-secondary);
   margin-bottom: 18px;
   max-width: 56ch;
-  text-wrap: pretty;
+  text-align: justify;
+  hyphens: auto;
+  -webkit-hyphens: auto;
 }
 .hire-clean-content p:last-child { margin-bottom: 0; }
 .hire-clean-content p strong { color: var(--text); font-weight: 500; }
@@ -767,7 +769,7 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
   <div class="container">
     <div class="hire-clean reveal">
       <div class="hire-clean-content">
-        <h2>We do not hire resumes. We hire receipts.</h2>
+        <h2>We don&rsquo;t hire resumes.<br/>We hire receipts.</h2>
         <p>The people who do well here have shipped something. They have owned a number. They have stood next to a problem and refused to leave the room until it was fixed.</p>
         <p>Where you went to school does not feature in the conversation. Neither does the title you are leaving behind. <strong>Show us a repository. A revenue line. A user count. A bad quarter you walked through. A team that would work with you again.</strong> If you have receipts, the rest of the interview takes care of itself.</p>
         <p>Most hires come through people already on the team. That is by design. The fastest way in is to be referred by an operator who has held the standard with you before. If that is not you yet, write to us anyway. We read every note.</p>
