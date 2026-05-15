@@ -579,6 +579,50 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
   mix-blend-mode: multiply;
 }
 
+/* A Decade In: clean 2-col layout — same pattern as Hire Receipts */
+.decade-clean {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr);
+  gap: clamp(48px, 6vw, 96px);
+  align-items: center;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+@media (max-width: 880px) {
+  .decade-clean { grid-template-columns: 1fr; gap: 36px; }
+}
+.decade-clean-content { padding-left: 0; }
+.decade-clean-content h2 {
+  font-size: clamp(28px, 3vw, 42px);
+  font-weight: 500; letter-spacing: -0.022em; line-height: 1.12;
+  margin: 0 0 clamp(28px, 3vw, 40px);
+  max-width: none; color: var(--text);
+}
+.decade-clean-content h2 .line { display: block; }
+@media (min-width: 600px) {
+  .decade-clean-content h2 .line { white-space: nowrap; }
+}
+.decade-clean-content p {
+  font-size: clamp(16.5px, 1.25vw, 19px);
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin-bottom: 18px;
+  max-width: 56ch;
+  text-wrap: pretty;
+}
+.decade-clean-content p:last-child { margin-bottom: 0; }
+.decade-clean-content p strong { color: var(--text); font-weight: 500; }
+.decade-clean-illustration {
+  display: flex; align-items: center; justify-content: flex-start;
+  overflow: visible;
+}
+@media (max-width: 880px) { .decade-clean-illustration { justify-content: center; } }
+.decade-clean-illustration img {
+  width: 100%; max-width: 960px;
+  height: auto; display: block;
+  mix-blend-mode: multiply;
+}
+
 /* Benefits: 2x2 hairline grid (mirrors about Values + Team & Operating Depth) */
 .programmes-grid {
   display: grid;
@@ -824,17 +868,15 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
 <!-- ════════ A DECADE IN (mirrors about-founder magazine spread again) ════════ -->
 <section class="section-body">
   <div class="container">
-    <div class="editorial-grid reveal">
-      <div class="editorial-aside">
-        <h2 class="editorial-title">A decade in, the math changes.</h2>
-        <figure class="editorial-illustration" aria-hidden="true">
-          <img src="assets/illustrations/careers/compound.png" alt="" loading="lazy" />
-        </figure>
-      </div>
-      <div class="editorial-body">
+    <div class="decade-clean reveal">
+      <div class="decade-clean-content">
+        <h2><span class="line">A decade in,</span><span class="line">the math changes.</span></h2>
         <p>When you give a decade to one operating company, you start watching the consequences of your own decisions land. A feature you shipped in 2018 is still earning the company money in 2026. A junior you hired in 2020 is now the person other juniors come to. The titles stop being interesting. The receipts start stacking.</p>
         <p>People who join Inspirelabs in their twenties tend to still be here in their forties. They buy houses on these salaries. They put children through school. They watch the company they helped build cross another zero. <strong>The compounding is not a metaphor.</strong> It is the reason to be here in the first place.</p>
       </div>
+      <figure class="decade-clean-illustration" aria-hidden="true">
+        <img src="assets/illustrations/careers/compound.png" alt="" loading="lazy" />
+      </figure>
     </div>
   </div>
 </section>
