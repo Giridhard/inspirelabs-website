@@ -617,6 +617,46 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
   background: var(--accent); display: inline-block;
 }
 
+/* Mastery moment: full-width editorial visual between sections */
+.careers-moment {
+  padding: clamp(80px, 9vw, 140px) 0;
+  border-top: 1px solid var(--hairline);
+  text-align: center;
+}
+.careers-moment-label {
+  display: inline-block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--text-tertiary); font-weight: 600;
+  margin-bottom: clamp(36px, 4vw, 56px);
+  position: relative; padding-left: 44px;
+}
+.careers-moment-label::before {
+  content: ''; position: absolute; left: 0; top: 50%;
+  width: 32px; height: 1px; background: var(--accent);
+  transform: translateY(-50%);
+}
+.careers-moment-figure {
+  width: 100%; max-width: 1200px;
+  margin: 0 auto;
+}
+.careers-moment-figure img {
+  width: 100%; height: auto; display: block;
+  mix-blend-mode: multiply;
+}
+.careers-moment-caption {
+  margin-top: clamp(28px, 3vw, 40px);
+  font-size: clamp(15px, 1.2vw, 18px);
+  line-height: 1.55;
+  color: var(--text-secondary);
+  max-width: 56ch;
+  margin-left: auto; margin-right: auto;
+  text-wrap: pretty;
+}
+.careers-moment-caption em {
+  font-style: normal; color: var(--text); font-weight: 500;
+}
+
 /* Soft single-line CTA section (mirrors about-doors) */
 .careers-doors {
   padding: clamp(80px, 9vw, 140px) 0;
@@ -779,6 +819,17 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
         <p>People who join Inspirelabs in their twenties tend to still be here in their forties. They buy houses on these salaries. They put children through school. They watch the company they helped build cross another zero. <strong>The compounding is not a metaphor.</strong> It is the reason to be here in the first place.</p>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- ════════ MASTERY MOMENT (eternal-style full-width visual) ════════ -->
+<section class="careers-moment">
+  <div class="container">
+    <div class="careers-moment-label">Year one to mastery</div>
+    <figure class="careers-moment-figure reveal">
+      <img src="assets/illustrations/careers/mastery.png" alt="Four stages of an operator: struggling with the work, building the work, seeing far, and standing on what was built." loading="lazy" />
+      <figcaption class="careers-moment-caption">The work that breaks you in year one is the work you train someone else on by year four. <em>The receipts compound, and so do you.</em></figcaption>
+    </figure>
   </div>
 </section>
 
