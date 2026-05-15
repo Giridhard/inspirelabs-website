@@ -524,6 +524,41 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
   max-width: 50ch;
 }
 
+/* Hire Receipts: clean 2-col layout (heading + body left, illustration right) */
+.hire-clean {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  gap: clamp(40px, 5vw, 96px);
+  align-items: center;
+}
+@media (max-width: 880px) {
+  .hire-clean { grid-template-columns: 1fr; gap: 36px; }
+}
+.hire-clean-content h2 {
+  font-size: clamp(30px, 3.4vw, 48px);
+  font-weight: 500; letter-spacing: -0.022em; line-height: 1.1;
+  margin: 0 0 clamp(28px, 3vw, 40px);
+  max-width: 18ch; color: var(--text);
+}
+.hire-clean-content p {
+  font-size: clamp(16.5px, 1.25vw, 19px);
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin-bottom: 18px;
+  max-width: 56ch;
+  text-wrap: pretty;
+}
+.hire-clean-content p:last-child { margin-bottom: 0; }
+.hire-clean-content p strong { color: var(--text); font-weight: 500; }
+.hire-clean-illustration {
+  display: flex; align-items: center; justify-content: center;
+}
+.hire-clean-illustration img {
+  width: 100%; max-width: 460px;
+  height: auto; display: block;
+  mix-blend-mode: multiply;
+}
+
 /* Benefits: 2x2 hairline grid (mirrors about Values + Team & Operating Depth) */
 .programmes-grid {
   display: grid;
@@ -730,18 +765,16 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
 <!-- ════════ NOTE ON HIRING (mirrors about-founder magazine spread) ════════ -->
 <section class="section-body">
   <div class="container">
-    <div class="editorial-grid reveal">
-      <div class="editorial-aside">
-        <h2 class="editorial-title">We hire people<br/>who build things<br/>that matter.</h2>
-        <figure class="editorial-illustration" aria-hidden="true">
-          <img src="assets/illustrations/careers/build-together.png" alt="" loading="lazy" />
-        </figure>
-      </div>
-      <div class="editorial-body">
+    <div class="hire-clean reveal">
+      <div class="hire-clean-content">
+        <h2>We do not hire resumes. We hire receipts.</h2>
         <p>The people who do well here have shipped something. They have owned a number. They have stood next to a problem and refused to leave the room until it was fixed.</p>
         <p>Where you went to school does not feature in the conversation. Neither does the title you are leaving behind. <strong>Show us a repository. A revenue line. A user count. A bad quarter you walked through. A team that would work with you again.</strong> If you have receipts, the rest of the interview takes care of itself.</p>
         <p>Most hires come through people already on the team. That is by design. The fastest way in is to be referred by an operator who has held the standard with you before. If that is not you yet, write to us anyway. We read every note.</p>
       </div>
+      <figure class="hire-clean-illustration" aria-hidden="true">
+        <img src="assets/illustrations/careers/build-together.png" alt="" loading="lazy" />
+      </figure>
     </div>
   </div>
 </section>
