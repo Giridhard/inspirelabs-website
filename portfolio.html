@@ -141,15 +141,20 @@ section.tight { padding: clamp(32px, 3.5vw, 55px) 0; }
 /* Products page brand-book hero, centered text */
 .hero-text-center {
   text-align: center;
-  max-width: 920px;
+  max-width: 1200px;
   margin: 0 auto clamp(36px, 4vw, 56px);
 }
 .hero-text-center .hero-eyebrow { margin-bottom: clamp(28px, 3vw, 40px); }
 .hero-text-center .hero-eyebrow::before,
 .next-tease .hero-eyebrow::before { display: none; }
 .hero-text-center h1 {
-  max-width: 18ch;
+  max-width: none;
   margin: 0 auto;
+  font-size: clamp(48px, 6vw, 104px);
+}
+.hero-text-center h1 .line { display: block; }
+@media (min-width: 600px) {
+  .hero-text-center h1 .line { white-space: nowrap; }
 }
 .hero-text-center h1 .accent { color: var(--accent); }
 .hero-text-center .hero-split-lead {
@@ -754,7 +759,7 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
   <div class="container hero-inner">
     <div class="hero-text-center">
       <div class="hero-eyebrow">AI-first Martech Company</div>
-      <h1 class="display-1"><span style="white-space:nowrap;">We build platforms</span><br/><span style="white-space:nowrap;">that stay live.</span></h1>
+      <h1 class="display-1"><span class="line">We build platforms</span><span class="line">that stay live.</span></h1>
       <p class="hero-split-lead">Commerce, rewards, sharing, growth, decision intelligence.<br/><span style="white-space: nowrap;">One venture engine.</span></p>
     </div>
 
