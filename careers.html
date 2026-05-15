@@ -476,25 +476,25 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
 /* 5 Questions: clean 2-col layout (illustration left, headline + bullet list right) */
 .questions-clean {
   display: grid;
-  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
-  gap: clamp(40px, 5vw, 96px);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(48px, 6vw, 96px);
   align-items: center;
+  max-width: 1280px;
+  margin: 0 auto;
 }
 @media (max-width: 880px) {
   .questions-clean { grid-template-columns: 1fr; gap: 36px; }
 }
 .questions-clean-illustration {
-  display: flex; align-items: center; justify-content: center;
+  display: flex; align-items: center; justify-content: flex-end;
 }
+@media (max-width: 880px) { .questions-clean-illustration { justify-content: center; } }
 .questions-clean-illustration img {
-  width: 100%; max-width: 620px;
+  width: 100%; max-width: 540px;
   height: auto; display: block;
   mix-blend-mode: multiply;
 }
-.questions-clean-content {
-  padding-left: clamp(20px, 4vw, 80px);
-}
-@media (max-width: 880px) { .questions-clean-content { padding-left: 0; } }
+.questions-clean-content { padding-left: 0; }
 .questions-clean-content h2 {
   font-size: clamp(30px, 3.4vw, 48px);
   font-weight: 500; letter-spacing: -0.022em; line-height: 1.1;
@@ -531,17 +531,16 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
 /* Hire Receipts: clean 2-col layout (heading + body left, illustration right) */
 .hire-clean {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr);
-  gap: clamp(40px, 5vw, 96px);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(48px, 6vw, 96px);
   align-items: center;
+  max-width: 1280px;
+  margin: 0 auto;
 }
 @media (max-width: 880px) {
   .hire-clean { grid-template-columns: 1fr; gap: 36px; }
 }
-.hire-clean-content {
-  padding-left: clamp(20px, 4vw, 80px);
-}
-@media (max-width: 880px) { .hire-clean-content { padding-left: 0; } }
+.hire-clean-content { padding-left: 0; }
 .hire-clean-content h2 {
   font-size: clamp(30px, 3.4vw, 48px);
   font-weight: 500; letter-spacing: -0.022em; line-height: 1.1;
@@ -561,10 +560,11 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
 .hire-clean-content p:last-child { margin-bottom: 0; }
 .hire-clean-content p strong { color: var(--text); font-weight: 500; }
 .hire-clean-illustration {
-  display: flex; align-items: center; justify-content: center;
+  display: flex; align-items: center; justify-content: flex-start;
 }
+@media (max-width: 880px) { .hire-clean-illustration { justify-content: center; } }
 .hire-clean-illustration img {
-  width: 100%; max-width: 620px;
+  width: 100%; max-width: 540px;
   height: auto; display: block;
   mix-blend-mode: multiply;
 }
