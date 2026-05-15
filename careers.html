@@ -476,7 +476,7 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
 /* 5 Questions: clean 2-col layout (illustration left, headline + bullet list right) */
 .questions-clean {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr);
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
   gap: clamp(48px, 6vw, 96px);
   align-items: center;
   max-width: 1500px;
@@ -490,7 +490,7 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
 }
 @media (max-width: 880px) { .questions-clean-illustration { justify-content: center; } }
 .questions-clean-illustration img {
-  width: 100%; max-width: 820px;
+  width: 100%; max-width: 960px;
   height: auto; display: block;
   mix-blend-mode: multiply;
 }
@@ -535,7 +535,7 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
 /* Hire Receipts: clean 2-col layout (heading + body left, illustration right) */
 .hire-clean {
   display: grid;
-  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr);
   gap: clamp(48px, 6vw, 96px);
   align-items: center;
   max-width: 1500px;
@@ -570,7 +570,7 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
 }
 @media (max-width: 880px) { .hire-clean-illustration { justify-content: center; } }
 .hire-clean-illustration img {
-  width: 100%; max-width: 820px;
+  width: 100%; max-width: 960px;
   height: auto; display: block;
   mix-blend-mode: multiply;
 }
