@@ -487,13 +487,17 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
 }
 .questions-clean-illustration {
   display: flex; align-items: center; justify-content: flex-end;
+  overflow: visible;
 }
 @media (max-width: 880px) { .questions-clean-illustration { justify-content: center; } }
 .questions-clean-illustration img {
   width: 100%; max-width: 960px;
   height: auto; display: block;
   mix-blend-mode: multiply;
+  transform: scale(1.5);
+  transform-origin: center center;
 }
+@media (max-width: 880px) { .questions-clean-illustration img { transform: scale(1.25); } }
 .questions-clean-content { padding-left: 0; }
 .questions-clean-content h2 {
   font-size: clamp(28px, 3vw, 42px);
