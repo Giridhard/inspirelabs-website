@@ -473,53 +473,55 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
   mix-blend-mode: multiply;
 }
 
-/* 5 Questions: 2-col staggered grid (4 in 2x2 + 5th spans both cols) */
-.questions-grid {
+/* 5 Questions: clean 2-col layout (illustration left, headline + bullet list right) */
+.questions-clean {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0;
-  border-top: 1px solid var(--hairline);
-  border-left: 1px solid var(--hairline);
-}
-.question-item {
-  padding: clamp(36px, 4vw, 56px);
-  border-right: 1px solid var(--hairline);
-  border-bottom: 1px solid var(--hairline);
-  display: flex; flex-direction: column;
-  gap: 16px;
-  background: var(--white);
-  position: relative;
-  transition: background 0.3s var(--ease);
-  list-style: none;
-}
-.question-item:hover { background: var(--warm); }
-.question-item:nth-child(5) {
-  grid-column: 1 / -1;
-  background: var(--text); color: var(--white);
-}
-.question-item:nth-child(5):hover { background: var(--text); }
-.question-item:nth-child(5) h3 { color: var(--white); max-width: 28ch; }
-.question-item:nth-child(5) p { color: rgba(255,255,255,0.72); max-width: 56ch; }
-.question-item:nth-child(5) .question-num { color: var(--accent); }
-.question-num {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase;
-  color: var(--accent-deep); font-weight: 700;
-}
-.question-item h3 {
-  font-size: clamp(22px, 2.2vw, 30px);
-  font-weight: 500; letter-spacing: -0.02em; line-height: 1.18;
-  color: var(--text); margin: 0;
-  max-width: 22ch;
-}
-.question-item p {
-  font-size: clamp(15px, 1.15vw, 17px);
-  line-height: 1.6; color: var(--text-secondary);
-  margin: 0; max-width: 50ch;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+  gap: clamp(40px, 5vw, 96px);
+  align-items: center;
 }
 @media (max-width: 880px) {
-  .questions-grid { grid-template-columns: 1fr; }
-  .question-item:nth-child(5) { grid-column: auto; }
+  .questions-clean { grid-template-columns: 1fr; gap: 36px; }
+}
+.questions-clean-illustration {
+  display: flex; align-items: center; justify-content: center;
+}
+.questions-clean-illustration img {
+  width: 100%; max-width: 460px;
+  height: auto; display: block;
+  mix-blend-mode: multiply;
+}
+.questions-clean-content h2 {
+  font-size: clamp(30px, 3.4vw, 48px);
+  font-weight: 500; letter-spacing: -0.022em; line-height: 1.1;
+  margin: 0 0 clamp(28px, 3vw, 40px);
+  max-width: 18ch; color: var(--text);
+}
+.questions-clean-list {
+  list-style: none; padding: 0; margin: 0;
+}
+.questions-clean-list li {
+  position: relative;
+  padding-left: 24px;
+  font-size: clamp(16.5px, 1.25vw, 19px);
+  line-height: 1.6;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+.questions-clean-list li::before {
+  content: '•';
+  position: absolute; left: 0; top: -1px;
+  color: var(--accent);
+  font-size: 1.2em; font-weight: 700;
+  line-height: 1.6;
+}
+.questions-clean-closer {
+  margin-top: clamp(28px, 3vw, 40px);
+  font-size: clamp(15.5px, 1.2vw, 18px);
+  line-height: 1.6;
+  color: var(--text-secondary);
+  font-style: italic;
+  max-width: 50ch;
 }
 
 /* Benefits: 2x2 hairline grid (mirrors about Values + Team & Operating Depth) */
@@ -767,40 +769,22 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
 <!-- ════════ FIVE QUESTIONS (mirrors about-team-depth hairline grid) ════════ -->
 <section class="section-body">
   <div class="container">
-    <div class="careers-head reveal">
-      <h2>When we meet a candidate, we ask ourselves five questions.</h2>
-      <p>The yes or no on each is the interview. The rest is paperwork.</p>
+    <div class="questions-clean reveal">
+      <figure class="questions-clean-illustration" aria-hidden="true">
+        <img src="assets/illustrations/careers/huddle.png" alt="" loading="lazy" />
+      </figure>
+      <div class="questions-clean-content">
+        <h2>When we meet a candidate, we ask ourselves five questions:</h2>
+        <ul class="questions-clean-list">
+          <li>Are they smarter than us in the room?</li>
+          <li>Are they more ambitious than us about the work?</li>
+          <li>Do they take full ownership of their lives?</li>
+          <li>Are they comfortable saying, &ldquo;I don&rsquo;t know&rdquo;?</li>
+          <li>Will they make every person in the room sharper?</li>
+        </ul>
+        <p class="questions-clean-closer">If that sounds like you, we&rsquo;d love to meet you.</p>
+      </div>
     </div>
-    <figure class="careers-illustration-band reveal" aria-hidden="true">
-      <img src="assets/illustrations/careers/huddle.png" alt="" loading="lazy" />
-    </figure>
-    <ol class="questions-grid reveal">
-      <li class="question-item">
-        <div class="question-num">/ 01 &middot; SHARPER</div>
-        <h3>Are they smarter than us in the room?</h3>
-        <p>We hire to be raised, not to feel taller.</p>
-      </li>
-      <li class="question-item">
-        <div class="question-num">/ 02 &middot; AMBITION</div>
-        <h3>Are they more ambitious than us about the work?</h3>
-        <p>Personal ambition is normal. Ambition for the work is rare. We need the second.</p>
-      </li>
-      <li class="question-item">
-        <div class="question-num">/ 03 &middot; OWNERSHIP</div>
-        <h3>Do they take full ownership of their lives?</h3>
-        <p>The best operators don&rsquo;t outsource agency. Nothing is anyone else&rsquo;s fault.</p>
-      </li>
-      <li class="question-item">
-        <div class="question-num">/ 04 &middot; HONESTY</div>
-        <h3>Are they comfortable saying, &ldquo;I don&rsquo;t know&rdquo;?</h3>
-        <p>Bluffing is the most expensive habit in any room. We hire people who can stop.</p>
-      </li>
-      <li class="question-item">
-        <div class="question-num">/ 05 &middot; THE ROOM TEST</div>
-        <h3>Will they make every person in the room sharper?</h3>
-        <p>Talent is a portfolio. The right hire raises the average. The wrong one drops it.</p>
-      </li>
-    </ol>
   </div>
 </section>
 
