@@ -623,37 +623,47 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
   mix-blend-mode: multiply;
 }
 
-/* Benefits: 2x2 hairline grid (mirrors about Values + Team & Operating Depth) */
+/* Programmes: 2x2 bordered card grid (eternal-style) */
 .programmes-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  column-gap: clamp(48px, 5vw, 96px);
-  row-gap: 0;
-  border-top: 1px solid var(--hairline);
+  gap: clamp(20px, 2vw, 32px);
+  margin-top: clamp(48px, 5vw, 72px);
 }
-@media (max-width: 900px) { .programmes-grid { grid-template-columns: 1fr; column-gap: 0; } }
+@media (max-width: 880px) { .programmes-grid { grid-template-columns: 1fr; gap: 20px; } }
 .programme-card {
-  padding: clamp(36px, 3vw, 52px) 0;
-  border-bottom: 1px solid var(--hairline);
+  padding: clamp(36px, 4vw, 56px);
+  border: 1px solid var(--hairline);
+  border-radius: 12px;
+  background: var(--white);
   display: flex; flex-direction: column;
-  gap: 14px;
-  position: relative;
-  transition: padding-left 0.3s var(--ease);
+  gap: clamp(20px, 2vw, 28px);
+  transition: border-color 0.25s var(--ease), transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
 }
-.programme-card:hover { padding-left: 8px; }
-.programme-num {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 14px; font-weight: 700; letter-spacing: 0.08em;
-  color: var(--accent-deep);
+.programme-card:hover {
+  border-color: var(--line);
+  transform: translateY(-3px);
+  box-shadow: 0 18px 42px -28px rgba(15,17,23,0.18);
+}
+.programme-card-icon {
+  width: clamp(72px, 7vw, 96px);
+  height: clamp(72px, 7vw, 96px);
+  display: flex; align-items: center; justify-content: flex-start;
+}
+.programme-card-icon img,
+.programme-card-icon svg {
+  width: 100%; height: 100%;
+  object-fit: contain; display: block;
+  mix-blend-mode: multiply;
 }
 .programme-card h3 {
-  font-size: clamp(20px, 1.8vw, 26px);
+  font-size: clamp(22px, 2vw, 28px);
   font-weight: 500; letter-spacing: -0.02em; line-height: 1.2;
   color: var(--text); margin: 0;
-  max-width: 28ch;
+  max-width: 24ch;
 }
 .programme-card p {
-  font-size: clamp(15px, 1.15vw, 17px);
+  font-size: clamp(15.5px, 1.2vw, 18px);
   line-height: 1.6; color: var(--text-secondary);
   margin: 0; max-width: 44ch;
   text-wrap: pretty;
@@ -888,27 +898,48 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
       <h2>How we care for the team.</h2>
       <p>From day one, the programmes we fund for every full-time teammate. Not perks. Programmes. Funded, run, and reviewed annually.</p>
     </div>
-    <figure class="careers-illustration-band reveal" aria-hidden="true">
-      <img src="assets/illustrations/careers/growth.png" alt="" loading="lazy" />
-    </figure>
     <div class="programmes-grid reveal">
       <article class="programme-card">
-        <div class="programme-num">/ 01 &middot; LEAVE</div>
+        <div class="programme-card-icon" aria-hidden="true">
+          <svg viewBox="0 0 64 64" fill="none" stroke="#0E0F0A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="8" y="14" width="48" height="42" rx="4"/>
+            <path d="M8 24h48M20 8v10M44 8v10"/>
+            <path d="M22 36h4M30 36h4M38 36h4M22 44h4M30 44h4"/>
+          </svg>
+        </div>
         <h3>24 paid leaves a year.</h3>
         <p>Six sick. Six casual. Twelve annual. On top of ten public holidays across the calendar.</p>
       </article>
       <article class="programme-card">
-        <div class="programme-num">/ 02 &middot; HEALTH</div>
+        <div class="programme-card-icon" aria-hidden="true">
+          <svg viewBox="0 0 64 64" fill="none" stroke="#0E0F0A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M32 56s-20-12-20-28a12 12 0 0 1 20-9 12 12 0 0 1 20 9c0 16-20 28-20 28z"/>
+            <path d="M22 28h6l3-6 4 12 3-6h6"/>
+          </svg>
+        </div>
         <h3>Comprehensive group health cover.</h3>
         <p>No cooling period, family-coverage options, and annual check-ups for every teammate.</p>
       </article>
       <article class="programme-card">
-        <div class="programme-num">/ 03 &middot; WELLNESS</div>
+        <div class="programme-card-icon" aria-hidden="true">
+          <svg viewBox="0 0 64 64" fill="none" stroke="#0E0F0A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="32" cy="20" r="8"/>
+            <path d="M16 56c0-10 7-18 16-18s16 8 16 18"/>
+            <circle cx="50" cy="14" r="2.5" fill="#FF7A45" stroke="none"/>
+          </svg>
+        </div>
         <h3>Health First &mdash; the 90-day challenge.</h3>
         <p>An annual campaign to build healthy habits. Wellness rooms, recreation zones, and a cafeteria stocked through the day.</p>
       </article>
       <article class="programme-card">
-        <div class="programme-num">/ 04 &middot; GROWTH</div>
+        <div class="programme-card-icon" aria-hidden="true">
+          <svg viewBox="0 0 64 64" fill="none" stroke="#0E0F0A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M8 56h48"/>
+            <path d="M14 56V36M26 56V26M38 56V20M50 56V12"/>
+            <path d="M14 36l36-24"/>
+            <path d="M44 12h6v6"/>
+          </svg>
+        </div>
         <h3>Learn at Work + the Young Leaders Programme.</h3>
         <p>Brown-bag sessions, cross-team learning, and a leadership track that hands operators real ownership of outcomes.</p>
       </article>
