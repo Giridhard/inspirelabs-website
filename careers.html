@@ -443,6 +443,193 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
 .careers-apply-mail-btn { display: inline-flex; align-items: center; padding: 16px 32px; background: var(--text); color: var(--white); font-weight: 600; font-size: 16px; letter-spacing: -0.005em; border-radius: 999px; transition: background 0.2s var(--ease), transform 0.2s var(--ease); }
 .careers-apply-mail-btn:hover { background: var(--accent); transform: translateY(-1px); }
 .careers-apply-mail-note { font-size: 14.5px; color: var(--text-secondary); line-height: 1.55; max-width: 44ch; margin: 0; }
+
+/* ════════════════════════════════════════════════════════
+   MAGAZINE SPREAD SYSTEM (eternal-style careers redesign)
+   ════════════════════════════════════════════════════════ */
+.mag-hero {
+  position: relative;
+  padding: clamp(120px, 18vh, 220px) 0 clamp(80px, 10vh, 140px);
+  border-bottom: 1px solid var(--hairline);
+}
+.mag-hero-eyebrow,
+.mag-chapter-num,
+.mag-thesis-eyebrow,
+.mag-apply-eyebrow,
+.mag-pull-cite {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--text-tertiary); font-weight: 600;
+}
+.mag-hero-eyebrow,
+.mag-chapter-num {
+  display: flex; align-items: center; gap: 14px;
+  margin-bottom: clamp(28px, 3vw, 40px);
+}
+.mag-hero-eyebrow::before,
+.mag-chapter-num::before {
+  content: ''; width: 32px; height: 1px; background: var(--accent);
+}
+.mag-hero h1 {
+  font-size: clamp(48px, 5.6vw, 104px);
+  font-weight: 400; letter-spacing: -0.03em; line-height: 1.04;
+  max-width: 18ch;
+  margin-bottom: clamp(28px, 3vw, 44px);
+}
+.mag-hero-sub {
+  font-size: clamp(17px, 1.4vw, 22px);
+  font-weight: 300; line-height: 1.55;
+  color: var(--text-secondary);
+  max-width: 56ch;
+}
+
+/* Chapter spread */
+.mag-spread {
+  padding: clamp(80px, 10vw, 140px) 0;
+  border-bottom: 1px solid var(--hairline);
+}
+.mag-spread-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr);
+  gap: clamp(48px, 6vw, 120px);
+  align-items: start;
+}
+@media (max-width: 980px) { .mag-spread-grid { grid-template-columns: 1fr; gap: 32px; } }
+.mag-aside { position: sticky; top: 120px; align-self: start; }
+@media (max-width: 980px) { .mag-aside { position: static; } }
+.mag-chapter-num { margin-bottom: 22px; }
+.mag-spread h2 {
+  font-size: clamp(32px, 3.6vw, 56px);
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  line-height: 1.08;
+  margin-bottom: clamp(28px, 3vw, 40px);
+  max-width: 14ch;
+}
+.mag-aside-illustration {
+  margin-top: clamp(32px, 4vw, 48px);
+  width: 100%;
+}
+.mag-aside-illustration img {
+  width: 100%; height: auto; display: block;
+  mix-blend-mode: multiply;
+}
+
+/* Magazine body */
+.mag-body { max-width: 60ch; }
+.mag-body p {
+  font-size: clamp(17px, 1.3vw, 20px);
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin-bottom: 22px;
+  text-wrap: pretty;
+}
+.mag-body p:last-child { margin-bottom: 0; }
+.mag-body p strong { color: var(--text); font-weight: 500; }
+.mag-body p em { font-style: normal; color: var(--text); font-weight: 500; }
+
+/* Editorial list */
+.mag-list {
+  list-style: none; padding: 0; margin: clamp(24px, 3vw, 36px) 0 0;
+  border-top: 1px solid var(--hairline);
+}
+.mag-list-item {
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  gap: clamp(20px, 2.5vw, 36px);
+  padding: clamp(26px, 3vw, 38px) 0;
+  border-bottom: 1px solid var(--hairline);
+  align-items: start;
+  transition: padding-left 0.3s var(--ease);
+}
+.mag-list-item:hover { padding-left: 8px; }
+.mag-list-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px; font-weight: 700; letter-spacing: 0.08em;
+  color: var(--accent-deep);
+}
+.mag-list-body h3 {
+  font-size: clamp(20px, 1.8vw, 26px);
+  font-weight: 500; letter-spacing: -0.018em; line-height: 1.25;
+  color: var(--text); margin: 0 0 8px; max-width: 28ch;
+}
+.mag-list-body p {
+  font-size: clamp(15px, 1.15vw, 17px);
+  line-height: 1.6; color: var(--text-secondary);
+  margin: 0; max-width: 56ch;
+}
+
+/* Pull-quote */
+.mag-pull {
+  padding: clamp(80px, 10vw, 140px) 0;
+  border-bottom: 1px solid var(--hairline);
+}
+.mag-pull blockquote {
+  max-width: 22ch;
+  font-size: clamp(36px, 4.2vw, 64px);
+  font-weight: 400; letter-spacing: -0.02em; line-height: 1.12;
+  color: var(--text);
+  padding-left: clamp(20px, 2vw, 32px);
+  border-left: 2px solid var(--accent);
+}
+.mag-pull blockquote em {
+  font-style: normal; color: var(--accent-deep);
+}
+.mag-pull-cite {
+  margin-top: clamp(28px, 3vw, 40px);
+  padding-left: clamp(20px, 2vw, 32px);
+  display: block;
+}
+
+/* Thesis (mantra) */
+.mag-thesis {
+  padding: clamp(120px, 14vw, 200px) 0;
+  background: var(--text); color: var(--white);
+  text-align: center;
+}
+.mag-thesis-eyebrow { color: var(--accent); margin-bottom: clamp(36px, 4vw, 56px); }
+.mag-thesis h2 {
+  font-size: clamp(36px, 5vw, 80px);
+  font-weight: 400; letter-spacing: -0.025em; line-height: 1.1;
+  color: var(--white);
+  max-width: 20ch; margin: 0 auto;
+}
+
+/* Apply */
+.mag-apply {
+  padding: clamp(120px, 14vw, 200px) 0;
+  text-align: center;
+  border-top: 1px solid var(--hairline);
+}
+.mag-apply-eyebrow { margin-bottom: clamp(28px, 3vw, 40px); display: block; }
+.mag-apply h2 {
+  font-size: clamp(40px, 5.2vw, 88px);
+  font-weight: 400; letter-spacing: -0.03em; line-height: 1.06;
+  margin: 0 auto clamp(36px, 4vw, 56px);
+  max-width: 18ch;
+}
+.mag-apply-cta {
+  display: inline-flex; align-items: center; gap: 14px;
+  padding: 18px 36px;
+  background: var(--text); color: var(--white);
+  font-size: 17px; font-weight: 500; letter-spacing: -0.01em;
+  border-radius: 999px;
+  transition: background 0.25s var(--ease), transform 0.25s var(--ease);
+}
+.mag-apply-cta::after {
+  content: '→'; transition: transform 0.25s var(--ease);
+}
+.mag-apply-cta:hover { background: var(--accent-deep); transform: translateY(-1px); }
+.mag-apply-cta:hover::after { transform: translateX(4px); }
+.mag-apply-cta:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+.mag-apply-note {
+  margin-top: clamp(28px, 3vw, 40px);
+  font-size: 15px; line-height: 1.6;
+  color: var(--text-tertiary);
+  max-width: 50ch;
+  margin-left: auto; margin-right: auto;
+  text-wrap: pretty;
+}
 </style>
 </head>
 
@@ -465,214 +652,188 @@ footer { padding: 88px 0 32px; background: var(--white); border-top: 1px solid v
 
 <main>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-grid"></div>
-  <div class="container hero-inner">
-    <h1 class="display-1">We hire operators. Then we hand them the room.</h1>
-    <p class="hero-sub">Twelve years bootstrapped, five platforms in market, people who joined in their twenties still here in their forties. The room is built to make you sharper, then it expects you to keep it sharp.</p>
+<!-- ════════ HERO ════════ -->
+<section class="mag-hero">
+  <div class="container">
+    <div class="mag-hero-eyebrow">Careers · Inspirelabs</div>
+    <h1>We hire operators. Then we hand them the room.</h1>
+    <p class="mag-hero-sub">Twelve years bootstrapped. Five platforms in market. People who joined in their twenties, still here in their forties. The room is built to make you sharper, then it expects you to keep it sharp.</p>
   </div>
 </section>
 
-<!-- HOW WE HIRE -->
-<section class="section-body">
+<!-- ════════ CHAPTER 01 / RECEIPTS ════════ -->
+<section class="mag-spread">
   <div class="container">
-    <div class="editorial-grid reveal">
-      <div class="editorial-aside">
-        <h2 class="editorial-title">We do not hire resumes. We hire receipts.</h2>
-        <figure class="editorial-illustration" aria-hidden="true">
+    <div class="mag-spread-grid reveal">
+      <aside class="mag-aside">
+        <div class="mag-chapter-num">Chapter 01 · Receipts</div>
+        <h2>We don&rsquo;t hire resumes. We hire receipts.</h2>
+        <figure class="mag-aside-illustration" aria-hidden="true">
           <img src="assets/illustrations/careers/build-together.png" alt="" loading="lazy" />
         </figure>
-      </div>
-      <div class="editorial-body">
-        <p>The people who do well here have shipped something. They have owned a number. They have stood next to a problem and refused to leave the room until it was fixed. Where you went to school does not feature in the conversation. Neither does the title you are leaving behind.</p>
-        <p>What we look for is simple. <strong>Evidence.</strong> A repository. A revenue line. A user count. A story about a bad quarter you walked through. A team that would work with you again. If you have receipts, the rest of the interview takes care of itself.</p>
+      </aside>
+      <div class="mag-body">
+        <p>The people who do well here have shipped something. They have owned a number. They have stood next to a problem and refused to leave the room until it was fixed.</p>
+        <p>Where you went to school does not feature in the conversation. Neither does the title you are leaving behind. <strong>Show us a repository. A revenue line. A user count. A bad quarter you walked through. A team that would work with you again.</strong> If you have receipts, the rest of the interview takes care of itself.</p>
         <p>Most hires come through people already on the team. That is by design. The fastest way in is to be referred by an operator who has held the standard with you before. If that is not you yet, write to us anyway. We read every note.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- WHAT WE ASK -->
-<section class="section-body">
+<!-- ════════ PULL-QUOTE 1 ════════ -->
+<section class="mag-pull reveal">
   <div class="container">
-    <div class="ask-grid reveal">
-      <figure class="ask-illustration" aria-hidden="true">
-        <img src="assets/illustrations/careers/huddle.png" alt="" loading="lazy" />
-      </figure>
-      <div class="ask-content">
-        <div class="section-head">
-          <h2 class="section-title">When we meet a candidate, we ask ourselves five questions.</h2>
-          <p class="section-intro">The yes or no on each is the interview. The rest is paperwork.</p>
-        </div>
-        <div class="criteria-list">
-      <article class="criteria-row">
-        <div class="criteria-num">01</div>
-        <h3>Are they smarter than us in the room?</h3>
-      </article>
-      <article class="criteria-row">
-        <div class="criteria-num">02</div>
-        <h3>Are they more ambitious than us about the work?</h3>
-      </article>
-      <article class="criteria-row">
-        <div class="criteria-num">03</div>
-        <h3>Do they take full ownership of their lives?</h3>
-      </article>
-      <article class="criteria-row">
-        <div class="criteria-num">04</div>
-        <h3>Are they comfortable saying, &ldquo;I don&rsquo;t know&rdquo;?</h3>
-      </article>
-      <article class="criteria-row">
-        <div class="criteria-num">05</div>
-        <h3>Will they make every person in the room sharper?</h3>
-      </article>
+    <blockquote>Where you went to school doesn&rsquo;t feature in the conversation. Neither does the title you&rsquo;re leaving behind.</blockquote>
+    <cite class="mag-pull-cite">From the hiring room.</cite>
+  </div>
+</section>
+
+<!-- ════════ CHAPTER 02 / FIVE QUESTIONS ════════ -->
+<section class="mag-spread">
+  <div class="container">
+    <div class="mag-spread-grid reveal">
+      <aside class="mag-aside">
+        <div class="mag-chapter-num">Chapter 02 · The interview</div>
+        <h2>When we meet a candidate, we ask ourselves five questions.</h2>
+        <figure class="mag-aside-illustration" aria-hidden="true">
+          <img src="assets/illustrations/careers/huddle.png" alt="" loading="lazy" />
+        </figure>
+      </aside>
+      <div class="mag-body">
+        <p>The yes or no on each is the interview. The rest is paperwork.</p>
+        <ol class="mag-list">
+          <li class="mag-list-item">
+            <div class="mag-list-num">01</div>
+            <div class="mag-list-body">
+              <h3>Are they smarter than us in the room?</h3>
+              <p>We hire to be raised, not to feel taller.</p>
+            </div>
+          </li>
+          <li class="mag-list-item">
+            <div class="mag-list-num">02</div>
+            <div class="mag-list-body">
+              <h3>Are they more ambitious than us about the work?</h3>
+              <p>Personal ambition is normal. Ambition for the work is rare. We need the second.</p>
+            </div>
+          </li>
+          <li class="mag-list-item">
+            <div class="mag-list-num">03</div>
+            <div class="mag-list-body">
+              <h3>Do they take full ownership of their lives?</h3>
+              <p>The best operators don&rsquo;t outsource agency. Nothing is anyone else&rsquo;s fault.</p>
+            </div>
+          </li>
+          <li class="mag-list-item">
+            <div class="mag-list-num">04</div>
+            <div class="mag-list-body">
+              <h3>Are they comfortable saying, &ldquo;I don&rsquo;t know&rdquo;?</h3>
+              <p>Bluffing is the most expensive habit in any room. We hire people who can stop.</p>
+            </div>
+          </li>
+          <li class="mag-list-item">
+            <div class="mag-list-num">05</div>
+            <div class="mag-list-body">
+              <h3>Will they make every person in the room sharper?</h3>
+              <p>Talent is a portfolio. The right hire raises the average. The wrong one drops it.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- A DECADE IN -->
-<section class="section-body">
+<!-- ════════ CHAPTER 03 / A DECADE IN ════════ -->
+<section class="mag-spread">
   <div class="container">
-    <div class="editorial-grid reveal">
-      <div class="editorial-aside">
-        <h2 class="editorial-title">A decade in, the math changes.</h2>
-        <figure class="editorial-illustration" aria-hidden="true">
+    <div class="mag-spread-grid reveal">
+      <aside class="mag-aside">
+        <div class="mag-chapter-num">Chapter 03 · Compounding</div>
+        <h2>A decade in, the math changes.</h2>
+        <figure class="mag-aside-illustration" aria-hidden="true">
           <img src="assets/illustrations/careers/compound.png" alt="" loading="lazy" />
         </figure>
-      </div>
-      <div class="editorial-body">
+      </aside>
+      <div class="mag-body">
         <p>When you give a decade to one operating company, you start watching the consequences of your own decisions land. A feature you shipped in 2018 is still earning the company money in 2026. A junior you hired in 2020 is now the person other juniors come to. The titles stop being interesting. The receipts start stacking.</p>
-        <p>People who join Inspirelabs in their twenties tend to still be here in their forties. They buy houses on these salaries. They put children through school. They watch the company they helped build cross another zero. <strong>The compounding is not a metaphor.</strong> It is the reason to be here in the first place.</p>
+        <p>People who join Inspirelabs in their twenties tend to still be here in their forties. They buy houses on these salaries. They put children through school. They watch the company they helped build cross another zero.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- BENEFITS -->
-<section class="section-body">
+<!-- ════════ PULL-QUOTE 2 ════════ -->
+<section class="mag-pull reveal">
   <div class="container">
-    <div class="section-head reveal">
-      <h2 class="section-title">How we care for the team.</h2>
-      <p class="section-intro">From day one, the programmes we fund for every full-time teammate.</p>
-    </div>
-    <figure class="benefits-illustration reveal" aria-hidden="true">
-      <img src="assets/illustrations/careers/growth.png" alt="" loading="lazy" />
-    </figure>
-    <div class="benefits-grid reveal">
-      <article class="benefit-card">
-        <div class="benefit-card-tag">Leave</div>
-        <h3>24 paid leaves a year.</h3>
-        <p>Six sick. Six casual. Twelve annual. On top of ten public holidays across the calendar.</p>
-      </article>
-      <article class="benefit-card">
-        <div class="benefit-card-tag">Health</div>
-        <h3>Comprehensive health insurance.</h3>
-        <p>Group coverage with no cooling period, family-coverage options, and annual check-ups for every teammate.</p>
-      </article>
-      <article class="benefit-card">
-        <div class="benefit-card-tag">Wellness</div>
-        <h3>Health First, the 90-day challenge.</h3>
-        <p>An annual campaign to build healthy habits, supported by wellness rooms, recreation zones, and a cafeteria stocked through the day.</p>
-      </article>
-      <article class="benefit-card">
-        <div class="benefit-card-tag">Growth</div>
-        <h3>Learn at Work and the Young Leaders Programme.</h3>
-        <p>Brown-bag sessions, cross-team learning, and a leadership track that hands operators real ownership of outcomes.</p>
-      </article>
+    <blockquote>The compounding is not a metaphor. <em>It is the reason to be here in the first place.</em></blockquote>
+    <cite class="mag-pull-cite">Founder&rsquo;s note.</cite>
+  </div>
+</section>
+
+<!-- ════════ CHAPTER 04 / HOW WE CARE ════════ -->
+<section class="mag-spread">
+  <div class="container">
+    <div class="mag-spread-grid reveal">
+      <aside class="mag-aside">
+        <div class="mag-chapter-num">Chapter 04 · The programmes</div>
+        <h2>How we care for the team.</h2>
+        <figure class="mag-aside-illustration" aria-hidden="true">
+          <img src="assets/illustrations/careers/growth.png" alt="" loading="lazy" />
+        </figure>
+      </aside>
+      <div class="mag-body">
+        <p>From day one, the programmes we fund for every full-time teammate. Not perks. Programmes. Funded, run, and reviewed annually.</p>
+        <ol class="mag-list">
+          <li class="mag-list-item">
+            <div class="mag-list-num">01</div>
+            <div class="mag-list-body">
+              <h3>24 paid leaves a year.</h3>
+              <p>Six sick. Six casual. Twelve annual. Plus ten public holidays across the calendar.</p>
+            </div>
+          </li>
+          <li class="mag-list-item">
+            <div class="mag-list-num">02</div>
+            <div class="mag-list-body">
+              <h3>Comprehensive group health cover.</h3>
+              <p>No cooling period, family-coverage options, annual check-ups for every teammate.</p>
+            </div>
+          </li>
+          <li class="mag-list-item">
+            <div class="mag-list-num">03</div>
+            <div class="mag-list-body">
+              <h3>Health First &mdash; the 90-day challenge.</h3>
+              <p>An annual campaign to build healthy habits. Wellness rooms, recreation zones, and a cafeteria stocked through the day.</p>
+            </div>
+          </li>
+          <li class="mag-list-item">
+            <div class="mag-list-num">04</div>
+            <div class="mag-list-body">
+              <h3>Learn at Work + the Young Leaders Programme.</h3>
+              <p>Brown-bag sessions, cross-team learning, and a leadership track that hands operators real ownership of outcomes.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- THE ROOM (mantra) -->
-<section class="inside-section">
- <div class="container">
- <div class="inside-head reveal">
- <h2 class="section-title-xl">Inside Inspirelabs</h2>
- <p class="biz-intro">A studio of operators who&rsquo;d rather build than pitch. We celebrate together, we ship together, and we leave the office knowing what we made today will outlive the next quarter.</p>
- </div>
-
- <div class="inside-grid reveal">
- <div class="inside-tile">
- <img class="inside-tile-img" src="assets/culture/team-collab.jpg" alt="The Inspirelabs team" loading="lazy" />
- <div class="inside-tile-caption">
- <div class="inside-tile-eyebrow">The Crew</div>
- <div class="inside-tile-title">One operating standard, six core values.</div>
- </div>
- </div>
- <div class="inside-tile">
- <img class="inside-tile-img" src="assets/culture/team-portrait.jpg" alt="An Inspirelabs town-hall in progress" loading="lazy" />
- <div class="inside-tile-caption">
- <div class="inside-tile-eyebrow">The Townhall</div>
- <div class="inside-tile-title">Where every decision gets explained.</div>
- </div>
- </div>
- <div class="inside-tile">
- <img class="inside-tile-img" src="assets/culture/cafeteria.jpg" alt="Cafeteria with art" loading="lazy" />
- <div class="inside-tile-caption">
- <div class="inside-tile-eyebrow">The Cafe</div>
- <div class="inside-tile-title">Where ideas get loud.</div>
- </div>
- </div>
- <div class="inside-tile">
- <img class="inside-tile-img" src="assets/culture/team-meet.jpg" alt="Team meet at Inspirelabs" loading="lazy" />
- <div class="inside-tile-caption">
- <div class="inside-tile-eyebrow">Celebrations</div>
- <div class="inside-tile-title">Iftars. Sports week. Women&rsquo;s Day. Anniversaries.</div>
- </div>
- </div>
- </div>
-
- <div class="inside-stats reveal">
- <div class="inside-stat">
- <div class="inside-stat-val">24</div>
- <div class="inside-stat-lbl">Paid leaves a year (sick, casual, annual)</div>
- </div>
- <div class="inside-stat">
- <div class="inside-stat-val">10</div>
- <div class="inside-stat-lbl">Public holidays across the calendar year</div>
- </div>
- <div class="inside-stat">
- <div class="inside-stat-val">5-day</div>
- <div class="inside-stat-lbl">Work week with eight productive hours</div>
- </div>
- <div class="inside-stat">
- <div class="inside-stat-val">90 days</div>
- <div class="inside-stat-lbl">Health First wellness challenge, every year</div>
- </div>
- </div>
-
- <div class="reveal" style="margin-top: clamp(40px, 4vw, 56px);">
- <a href="about.html" class="tlink">See life at Inspirelabs</a>
- </div>
- </div>
-</section>
-
-
-<section class="careers-mantra">
+<!-- ════════ THESIS / MANTRA ════════ -->
+<section class="mag-thesis">
   <div class="container">
-    <div class="careers-mantra-inner reveal">
-      <span class="careers-mantra-eyebrow">The room</span>
-      <h2 class="careers-mantra-text">This place is built to make you sharper.</h2>
-      <p class="careers-mantra-body">The work asks for hard hours, real ownership, and the willingness to sit slightly outside your comfort. You will feel a little stretched. A little under-prepared for the size of the problem in front of you. That is the room. That is also the only room where the compounding happens.</p>
-    </div>
+    <div class="mag-thesis-eyebrow">Inside the room</div>
+    <h2>This place is built to make you sharper.</h2>
   </div>
 </section>
 
-<!-- APPLY -->
-<section class="careers-apply">
+<!-- ════════ APPLY ════════ -->
+<section class="mag-apply">
   <div class="container">
-    <div class="careers-apply-grid reveal">
-      <div class="careers-apply-text">
-        <span class="careers-apply-eyebrow">Apply</span>
-        <h2>Tell us what you have shipped.</h2>
-        <p>Tell us the problem you would not let go. Tell us the team you held the standard with. We read every note.</p>
-        <p class="careers-apply-mail-fallback">Or write directly to <a href="mailto:careers@inspirelabs.com" class="tlink">careers@inspirelabs.com</a></p>
-      </div>
-      <div class="careers-apply-mailto">
-        <a href="mailto:careers@inspirelabs.com?subject=Application%20%C2%B7%20Inspirelabs" class="careers-apply-mail-btn">Email careers@inspirelabs.com</a>
-        <p class="careers-apply-mail-note">Tell us what you have shipped, the problem you would not let go, and the team you held the standard with.</p>
-      </div>
-    </div>
+    <span class="mag-apply-eyebrow">Want in?</span>
+    <h2>Tell us what you&rsquo;ve shipped.</h2>
+    <a href="mailto:careers@inspirelabs.com?subject=Application%20%C2%B7%20Inspirelabs" class="mag-apply-cta">Email careers@inspirelabs.com</a>
+    <p class="mag-apply-note">Tell us what you have shipped, the problem you would not let go, and the team you held the standard with.</p>
   </div>
 </section>
 
